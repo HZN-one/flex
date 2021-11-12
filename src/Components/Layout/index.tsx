@@ -1,1 +1,1 @@
-export * from './Initiator'
+export * from './Initiator';

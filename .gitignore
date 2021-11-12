@@ -4,6 +4,8 @@ node_modules
 .cache
 dist
 
+# Example folder
+example
 
 # Logs
 logs

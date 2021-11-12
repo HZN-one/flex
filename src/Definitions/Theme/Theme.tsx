@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material/styles'
+import { createTheme } from '@mui/material/styles';
 
 // Create a theme instance.
 export const baseTheme = createTheme({
@@ -7,9 +7,9 @@ export const baseTheme = createTheme({
   },
   palette: {
     primary: {
-      main: '#DC3939',
-      dark: '#DC3931',
-      light: '#DC3931',
+      main: '#DC3931',
+      dark: '#B02D27',
+      light: '#E3615A',
     },
     secondary: {
       main: '#525252',
@@ -24,4 +24,4 @@ export const baseTheme = createTheme({
     // E.g., shift from Red 500 to Red 300 or Red 700.
     tonalOffset: 0.2,
   },
-})
+});

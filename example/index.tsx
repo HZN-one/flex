@@ -1,13 +1,15 @@
 import 'react-app-polyfill/ie11'
 import React, { useState } from 'react'
 import * as ReactDOM from 'react-dom'
-import { ButtonPegasus } from '../src/Components'
+
+import {ButtonPegasus} from '../src'
 
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { purple } from '@mui/material/colors'
 import Button from '@mui/material/Button'
 
-import { baseTheme, ThemeProviderWrapper } from '../src'
+import { baseTheme } from '../src'
+import {ThemeProviderWrapper} from '../src'
 
 export const newTheme = createTheme({
   typography: {
@@ -34,26 +36,35 @@ export const newTheme = createTheme({
   },
 })
 
-console.log(newTheme);
-
-
+console.log(newTheme)
 
 const App = () => {
   const [Number, setNumber] = useState(0)
   return (
-    <ThemeProviderWrapper>
+    <ThemeProviderWrapper replaceTheme={
+      {
+        typography: {
+          fontFamily: 'Arial'
+        },
+        palette: {
+          primary: {
+            main: '#00FF00'
+          }
+        }
+      }
+    }>
       <>
-      <ButtonPegasus
-        // gradientColor="blue"
-        variant="contained"
-        testID="button-coba"
-        color="primary"
-        onClick={() => setNumber(Number + 1)}
-      >
-        Pegasus
-      </ButtonPegasus>
-      {Number}
-      <p>hihahdwdsdaw</p>
+        <ButtonPegasus
+          // gradientColor="blue"
+          variant="contained"
+          testID="button-coba"
+          color="primary"
+          onClick={() => setNumber(Number + 1)}
+        >
+          Pegasus
+        </ButtonPegasus>
+        {Number}
+        <p>hihahdwdsdaw</p>
       </>
     </ThemeProviderWrapper>
   )

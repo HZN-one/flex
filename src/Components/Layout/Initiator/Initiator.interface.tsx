@@ -1,8 +1,29 @@
-import React, { HTMLAttributes, ReactChild } from 'react'
-import { baseTheme } from '../../..'
-import { createTheme } from '@mui/material/styles'
+import { HTMLAttributes, ReactChild } from 'react';
 
 export interface Props extends HTMLAttributes<HTMLDivElement> {
   children?: ReactChild
-  replaceTheme?: typeof createTheme
+  replaceTheme?: {
+    typography?: {
+      fontFamily?: string,
+    },
+    palette?: {
+      primary?: {
+        main?: string,
+        dark?: string,
+        light?: string,
+      },
+      secondary?: {
+        main?: string,
+        dark?: string,
+        light?: string,
+      },
+      // Used by `getContrastText()` to maximize the contrast between
+      // the background and the text.
+      contrastThreshold?: number,
+      // Used by the functions below to shift a color's luminance by approximately
+      // two indexes within its tonal palette.
+      // E.g., shift from Red 500 to Red 300 or Red 700.
+      tonalOffset?: number,
+    },
+  }
 }

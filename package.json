@@ -32,24 +32,26 @@
     }
   },
   "name": "@hzn-one/flex-hzn",
-  "author": "pranotoism",
-  "module": "dist/design.esm.js",
+  "author": "PT HZN Teknologi Indonesia",
+  "module": "dist/flex-hzn.esm.js",
   "size-limit": [
     {
-      "path": "dist/design.cjs.production.min.js",
+      "path": "dist/flex-hzn.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/design.esm.js",
+      "path": "dist/flex-hzn.esm.js",
       "limit": "10 KB"
     }
   ],
-  "devDependencies": {
-    "@babel/core": "^7.16.0",
+  "dependencies": {
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
     "@mui/material": "^5.1.0",
-    "@mui/styles": "^5.1.0",
+    "@mui/styles": "^5.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
     "@size-limit/preset-small-lib": "^6.0.4",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-info": "^5.3.21",
@@ -67,7 +69,7 @@
     "babel-loader": "^8.2.3",
     "dts-cli": "^0.19.4",
     "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^19.0.0",
+    "eslint-config-airbnb-typescript": "^15.0.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.27.0",
