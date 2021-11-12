@@ -31,7 +31,7 @@
       "pre-commit": "dts lint"
     }
   },
-  "name": "design",
+  "name": "@hzn-one/flex-hzn",
   "author": "pranotoism",
   "module": "dist/design.esm.js",
   "size-limit": [

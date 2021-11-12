@@ -4,7 +4,7 @@ export interface BrunoProps {
   yourName: string
 }
 
-export function Bruno({ yourName }: BrunoProps) {
+export var Bruno = function ({ yourName }: BrunoProps) {
   return (
     <h1>
       Halo
