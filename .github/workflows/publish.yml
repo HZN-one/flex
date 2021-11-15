@@ -1,0 +1,25 @@
+name: "NPM publish CD workflow"
+
+on:
+  push:
+    branches:
+      - release/staging
+
+jobs:
+  release:
+    name: 'NPM publish CD workflow'
+    runs-on: macos-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+          registry-url: https://registry.npmjs.org/
+          scope: '@hzn-one'
+      - run: npm install
+      - run: npm run build
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,9 +1,0 @@
-{
-  "extends": "@tsconfig/create-react-app/tsconfig.json",
-  "compilerOptions": {
-    "lib": ["es6", "dom"],
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true
-  }
-}
