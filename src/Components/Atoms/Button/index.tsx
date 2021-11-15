@@ -23,6 +23,7 @@ export const ButtonPegasus = memo((props: IButton) => {
   return (
     <Button
       data-testid={testID}
+      variant='contained'
       className={gradientColor ? classes.gradientColor : ''}
       {...materialUIProps}
     />

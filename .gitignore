@@ -4,7 +4,9 @@ node_modules
 .cache
 dist
 example
+stories2
 
+stories2/
 # Example folder
 example/
 

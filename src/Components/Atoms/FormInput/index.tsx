@@ -6,15 +6,15 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { FormHelperText, InputAdornment } from '@mui/material';
 // import NativeSelect from '@mui/material/NativeSelect';
-import InputBase from '@mui/material/InputBase';
+import Input from '@mui/material/Input';
 
 import { IFormInput } from './FormInput.interface';
 
-const BootstrapInput = styled(InputBase)(({ theme }) => ({
+const BootstrapInput = styled(Input)(({ theme }) => ({
   'label + &': {
     marginTop: theme.spacing(3),
   },
-  '& .MuiInputBase-input': {
+  '& .MuiInput-input': {
     borderRadius: 4,
     position: 'relative',
     backgroundColor: theme.palette.background.paper,
@@ -59,9 +59,9 @@ export const FormInputPegasus = memo((props: IFormInput) => {
           <InputLabel
             htmlFor="component-textbox"
           >
-            nama
+            {label}
           </InputLabel>
-          <BootstrapInput
+          <Input
             id="component-textbox" 
             onChange={onChange}
             startAdornment={
