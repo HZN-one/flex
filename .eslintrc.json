@@ -20,5 +20,5 @@
     "@typescript-eslint/no-use-before-define": ["error"],
     "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }]
   },
-  "ignorePatterns": ["dist/*", "example/*", "**/*.js", "test/*"]
+  "ignorePatterns": ["dist/*", "example/*", "**/*.js", "test/*", "stories/*"]
 }
