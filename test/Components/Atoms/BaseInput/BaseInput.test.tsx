@@ -6,14 +6,14 @@
  import '@testing-library/jest-dom'
 
  
- import { TextFieldPegasus } from 'Components'
+ import { BaseInput } from 'Components'
  
  import { render } from '@testing-library/react'
  
- describe('TextFieldPegasus', () => {
+ describe('BaseInput', () => {
    it('should match snapshot', () => {
      const { container } = render(
-       <TextFieldPegasus testID="input-example"  />
+       <BaseInput testID="input-example"  />
      )
      expect(container).toMatchSnapshot()
    })

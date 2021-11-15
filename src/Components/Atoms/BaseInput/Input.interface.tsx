@@ -9,4 +9,5 @@ export interface IInput extends FormControlProps {
   helperText?: string
   onChange?: any
   value?: any
+  variant?: 'standard' | 'outlined' | 'filled'
 }
