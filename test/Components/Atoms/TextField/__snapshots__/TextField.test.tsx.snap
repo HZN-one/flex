@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextFieldPegasus should match snapshot 1`] = `
+<div>
+  <div
+    class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+  >
+    <label
+      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
+      data-shrink="false"
+      for="component-error"
+    />
+    <div
+      class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1480iag-MuiInputBase-root-MuiInput-root"
+      data-testid="input-example"
+    >
+      <input
+        aria-describedby="component-error-text"
+        aria-invalid="false"
+        class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+        type="text"
+        value=""
+      />
+    </div>
+    <p
+      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium css-1d1r5q-MuiFormHelperText-root"
+      id="component-error-text"
+    />
+  </div>
+</div>
+`;

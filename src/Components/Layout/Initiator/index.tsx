@@ -11,29 +11,55 @@ export const ThemeProviderWrapper: FC<Props> = function ({
   children,
   replaceTheme,
 }) {
+  const primaryPallete = replaceTheme?.palette?.primary;
+  const secondaryPallete = replaceTheme?.palette?.secondary;
+  const contrastThreshold = replaceTheme?.palette?.contrastThreshold;
+  const tonalOffset = replaceTheme?.palette?.tonalOffset;
+
   return (
-    <ThemeProvider theme={replaceTheme ? createTheme({
-      typography: {
-        fontFamily: replaceTheme?.typography?.fontFamily || 'Inter',
-      },
-      palette: {
-        primary: {
-          main: replaceTheme?.palette?.primary?.main || '#DC3931',
-          dark: replaceTheme?.palette?.primary?.dark || '#B02D27',
-          light: replaceTheme?.palette?.primary?.light || '#E3615A',
-        },
-        secondary: {
-          main: replaceTheme?.palette?.secondary?.main || '#525252',
-          dark: replaceTheme?.palette?.secondary?.dark || '#262626',
-          light: replaceTheme?.palette?.secondary?.light || '#737373',
-        },
-        contrastThreshold: replaceTheme?.palette?.contrastThreshold || 3,
-        tonalOffset: replaceTheme?.palette?.tonalOffset || 0.2,
-      },
-    }) : baseTheme}>
+    <ThemeProvider
+      theme={
+        replaceTheme
+          ? createTheme({
+            typography: {
+              fontFamily: replaceTheme?.typography?.fontFamily || 'Inter',
+            },
+            palette: {
+              primary: {
+                main: primaryPallete?.main || '#DC3931',
+                dark: primaryPallete?.main
+                  ? primaryPallete?.dark
+                    ? primaryPallete?.dark
+                    : undefined
+                  : '#B02D27',
+                light: primaryPallete?.main
+                  ? primaryPallete?.light
+                    ? primaryPallete?.light
+                    : undefined
+                  : '#E3615A',
+              },
+              secondary: {
+                main: secondaryPallete?.main || '#525252',
+                dark: secondaryPallete?.main
+                  ? secondaryPallete?.dark
+                    ? secondaryPallete?.dark
+                    : undefined
+                  : '#262626',
+                light: secondaryPallete?.main
+                  ? secondaryPallete?.light
+                    ? secondaryPallete?.light
+                    : undefined
+                  : '#737373',
+              },
+              contrastThreshold: contrastThreshold || 3,
+              tonalOffset: tonalOffset || 0.2,
+            },
+          })
+          : baseTheme
+      }
+    >
       <CssBaseline />
       {children}
     </ThemeProvider>
   );
 };
-
