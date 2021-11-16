@@ -1886,7 +1886,7 @@
   "resolved" "https://registry.npmjs.org/@pmmmwh/react-refresh-webpack-plugin/-/react-refresh-webpack-plugin-0.4.3.tgz"
   "version" "0.4.3"
   dependencies:
-    "ansi-html" "^0.0.7"
+    "ansi-html-community": "^0.0.8"
     "error-stack-parser" "^2.0.6"
     "html-entities" "^1.2.1"
     "native-url" "^0.2.6"
