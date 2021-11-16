@@ -11,4 +11,5 @@ export interface IFormInput extends FormControlProps {
   MenuItems?: { value: any, name: any }[]
   adornment?: ReactChild
   adornmentPosition?: 'start' | 'end'
+  placeholder?: string
 }
