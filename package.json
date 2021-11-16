@@ -21,7 +21,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint src/Components/Atoms/Button/*",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "preinstall": "npx npm-force-resolutions"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -44,6 +45,9 @@
       "limit": "10 KB"
     }
   ],
+  "resolutions": {
+    "ansi-html": "https://registry.npmjs.org/ansi-html-community/-/ansi-html-community-0.0.8.tgz"
+  },
   "dependencies": {
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
@@ -51,7 +55,6 @@
     "@mui/styles": "^5.1.0"
   },
   "devDependencies": {
-    "ansi-regex": "^5.0.1",
     "@babel/core": "^7.16.0",
     "@size-limit/preset-small-lib": "^6.0.4",
     "@storybook/addon-actions": "^6.3.12",
@@ -60,7 +63,7 @@
     "@storybook/addon-info": "^4.1.18",
     "@storybook/addon-links": "^6.3.12",
     "@storybook/addons": "^6.3.12",
-    "@storybook/react": "^6.0.28",
+    "@storybook/react": "^6.3.12",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^12.1.2",
     "@tsconfig/create-react-app": "^1.0.2",
@@ -70,6 +73,7 @@
     "@types/react-dom": "^17.0.11",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
+    "ansi-regex": "^5.0.1",
     "babel-loader": "^8.2.3",
     "babel-plugin-module-resolver": "^4.1.0",
     "dts-cli": "^0.19.4",
