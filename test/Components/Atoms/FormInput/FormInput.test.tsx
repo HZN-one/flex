@@ -6,14 +6,14 @@
  import '@testing-library/jest-dom'
 
  
- import { FormInputPegasus } from 'Components'
+ import { FormInput } from 'Components'
  
  import { render } from '@testing-library/react'
  
- describe('FormInputPegasus', () => {
+ describe('FormInput', () => {
    it('should match snapshot', () => {
      const { container } = render(
-       <FormInputPegasus testID="input-example"  />
+       <FormInput testID="input-example"  />
      )
      expect(container).toMatchSnapshot()
    })
