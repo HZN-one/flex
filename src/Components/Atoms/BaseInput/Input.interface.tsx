@@ -10,4 +10,5 @@ export interface IInput extends FormControlProps {
   onChange?: any
   value?: any
   variant?: 'standard' | 'outlined' | 'filled'
+  type?: string
 }

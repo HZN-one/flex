@@ -1,41 +1,53 @@
 import React, { memo } from 'react';
-import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import { FormHelperText, InputAdornment } from '@mui/material';
+import { FormHelperText, InputAdornment, InputLabel } from '@mui/material';
 import TextField from '@mui/material/TextField';
-import Select from '@mui/material/Select';
 
 import { IFormInput } from './FormInput.interface';
-
 
 export const FormInput = memo((props: IFormInput) => {
 
   const { testID, placeholder, type, label, helperText, onChange, adornment, adornmentPosition, value, MenuItems, ...materialUIProps } = props;
-  
+
+  const AddAdornment = () => {
+    return (
+      <InputAdornment position="start">
+        {adornment}
+      </InputAdornment>
+    );
+  };
+
+  const startAdornment = adornment && adornmentPosition === 'start' ? (
+    AddAdornment()
+  ) : null;
+
+  const endAdornment = adornment && adornmentPosition === 'end' ? (
+    AddAdornment()
+  ) : null;
+
+
   if (type !== 'select') {
     return (
-      <FormControl {...materialUIProps} data-testid={testID}>
+      <FormControl
+        sx={{ mt: 1, minWidth: 130 }}
+        data-testid={testID}
+        {...materialUIProps}
+      >
+        <InputLabel htmlFor="component-error">{type == 'date' || type == 'time' ? 'pohon' : ''}</InputLabel>
         <TextField
+          type={type}
           placeholder={placeholder}
-          label={label}
+          label={type !== 'date' && type !== 'time' && label}
           variant='outlined'
           onChange={onChange}
           value={value}
           InputProps={{
             startAdornment: (
-              adornment && adornmentPosition === 'start' ? (
-                <InputAdornment position="start">
-                {adornment}
-              </InputAdornment>
-              ) : null
+              startAdornment
             ),
             endAdornment: (
-              adornment && adornmentPosition === 'end' ? (
-                <InputAdornment position="start">
-                {adornment}
-              </InputAdornment>
-              ) : null
+              endAdornment
             ),
           }}
           aria-describedby="component-error-text"
@@ -48,16 +60,20 @@ export const FormInput = memo((props: IFormInput) => {
   return (
     <div>
       <FormControl
-        sx={{ minWidth: 130 }}
+        sx={{ mt: 1, minWidth: 130 }}
         variant="outlined"
         data-testid={testID}
         {...materialUIProps}
       >
-        <InputLabel id="component-select-label">{label}</InputLabel>
-        <Select
-          labelId="demo-simple-select-standard-label"
+        <TextField
+          select
           id="demo-simple-select-standard"
           label={label}
+          InputProps={{
+            startAdornment: (
+              startAdornment
+            ),
+          }}
         >
           <MenuItem value="">
             <em>None</em>
@@ -65,7 +81,7 @@ export const FormInput = memo((props: IFormInput) => {
           {MenuItems && MenuItems?.length > 0 ? MenuItems.map((oneMenuItem, i) => {
             return <MenuItem key={i} value={oneMenuItem.value}>{oneMenuItem.name}</MenuItem>;
           }) :  null}
-        </Select>
+        </TextField>
         <FormHelperText id="component-error-text" error >{helperText}</FormHelperText>
       </FormControl>
     </div>

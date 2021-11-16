@@ -3,28 +3,38 @@ import { FormControl, TextField, InputAdornment, FormHelperText } from '@mui/mat
 import { IInput } from './Input.interface';
 
 export const BaseInput = memo((props: IInput) => {
-  const { variant, testID, value, label, adornment, adornmentPosition, helperText, onChange, ...materialUIProps } = props;
+  const {  type, variant, testID, value, label, adornment, adornmentPosition, helperText, onChange, ...materialUIProps } = props;
+
+  const AddAdornment = () => {
+    return (
+      <InputAdornment position="start">
+        {adornment}
+      </InputAdornment>
+    );
+  };
+
+  const startAdornment = adornment && adornmentPosition === 'start' ? (
+    AddAdornment()
+  ) : null;
+
+  const endAdornment = adornment && adornmentPosition === 'end' ? (
+    AddAdornment()
+  ) : null;
+
   return (
     <FormControl {...materialUIProps} data-testid={testID}>
         <TextField
+          type={type}
           label={label}
           variant={variant || 'standard'}
           onChange={onChange}
           value={value}
           InputProps={{
             startAdornment: (
-              adornment && adornmentPosition === 'start' ? (
-                <InputAdornment position="start">
-                {adornment}
-              </InputAdornment>
-              ) : null
+              startAdornment
             ),
             endAdornment: (
-              adornment && adornmentPosition === 'end' ? (
-                <InputAdornment position="start">
-                {adornment}
-              </InputAdornment>
-              ) : null
+              endAdornment
             ),
           }}
           aria-describedby="component-error-text"

@@ -51,6 +51,7 @@
     "@mui/styles": "^5.1.0"
   },
   "devDependencies": {
+    "immer": "^9.0.6",
     "@babel/core": "^7.16.0",
     "@size-limit/preset-small-lib": "^6.0.4",
     "@storybook/addon-actions": "^6.3.12",
