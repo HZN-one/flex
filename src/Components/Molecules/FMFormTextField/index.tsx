@@ -1,12 +1,11 @@
 import React, { memo } from 'react';
-import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import { FormHelperText, InputAdornment, InputLabel } from '@mui/material';
+import { FormHelperText, InputAdornment, InputLabel, Typography } from '@mui/material';
 import TextField from '@mui/material/TextField';
 
-import { IFormInput } from './FormInput.interface';
+import { IFMFormTextField } from './FMFormTextField.interface';
 
-export const FormInput = memo((props: IFormInput) => {
+export const FMFormTextField = memo((props: IFMFormTextField) => {
 
   const { testID, placeholder, type, label, helperText, onChange, adornment, adornmentPosition, value, MenuItems, ...materialUIProps } = props;
 
@@ -26,11 +25,13 @@ export const FormInput = memo((props: IFormInput) => {
     AddAdornment()
   ) : null;
 
-
-  if (type !== 'select') {
-    return (
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', width: '100%', justifyContent: 'space-between' }}>
+      <Typography variant="subtitle1" gutterBottom component="div">
+        {label}
+      </Typography>
       <FormControl
-        sx={{ mt: 1, minWidth: 130 }}
+        sx={{ mt: 1, minWidth: '70%' }}
         data-testid={testID}
         {...materialUIProps}
       >
@@ -38,7 +39,6 @@ export const FormInput = memo((props: IFormInput) => {
         <TextField
           type={type}
           placeholder={placeholder}
-          label={type !== 'date' && type !== 'time' && label}
           variant='outlined'
           onChange={onChange}
           value={value}
@@ -53,40 +53,10 @@ export const FormInput = memo((props: IFormInput) => {
           aria-describedby="component-error-text"
         />
         <FormHelperText id="component-error-text" error >{helperText}</FormHelperText>
-      </FormControl>
-    );
-  }
-  
-  return (
-    <div>
-      <FormControl
-        sx={{ mt: 1, minWidth: 130 }}
-        variant="outlined"
-        data-testid={testID}
-        {...materialUIProps}
-      >
-        <TextField
-          select
-          id="demo-simple-select-standard"
-          label={label}
-          InputProps={{
-            startAdornment: (
-              startAdornment
-            ),
-          }}
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          {MenuItems && MenuItems?.length > 0 ? MenuItems.map((oneMenuItem, i) => {
-            return <MenuItem key={i} value={oneMenuItem.value}>{oneMenuItem.name}</MenuItem>;
-          }) :  null}
-        </TextField>
-        <FormHelperText id="component-error-text" error >{helperText}</FormHelperText>
-      </FormControl>
+      </FormControl>  
     </div>
   );
 });
 
-FormInput.displayName = 'FormInput';
+FMFormTextField.displayName = 'FMFormTextField';
 

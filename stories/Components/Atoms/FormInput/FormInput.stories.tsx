@@ -1,11 +1,11 @@
 import React from "react";
 import { ComponentStory } from '@storybook/react';
-import {FormInput} from '../../../../src/Components'
-import { IFormInput } from "../../../../src/Components/Atoms/FormInput/FormInput.interface";
+import {FMFormTextField} from '../../../../src/Components'
+import { IFMFormTextField } from "../../../../src/Components/Molecules/FMFormTextField/FMFormTextField.interface";
 
 const story = {
   title: "Form Input",
-  component: FormInput,
+  component: FMFormTextField,
   argTypes: {
     placeholder: { control: "text" },
   },
@@ -16,11 +16,11 @@ const story = {
 
 export default story;
 
-const Template: ComponentStory<typeof FormInput> = (props: IFormInput) => <FormInput {...props} />;
+const Template: ComponentStory<typeof FMFormTextField> = (props: IFMFormTextField) => <FMFormTextField {...props} />;
 
-export const Default = (props: IFormInput) => (
+export const Default = (props: IFMFormTextField) => (
   <>
-    <FormInput {...props}>{props.children}</FormInput>
+    <FMFormTextField {...props}>{props.children}</FMFormTextField>
   </>
 );
 

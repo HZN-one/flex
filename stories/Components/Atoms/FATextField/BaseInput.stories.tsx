@@ -1,11 +1,11 @@
 import React from "react";
 import { ComponentStory } from '@storybook/react';
-import {BaseInput} from '../../../../src/Components'
-import { IInput } from "../../../../src/Components/Atoms/BaseInput/Input.interface"
+import {FATextField} from '../../../../src/Components'
+import { IInput } from "../../../../src/Components/Atoms/FATextField/Input.interface"
 
 const story = {
-  title: "Base Input",
-  component: BaseInput,
+  title: "Text Field",
+  component: FATextField,
   argTypes: {
     label: { control: "text" },
   },
@@ -16,11 +16,11 @@ const story = {
 
 export default story;
 
-const Template: ComponentStory<typeof BaseInput> = (props: IInput) => <BaseInput {...props} />;
+const Template: ComponentStory<typeof FATextField> = (props: IInput) => <FATextField {...props} />;
 
 export const Default = (props: IInput) => (
   <>
-    <BaseInput {...props}>{props.children}</BaseInput>
+    <FATextField {...props}>{props.children}</FATextField>
   </>
 );
 

@@ -6,14 +6,14 @@
  import '@testing-library/jest-dom'
 
  
- import { FormInput } from 'Components'
+ import { FMFormTextField } from 'Components'
  
  import { render } from '@testing-library/react'
  
- describe('FormInput', () => {
+ describe('FMFormTextField', () => {
    it('should match snapshot', () => {
      const { container } = render(
-       <FormInput testID="input-example"  />
+       <FMFormTextField testID="input-example"  />
      )
      expect(container).toMatchSnapshot()
    })

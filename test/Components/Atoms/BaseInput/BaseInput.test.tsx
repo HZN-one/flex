@@ -6,14 +6,14 @@
  import '@testing-library/jest-dom'
 
  
- import { BaseInput } from 'Components'
+ import { FATextField } from 'Components'
  
  import { render } from '@testing-library/react'
  
- describe('BaseInput', () => {
+ describe('FATextField', () => {
    it('should match snapshot', () => {
      const { container } = render(
-       <BaseInput testID="input-example"  />
+       <FATextField testID="input-example"  />
      )
      expect(container).toMatchSnapshot()
    })

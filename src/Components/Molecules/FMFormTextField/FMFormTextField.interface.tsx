@@ -1,7 +1,7 @@
 import { ReactChild } from 'react';
 import { FormControlProps } from '@mui/material';
 
-export interface IFormInput extends FormControlProps {
+export interface IFMFormTextField extends FormControlProps {
   testID: `input-${string}`
   type?: 'text' | 'select' | string
   label?: string

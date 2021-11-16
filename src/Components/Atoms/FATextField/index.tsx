@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { FormControl, TextField, InputAdornment, FormHelperText } from '@mui/material';
 import { IInput } from './Input.interface';
 
-export const BaseInput = memo((props: IInput) => {
+export const FATextField = memo((props: IInput) => {
   const {  type, variant, testID, value, label, adornment, adornmentPosition, helperText, onChange, ...materialUIProps } = props;
 
   const AddAdornment = () => {
@@ -44,4 +44,4 @@ export const BaseInput = memo((props: IInput) => {
   );
 });
 
-BaseInput.displayName = 'BaseInput';
+FATextField.displayName = 'FATextField';
