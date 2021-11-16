@@ -26,7 +26,7 @@ export const Default = (props: IFormInput) => (
 
 export const SelectType = Template.bind({});
 SelectType.args = {
-  label: 'labelsdawdwdwadawds',
+  label: 'label',
   type: 'select',
   adornment: 'kg',
   adornmentPosition: 'start'
