@@ -1,10 +1,10 @@
 import React, { memo } from 'react';
 import { FormControl, Select, InputAdornment, FormHelperText } from '@mui/material';
 import MenuItem from '@mui/material/MenuItem';
-import { ISelectInput } from './Select.interfaces';
+import { ISelectInput } from './FMSelect.interfaces';
 import { InputLabel } from '@mui/material';
 
-export const SelectFlex = memo((props: ISelectInput) => {
+export const FMSelect = memo((props: ISelectInput) => {
   const { MenuItems, size, testID, value, label, adornment, adornmentPosition, helperText, onChange, ...materialUIProps } = props;
 
   const AddAdornment = () => {
@@ -45,4 +45,4 @@ export const SelectFlex = memo((props: ISelectInput) => {
   );
 });
 
-SelectFlex.displayName = 'Select';
+FMSelect.displayName = 'FMSelect';

@@ -1,11 +1,11 @@
 import React from "react";
 import { ComponentStory } from '@storybook/react';
-import { SelectFlex } from '../../../../src/Components'
-import { ISelectInput } from "../../../../src/Components/Atoms/Select/Select.interfaces";
+import { FMSelect } from '../../../../src/Components'
+import { ISelectInput } from "../../../../src/Components/Molecules/FMSelect/FMSelect.interfaces";
 
 const story = {
   title: "Select",
-  component: SelectFlex,
+  component: FMSelect,
   argTypes: {
     placeholder: { control: "text" },
   },
@@ -16,11 +16,11 @@ const story = {
 
 export default story;
 
-const Template: ComponentStory<typeof SelectFlex> = (props: ISelectInput) => <SelectFlex {...props} />;
+const Template: ComponentStory<typeof FMSelect> = (props: ISelectInput) => <FMSelect {...props} />;
 
 export const Default = (props: ISelectInput) => (
   <>
-    <SelectFlex {...props} />
+    <FMSelect {...props} />
   </>
 );
 
