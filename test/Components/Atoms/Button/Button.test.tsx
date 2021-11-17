@@ -5,21 +5,21 @@
 import * as React from 'react'
 import '@testing-library/jest-dom'
 
-import { ButtonPegasus } from '../../../../src/Components'
+import { FAButton } from '../../../../src/Components'
 
 import { fireEvent, render } from '@testing-library/react'
 
-describe('ButtonPegasus', () => {
+describe('FAButton', () => {
   it('should match snapshot', () => {
     const { container } = render(
-      <ButtonPegasus testID="button-example">Test</ButtonPegasus>
+      <FAButton testID="button-example">Test</FAButton>
     )
     expect(container).toMatchSnapshot()
   })
 
   it('should render with children prop', () => {
     const { getByText } = render(
-      <ButtonPegasus testID="button-example">hey</ButtonPegasus>
+      <FAButton testID="button-example">hey</FAButton>
     )
 
     expect(getByText('hey')).toBeTruthy()
@@ -28,14 +28,14 @@ describe('ButtonPegasus', () => {
   it('should increment number on click', () => {
     let number = 1
     const { getByTestId } = render(
-      <ButtonPegasus
+      <FAButton
         testID="button-example"
         onClick={() => {
           number += 1
         }}
       >
-        ButtonPegasus
-      </ButtonPegasus>
+        FAButton
+      </FAButton>
     )
 
     fireEvent.click(getByTestId('button-example'), new MouseEvent('click'))
@@ -45,9 +45,9 @@ describe('ButtonPegasus', () => {
 
   it('should render gradient blue button by gradientColor property', () => {
     const { getByTestId } = render(
-      <ButtonPegasus testID="button-example" gradientColor="blue">
-        ButtonPegasus
-      </ButtonPegasus>
+      <FAButton testID="button-example" gradientColor="blue">
+        FAButton
+      </FAButton>
     )
 
     expect(getByTestId('button-example')).toHaveStyle(
@@ -57,9 +57,9 @@ describe('ButtonPegasus', () => {
 
   it('should render gradient red button by gradientColor property', () => {
     const { getByTestId } = render(
-      <ButtonPegasus testID="button-example" gradientColor="red">
-        ButtonPegasus
-      </ButtonPegasus>
+      <FAButton testID="button-example" gradientColor="red">
+        FAButton
+      </FAButton>
     )
 
     expect(getByTestId('button-example')).toHaveStyle(

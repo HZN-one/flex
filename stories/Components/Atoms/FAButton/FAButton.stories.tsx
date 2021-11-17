@@ -1,11 +1,11 @@
 import React from "react";
 import { ComponentStory } from '@storybook/react';
-import {ButtonPegasus} from '../../../../src/Components/Atoms/Button'
-import {IButton} from '../../../../src/Components/Atoms/Button/Button.interface'
+import {FAButton} from '../../../../src/Components/Atoms/FAButton'
+import {IButton} from '../../../../src/Components/Atoms/FAButton/Button.interface'
 
 const story = {
   title: "Button",
-  component: ButtonPegasus,
+  component: FAButton,
   argTypes: {
     children: { control: "text" },
   },
@@ -16,11 +16,11 @@ const story = {
 
 export default story;
 
-const Template: ComponentStory<typeof ButtonPegasus> = (props: IButton) => <ButtonPegasus {...props} />;
+const Template: ComponentStory<typeof FAButton> = (props: IButton) => <FAButton {...props} />;
 
 export const Default = (props: IButton) => (
   <>
-    <ButtonPegasus {...props}>{props.children}</ButtonPegasus>
+    <FAButton {...props}>{props.children}</FAButton>
   </>
 );
 

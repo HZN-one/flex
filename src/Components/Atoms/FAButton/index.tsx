@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   },
 });
 
-export const ButtonPegasus = memo((props: IButton) => {
+export const FAButton = memo((props: IButton) => {
   const { testID, gradientColor, ...materialUIProps } = props;
   const classes = useStyles({ gradientColor });
   return (
