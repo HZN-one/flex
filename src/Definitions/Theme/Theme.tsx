@@ -16,6 +16,27 @@ export const baseTheme = createTheme({
       dark: '#262626',
       light: '#737373',
     },
+    info: {
+      main: '#3A82F6',
+      dark: '#629BF8',
+      light: '#629BF8',
+    },
+    error: {
+      main: '#F43F5E',
+      dark: '#BE123C',
+      light: '#FB7185',
+    },
+    warning: {
+      main: '#F59E0B',
+      dark: '#B45309',
+      light: '#FBBF24',
+    },
+    success: {
+      main: '#22C55E',
+      dark: '#15803D',
+      light: '#34D399',
+    },
+    
     // Used by `getContrastText()` to maximize the contrast between
     // the background and the text.
     contrastThreshold: 3,
