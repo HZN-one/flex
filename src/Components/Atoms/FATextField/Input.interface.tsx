@@ -1,7 +1,7 @@
 import { ReactChild } from 'react';
-import { FormControlProps } from '@mui/material';
+import { StandardTextFieldProps } from '@mui/material';
 
-export interface IInput extends FormControlProps {
+export interface IInput extends StandardTextFieldProps {
   testID: `input-${string}`
   label?: string
   adornment?: ReactChild
@@ -9,6 +9,7 @@ export interface IInput extends FormControlProps {
   helperText?: string
   onChange?: any
   value?: any
-  variant?: 'standard' | 'outlined' | 'filled'
+  variants?: 'standard' | 'outlined' | 'filled'
   type?: string
+  disabled?: boolean
 }

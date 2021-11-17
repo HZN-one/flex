@@ -45,10 +45,10 @@ WithHelperText.args = {
 
 export const Outlined = Template.bind({});
 Outlined.args = {
-  variant: 'outlined'
+  variants: 'outlined'
 };
 
 export const Filled = Template.bind({});
 Filled.args = {
-  variant: 'filled'
+  variants: 'filled'
 };

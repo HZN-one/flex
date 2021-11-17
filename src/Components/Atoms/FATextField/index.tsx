@@ -3,7 +3,7 @@ import { FormControl, TextField, InputAdornment, FormHelperText } from '@mui/mat
 import { IInput } from './Input.interface';
 
 export const FATextField = memo((props: IInput) => {
-  const {  type, variant, testID, value, label, adornment, adornmentPosition, helperText, onChange, ...materialUIProps } = props;
+  const {  disabled, variants, type, testID, value, label, adornment, adornmentPosition, helperText, onChange, ...materialUIProps } = props;
 
   const AddAdornment = () => {
     return (
@@ -22,11 +22,13 @@ export const FATextField = memo((props: IInput) => {
   ) : null;
 
   return (
-    <FormControl {...materialUIProps} data-testid={testID}>
+    <FormControl data-testid={testID}>
         <TextField
+          {...materialUIProps}
+          disabled={disabled}
           type={type}
           label={label}
-          variant={variant || 'standard'}
+          variant={variants}
           onChange={onChange}
           value={value}
           InputProps={{

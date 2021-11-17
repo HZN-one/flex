@@ -1,7 +1,7 @@
 import { ReactChild } from 'react';
-import { FormControlProps } from '@mui/material';
+import { OutlinedTextFieldProps } from '@mui/material';
 
-export interface IFMFormTextField extends FormControlProps {
+export interface IFMFormTextField extends OutlinedTextFieldProps {
   testID: `input-${string}`
   type?: 'text' | 'select' | string
   label?: string

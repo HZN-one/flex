@@ -20,7 +20,7 @@ const Template: ComponentStory<typeof SelectFlex> = (props: ISelectInput) => <Se
 
 export const Default = (props: ISelectInput) => (
   <>
-    <SelectFlex {...props}>{props.children}</SelectFlex>
+    <SelectFlex {...props} />
   </>
 );
 

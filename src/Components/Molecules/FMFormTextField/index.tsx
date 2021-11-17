@@ -33,10 +33,11 @@ export const FMFormTextField = memo((props: IFMFormTextField) => {
       <FormControl
         sx={{ mt: 1, minWidth: '70%' }}
         data-testid={testID}
-        {...materialUIProps}
-      >
+        disabled
+        >
         <InputLabel htmlFor="component-error">{type == 'date' || type == 'time' ? 'pohon' : ''}</InputLabel>
         <TextField
+          {...materialUIProps}
           type={type}
           placeholder={placeholder}
           variant='outlined'
