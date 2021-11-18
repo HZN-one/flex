@@ -22,7 +22,8 @@
     "build-storybook": "build-storybook",
     "lint": "eslint src/Components/Atoms/Button/*",
     "prettier": "prettier --write .",
-    "preinstall": "npx npm-force-resolutions"
+    "preinstall": "npx npm-force-resolutions",
+    "chromatic": "npx chromatic --project-token=d57c1950c7f4"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -76,6 +77,7 @@
     "ansi-regex": "^5.0.1",
     "babel-loader": "^8.2.3",
     "babel-plugin-module-resolver": "^4.1.0",
+    "chromatic": "^6.0.6",
     "dts-cli": "^0.19.4",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-typescript": "^15.0.0",

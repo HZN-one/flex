@@ -10,7 +10,7 @@ const story = {
     children: { control: "text" },
   },
   args: {
-    children: "Welcome!",
+    children: "Naruto!",
   },
 };
 

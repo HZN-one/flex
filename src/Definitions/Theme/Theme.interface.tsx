@@ -1,6 +1,6 @@
-import { HTMLAttributes, ReactChild } from 'react';
+import { ReactChild } from 'react';
 
-export interface Props extends HTMLAttributes<HTMLDivElement> {
+export interface ThemeProps {
   children?: ReactChild
   replaceTheme?: {
     typography?: {
