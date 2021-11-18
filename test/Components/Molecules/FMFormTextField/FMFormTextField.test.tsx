@@ -13,7 +13,7 @@
  describe('FMFormTextField', () => {
    it('should match snapshot', () => {
      const { container } = render(
-       <FMFormTextField testID="input-example"  />
+       <FMFormTextField variant="outlined" testID="input-example"  />
      )
      expect(container).toMatchSnapshot()
    })

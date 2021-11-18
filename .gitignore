@@ -10,6 +10,9 @@ stories2/
 # Example folder
 example/
 
+#storybook-static
+storybook-static/
+
 # Logs
 logs
 *.log
