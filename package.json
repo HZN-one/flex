@@ -22,8 +22,8 @@
     "build-storybook": "build-storybook",
     "lint": "eslint src/Components/Atoms/Button/*",
     "prettier": "prettier --write .",
-    "preinstall": "npx npm-force-resolutions",
-    "chromatic": "npx chromatic --project-token=d57c1950c7f4"
+    "chromatic": "npx chromatic --project-token=d57c1950c7f4",
+    "preinstall": "npx npm-force-resolutions"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -47,7 +47,15 @@
     }
   ],
   "resolutions": {
-    "ansi-html": "https://registry.npmjs.org/ansi-html-community/-/ansi-html-community-0.0.8.tgz"
+    "ansi-html": "https://registry.npmjs.org/ansi-html-community/-/ansi-html-community-0.0.8.tgz",
+    "immer": "^9.0.6",
+    "glob-parent": ">=5.1.2",
+    "trim": ">=0.0.3",
+    "browserslist": ">=4.16.5",
+    "node-fetch": ">=2.6.1 ",
+    "ansi-regex": "^5.0.1",
+    "prismjs": ">=1.21.0",
+    "highlight.js": ">=10.4.1"
   },
   "dependencies": {
     "@emotion/react": "^11.5.0",
@@ -59,9 +67,9 @@
     "@babel/core": "^7.16.0",
     "@size-limit/preset-small-lib": "^6.0.4",
     "@storybook/addon-actions": "^6.3.12",
-    "@storybook/addon-docs": "^6.1.21",
-    "@storybook/addon-essentials": "^6.1.21",
-    "@storybook/addon-info": "^4.1.18",
+    "@storybook/addon-docs": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-info": "^5.3.21",
     "@storybook/addon-links": "^6.3.12",
     "@storybook/addons": "^6.3.12",
     "@storybook/react": "^6.3.12",
