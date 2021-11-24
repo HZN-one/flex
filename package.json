@@ -22,8 +22,7 @@
     "build-storybook": "build-storybook",
     "lint": "eslint src/Components/Atoms/Button/*",
     "prettier": "prettier --write .",
-    "chromatic": "npx chromatic --project-token=d57c1950c7f4",
-    "preinstall": "npx npm-force-resolutions"
+    "chromatic": "npx chromatic --project-token=d57c1950c7f4"
   },
   "peerDependencies": {
     "react": ">=16"
