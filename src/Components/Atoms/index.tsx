@@ -4,3 +4,8 @@ export * from '../Molecules/FMFormTextField';
 export * from './FATextField';
 export * from '../Molecules/FMSelect';
 export * from './FACheckbox';
+export * from './FASwitch';
+export * from './FARadio';
+export * from './FABasePagination';
+export * from './FAChip';
+export * from './FATooltip';

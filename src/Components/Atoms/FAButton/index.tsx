@@ -29,3 +29,5 @@ export const FAButton = memo((props: IButton) => {
     />
   );
 });
+
+FAButton.displayName = 'FAButton';
