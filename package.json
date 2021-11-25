@@ -20,7 +20,7 @@
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint src/Components/Atoms/Button/*",
+    "lint": "eslint src/*",
     "prettier": "prettier --write .",
     "chromatic": "npx chromatic --project-token=d57c1950c7f4"
   },
