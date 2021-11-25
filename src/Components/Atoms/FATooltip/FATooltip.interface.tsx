@@ -1,7 +1,5 @@
 import { TooltipProps } from '@mui/material';
-import { HTMLAttributes, ReactChild } from 'react';
 
-export interface IFATooltip extends HTMLAttributes<HTMLDivElement> {
-  children: ReactChild
+export interface IFATooltip extends TooltipProps {
   testID: `tooltip-${string}`
 }
