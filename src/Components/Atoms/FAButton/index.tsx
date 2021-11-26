@@ -1,7 +1,7 @@
-import React, { memo } from 'react';
-import { Button } from '@mui/material';
-import { makeStyles } from '@mui/styles';
-import { IButton, IStyle } from './Button.interface';
+import React, { memo } from 'react'
+import { Button } from '@mui/material'
+import { makeStyles } from '@mui/styles'
+import { IButton, IStyle } from './Button.interface'
 
 const useStyles = makeStyles({
   gradientColor: {
@@ -15,19 +15,19 @@ const useStyles = makeStyles({
         : '0 3px 5px 2px rgba(33, 203, 243, .3)',
     color: 'white',
   },
-});
+})
 
 export const FAButton = memo((props: IButton) => {
-  const { testID, gradientColor, ...materialUIProps } = props;
-  const classes = useStyles({ gradientColor });
+  const { testID, gradientColor, ...materialUIProps } = props
+  const classes = useStyles({ gradientColor })
   return (
     <Button
       data-testid={testID}
-      variant='contained'
+      variant="contained"
       className={gradientColor ? classes.gradientColor : ''}
       {...materialUIProps}
     />
-  );
-});
+  )
+})
 
-FAButton.displayName = 'FAButton';
+FAButton.displayName = 'FAButton'

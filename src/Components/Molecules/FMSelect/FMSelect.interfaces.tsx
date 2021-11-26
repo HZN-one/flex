@@ -1,5 +1,5 @@
-import { ReactChild } from 'react';
-import { SelectProps } from '@mui/material';
+import { ReactChild } from 'react'
+import { SelectProps } from '@mui/material'
 
 export interface ISelectInput extends SelectProps {
   testID: `select-${string}`
@@ -8,7 +8,7 @@ export interface ISelectInput extends SelectProps {
   helperText?: string
   onChange?: any
   value?: any
-  MenuItems?: { value: any, name: any }[]
+  MenuItems?: { value: any; name: any }[]
   adornment?: ReactChild
   adornmentPosition?: 'start' | 'end'
   placeholder?: string

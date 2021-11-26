@@ -1,4 +1,4 @@
-import { CheckboxProps } from '@mui/material';
+import { CheckboxProps } from '@mui/material'
 
 export interface IFACheckbox extends CheckboxProps {
   label?: string

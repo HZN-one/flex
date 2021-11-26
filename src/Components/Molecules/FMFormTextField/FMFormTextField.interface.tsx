@@ -1,5 +1,5 @@
-import { ReactChild } from 'react';
-import { OutlinedTextFieldProps } from '@mui/material';
+import { ReactChild } from 'react'
+import { OutlinedTextFieldProps } from '@mui/material'
 
 export interface IFMFormTextField extends OutlinedTextFieldProps {
   testID: `input-${string}`
@@ -8,7 +8,7 @@ export interface IFMFormTextField extends OutlinedTextFieldProps {
   helperText?: string
   onChange?: any
   value?: any
-  MenuItems?: { value: any, name: any }[]
+  MenuItems?: { value: any; name: any }[]
   adornment?: ReactChild
   adornmentPosition?: 'start' | 'end'
   placeholder?: string

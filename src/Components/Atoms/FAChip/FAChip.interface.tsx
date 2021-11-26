@@ -1,4 +1,4 @@
-import { ChipProps } from '@mui/material';
+import { ChipProps } from '@mui/material'
 
 export interface IFAChip extends ChipProps {
   label?: string
