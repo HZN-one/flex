@@ -9,7 +9,6 @@ import { IFMSearch } from "./FMSearch.interfaces";
 
 export const FMSearch = memo((props: IFMSearch) => {
   const {
-    disabled,
     variants,
     type,
     testID,
@@ -24,7 +23,6 @@ export const FMSearch = memo((props: IFMSearch) => {
     <FormControl data-testid={testID}>
       <TextField
         {...materialUIProps}
-        disabled={disabled}
         type={type}
         label={label}
         variant={variants}

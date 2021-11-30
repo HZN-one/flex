@@ -10,5 +10,4 @@ export interface IFMSearch extends StandardTextFieldProps {
   value?: any;
   variants?: "standard" | "outlined" | "filled";
   type?: string;
-  disabled?: boolean;
 }
