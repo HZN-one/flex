@@ -1,14 +1,14 @@
-import React, { memo } from 'react'
-import FormControl from '@mui/material/FormControl'
+import React, { memo } from "react";
+import FormControl from "@mui/material/FormControl";
 import {
   FormHelperText,
   InputAdornment,
   InputLabel,
   Typography,
-} from '@mui/material'
-import TextField from '@mui/material/TextField'
+} from "@mui/material";
+import TextField from "@mui/material/TextField";
 
-import { IFMFormTextField } from './FMFormTextField.interface'
+import { IFMFormTextField } from "./FMFormTextField.interface";
 
 export const FMFormTextField = memo((props: IFMFormTextField) => {
   const {
@@ -23,37 +23,37 @@ export const FMFormTextField = memo((props: IFMFormTextField) => {
     value,
     MenuItems,
     ...materialUIProps
-  } = props
+  } = props;
 
   const AddAdornment = () => {
-    return <InputAdornment position="start">{adornment}</InputAdornment>
-  }
+    return <InputAdornment position="start">{adornment}</InputAdornment>;
+  };
 
   const startAdornment =
-    adornment && adornmentPosition === 'start' ? AddAdornment() : null
+    adornment && adornmentPosition === "start" ? AddAdornment() : null;
 
   const endAdornment =
-    adornment && adornmentPosition === 'end' ? AddAdornment() : null
+    adornment && adornmentPosition === "end" ? AddAdornment() : null;
 
   return (
     <div
       style={{
-        display: 'flex',
-        alignItems: 'center',
-        width: '100%',
-        justifyContent: 'space-between',
+        display: "flex",
+        alignItems: "center",
+        width: "100%",
+        justifyContent: "space-between",
       }}
     >
       <Typography variant="subtitle1" gutterBottom component="div">
         {label}
       </Typography>
       <FormControl
-        sx={{ mt: 1, minWidth: '70%' }}
+        sx={{ mt: 1, minWidth: "70%" }}
         data-testid={testID}
         disabled
       >
         <InputLabel htmlFor="component-error">
-          {type == 'date' || type == 'time' ? 'pohon' : ''}
+          {type == "date" || type == "time" ? "pohon" : ""}
         </InputLabel>
         <TextField
           {...materialUIProps}
@@ -73,7 +73,7 @@ export const FMFormTextField = memo((props: IFMFormTextField) => {
         </FormHelperText>
       </FormControl>
     </div>
-  )
-})
+  );
+});
 
-FMFormTextField.displayName = 'FMFormTextField'
+FMFormTextField.displayName = "FMFormTextField";

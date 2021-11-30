@@ -1,11 +1,11 @@
-import React, { memo } from 'react'
+import React, { memo } from "react";
 import {
   FormControl,
   TextField,
   InputAdornment,
   FormHelperText,
-} from '@mui/material'
-import { IInput } from './Input.interface'
+} from "@mui/material";
+import { IInput } from "./Input.interface";
 
 export const FATextField = memo((props: IInput) => {
   const {
@@ -20,17 +20,17 @@ export const FATextField = memo((props: IInput) => {
     helperText,
     onChange,
     ...materialUIProps
-  } = props
+  } = props;
 
   const AddAdornment = () => {
-    return <InputAdornment position="start">{adornment}</InputAdornment>
-  }
+    return <InputAdornment position="start">{adornment}</InputAdornment>;
+  };
 
   const startAdornment =
-    adornment && adornmentPosition === 'start' ? AddAdornment() : null
+    adornment && adornmentPosition === "start" ? AddAdornment() : null;
 
   const endAdornment =
-    adornment && adornmentPosition === 'end' ? AddAdornment() : null
+    adornment && adornmentPosition === "end" ? AddAdornment() : null;
 
   return (
     <FormControl data-testid={testID}>
@@ -52,7 +52,7 @@ export const FATextField = memo((props: IInput) => {
         {helperText}
       </FormHelperText>
     </FormControl>
-  )
-})
+  );
+});
 
-FATextField.displayName = 'FATextField'
+FATextField.displayName = "FATextField";

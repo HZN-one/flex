@@ -1,9 +1,9 @@
-import React, { memo } from 'react'
-import { Chip, Avatar } from '@mui/material'
-import { IFAChip } from './FAChip.interface'
+import React, { memo } from "react";
+import { Chip, Avatar } from "@mui/material";
+import { IFAChip } from "./FAChip.interface";
 
 export const FAChip = memo((props: IFAChip) => {
-  const { testID, label, avatar, deleteable, ...materialUIProps } = props
+  const { testID, label, avatar, deleteable, ...materialUIProps } = props;
   return (
     <Chip
       avatar={avatar && <Avatar>{avatar}</Avatar>}
@@ -28,7 +28,7 @@ export const FAChip = memo((props: IFAChip) => {
       }
       {...materialUIProps}
     />
-  )
-})
+  );
+});
 
-FAChip.displayName = 'FAChip'
+FAChip.displayName = "FAChip";

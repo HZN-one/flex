@@ -1,13 +1,13 @@
-import React, { memo } from 'react'
+import React, { memo } from "react";
 import {
   FormControl,
   Select,
   InputAdornment,
   FormHelperText,
-} from '@mui/material'
-import MenuItem from '@mui/material/MenuItem'
-import { ISelectInput } from './FMSelect.interfaces'
-import { InputLabel } from '@mui/material'
+} from "@mui/material";
+import MenuItem from "@mui/material/MenuItem";
+import { ISelectInput } from "./FMSelect.interfaces";
+import { InputLabel } from "@mui/material";
 
 export const FMSelect = memo((props: ISelectInput) => {
   const {
@@ -21,14 +21,14 @@ export const FMSelect = memo((props: ISelectInput) => {
     helperText,
     onChange,
     ...materialUIProps
-  } = props
+  } = props;
 
   const AddAdornment = () => {
-    return <InputAdornment position="start">{adornment}</InputAdornment>
-  }
+    return <InputAdornment position="start">{adornment}</InputAdornment>;
+  };
 
   const startAdornment =
-    adornment && adornmentPosition === 'start' ? AddAdornment() : null
+    adornment && adornmentPosition === "start" ? AddAdornment() : null;
 
   return (
     <FormControl sx={{ minWidth: 130 }} variant="outlined" data-testid={testID}>
@@ -36,7 +36,7 @@ export const FMSelect = memo((props: ISelectInput) => {
       <Select
         {...materialUIProps}
         label={label}
-        size={size || 'medium'}
+        size={size || "medium"}
         id="demo-simple-select-standard"
         startAdornment={startAdornment}
       >
@@ -49,7 +49,7 @@ export const FMSelect = memo((props: ISelectInput) => {
                 <MenuItem key={i} value={oneMenuItem.value}>
                   {oneMenuItem.name}
                 </MenuItem>
-              )
+              );
             })
           : null}
       </Select>
@@ -57,7 +57,7 @@ export const FMSelect = memo((props: ISelectInput) => {
         {helperText}
       </FormHelperText>
     </FormControl>
-  )
-})
+  );
+});
 
-FMSelect.displayName = 'FMSelect'
+FMSelect.displayName = "FMSelect";

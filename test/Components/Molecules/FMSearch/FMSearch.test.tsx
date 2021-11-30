@@ -4,15 +4,14 @@
 
 import * as React from 'react'
 import '@testing-library/jest-dom'
-import { FMFormTextField } from 'Components'
+
+import { FMSearch } from '../../../../src/Components'
 
 import { render } from '@testing-library/react'
 
-describe('FMFormTextField', () => {
+describe('FMSearch', () => {
   it('should match snapshot', () => {
-    const { container } = render(
-      <FMFormTextField variant="outlined" testID="input-example" />
-    )
+    const { container } = render(<FMSearch testID="search-example" />)
     expect(container).toMatchSnapshot()
   })
 })

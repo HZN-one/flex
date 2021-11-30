@@ -1,6 +1,6 @@
-import { PaginationProps } from '@mui/material'
+import { PaginationProps } from "@mui/material";
 
 export interface IFABasePagination extends PaginationProps {
-  label?: string
-  testID: `pagination-${string}`
+  label?: string;
+  testID: `pagination-${string}`;
 }

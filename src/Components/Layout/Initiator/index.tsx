@@ -1,11 +1,11 @@
-import React, { FC } from 'react'
+import React, { FC } from "react";
 
-import { ThemeProvider } from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
-import { Props } from './Initiator.interface'
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import { Props } from "./Initiator.interface";
 // import { createTheme } from '@mui/material/styles';
 
-import { baseTheme } from '../../..'
+import { baseTheme } from "../../..";
 
 export const ThemeProviderWrapper: FC<Props> = function (props) {
   // const primaryPallete = replaceTheme?.palette?.primary;
@@ -22,5 +22,5 @@ export const ThemeProviderWrapper: FC<Props> = function (props) {
       <CssBaseline />
       {props.children}
     </ThemeProvider>
-  )
-}
+  );
+};

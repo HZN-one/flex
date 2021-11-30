@@ -1,11 +1,10 @@
 import { ReactChild } from "react";
 import { StandardTextFieldProps } from "@mui/material";
 
-export interface IInput extends StandardTextFieldProps {
-  testID: `input-${string}`;
+export interface IFMSearch extends StandardTextFieldProps {
+  testID: `search-${string}`;
   label?: string;
   adornment?: ReactChild;
-  adornmentPosition?: "start" | "end";
   helperText?: string;
   onChange?: any;
   value?: any;
