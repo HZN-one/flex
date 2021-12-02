@@ -1,6 +1,6 @@
 import { IconProps } from "@mui/material";
 
 export interface IIcon extends IconProps {
-  iconName?: string;
+  iconName: string;
   testID: `icon-${string}`;
 }

@@ -1,7 +1,8 @@
 import React from "react";
-import { ComponentStory } from '@storybook/react';
-import {FASwitch} from '../../../../src/Components/Atoms/FASwitch'
-import {IFASwitch} from '../../../../src/Components/Atoms/FASwitch/FASwitch.interface'
+import { ComponentStory } from "@storybook/react";
+import { FASwitch, FAFormControlLabel } from "../../../../src/Components/Atoms";
+import { IFASwitch } from "../../../../src/Components/Atoms/FASwitch/FASwitch.interface";
+import { IFAFormControlLabel } from "@Atoms/FAFormControlLabel/FAFormControlLabel.interfaces";
 
 const story = {
   title: "Switch",
@@ -16,7 +17,9 @@ const story = {
 
 export default story;
 
-const Template: ComponentStory<typeof FASwitch> = (props: IFASwitch) => <FASwitch {...props} />;
+const Template: ComponentStory<typeof FASwitch> = (props: IFASwitch) => (
+  <FASwitch {...props} />
+);
 
 export const Default = (props: IFASwitch) => (
   <>
@@ -24,12 +27,18 @@ export const Default = (props: IFASwitch) => (
   </>
 );
 
-export const WithLabel = Template.bind({});
-WithLabel.args = {
-  label: 'Label'
-};
+export const WithLabel = (props: IFAFormControlLabel) => (
+  <>
+    <FAFormControlLabel
+      {...props}
+      label="test"
+      testID="ControlLabel-test"
+      control={<FASwitch testID="switch-test" />}
+    />
+  </>
+);
 
 export const Small = Template.bind({});
 Small.args = {
-  size: 'small'
+  size: "small",
 };

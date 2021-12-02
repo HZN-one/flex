@@ -5,14 +5,14 @@
  import * as React from 'react'
  import '@testing-library/jest-dom'
  
- import { FABasePagination } from '../../../../src/Components'
+ import { FAPagination } from '../../../../src/Components'
  
  import { fireEvent, render } from '@testing-library/react'
  
- describe('FABasePagination', () => {
+ describe('FAPagination', () => {
    it('should match snapshot', () => {
      const { container } = render(
-       <FABasePagination testID="pagination-example" />
+       <FAPagination testID="pagination-example" />
      )
      expect(container).toMatchSnapshot()
    })

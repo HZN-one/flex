@@ -5,7 +5,7 @@ import { IFATooltip } from "./FATooltip.interface";
 export const FATooltip = memo((props: IFATooltip) => {
   const { testID, title, ...materialUIProps } = props;
   return (
-    <Tooltip data-testid={testID} title="add" {...materialUIProps}>
+    <Tooltip data-testid={testID} title={title} {...materialUIProps}>
       {props.children}
     </Tooltip>
   );

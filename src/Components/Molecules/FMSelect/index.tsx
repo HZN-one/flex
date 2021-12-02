@@ -1,10 +1,5 @@
 import React, { memo } from "react";
-import {
-  FormControl,
-  Select,
-  InputAdornment,
-  FormHelperText,
-} from "@mui/material";
+import { Select, InputAdornment } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
 import { ISelectInput } from "./FMSelect.interfaces";
 import { InputLabel } from "@mui/material";
@@ -31,7 +26,7 @@ export const FMSelect = memo((props: ISelectInput) => {
     adornment && adornmentPosition === "start" ? AddAdornment() : null;
 
   return (
-    <FormControl sx={{ minWidth: 130 }} variant="outlined" data-testid={testID}>
+    <>
       <InputLabel id="demo-customized-select-label">{label}</InputLabel>
       <Select
         {...materialUIProps}
@@ -53,10 +48,7 @@ export const FMSelect = memo((props: ISelectInput) => {
             })
           : null}
       </Select>
-      <FormHelperText id="component-error-text" error>
-        {helperText}
-      </FormHelperText>
-    </FormControl>
+    </>
   );
 });
 

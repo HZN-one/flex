@@ -1,24 +1,14 @@
 import React, { memo } from "react";
-import {
-  FormControl,
-  TextField,
-  InputAdornment,
-  FormHelperText,
-} from "@mui/material";
+import { TextField, InputAdornment } from "@mui/material";
 import { IInput } from "./Input.interface";
 
 export const FATextField = memo((props: IInput) => {
   const {
-    disabled,
-    variants,
-    type,
+    name,
     testID,
-    value,
-    label,
     adornment,
     adornmentPosition,
-    helperText,
-    onChange,
+    variants,
     ...materialUIProps
   } = props;
 
@@ -33,25 +23,17 @@ export const FATextField = memo((props: IInput) => {
     adornment && adornmentPosition === "end" ? AddAdornment() : null;
 
   return (
-    <FormControl data-testid={testID}>
-      <TextField
-        {...materialUIProps}
-        disabled={disabled}
-        type={type}
-        label={label}
-        variant={variants}
-        onChange={onChange}
-        value={value}
-        InputProps={{
-          startAdornment: startAdornment,
-          endAdornment: endAdornment,
-        }}
-        aria-describedby="component-error-text"
-      />
-      <FormHelperText id="component-error-text" error>
-        {helperText}
-      </FormHelperText>
-    </FormControl>
+    <TextField
+      data-testid={testID}
+      name={name}
+      variant={variants}
+      {...materialUIProps}
+      InputProps={{
+        startAdornment: startAdornment,
+        endAdornment: endAdornment,
+      }}
+      aria-describedby="component-error-text"
+    />
   );
 });
 

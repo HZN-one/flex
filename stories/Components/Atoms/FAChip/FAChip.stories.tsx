@@ -1,7 +1,5 @@
 import React from "react";
-import { ComponentStory } from '@storybook/react';
-import {FAChip} from '../../../../src/Components/Atoms/FAChip'
-import {IFAChip} from '../../../../src/Components/Atoms/FAChip/FAChip.interface'
+import { FAChip } from "../../../../src/Components/Atoms/FAChip";
 
 const story = {
   title: "Chip",
@@ -16,28 +14,64 @@ const story = {
 
 export default story;
 
-const Template: ComponentStory<typeof FAChip> = (props: IFAChip) => (
+export const Default = () => (
   <>
-    <FAChip color='default' {...props} sx={{marginRight: '1vw', marginBottom: '1vh'}} />
-    <FAChip color='primary' {...props} sx={{marginRight: '1vw', marginBottom: '1vh'}} />
-    <FAChip color='secondary' {...props} sx={{marginRight: '1vw', marginBottom: '1vh'}} />
+    <FAChip
+      testID="chip-test"
+      color="default"
+      // {...props}
+      label="test"
+      sx={{ marginRight: "1vw", marginBottom: "1vh" }}
+    />
+    <FAChip
+      testID="chip-test"
+      color="primary"
+      label="test"
+      onDelete={console.log("ew")}
+      // {...props}
+      sx={{ marginRight: "1vw", marginBottom: "1vh" }}
+    />
   </>
 );
 
-export const Default = Template.bind({});
-Default.args = {
-  label: 'Label'
-};
+export const WithAvatar = () => (
+  <>
+    <FAChip
+      testID="chip-test"
+      color="default"
+      // {...props}
+      label="test"
+      avatar={<>s</>}
+      sx={{ marginRight: "1vw", marginBottom: "1vh" }}
+    />
+    <FAChip
+      testID="chip-test"
+      color="primary"
+      label="test"
+      // {...props}
+      avatar={<>s</>}
+      sx={{ marginRight: "1vw", marginBottom: "1vh" }}
+    />
+  </>
+);
 
-export const WithAvatar = Template.bind({});
-WithAvatar.args = {
-  label: 'Label',
-  avatar: 'F'
-};
-
-export const Deleteable = Template.bind({});
-Deleteable.args = {
-  label: 'Label',
-  avatar: 'F',
-  deleteable: true
-};
+export const Deleteable = () => (
+  <>
+    <FAChip
+      testID="chip-test"
+      color="default"
+      // {...props}
+      label="test"
+      sx={{ marginRight: "1vw", marginBottom: "1vh" }}
+      onDelete={() => console.log("delete")}
+    />
+    <FAChip
+      testID="chip-test"
+      color="primary"
+      label="test"
+      onDelete={() => console.log("delete")}
+      // {...props}
+      sx={{ marginRight: "1vw", marginBottom: "1vh" }}
+    />
+  </>
+);
