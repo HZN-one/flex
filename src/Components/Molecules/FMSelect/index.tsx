@@ -1,39 +1,24 @@
 import React, { memo } from "react";
-import { Select, InputAdornment } from "@mui/material";
+import { InputAdornment } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
 import { ISelectInput } from "./FMSelect.interfaces";
-import { InputLabel } from "@mui/material";
+import { FATextField } from "../../Atoms";
 
 export const FMSelect = memo((props: ISelectInput) => {
-  const {
-    MenuItems,
-    size,
-    testID,
-    value,
-    label,
-    adornment,
-    adornmentPosition,
-    helperText,
-    onChange,
-    ...materialUIProps
-  } = props;
-
-  const AddAdornment = () => {
-    return <InputAdornment position="start">{adornment}</InputAdornment>;
-  };
-
-  const startAdornment =
-    adornment && adornmentPosition === "start" ? AddAdornment() : null;
+  const { MenuItems, size, label, adornment } = props;
 
   return (
     <>
-      <InputLabel id="demo-customized-select-label">{label}</InputLabel>
-      <Select
-        {...materialUIProps}
+      <FATextField
+        testID="input-select"
         label={label}
         size={size || "medium"}
         id="demo-simple-select-standard"
-        startAdornment={startAdornment}
+        select
+        adornmentPosition="start"
+        adornment={
+          <InputAdornment position="start">{adornment}</InputAdornment>
+        }
       >
         <MenuItem value="">
           <em>None</em>
@@ -47,7 +32,7 @@ export const FMSelect = memo((props: ISelectInput) => {
               );
             })
           : null}
-      </Select>
+      </FATextField>
     </>
   );
 });

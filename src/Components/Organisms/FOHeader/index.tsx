@@ -1,7 +1,8 @@
 import React, { memo } from "react";
-import { AppBar, Toolbar, Button, IconButton, Typography } from "@mui/material";
+import { AppBar, Toolbar } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IFOHeader } from "./FOHeader.interfaces";
+import { FAButton, FATypography, FAIconButton } from "../../Atoms";
 
 export const FOHeader = memo((props: IFOHeader) => {
   const {
@@ -50,7 +51,8 @@ export const FOHeader = memo((props: IFOHeader) => {
           </>
         ) : (
           <>
-            <IconButton
+            <FAIconButton
+              testID="icon-button-header"
               size="large"
               edge="start"
               color="inherit"
@@ -58,29 +60,35 @@ export const FOHeader = memo((props: IFOHeader) => {
               sx={{ mr: 2 }}
             >
               <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            </FAIconButton>
+            <FATypography
+              testID="typography-header"
+              variant="h6"
+              sx={{ flexGrow: 1 }}
+            >
               {title}
-            </Typography>
+            </FATypography>
           </>
         )}
         {logout && (
           <>
-            <Button
+            <FAButton
+              testID="button-login"
               variant="text"
               color="inherit"
               sx={{ mr: 2 }}
               onClick={handleLogin}
             >
               Login
-            </Button>
-            <Button
+            </FAButton>
+            <FAButton
+              testID="button-register"
               variant="contained"
               color="secondary"
               onClick={handleRegister}
             >
               Register
-            </Button>
+            </FAButton>
           </>
         )}
       </Toolbar>

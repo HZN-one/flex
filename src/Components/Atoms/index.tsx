@@ -1,4 +1,5 @@
 export * from "./FAButton";
+export * from "./FAIconButton";
 export * from "./Icon";
 export * from "../Molecules/FMFormTextField";
 export * from "./FATextField";
@@ -11,3 +12,4 @@ export * from "./FAChip";
 export * from "./FATooltip";
 export * from "./FAFormControlLabel";
 export * from "./FAFormControl";
+export * from "./FATypography";

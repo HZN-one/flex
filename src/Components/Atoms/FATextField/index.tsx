@@ -32,7 +32,6 @@ export const FATextField = memo((props: IInput) => {
         startAdornment: startAdornment,
         endAdornment: endAdornment,
       }}
-      aria-describedby="component-error-text"
     />
   );
 });
