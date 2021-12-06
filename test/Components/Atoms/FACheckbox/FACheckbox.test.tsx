@@ -7,7 +7,7 @@ import "@testing-library/jest-dom";
 
 import { FACheckbox } from "Components";
 
-import { fireEvent, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
 describe("FACheckbox", () => {
   it("should match snapshot", () => {

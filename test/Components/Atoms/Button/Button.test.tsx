@@ -45,9 +45,7 @@ describe("FAButton", () => {
 
   it("should render gradient blue button by gradientColor property", () => {
     const { getByTestId } = render(
-      <FAButton testID="button-example" gradientColor="blue">
-        FAButton
-      </FAButton>
+      <FAButton testID="button-example">FAButton</FAButton>
     );
 
     expect(getByTestId("button-example")).toHaveStyle(
@@ -57,9 +55,7 @@ describe("FAButton", () => {
 
   it("should render gradient red button by gradientColor property", () => {
     const { getByTestId } = render(
-      <FAButton testID="button-example" gradientColor="red">
-        FAButton
-      </FAButton>
+      <FAButton testID="button-example">FAButton</FAButton>
     );
 
     expect(getByTestId("button-example")).toHaveStyle(
