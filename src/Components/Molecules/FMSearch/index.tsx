@@ -33,7 +33,6 @@ export const FMSearch = memo((props: IFMSearch) => {
           </InputAdornment>
         ),
       }}
-      aria-describedby="component-error-text"
     />
   );
 });
