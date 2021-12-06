@@ -11,6 +11,7 @@ export const FOHeader = memo((props: IFOHeader) => {
     handleLogin,
     handleRegister,
     logout,
+    search,
     ...materialUIProps
   } = props;
 
