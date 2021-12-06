@@ -1,7 +1,7 @@
 import React from "react";
-import { ComponentStory } from '@storybook/react';
-import {FAButton} from '../../../../src/Components/Atoms/FAButton'
-import {IButton} from '../../../../src/Components/Atoms/FAButton/Button.interface'
+import { ComponentStory } from "@storybook/react";
+import { FAButton } from "../../../../src/Components/Atoms/FAButton";
+import { IButton } from "../../../../src/Components/Atoms/FAButton/Button.interface";
 
 const story = {
   title: "Button",
@@ -16,7 +16,9 @@ const story = {
 
 export default story;
 
-const Template: ComponentStory<typeof FAButton> = (props: IButton) => <FAButton {...props} />;
+const Template: ComponentStory<typeof FAButton> = (props: IButton) => (
+  <FAButton {...props} />
+);
 
 export const Default = (props: IButton) => (
   <>
@@ -26,15 +28,15 @@ export const Default = (props: IButton) => (
 
 export const Contained = Template.bind({});
 Contained.args = {
-  variant: 'contained',
+  variant: "contained",
 };
 
 export const Outlined = Template.bind({});
 Outlined.args = {
-  variant: 'outlined',
+  variant: "outlined",
 };
 
 export const Text = Template.bind({});
 Text.args = {
-  variant: 'text',
+  variant: "text",
 };
