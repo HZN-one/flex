@@ -1,9 +1,6 @@
 import React from "react";
-import {
-  FACheckbox,
-  FAFormControlLabel,
-} from "../../../../src/Components/Atoms";
-import { IFACheckbox } from "../../../../src/Components/Atoms/FACheckbox/FACheckbox.interface";
+import { FACheckbox, FAFormControlLabel } from "Components/Atoms";
+import { IFACheckbox } from "Components/Atoms/FACheckbox/FACheckbox.interface";
 import { IFAFormControlLabel } from "@Atoms/FAFormControlLabel/FAFormControlLabel.interfaces";
 
 const story = {

@@ -1,5 +1,5 @@
 import React from "react";
-import { FAChip } from "../../../../src/Components/Atoms/FAChip";
+import { FAChip } from "Components/Atoms/FAChip";
 
 const story = {
   title: "Chip",
