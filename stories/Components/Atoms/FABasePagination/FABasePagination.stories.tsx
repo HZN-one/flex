@@ -1,6 +1,6 @@
 import React from "react";
-import { FAPagination } from "../../../../src/Components/Atoms/FAPagination";
-import { IFAPagination } from "../../../../src/Components/Atoms/FAPagination/FAPagination.interface";
+import { FAPagination } from "Components/Atoms/FAPagination";
+import { IFAPagination } from "Components/Atoms/FAPagination/FAPagination.interface";
 
 const story = {
   title: "Pagination",

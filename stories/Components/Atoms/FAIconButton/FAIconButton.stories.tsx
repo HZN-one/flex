@@ -1,6 +1,6 @@
 import React from "react";
-import { FAIconButton } from "../../../../src/Components/Atoms/FAIconButton";
-import { IIconButton } from "../../../../src/Components/Atoms/FAIconButton/FAIconButton.interface";
+import { FAIconButton } from "Components/Atoms/FAIconButton";
+import { IIconButton } from "Components/Atoms/FAIconButton/FAIconButton.interface";
 import MenuIcon from "@mui/icons-material/Menu";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AlarmIcon from "@mui/icons-material/Alarm";

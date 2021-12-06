@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
-import { FASwitch, FAFormControlLabel } from "../../../../src/Components/Atoms";
-import { IFASwitch } from "../../../../src/Components/Atoms/FASwitch/FASwitch.interface";
+import { FASwitch, FAFormControlLabel } from "Components/Atoms";
+import { IFASwitch } from "Components/Atoms/FASwitch/FASwitch.interface";
 import { IFAFormControlLabel } from "@Atoms/FAFormControlLabel/FAFormControlLabel.interfaces";
 
 const story = {

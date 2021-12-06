@@ -1,6 +1,6 @@
 import React from "react";
-import { FOHeader } from "../../../../src/Components";
-import { IFOHeader } from "../../../../src/Components/Organisms/FOHeader/FOHeader.interfaces";
+import { FOHeader } from "Components";
+import { IFOHeader } from "Components/Organisms/FOHeader/FOHeader.interfaces";
 
 const story = {
   title: "Header",

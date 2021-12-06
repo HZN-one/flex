@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
-import { FATextField, FAFormControl } from "../../../../src/Components";
-import { IInput } from "../../../../src/Components/Atoms/FATextField/Input.interface";
+import { FATextField, FAFormControl } from "Components";
+import { IInput } from "Components/Atoms/FATextField/Input.interface";
 import { IFAFormControl } from "@Atoms/FAFormControl/FAFormControl.interfaces";
 
 const story = {
