@@ -1,7 +1,8 @@
 import React from "react";
-import { ComponentStory } from '@storybook/react';
-import {FATextField} from '../../../../src/Components'
-import { IInput } from "../../../../src/Components/Atoms/FATextField/Input.interface"
+import { ComponentStory } from "@storybook/react";
+import { FATextField, FAFormControl } from "Components";
+import { IInput } from "Components/Atoms/FATextField/Input.interface";
+import { IFAFormControl } from "@Atoms/FAFormControl/FAFormControl.interfaces";
 
 const story = {
   title: "Text Field",
@@ -16,7 +17,17 @@ const story = {
 
 export default story;
 
-const Template: ComponentStory<typeof FATextField> = (props: IInput) => <FATextField {...props} />;
+const Template: ComponentStory<typeof FATextField> = (props: IInput) => (
+  <FATextField {...props} />
+);
+
+const Template2: ComponentStory<typeof FAFormControl> = (
+  props: IFAFormControl
+) => (
+  <FAFormControl {...props}>
+    <FATextField testID="input-test" label="test"></FATextField>
+  </FAFormControl>
+);
 
 export const Default = (props: IInput) => (
   <>
@@ -26,29 +37,33 @@ export const Default = (props: IInput) => (
 
 export const WithAdornment = Template.bind({});
 WithAdornment.args = {
-  adornment: 'kg',
-  adornmentPosition: 'start'
+  adornment: "kg",
+  adornmentPosition: "start",
 };
 
 export const WithAdornmentAtEnd = Template.bind({});
 WithAdornmentAtEnd.args = {
-  adornment: 'kg',
-  adornmentPosition: 'end'
+  adornment: "kg",
+  adornmentPosition: "end",
 };
 
-export const WithHelperText = Template.bind({});
+export const WithHelperText = Template2.bind({});
 WithHelperText.args = {
-  adornment: 'kg',
-  adornmentPosition: 'end',
-  helperText: `it can't be empty`
+  helperText: `it can't be empty`,
 };
 
-export const Outlined = Template.bind({});
-Outlined.args = {
-  variants: 'outlined'
-};
+export const Outlined = (props: IInput) => (
+  <>
+    <FATextField variants="outlined" {...props}>
+      {props.children}
+    </FATextField>
+  </>
+);
 
-export const Filled = Template.bind({});
-Filled.args = {
-  variants: 'filled'
-};
+export const Filled = (props: IInput) => (
+  <>
+    <FATextField variants="filled" {...props}>
+      {props.children}
+    </FATextField>
+  </>
+);

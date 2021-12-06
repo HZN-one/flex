@@ -1,7 +1,7 @@
 import React from "react";
-import { ComponentStory } from '@storybook/react';
-import {FACheckbox} from '../../../../src/Components/Atoms/FACheckbox'
-import {IFACheckbox} from '../../../../src/Components/Atoms/FACheckbox/FACheckbox.interface'
+import { FACheckbox, FAFormControlLabel } from "Components/Atoms";
+import { IFACheckbox } from "Components/Atoms/FACheckbox/FACheckbox.interface";
+import { IFAFormControlLabel } from "@Atoms/FAFormControlLabel/FAFormControlLabel.interfaces";
 
 const story = {
   title: "Checkbox",
@@ -16,15 +16,19 @@ const story = {
 
 export default story;
 
-const Template: ComponentStory<typeof FACheckbox> = (props: IFACheckbox) => <FACheckbox {...props} />;
-
 export const Default = (props: IFACheckbox) => (
   <>
     <FACheckbox {...props} />
   </>
 );
 
-export const WithLabel = Template.bind({});
-WithLabel.args = {
-  label: 'Label'
-};
+export const WithLabel = (props: IFAFormControlLabel) => (
+  <>
+    <FAFormControlLabel
+      {...props}
+      label="test"
+      testID="ControlLabel-test"
+      control={<FACheckbox testID="checkbox-test" />}
+    />
+  </>
+);
