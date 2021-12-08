@@ -53,14 +53,16 @@
     "browserslist": ">=4.16.5",
     "ansi-regex": "^5.0.1",
     "prismjs": ">=1.21.0",
-    "highlight.js": ">=10.4.1"
+    "highlight.js": ">=10.4.1",
+    "node-fetch": ">=2.6.1"
   },
   "dependencies": {
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.2.0",
     "@mui/material": "^5.1.0",
     "@mui/styles": "^5.1.0",
-    "@mui/icons-material": "^5.2.0"
+    "react-router-dom": "^6.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
