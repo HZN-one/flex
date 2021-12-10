@@ -114,10 +114,13 @@ export const FOSideBar = memo((props: IFOSideBar) => {
           props.children
         )}
         {footer && (
-          <div style={{ flexGrow: 1, width: "100%" }}>
-            <Divider />
-            {footer}
-          </div>
+          <>
+            <div style={{ flexGrow: 1 }}></div>
+            <div style={{ width: "100%" }}>
+              <Divider />
+              {footer}
+            </div>
+          </>
         )}
       </Drawer>
     </>
