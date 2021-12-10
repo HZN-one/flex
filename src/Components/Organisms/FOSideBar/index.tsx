@@ -7,7 +7,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import List from "@mui/material/List";
 
 import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
+import { FAIconButton } from "Components";
 
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -34,8 +34,6 @@ const useStyles = makeStyles({
   },
 });
 
-const drawerWidth = 240;
-
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
@@ -46,7 +44,8 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 export const FOSideBar = memo((props: IFOSideBar) => {
-  const { testID, open, color, footer, sections, ...materialUIProps } = props;
+  const { testID, open, color, footer, sections, sx, ...materialUIProps } =
+    props;
   const classes = useStyles({ color });
   const theme = useTheme();
   const [opens, setOpen] = React.useState(open);
@@ -67,30 +66,20 @@ export const FOSideBar = memo((props: IFOSideBar) => {
       <Drawer
         className={color ? classes.color : ""}
         data-testid={testID}
-        sx={{
-          backgroundColor: "#888",
-          color: "#888",
-          position: "relative",
-          width: drawerWidth,
-          flexShrink: 0,
-          "& .MuiDrawer-paper": {
-            width: drawerWidth,
-            boxSizing: "border-box",
-          },
-        }}
+        sx={sx}
         variant="persistent"
         anchor="left"
         open={opens}
         {...materialUIProps}
       >
         <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
+          <FAIconButton testID="icon-button-drawer" onClick={handleDrawerClose}>
             {theme.direction === "ltr" ? (
               <ChevronLeftIcon />
             ) : (
               <ChevronRightIcon />
             )}
-          </IconButton>
+          </FAIconButton>
         </DrawerHeader>
         <Divider />
         {sections && sections.length > 0 ? (
@@ -125,7 +114,7 @@ export const FOSideBar = memo((props: IFOSideBar) => {
           props.children
         )}
         {footer && (
-          <div style={{ position: "absolute", bottom: 0, width: "100%" }}>
+          <div style={{ flexGrow: 1, width: "100%" }}>
             <Divider />
             {footer}
           </div>
