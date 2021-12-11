@@ -5,13 +5,15 @@
 import * as React from "react";
 import "@testing-library/jest-dom";
 
-import { FAPagination } from "Components";
+import { FAPagination } from "../../../../src/Components";
 
-import { fireEvent, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
 describe("FAPagination", () => {
   it("should match snapshot", () => {
-    const { container } = render(<FAPagination testID="pagination-example" />);
+    const { container } = render(
+      <FAPagination count={10} testID="pagination-example" />
+    );
     expect(container).toMatchSnapshot();
   });
 });

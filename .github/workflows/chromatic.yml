@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # 👈 Required to retrieve git history
       - run: npm install
          # 👇 Adds Chromatic as a step in the workflow
       - name: Publish to Chromatic

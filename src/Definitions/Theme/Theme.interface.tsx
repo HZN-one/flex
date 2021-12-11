@@ -1,6 +1,7 @@
 import { ReactChild } from "react";
+import { ThemeOptions } from "@mui/material";
 
-export interface ThemeProps {
+export interface ThemeProps extends ThemeOptions {
   children?: ReactChild;
   replaceTheme?: {
     typography?: {
