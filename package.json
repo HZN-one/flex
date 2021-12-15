@@ -62,6 +62,7 @@
     "@mui/icons-material": "^5.2.0",
     "@mui/material": "^5.1.0",
     "@mui/styles": "^5.1.0",
+    "next-i18next": "^10.0.1",
     "react-router-dom": "^6.0.2"
   },
   "devDependencies": {

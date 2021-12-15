@@ -7,12 +7,8 @@ import { IIcon } from "./Icon.interface";
 // <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Two+Tone"/>;
 
 export const IconPegasus = memo((props: IIcon) => {
-  const { testID, iconName, ...materialUIProps } = props;
-  return (
-    <Icon data-testid={testID} {...materialUIProps}>
-      {iconName}
-    </Icon>
-  );
+  const { testID, ...materialUIProps } = props;
+  return <Icon data-testid={testID} {...materialUIProps} />;
 });
 
 IconPegasus.displayName = "IconPegasus";
