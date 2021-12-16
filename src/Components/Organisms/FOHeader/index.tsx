@@ -11,9 +11,12 @@ export const FOHeader = memo((props: IFOHeader) => {
     title,
     handleLogin,
     handleRegister,
+    handleMenuIcon,
+    handleSearch,
     logout,
     menuIcon,
     search,
+    leftSide,
     rightSide,
     ...materialUIProps
   } = props;
@@ -30,7 +33,8 @@ export const FOHeader = memo((props: IFOHeader) => {
                 edge="start"
                 color="inherit"
                 aria-label="menu"
-                sx={{ mr: 2 }}
+                sx={{ mr: 1 }}
+                onClick={handleMenuIcon}
               >
                 <MenuIcon />
               </FAIconButton>
@@ -53,10 +57,13 @@ export const FOHeader = memo((props: IFOHeader) => {
                 bgcolor: "#fff",
                 borderRadius: "8px",
                 flexGrow: 0.2,
+                mr: 3,
               }}
               testID="search-header"
+              onChange={handleSearch}
             ></FMSearch>
           )}
+          {leftSide}
         </Box>
 
         {logout && !rightSide ? (

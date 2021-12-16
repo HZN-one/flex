@@ -7,8 +7,11 @@ export interface IFOHeader extends AppBarProps {
   logout?: boolean;
   logo?: ReactChild;
   handleLogin?: () => void;
+  handleSearch?: () => void;
+  handleMenuIcon?: () => void;
   handleRegister?: () => void;
   title?: string;
   menuIcon?: boolean;
   rightSide?: ReactChild;
+  leftSide?: ReactChild;
 }
