@@ -2,7 +2,6 @@ import React, { useEffect, memo } from "react";
 // import Router from "next/router";
 import IDashboardSidebarProps from "./FOTMSSidebar.interfaces";
 
-import Router from "next/router";
 import { Box, Icon, Collapse } from "@mui/material";
 
 import { styled, useTheme } from "@mui/material/styles";
@@ -190,7 +189,7 @@ export const FOTMSSidebar = memo((props: IDashboardSidebarProps) => {
                     disablePadding
                     sx={{ pl: 4.5 }}
                     key={i}
-                    onClick={() => Router.push(oneChildren.path)}
+                    onClick={() => window.location.assign(oneChildren.path)}
                   >
                     <ListItem button sx={{ pl: 4 }}>
                       <ListItemText primary={oneChildren.title} />
@@ -203,7 +202,7 @@ export const FOTMSSidebar = memo((props: IDashboardSidebarProps) => {
             <ListItem
               button
               key={index}
-              onClick={() => Router.push(oneSection.path)}
+              onClick={() => window.location.assign(oneSection.path)}
             >
               <Box sx={pathMarkerSidebar(oneSection.path)}>
                 <ListItemIcon>
@@ -218,7 +217,7 @@ export const FOTMSSidebar = memo((props: IDashboardSidebarProps) => {
       <Box sx={{ flexGrow: 1 }}></Box>
       <Divider />
       <List>
-        <ListItem button onClick={() => Router.push("/settings")}>
+        <ListItem button onClick={() => window.location.assign("/settings")}>
           <Box sx={pathMarkerSidebar("/settings")}>
             <ListItemIcon>
               <SettingsIcon />
@@ -226,7 +225,7 @@ export const FOTMSSidebar = memo((props: IDashboardSidebarProps) => {
             <ListItemText primary={"Settings"} />
           </Box>
         </ListItem>
-        <ListItem onClick={() => Router.push("/launchpad")}>
+        <ListItem onClick={() => window.location.assign("/launchpad")}>
           <Button
             fullWidth
             sx={{

@@ -5,7 +5,7 @@ import { IFARadio } from "Components/Atoms/FARadio/FARadio.interface";
 import { IFAFormControlLabel } from "@Atoms/FAFormControlLabel/FAFormControlLabel.interfaces";
 
 const story = {
-  title: "Radio",
+  title: "Atom/Radio",
   component: FARadio,
   argTypes: {
     children: { control: "text" },

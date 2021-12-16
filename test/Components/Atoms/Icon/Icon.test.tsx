@@ -12,7 +12,7 @@ import { fireEvent, render } from "@testing-library/react";
 describe("IconPegasus", () => {
   it("should match snapshot", () => {
     const { container } = render(
-      <IconPegasus testID="icon-example" iconName="add_circle" />
+      <IconPegasus testID="icon-example">add_circle</IconPegasus>
     );
     expect(container).toMatchSnapshot();
   });
@@ -25,7 +25,6 @@ describe("IconPegasus", () => {
         onClick={() => {
           number += 1;
         }}
-        iconName="add_circle"
       />
     );
 
@@ -36,7 +35,7 @@ describe("IconPegasus", () => {
 
   it("should render android icon by iconName property", () => {
     const { getByTestId } = render(
-      <IconPegasus testID="icon-example" iconName="android" />
+      <IconPegasus testID="icon-example">android</IconPegasus>
     );
 
     expect(`${getByTestId("icon-example").innerHTML}`).toMatch("android");

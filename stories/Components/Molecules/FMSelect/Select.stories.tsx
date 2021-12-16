@@ -5,7 +5,7 @@ import { ISelectInput } from "Components/Molecules/FMSelect/FMSelect.interfaces"
 import { IFAFormControl } from "@Atoms/FAFormControl/FAFormControl.interfaces";
 
 const story = {
-  title: "Select",
+  title: "Molecules/Select",
   component: FMSelect,
   argTypes: {
     placeholder: { control: "text" },

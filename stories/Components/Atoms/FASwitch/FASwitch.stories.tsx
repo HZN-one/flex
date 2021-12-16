@@ -5,7 +5,7 @@ import { IFASwitch } from "Components/Atoms/FASwitch/FASwitch.interface";
 import { IFAFormControlLabel } from "@Atoms/FAFormControlLabel/FAFormControlLabel.interfaces";
 
 const story = {
-  title: "Switch",
+  title: "Atom/Switch",
   component: FASwitch,
   argTypes: {
     children: { control: "text" },

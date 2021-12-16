@@ -1,7 +1,6 @@
 import React, { memo } from "react";
 import { FAButton } from "@Atoms";
 import { AppBar, Toolbar } from "@mui/material";
-import Router from "next/router";
 import IDashboardNavbarProps from "./Header.interface";
 import { useTranslation } from "next-i18next";
 
@@ -11,11 +10,11 @@ export const FOTMSRegisterNavbar = memo((props: IDashboardNavbarProps) => {
   const { t } = useTranslation();
 
   const handleLogin = () => {
-    Router.push("/login");
+    window.location.assign("/login");
   };
 
   const handleRegister = () => {
-    Router.push("/register");
+    window.location.assign("/register");
   };
 
   return (

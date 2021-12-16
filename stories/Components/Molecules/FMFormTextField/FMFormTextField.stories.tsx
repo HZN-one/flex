@@ -4,7 +4,7 @@ import { FMFormTextField } from "Components";
 import { IFMFormTextField } from "Components/Molecules/FMFormTextField/FMFormTextField.interface";
 
 const story = {
-  title: "Form Input",
+  title: "Molecules/Form Input",
   component: FMFormTextField,
   argTypes: {
     placeholder: { control: "text" },
