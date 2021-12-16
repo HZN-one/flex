@@ -7,7 +7,7 @@ import AlarmIcon from "@mui/icons-material/Alarm";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 const story = {
-  title: "Icon Button",
+  title: "Atom/Icon Button",
   component: FAIconButton,
   argTypes: {
     children: { control: "text" },

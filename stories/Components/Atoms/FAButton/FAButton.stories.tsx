@@ -4,7 +4,7 @@ import { FAButton } from "Components/Atoms/FAButton";
 import { IButton } from "Components/Atoms/FAButton/Button.interface";
 
 const story = {
-  title: "Button",
+  title: "Atom/Button",
   component: FAButton,
   argTypes: {
     children: { control: "text" },

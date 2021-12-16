@@ -3,7 +3,7 @@ import { FAPagination } from "Components/Atoms/FAPagination";
 import { IFAPagination } from "Components/Atoms/FAPagination/FAPagination.interface";
 
 const story = {
-  title: "Pagination",
+  title: "Atom/Pagination",
   component: FAPagination,
 };
 

@@ -53,6 +53,7 @@ const AppBar = styled(MuiAppBar, {
     }),
   }),
 }));
+
 export const FOTMSDashboardNavbar: FC<IDashboardNavbarProps> = ({
   testID,
   popUp,

@@ -5,7 +5,7 @@ import { IFMSearch } from "Components/Molecules/FMSearch/FMSearch.interfaces";
 import { IFAFormControl } from "@Atoms/FAFormControl/FAFormControl.interfaces";
 
 const story = {
-  title: "Search",
+  title: "Molecules/Search",
   component: FMSearch,
   argTypes: {
     placeholder: { control: "text" },
