@@ -99,7 +99,7 @@ export const WithSearch = (props: IFOHeader) => (
 
 export const CustomRightSide = (props: IFOHeader) => (
   <>
-    <FOHeader rightSide={<button>custom button</button>} {...props}>
+    <FOHeader endAdornment={<button>custom button</button>} {...props}>
       {props.children}
     </FOHeader>
   </>

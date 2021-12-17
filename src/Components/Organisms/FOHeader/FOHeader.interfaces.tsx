@@ -12,6 +12,6 @@ export interface IFOHeader extends AppBarProps {
   handleRegister?: () => void;
   title?: string;
   menuIcon?: boolean;
-  rightSide?: ReactChild;
-  leftSide?: ReactChild;
+  endAdornment?: ReactChild;
+  startAdornment?: ReactChild;
 }

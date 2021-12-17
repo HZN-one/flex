@@ -99,6 +99,7 @@
     "jest.config.js",
     "next-i18next.config.js",
     "**/test/jest.setup.ts",
-    "**/test/mocks.ts"
+    "**/test/mocks.ts",
+    "i18n.js"
   ]
 }

@@ -1,4 +1,7 @@
 import React, { memo } from "react";
+import "/Users/pranoto/Documents/work/flex/i18n.js";
+import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import { AppBar, Toolbar, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IFOHeader } from "./FOHeader.interfaces";
@@ -16,13 +19,15 @@ export const FOHeader = memo((props: IFOHeader) => {
     logout,
     menuIcon,
     search,
-    leftSide,
-    rightSide,
+    startAdornment,
+    endAdornment,
     ...materialUIProps
   } = props;
 
+  const { t } = useTranslation();
+
   return (
-    <AppBar position="static" {...materialUIProps}>
+    <AppBar position="static" color="inherit" {...materialUIProps}>
       <Toolbar>
         <Box style={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
           {menuIcon && (
@@ -63,10 +68,10 @@ export const FOHeader = memo((props: IFOHeader) => {
               onChange={handleSearch}
             ></FMSearch>
           )}
-          {leftSide}
+          {startAdornment}
         </Box>
 
-        {logout && !rightSide ? (
+        {logout && !endAdornment ? (
           <>
             <FAButton
               testID="button-login"
@@ -75,19 +80,19 @@ export const FOHeader = memo((props: IFOHeader) => {
               sx={{ mr: 2 }}
               onClick={handleLogin}
             >
-              Sign In
+              {t("description.signIn")}
             </FAButton>
             <FAButton
               testID="button-register"
               variant="contained"
-              color="secondary"
+              color="primary"
               onClick={handleRegister}
             >
-              Register
+              {t("description.register")}
             </FAButton>
           </>
         ) : (
-          <>{rightSide}</>
+          <>{endAdornment}</>
         )}
       </Toolbar>
     </AppBar>
