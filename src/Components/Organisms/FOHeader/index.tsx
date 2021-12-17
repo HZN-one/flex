@@ -1,7 +1,6 @@
 import React, { memo } from "react";
 import "/Users/pranoto/Documents/work/flex/i18n.js";
 import { useTranslation } from "react-i18next";
-// import { useTranslation } from "react-i18next";
 import { AppBar, Toolbar, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IFOHeader } from "./FOHeader.interfaces";
