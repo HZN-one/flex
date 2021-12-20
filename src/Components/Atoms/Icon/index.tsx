@@ -6,9 +6,9 @@ import { IIcon } from "./Icon.interface";
 // <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 // <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Two+Tone"/>;
 
-export const IconPegasus = memo((props: IIcon) => {
+export const FAIcon = memo((props: IIcon) => {
   const { testID, ...materialUIProps } = props;
   return <Icon data-testid={testID} {...materialUIProps} />;
 });
 
-IconPegasus.displayName = "IconPegasus";
+FAIcon.displayName = "FAIcon";

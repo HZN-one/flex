@@ -5,14 +5,14 @@
 import * as React from "react";
 import "@testing-library/jest-dom";
 
-import { IconPegasus } from "Components";
+import { FAIcon } from "Components";
 
 import { fireEvent, render } from "@testing-library/react";
 
-describe("IconPegasus", () => {
+describe("FAIcon", () => {
   it("should match snapshot", () => {
     const { container } = render(
-      <IconPegasus testID="icon-example">add_circle</IconPegasus>
+      <FAIcon testID="icon-example">add_circle</FAIcon>
     );
     expect(container).toMatchSnapshot();
   });
@@ -20,7 +20,7 @@ describe("IconPegasus", () => {
   it("should increment number on click", () => {
     let number = 1;
     const { getByTestId } = render(
-      <IconPegasus
+      <FAIcon
         testID="icon-example"
         onClick={() => {
           number += 1;
@@ -35,7 +35,7 @@ describe("IconPegasus", () => {
 
   it("should render android icon by iconName property", () => {
     const { getByTestId } = render(
-      <IconPegasus testID="icon-example">android</IconPegasus>
+      <FAIcon testID="icon-example">android</FAIcon>
     );
 
     expect(`${getByTestId("icon-example").innerHTML}`).toMatch("android");
