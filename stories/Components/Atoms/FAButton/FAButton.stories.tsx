@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
-import { FAButton } from "Components/Atoms/FAButton";
-import { IButton } from "Components/Atoms/FAButton/Button.interface";
+import { FAButton } from "@Atoms/FAButton";
+import { IButton } from "@Atoms/FAButton/Button.interface";
 
 const story = {
   title: "Atom/Button",

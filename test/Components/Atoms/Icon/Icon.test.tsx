@@ -5,7 +5,7 @@
 import * as React from "react";
 import "@testing-library/jest-dom";
 
-import { FAIcon } from "@Components";
+import { FAIcon } from "@Atoms";
 
 import { fireEvent, render } from "@testing-library/react";
 

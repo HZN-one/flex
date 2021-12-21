@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 import { AppBar, Toolbar, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IFOHeader } from "./FOHeader.interfaces";
-import { FAButton, FATypography, FAIconButton } from "@Components";
-import { FMSearch } from "@Components";
+import { FAButton, FATypography, FAIconButton } from "@Atoms";
+import { FMSearch } from "@Molecules";
 
 export const FOHeader = memo((props: IFOHeader) => {
   const {

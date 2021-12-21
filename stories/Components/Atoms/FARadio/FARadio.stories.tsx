@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
-import { FARadio, FAFormControlLabel } from "Components/Atoms";
-import { IFARadio } from "Components/Atoms/FARadio/FARadio.interface";
+import { FARadio, FAFormControlLabel } from "@Atoms";
+import { IFARadio } from "@Atoms/FARadio/FARadio.interface";
 import { IFAFormControlLabel } from "@Atoms/FAFormControlLabel/FAFormControlLabel.interfaces";
 
 const story = {

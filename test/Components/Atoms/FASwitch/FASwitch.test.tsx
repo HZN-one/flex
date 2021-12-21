@@ -5,9 +5,9 @@
 import * as React from "react";
 import "@testing-library/jest-dom";
 
-import { FASwitch } from "@Components";
+import { FASwitch } from "@Atoms";
 
-import { fireEvent, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
 describe("FASwitch", () => {
   it("should match snapshot", () => {

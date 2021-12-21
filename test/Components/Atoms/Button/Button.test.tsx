@@ -5,7 +5,7 @@
 import * as React from "react";
 import "@testing-library/jest-dom";
 
-import { FAButton } from "@Components";
+import { FAButton } from "@Atoms";
 
 import { fireEvent, render } from "@testing-library/react";
 

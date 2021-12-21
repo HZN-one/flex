@@ -5,7 +5,7 @@
 import * as React from "react";
 import "@testing-library/jest-dom";
 
-import { FMSearch } from "@Components";
+import { FMSearch } from "@Molecules";
 
 import { render } from "@testing-library/react";
 

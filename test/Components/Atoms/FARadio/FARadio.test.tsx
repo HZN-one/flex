@@ -5,9 +5,9 @@
 import * as React from "react";
 import "@testing-library/jest-dom";
 
-import { FARadio } from "@Components";
+import { FARadio } from "@Atoms";
 
-import { fireEvent, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
 describe("FARadio", () => {
   it("should match snapshot", () => {

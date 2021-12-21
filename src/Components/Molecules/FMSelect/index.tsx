@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import { InputAdornment } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
 import { ISelectInput } from "./FMSelect.interfaces";
-import { FATextField } from "../../Atoms";
+import { FATextField } from "@Atoms";
 
 export const FMSelect = memo((props: ISelectInput) => {
   const { MenuItems, size, label, adornment } = props;

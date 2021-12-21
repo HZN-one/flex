@@ -1,6 +1,6 @@
 import React from "react";
-import { FATooltip } from "Components/Atoms/FATooltip";
-import { IFATooltip } from "Components/Atoms/FATooltip/FATooltip.interface";
+import { FATooltip } from "@Atoms/FATooltip";
+import { IFATooltip } from "@Atoms/FATooltip/FATooltip.interface";
 
 const story = {
   title: "Atom/Tooltip",

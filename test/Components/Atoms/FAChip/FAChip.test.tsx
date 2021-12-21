@@ -5,9 +5,9 @@
 import * as React from "react";
 import "@testing-library/jest-dom";
 
-import { FAChip } from "@Components";
+import { FAChip } from "@Atoms";
 
-import { fireEvent, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
 describe("FAChip", () => {
   it("should match snapshot", () => {
