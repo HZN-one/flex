@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
-import { FMSearch, FAFormControl } from "Components";
+import { FMSearch, FAFormControl } from "@Components";
 import { IFMSearch } from "Components/Molecules/FMSearch/FMSearch.interfaces";
 import { IFAFormControl } from "@Atoms/FAFormControl/FAFormControl.interfaces";
 

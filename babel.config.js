@@ -9,6 +9,7 @@ module.exports = {
             ],
             alias: {
                 "@Atoms": "Components/Atoms",
+                "@Src": ".",
             }
         }
     ]

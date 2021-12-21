@@ -5,7 +5,7 @@
 import * as React from "react";
 import "@testing-library/jest-dom";
 
-import { FASwitch } from "Components";
+import { FASwitch } from "@Components";
 
 import { fireEvent, render } from "@testing-library/react";
 

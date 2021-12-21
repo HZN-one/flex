@@ -7,7 +7,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import List from "@mui/material/List";
 
 import Divider from "@mui/material/Divider";
-import { FAIconButton } from "Components";
+import { FAIconButton } from "@Components";
 
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";

@@ -1,11 +1,11 @@
 import React, { memo } from "react";
-import "../../../../i18n";
+import "@src/i18n";
 import { useTranslation } from "react-i18next";
 import { AppBar, Toolbar, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IFOHeader } from "./FOHeader.interfaces";
-import { FAButton, FATypography, FAIconButton } from "Components";
-import { FMSearch } from "Components";
+import { FAButton, FATypography, FAIconButton } from "@Components";
+import { FMSearch } from "@Components";
 
 export const FOHeader = memo((props: IFOHeader) => {
   const {

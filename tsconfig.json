@@ -4,12 +4,18 @@
   "include": ["src", "types", "test", "example", "stories", "stories2"],
 
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@Atoms/*": ["Components/Atoms/*"],
+      "@Atoms/*": ["src/Components/Atoms/*"],
       "@Atoms": [
-        "Components/Atoms"
+        "src/Components/Atoms"
       ],
+      "@Components/*": ["src/Components/*"],
+      "@Components": [
+        "src/Components"
+      ],
+      "@src/*": ["./*"],
+      "@src": ["."],
     },
     "lib": ["es6", "dom"],
     "noImplicitAny": true,

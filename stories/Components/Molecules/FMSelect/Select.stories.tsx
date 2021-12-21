@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
-import { FMSelect, FAFormControl } from "Components";
+import { FMSelect, FAFormControl } from "@Components";
 import { ISelectInput } from "Components/Molecules/FMSelect/FMSelect.interfaces";
 import { IFAFormControl } from "@Atoms/FAFormControl/FAFormControl.interfaces";
 

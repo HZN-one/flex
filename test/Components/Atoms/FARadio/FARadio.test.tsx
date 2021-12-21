@@ -5,7 +5,7 @@
 import * as React from "react";
 import "@testing-library/jest-dom";
 
-import { FARadio } from "Components";
+import { FARadio } from "@Components";
 
 import { fireEvent, render } from "@testing-library/react";
 

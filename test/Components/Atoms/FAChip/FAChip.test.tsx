@@ -5,7 +5,7 @@
 import * as React from "react";
 import "@testing-library/jest-dom";
 
-import { FAChip } from "Components";
+import { FAChip } from "@Components";
 
 import { fireEvent, render } from "@testing-library/react";
 

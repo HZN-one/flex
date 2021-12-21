@@ -4,7 +4,7 @@
 
 import * as React from "react";
 import "@testing-library/jest-dom";
-import { FATextField } from "Components";
+import { FATextField } from "@Components";
 
 import { render } from "@testing-library/react";
 

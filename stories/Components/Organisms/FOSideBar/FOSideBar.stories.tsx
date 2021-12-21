@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
-import { FOSideBar } from "Components";
+import { FOSideBar } from "@Components";
 import { IFOSideBar } from "Components/Organisms/FOSideBar/FOSideBar.interfaces";
 import StarBorder from "@mui/icons-material/StarBorder";
 

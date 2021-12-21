@@ -5,7 +5,7 @@
 import * as React from "react";
 import "@testing-library/jest-dom";
 
-import { FMSelect } from "Components";
+import { FMSelect } from "@Components";
 
 import { render } from "@testing-library/react";
 
