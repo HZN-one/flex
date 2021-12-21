@@ -1,5 +1,5 @@
 import React from "react";
-import { FOHeader } from "@Components";
+import { FOHeader } from "@Organisms";
 import { IFOHeader } from "@Organisms/FOHeader/FOHeader.interfaces";
 
 const story = {

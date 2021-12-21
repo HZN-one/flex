@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { FAButton } from "@Components";
+import { FAButton } from "@Atoms";
 import { AppBar, Toolbar } from "@mui/material";
 import IDashboardNavbarProps from "./Header.interface";
 import { useTranslation } from "next-i18next";

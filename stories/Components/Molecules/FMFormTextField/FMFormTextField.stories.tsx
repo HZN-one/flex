@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
-import { FMFormTextField } from "@Components";
+import { FMFormTextField } from "@Molecules";
 import { IFMFormTextField } from "@Molecules/FMFormTextField/FMFormTextField.interface";
 
 const story = {
