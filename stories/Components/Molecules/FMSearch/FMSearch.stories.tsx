@@ -1,11 +1,12 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
-import { FMSearch, FAFormControl } from "Components";
-import { IFMSearch } from "Components/Molecules/FMSearch/FMSearch.interfaces";
+import { FMSearch } from "@Molecules";
+import { FAFormControl } from "@Atoms";
+import { IFMSearch } from "@Molecules/FMSearch/FMSearch.interfaces";
 import { IFAFormControl } from "@Atoms/FAFormControl/FAFormControl.interfaces";
 
 const story = {
-  title: "Search",
+  title: "Molecules/Search",
   component: FMSearch,
   argTypes: {
     placeholder: { control: "text" },

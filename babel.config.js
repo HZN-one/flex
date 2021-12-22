@@ -8,7 +8,8 @@ module.exports = {
                 "src/"
             ],
             alias: {
-                "@Atoms": "Components/Atoms",
+                "@Atoms": "@Atoms",
+                "@Src": ".",
             }
         }
     ]

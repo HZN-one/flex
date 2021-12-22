@@ -5,9 +5,9 @@
 import * as React from "react";
 import "@testing-library/jest-dom";
 
-import { FATooltip } from "Components";
+import { FATooltip } from "@Atoms";
 
-import { fireEvent, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
 describe("FATooltip", () => {
   it("should match snapshot", () => {

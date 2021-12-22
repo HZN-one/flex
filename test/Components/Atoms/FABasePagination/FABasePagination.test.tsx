@@ -5,7 +5,7 @@
 import * as React from "react";
 import "@testing-library/jest-dom";
 
-import { FAPagination } from "../../../../src/Components";
+import { FAPagination } from "@Atoms";
 
 import { render } from "@testing-library/react";
 

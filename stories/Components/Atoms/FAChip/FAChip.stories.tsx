@@ -1,8 +1,8 @@
 import React from "react";
-import { FAChip } from "Components/Atoms/FAChip";
+import { FAChip } from "@Atoms/FAChip";
 
 const story = {
-  title: "Chip",
+  title: "Atom/Chip",
   component: FAChip,
   argTypes: {
     children: { control: "text" },

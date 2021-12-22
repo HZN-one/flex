@@ -21,7 +21,6 @@ export const FMFormTextField = memo((props: IFMFormTextField) => {
     adornment,
     adornmentPosition,
     value,
-    MenuItems,
     ...materialUIProps
   } = props;
 
