@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useEffect } from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import makeStyles from "@mui/styles/makeStyles";
 
@@ -7,14 +7,13 @@ import CssBaseline from "@mui/material/CssBaseline";
 import List from "@mui/material/List";
 
 import Divider from "@mui/material/Divider";
-import { FAIconButton } from "@Atoms";
+import { FAIconButton, FAIcon, FALogo } from "@Atoms";
 
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import { Box } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import ListItemButton from "@mui/material/ListItemButton";
 import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
@@ -44,21 +43,59 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 export const FOSideBar = memo((props: IFOSideBar) => {
-  const { testID, open, color, footer, sections, sx, ...materialUIProps } =
-    props;
+  const {
+    testID,
+    open,
+    color,
+    footer,
+    sections,
+    sx,
+    logo,
+    ...materialUIProps
+  } = props;
+
+  const initialPath = window.location.pathname;
+  const pathMarkerSidebar = (path: string) => {
+    if (initialPath === path) {
+      return {
+        bgcolor: "#FDEBEA",
+        width: "100%",
+        display: "flex",
+        alignItems: "center",
+        borderRadius: 16,
+        padding: "0 12px",
+      };
+    }
+    return {
+      width: "100%",
+      display: "flex",
+      alignItems: "center",
+      borderRadius: 16,
+      padding: "0 12px",
+    };
+  };
+
   const classes = useStyles({ color });
   const theme = useTheme();
-  const [opens, setOpen] = React.useState(open);
+  const [isDrawerOpen, setIsDrawerOpen] = React.useState(open);
 
-  const [openChildren, setOpenChildren] = React.useState(true);
+  const [isDrawerChildOpen, setIsDrawerChildOpen] = React.useState(true);
 
   const handleClick = () => {
-    setOpenChildren(!openChildren);
+    setIsDrawerChildOpen(!isDrawerChildOpen);
   };
 
   const handleDrawerClose = () => {
-    setOpen(false);
+    setIsDrawerOpen(false);
   };
+
+  useEffect(() => {
+    if (open) {
+      setIsDrawerOpen(true);
+    } else {
+      setIsDrawerOpen(false);
+    }
+  }, [open]);
 
   return (
     <>
@@ -69,13 +106,31 @@ export const FOSideBar = memo((props: IFOSideBar) => {
         sx={sx}
         variant="persistent"
         anchor="left"
-        open={opens}
+        open={isDrawerOpen}
         {...materialUIProps}
       >
         <DrawerHeader>
-          <FAIconButton testID="icon-button-drawer" onClick={handleDrawerClose}>
+          <FAIconButton onClick={handleDrawerClose} testID="icon-button-drawer">
             {theme.direction === "ltr" ? (
-              <ChevronLeftIcon />
+              <Box
+                sx={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "flex-start",
+                }}
+              >
+                {logo ? (
+                  <>{logo}</>
+                ) : (
+                  <FALogo
+                    iconColor="#D8232A"
+                    textColor="#000"
+                    width={129}
+                    height={28}
+                    testID="logo-sidebar"
+                  ></FALogo>
+                )}
+              </Box>
             ) : (
               <ChevronRightIcon />
             )}
@@ -85,27 +140,50 @@ export const FOSideBar = memo((props: IFOSideBar) => {
         {sections && sections.length > 0 ? (
           <List>
             {sections.map((oneSection, index) =>
-              oneSection.children && oneSection.children?.length > 0 ? (
+              oneSection?.children?.length ? (
                 <>
                   <ListItem button key={index} onClick={handleClick}>
-                    <ListItemIcon>{oneSection.icon}</ListItemIcon>
-                    <ListItemText primary={oneSection.title} />
-                    {openChildren ? <ExpandLess /> : <ExpandMore />}
+                    <Box sx={pathMarkerSidebar(oneSection.path)}>
+                      <ListItemIcon>
+                        <FAIcon testID="icon-drawerChild">
+                          {oneSection.icon}
+                        </FAIcon>
+                      </ListItemIcon>
+                      <ListItemText primary={oneSection.title} />
+
+                      {isDrawerChildOpen ? <ExpandLess /> : <ExpandMore />}
+                    </Box>
                   </ListItem>
-                  <Collapse in={openChildren} timeout="auto" unmountOnExit>
+                  <Collapse in={isDrawerChildOpen} timeout="auto" unmountOnExit>
                     {oneSection.children.map((oneChildren, i) => (
-                      <List component="div" disablePadding key={i}>
-                        <ListItemButton sx={{ pl: 4 }}>
+                      <List
+                        component="div"
+                        disablePadding
+                        sx={{ pl: 7 }}
+                        key={i}
+                        onClick={() => window.location.assign(oneChildren.path)}
+                      >
+                        <ListItem button sx={{ pl: 4 }}>
                           <ListItemText primary={oneChildren.title} />
-                        </ListItemButton>
+                        </ListItem>
                       </List>
                     ))}
                   </Collapse>
                 </>
               ) : (
-                <ListItem button key={index}>
-                  <ListItemIcon>{oneSection.icon}</ListItemIcon>
-                  <ListItemText primary={oneSection.title} />
+                <ListItem
+                  button
+                  key={index}
+                  onClick={() => window.location.assign(oneSection.path)}
+                >
+                  <Box sx={pathMarkerSidebar(oneSection.path)}>
+                    <ListItemIcon>
+                      <FAIcon testID="icon-drawerChild">
+                        {oneSection.icon}
+                      </FAIcon>
+                    </ListItemIcon>
+                    <ListItemText primary={oneSection.title} />
+                  </Box>
                 </ListItem>
               )
             )}
