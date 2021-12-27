@@ -140,7 +140,7 @@ export const FOSideBar = memo((props: IFOSideBar) => {
         {sections && sections.length > 0 ? (
           <List>
             {sections.map((oneSection, index) =>
-              oneSection.children && oneSection.children?.length > 0 ? (
+              oneSection?.children?.length ? (
                 <>
                   <ListItem button key={index} onClick={handleClick}>
                     <Box sx={pathMarkerSidebar(oneSection.path)}>
