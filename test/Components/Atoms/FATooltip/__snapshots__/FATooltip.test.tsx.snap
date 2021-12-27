@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FATooltip should match snapshot 1`] = `
+<div>
+  <button
+    aria-label="test"
+    class=""
+    data-mui-internal-clone-element="true"
+    data-testid="tooltip-example"
+  >
+    test
+  </button>
+</div>
+`;

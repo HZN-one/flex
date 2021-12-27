@@ -1,9 +1,26 @@
 import { createTheme } from "@mui/material/styles";
 import { ThemeProps } from "./Theme.interface";
 
+const drawerWidth = 240;
+
 // Create a theme instance.
 export const baseTheme = (props: ThemeProps) =>
   createTheme({
+    components: {
+      MuiDrawer: props.components?.MuiDrawer || {
+        styleOverrides: {
+          root: {
+            position: "relative",
+            width: drawerWidth,
+            flexShrink: 0,
+            "& .MuiDrawer-paper": {
+              width: drawerWidth,
+              boxSizing: "border-box",
+            },
+          },
+        },
+      },
+    },
     typography: {
       fontFamily: props.replaceTheme?.typography?.fontFamily || "Inter",
       htmlFontSize: 16,

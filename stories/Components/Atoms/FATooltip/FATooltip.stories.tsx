@@ -1,9 +1,9 @@
 import React from "react";
-import { FATooltip } from "Components/Atoms/FATooltip";
-import { IFATooltip } from "Components/Atoms/FATooltip/FATooltip.interface";
+import { FATooltip } from "@Atoms/FATooltip";
+import { IFATooltip } from "@Atoms/FATooltip/FATooltip.interface";
 
 const story = {
-  title: "Tooltip",
+  title: "Atom/Tooltip",
   component: FATooltip,
   argTypes: {
     children: { control: "text" },
@@ -31,6 +31,7 @@ export const WithArrow = (props: IFATooltip) => (
       title="top"
       style={{ margin: "20px 0", padding: "5px 0", minWidth: "7%" }}
       arrow
+      title="top"
       placement="top"
     >
       <button>test</button>
@@ -41,6 +42,7 @@ export const WithArrow = (props: IFATooltip) => (
       title="right"
       style={{ margin: "20px 0", padding: "5px 0", minWidth: "7%" }}
       arrow
+      title="right"
       placement="right"
     >
       <button>test</button>
@@ -51,6 +53,7 @@ export const WithArrow = (props: IFATooltip) => (
       title="bottom"
       style={{ margin: "20px 0", padding: "5px 0", minWidth: "7%" }}
       arrow
+      title="bottom"
       placement="bottom"
     >
       <button>test</button>
@@ -61,19 +64,10 @@ export const WithArrow = (props: IFATooltip) => (
       title="left"
       style={{ margin: "20px 0", padding: "5px 0", minWidth: "7%" }}
       arrow
+      title="left"
       placement="left"
     >
       <button>test</button>
     </FATooltip>
   </div>
 );
-
-// export const WithLabel = Template.bind({});
-// WithLabel.args = {
-//   label: 'Label'
-// };
-
-// export const Small = Template.bind({});
-// Small.args = {
-//   size: 'small'
-// };

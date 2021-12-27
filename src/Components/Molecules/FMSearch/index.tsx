@@ -11,13 +11,13 @@ export const FMSearch = memo((props: IFMSearch) => {
     testID,
     value,
     label,
-    helperText,
     onChange,
     ...materialUIProps
   } = props;
 
   return (
     <TextField
+      data-testid={testID}
       {...materialUIProps}
       disabled={disabled}
       type={type}
