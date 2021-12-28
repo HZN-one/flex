@@ -6,7 +6,7 @@ import { FATypography, FAButton } from "@Atoms";
 
 import { IFMCard } from "./FMCard.interfaces";
 
-export const FMFormTextField = memo((props: IFMCard) => {
+export const FMCard = memo((props: IFMCard) => {
   const { testID, content, actions, ...materialUIProps } = props;
   return (
     <Card data-testid={testID} {...materialUIProps}>
@@ -36,4 +36,4 @@ export const FMFormTextField = memo((props: IFMCard) => {
   );
 });
 
-FMFormTextField.displayName = "FMFormTextField";
+FMCard.displayName = "FMCard";
