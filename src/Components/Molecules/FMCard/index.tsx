@@ -2,17 +2,17 @@ import React, { memo } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import { FATypography, FAButton } from "@Atoms";
+import { FATypography } from "@Atoms";
 
 import { IFMCard } from "./FMCard.interfaces";
 
 export const FMCard = memo((props: IFMCard) => {
-  const { testID, content, actions, ...materialUIProps } = props;
+  const { testID, actions, ...materialUIProps } = props;
   return (
     <Card data-testid={testID} {...materialUIProps}>
       <CardContent>
-        {content ? (
-          <>{content}</>
+        {props.children ? (
+          <>{props.children}</>
         ) : (
           <FATypography
             testID="typography-card"
@@ -23,15 +23,8 @@ export const FMCard = memo((props: IFMCard) => {
           </FATypography>
         )}
       </CardContent>
-      <CardActions>
-        {actions ? (
-          <>{actions}</>
-        ) : (
-          <FAButton testID="button-card" size="small">
-            Learn More
-          </FAButton>
-        )}
-      </CardActions>
+
+      {actions && <CardActions>{actions}</CardActions>}
     </Card>
   );
 });
