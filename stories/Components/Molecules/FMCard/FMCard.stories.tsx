@@ -25,10 +25,5 @@ export const withCustomChildren = (props: IFMCard) => (
 
 export const withAction = Template.bind({});
 withAction.args = {
-  content: (
-    <>
-      <p>this is test</p>
-    </>
-  ),
   actions: <FAButton testID="button-card">Button test</FAButton>,
 };
