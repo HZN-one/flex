@@ -14,7 +14,6 @@ const story = {
 };
 
 export default story;
-
 export const Default = (props: IFATooltip) => (
   <div style={{ width: "10%" }}>
     <FATooltip {...props} title="test">
@@ -29,9 +28,9 @@ export const WithArrow = (props: IFATooltip) => (
   >
     <FATooltip
       {...props}
+      title="top"
       style={{ margin: "20px 0", padding: "5px 0", minWidth: "7%" }}
       arrow
-      title="top"
       placement="top"
     >
       <button>test</button>
@@ -39,9 +38,9 @@ export const WithArrow = (props: IFATooltip) => (
 
     <FATooltip
       {...props}
+      title="right"
       style={{ margin: "20px 0", padding: "5px 0", minWidth: "7%" }}
       arrow
-      title="right"
       placement="right"
     >
       <button>test</button>
@@ -49,9 +48,9 @@ export const WithArrow = (props: IFATooltip) => (
 
     <FATooltip
       {...props}
+      title="bottom"
       style={{ margin: "20px 0", padding: "5px 0", minWidth: "7%" }}
       arrow
-      title="bottom"
       placement="bottom"
     >
       <button>test</button>
@@ -59,9 +58,9 @@ export const WithArrow = (props: IFATooltip) => (
 
     <FATooltip
       {...props}
+      title="left"
       style={{ margin: "20px 0", padding: "5px 0", minWidth: "7%" }}
       arrow
-      title="left"
       placement="left"
     >
       <button>test</button>

@@ -42,24 +42,4 @@ describe("FAButton", () => {
 
     expect(number).toBe(2);
   });
-
-  it("should render gradient blue button by gradientColor property", () => {
-    const { getByTestId } = render(
-      <FAButton testID="button-example">FAButton</FAButton>
-    );
-
-    expect(getByTestId("button-example")).toHaveStyle(
-      "background: linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)"
-    );
-  });
-
-  it("should render gradient red button by gradientColor property", () => {
-    const { getByTestId } = render(
-      <FAButton testID="button-example">FAButton</FAButton>
-    );
-
-    expect(getByTestId("button-example")).toHaveStyle(
-      "background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)"
-    );
-  });
 });
