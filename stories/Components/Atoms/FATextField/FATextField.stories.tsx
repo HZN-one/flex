@@ -1,11 +1,11 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
-import { FATextField, FAFormControl } from "Components";
-import { IInput } from "Components/Atoms/FATextField/Input.interface";
+import { FATextField, FAFormControl } from "@Components";
+import { IInput } from "@Atoms/FATextField/Input.interface";
 import { IFAFormControl } from "@Atoms/FAFormControl/FAFormControl.interfaces";
 
 const story = {
-  title: "Text Field",
+  title: "Atom/Text Field",
   component: FATextField,
   argTypes: {
     label: { control: "text" },

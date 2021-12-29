@@ -1,13 +1,13 @@
 import React from "react";
-import { FAIconButton } from "Components/Atoms/FAIconButton";
-import { IIconButton } from "Components/Atoms/FAIconButton/FAIconButton.interface";
+import { FAIconButton } from "@Atoms/FAIconButton";
+import { IIconButton } from "@Atoms/FAIconButton/FAIconButton.interface";
 import MenuIcon from "@mui/icons-material/Menu";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AlarmIcon from "@mui/icons-material/Alarm";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 const story = {
-  title: "Icon Button",
+  title: "Atom/Icon Button",
   component: FAIconButton,
   argTypes: {
     children: { control: "text" },

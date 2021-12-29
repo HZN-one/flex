@@ -7,9 +7,17 @@ module.exports = {
       path.resolve(__dirname, "../src"),
     ];
 
+    config.resolve.alias = {
+      "@Atoms": path.resolve(__dirname, "../src/Components/Atoms"),
+      "@Molecules": path.resolve(__dirname, "../src/Components/Molecules"),
+      "@Organisms": path.resolve(__dirname, "../src/Components/Organisms"),
+      "@src": path.resolve(__dirname, ".."),
+      "@Components": path.resolve(__dirname, "../src/Components")
+   }
+
     return config;
   },
-  stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx)'],
+  stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx|mdx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   // https://storybook.js.org/docs/react/configure/typescript#mainjs-configuration
   typescript: {

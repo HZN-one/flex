@@ -3,22 +3,35 @@
 exports[`FMSelect should match snapshot 1`] = `
 <div>
   <div
-    class="MuiFormControl-root css-4xtla9-MuiFormControl-root"
-    data-testid="select-example"
+    class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+    data-testid="input-select"
   >
-    <label
-      class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-      data-shrink="false"
-      id="demo-customized-select-label"
-    />
     <div
-      class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+      class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedStart css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root"
     >
+      <div
+        class="MuiInputAdornment-root MuiInputAdornment-positionStart MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-ittuaa-MuiInputAdornment-root"
+      >
+        <span
+          class="notranslate"
+        >
+          ​
+        </span>
+        <div
+          class="MuiInputAdornment-root MuiInputAdornment-positionStart css-ittuaa-MuiInputAdornment-root"
+        >
+          <span
+            class="notranslate"
+          >
+            ​
+          </span>
+        </div>
+      </div>
       <div
         aria-expanded="false"
         aria-haspopup="listbox"
         aria-labelledby="demo-simple-select-standard"
-        class="MuiSelect-select MuiSelect-outlined MuiOutlinedInput-input MuiInputBase-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+        class="MuiSelect-select MuiSelect-outlined MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedStart css-bf1e45-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
         id="demo-simple-select-standard"
         role="button"
         tabindex="0"
@@ -61,10 +74,6 @@ exports[`FMSelect should match snapshot 1`] = `
         </legend>
       </fieldset>
     </div>
-    <p
-      class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
-      id="component-error-text"
-    />
   </div>
 </div>
 `;

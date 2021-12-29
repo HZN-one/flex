@@ -1,11 +1,12 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
-import { FMSelect, FAFormControl } from "Components";
-import { ISelectInput } from "Components/Molecules/FMSelect/FMSelect.interfaces";
+import { FMSelect } from "@Molecules";
+import { FAFormControl } from "@Atoms";
+import { ISelectInput } from "@Molecules/FMSelect/FMSelect.interfaces";
 import { IFAFormControl } from "@Atoms/FAFormControl/FAFormControl.interfaces";
 
 const story = {
-  title: "Select",
+  title: "Molecules/Select",
   component: FMSelect,
   argTypes: {
     placeholder: { control: "text" },
