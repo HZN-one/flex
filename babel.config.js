@@ -8,8 +8,24 @@ module.exports = {
                 "src/"
             ],
             alias: {
-                "@Atoms": "@Atoms",
-                "@Src": ".",
+                "@Atoms/*": "src/Components/Atoms/*",
+                "@Atoms": 
+                    "src/Components/Atoms"
+                ,
+                "@Molecules/*": "src/Components/Molecules/*",
+                "@Molecules": 
+                    "src/Components/Molecules"
+                ,
+                "@Organisms/*": "src/Components/Organisms/*",
+                "@Organisms": 
+                    "src/Components/Organisms"
+                ,
+                "@Components/*": "src/Components/*",
+                "@Components": 
+                    "src/Components"
+                ,
+                "@src/*": "./*",
+                "@src": ".",
             }
         }
     ]
