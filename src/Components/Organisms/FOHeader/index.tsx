@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import "@src/i18n";
+import "../../../../i18n";
 import { useTranslation } from "react-i18next";
 import { AppBar, Toolbar, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
