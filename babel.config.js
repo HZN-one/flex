@@ -5,7 +5,7 @@ module.exports = {
         "module-resolver",
         {
             root: [
-                "src/"
+                "."
             ],
             alias: {
                 "@Atoms/*": "src/Components/Atoms/*",
