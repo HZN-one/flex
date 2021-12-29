@@ -17,6 +17,7 @@ export interface IFOSideBar extends DrawerProps {
   }[];
   footer?: ReactChild;
   sx?: SxProps<Theme>;
+  logo?: ReactChild;
 }
 
 export interface IStyle {

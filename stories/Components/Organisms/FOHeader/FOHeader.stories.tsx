@@ -3,7 +3,7 @@ import { FOHeader } from "@Organisms";
 import { IFOHeader } from "@Organisms/FOHeader/FOHeader.interfaces";
 
 const story = {
-  title: "Organism/Header",
+  title: "Organisms/Header",
   component: FOHeader,
 };
 

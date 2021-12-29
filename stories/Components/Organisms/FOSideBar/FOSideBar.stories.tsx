@@ -5,7 +5,7 @@ import { IFOSideBar } from "@Organisms/FOSideBar/FOSideBar.interfaces";
 import StarBorder from "@mui/icons-material/StarBorder";
 
 const story = {
-  title: "SideBar",
+  title: "Organisms/SideBar",
   component: FOSideBar,
 };
 
