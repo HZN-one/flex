@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -58,9 +58,14 @@
   "dependencies": {
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.2.0",
     "@mui/material": "^5.1.0",
     "@mui/styles": "^5.1.0",
-    "@mui/icons-material": "^5.2.0"
+    "i18next": "^21.6.2",
+    "i18next-browser-languagedetector": "^6.1.2",
+    "next-i18next": "^10.0.1",
+    "react-i18next": "^11.15.1",
+    "react-router-dom": "^6.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
