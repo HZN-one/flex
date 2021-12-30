@@ -4,7 +4,7 @@
 
 import * as React from "react";
 import "@testing-library/jest-dom";
-import { FOTMSDashboardNavbar } from "Components/TMS/Organisms/FOTMSDashboardNavbar";
+import { FOTMSDashboardNavbar } from "../../../../../src/Components/TMS/Organisms/FOTMSDashboardNavbar";
 
 import { render } from "@testing-library/react";
 

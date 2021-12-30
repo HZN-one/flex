@@ -4,7 +4,7 @@
 
 import * as React from "react";
 import "@testing-library/jest-dom";
-import { FOTMSSidebar } from "Components/TMS/Organisms";
+import { FOTMSSidebar } from "../../../../../src/Components/TMS/Organisms";
 
 import { render } from "@testing-library/react";
 
