@@ -7,6 +7,13 @@ const drawerWidth = 240;
 export const baseTheme = (props: ThemeProps) =>
   createTheme({
     components: {
+      MuiButton: {
+        styleOverrides: {
+          root: {
+            textTransform: "none",
+          },
+        },
+      },
       MuiDrawer: props.components?.MuiDrawer || {
         styleOverrides: {
           root: {
