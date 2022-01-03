@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
-import { FATextField, FAFormControl } from "@Components";
+import { FATextField, FAFormControl } from "@Atoms";
 import { IInput } from "@Atoms/FATextField/Input.interface";
 import { IFAFormControl } from "@Atoms/FAFormControl/FAFormControl.interfaces";
 
@@ -17,7 +17,7 @@ const story = {
 
 export default story;
 
-const Template: ComponentStory<typeof FATextField> = (props: IInput) => (
+const Template: ComponentStory<typeof FATextField> = props => (
   <FATextField {...props} />
 );
 
