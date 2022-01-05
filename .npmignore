@@ -6,6 +6,7 @@ dist
 example
 stories
 
+stories/*
 stories/
 # Example folder
 example/

@@ -14,3 +14,4 @@ export * from "./FAFormControlLabel";
 export * from "./FAFormControl";
 export * from "./FATypography";
 export * from "./FALogo";
+export * from "./FAOutlinedInput";
