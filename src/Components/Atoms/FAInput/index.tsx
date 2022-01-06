@@ -6,7 +6,7 @@ export const FAInput = memo((props: IInput) => {
   const {
     label,
     helperText,
-    variants,
+    variant,
     hook,
     testID,
     error,
@@ -16,13 +16,15 @@ export const FAInput = memo((props: IInput) => {
     required,
     htmlFor,
     shrink,
+    endAdornment,
+    startAdornment,
     ...materialUIProps
   } = props;
 
   return (
     <>
       <FormControl
-        variant={variants}
+        variant={variant}
         fullWidth
         required={required}
         className={className}
@@ -33,6 +35,8 @@ export const FAInput = memo((props: IInput) => {
         <Input
           {...materialUIProps}
           data-testid={testID}
+          endAdornment={endAdornment}
+          startAdornment={startAdornment}
           {...hook}
           error={error}
           type={type}
