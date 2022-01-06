@@ -9,7 +9,10 @@ export interface IInput extends InputProps {
   focusedText?: ReactChild;
   hook?: any;
   error?: boolean;
+  required?: boolean;
   type?: string;
   className?: string;
   placeholder?: string;
+  htmlFor?: string;
+  shrink?: boolean;
 }

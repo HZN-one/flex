@@ -13,13 +13,21 @@ export const FAInput = memo((props: IInput) => {
     type,
     className,
     placeholder,
+    required,
+    htmlFor,
+    shrink,
     ...materialUIProps
   } = props;
 
   return (
     <>
-      <FormControl variant={variants} fullWidth required className={className}>
-        <InputLabel htmlFor="standard-adornment-password" shrink>
+      <FormControl
+        variant={variants}
+        fullWidth
+        required={required}
+        className={className}
+      >
+        <InputLabel htmlFor={htmlFor} shrink={shrink}>
           {label}
         </InputLabel>
         <Input
