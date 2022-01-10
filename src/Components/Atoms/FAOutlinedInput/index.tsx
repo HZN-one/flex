@@ -1,10 +1,8 @@
 import React, { forwardRef, memo } from "react";
-import FormControl, { useFormControl } from "@mui/material/FormControl";
+import { useFormControl } from "@mui/material/FormControl";
 import OutlinedInput from "@mui/material/OutlinedInput";
-import Box from "@mui/material/Box";
-import FormHelperText from "@mui/material/FormHelperText";
 import { IInput } from "./Input.interface";
-import { InputLabel } from "@mui/material";
+import { InputLabel, Box, FormHelperText, FormControl } from "@mui/material";
 
 export const FAOutlinedInput = memo(
   forwardRef((props: IInput, ref) => {

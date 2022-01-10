@@ -14,7 +14,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 // appbar
 import MenuIcon from "@mui/icons-material/Menu";
 
-// PR: get from flex
+// get from flex
 import { FATypography } from "@Atoms/FATypography";
 import { FAIconButton } from "@Atoms/FAIconButton";
 import { FAButton } from "@Atoms/FAButton";
