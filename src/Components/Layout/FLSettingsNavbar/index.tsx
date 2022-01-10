@@ -6,7 +6,6 @@ import { styled } from "@mui/material/styles";
 
 // sidebar
 import List from "@mui/material/List";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
@@ -39,6 +38,7 @@ export interface IFLSettingsNavbarLayout {
       path: string;
     }[];
   }[];
+  handleLogOut?: () => void;
 }
 
 const Main = styled("main", { shouldForwardProp: prop => prop !== "open" })<{
@@ -58,7 +58,8 @@ const Main = styled("main", { shouldForwardProp: prop => prop !== "open" })<{
 }));
 
 export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
-  const { testID, popUp, headbarPosition, sections, title } = props;
+  const { testID, popUp, handleLogOut, headbarPosition, sections, title } =
+    props;
   const [open, setOpen] = React.useState(false);
 
   const initialPath = window.location.pathname;
@@ -150,7 +151,7 @@ export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
                 <ListItemText primary={"Settings"} />
               </Box>
             </ListItem>
-            <ListItem onClick={() => window.location.assign("/launchpad")}>
+            <ListItem onClick={handleLogOut}>
               <FAButton
                 testID="button-layoutSettings"
                 fullWidth
@@ -161,9 +162,22 @@ export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
                   mt: 2,
                 }}
                 variant="outlined"
-                startIcon={<ChevronLeftIcon />}
+                startIcon={
+                  <svg
+                    width="17"
+                    height="16"
+                    viewBox="0 0 17 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.833 4.66667L10.893 5.60667L12.613 7.33333H5.83301V8.66667H12.613L10.893 10.3867L11.833 11.3333L15.1663 8L11.833 4.66667ZM3.16634 3.33333H8.49967V2H3.16634C2.43301 2 1.83301 2.6 1.83301 3.33333V12.6667C1.83301 13.4 2.43301 14 3.16634 14H8.49967V12.6667H3.16634V3.33333Z"
+                      fill="#221F20"
+                    />
+                  </svg>
+                }
               >
-                Back to Launchpad
+                Log Out
               </FAButton>
             </ListItem>
           </List>
