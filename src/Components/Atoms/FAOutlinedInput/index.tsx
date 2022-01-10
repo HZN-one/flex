@@ -28,8 +28,9 @@ export const FAOutlinedInput = memo(
     return (
       <Box component="form" noValidate autoComplete="off">
         <FormControl sx={{ width: "25ch" }}>
-          <InputLabel>{label}</InputLabel>
+          <InputLabel required>{label}</InputLabel>
           <OutlinedInput
+            required
             label={label}
             data-testid={testID}
             inputRef={ref}

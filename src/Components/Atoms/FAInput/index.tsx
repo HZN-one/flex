@@ -25,7 +25,7 @@ export const FAInput = memo(
     return (
       <>
         <FormControl
-          variant={variant}
+          variant={variant ?? "standard"}
           fullWidth
           required={required}
           className={className}

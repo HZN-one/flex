@@ -1,11 +1,11 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
-import { FAStandardInput } from "@Atoms";
-import { IInput } from "@Atoms/FAStandardInput/Input.interface";
+import { FAInput } from "@Atoms";
+import { IInput } from "@Atoms/FAInput/FAInput.interfaces";
 
 const story = {
-  title: "Atom/Standard Input",
-  component: FAStandardInput,
+  title: "Atom/Input",
+  component: FAInput,
   argTypes: {
     label: { control: "text" },
   },
@@ -16,13 +16,13 @@ const story = {
 
 export default story;
 
-const Template: ComponentStory<typeof FAStandardInput> = props => (
-  <FAStandardInput {...props} />
+const Template: ComponentStory<typeof FAInput> = props => (
+  <FAInput {...props} />
 );
 
 export const Default = (props: IInput) => (
   <>
-    <FAStandardInput {...props} />
+    <FAInput {...props} />
   </>
 );
 
