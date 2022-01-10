@@ -1,16 +1,42 @@
 import React, { memo } from "react";
 import "../../../../i18n";
 import { useTranslation } from "react-i18next";
-import { AppBar, Toolbar, Box } from "@mui/material";
+import { Toolbar, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IFOHeader } from "./FOHeader.interfaces";
 import { FAButton, FATypography, FAIconButton } from "@Atoms";
 import { FMSearch } from "@Molecules";
 
+import { styled } from "@mui/material/styles";
+import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
+
+const drawerWidth = 250;
+interface AppBarProps extends MuiAppBarProps {
+  open?: boolean;
+}
+
+const AppBar = styled(MuiAppBar, {
+  shouldForwardProp: prop => prop !== "open",
+})<AppBarProps>(({ theme, open }) => ({
+  transition: theme.transitions.create(["margin", "width"], {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen,
+  }),
+  ...(open && {
+    width: `calc(100% - ${drawerWidth}px)`,
+    marginLeft: `${drawerWidth}px`,
+    transition: theme.transitions.create(["margin", "width"], {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  }),
+}));
+
 export const FOHeader = memo((props: IFOHeader) => {
   const {
     logo,
     title,
+    position,
     handleLogin,
     handleRegister,
     handleMenuIcon,
@@ -20,13 +46,19 @@ export const FOHeader = memo((props: IFOHeader) => {
     search,
     startAdornment,
     endAdornment,
+    open,
     ...materialUIProps
   } = props;
 
   const { t } = useTranslation();
 
   return (
-    <AppBar position="static" color="inherit" {...materialUIProps}>
+    <AppBar
+      position={position}
+      color="inherit"
+      {...materialUIProps}
+      open={open}
+    >
       <Toolbar>
         <Box style={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
           {menuIcon && (
