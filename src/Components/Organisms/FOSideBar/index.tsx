@@ -85,10 +85,6 @@ export const FOSideBar = memo((props: IFOSideBar) => {
     setIsDrawerChildOpen(!isDrawerChildOpen);
   };
 
-  const handleDrawerClose = () => {
-    setIsDrawerOpen(false);
-  };
-
   useEffect(() => {
     if (open) {
       setIsDrawerOpen(true);
@@ -110,7 +106,7 @@ export const FOSideBar = memo((props: IFOSideBar) => {
         {...materialUIProps}
       >
         <DrawerHeader>
-          <FAIconButton onClick={handleDrawerClose} testID="icon-button-drawer">
+          <FAIconButton sx={{ width: "100%" }} testID="icon-button-drawer">
             {theme.direction === "ltr" ? (
               <Box
                 sx={{
