@@ -49,6 +49,10 @@ export const baseTheme = (props: ThemeProps) =>
         fontWeight: 700,
       },
       h5: {
+        fontSize: "1.25rem",
+        fontWeight: 700,
+      },
+      h6: {
         fontSize: "1.125rem",
         fontWeight: 700,
       },
