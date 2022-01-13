@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { Box, Container } from "@mui/material";
+import { Box, Container, ListItemText } from "@mui/material";
 
 import type { ReactNode } from "react";
 import { styled } from "@mui/material/styles";
@@ -166,14 +166,16 @@ export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
                     color={initialPath === "/settings" ? "primary" : "inherit"}
                   />
                 </ListItemIcon>
-                <FATypography
-                  testID="typography-sidebar"
-                  variant="body2"
-                  fontWeight={initialPath === "/settings" ? 600 : 400}
-                  color={initialPath === "/settings" ? "primary" : "inherit"}
-                >
-                  Settings
-                </FATypography>
+                <ListItemText>
+                  <FATypography
+                    testID="typography-sidebar"
+                    variant="body2"
+                    fontWeight={initialPath === "/settings" ? 600 : 400}
+                    color={initialPath === "/settings" ? "primary" : "inherit"}
+                  >
+                    Settings
+                  </FATypography>
+                </ListItemText>
               </Box>
             </ListItem>
             <ListItem onClick={handleLogOut}>
