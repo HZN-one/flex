@@ -8,7 +8,6 @@ import { styled } from "@mui/material/styles";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 
 // appbar
@@ -157,6 +156,7 @@ export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
             >
               <Box
                 sx={pathMarkerSidebar("/settings")}
+                color={initialPath === "/settings" ? "primary" : "inherit"}
                 bgcolor={
                   initialPath === "/settings" ? "primary.light" : "inherit"
                 }
@@ -166,10 +166,14 @@ export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
                     color={initialPath === "/settings" ? "primary" : "inherit"}
                   />
                 </ListItemIcon>
-                <ListItemText
+                <FATypography
+                  testID="typography-sidebar"
+                  variant="body2"
+                  fontWeight={initialPath === "/settings" ? 600 : 400}
                   color={initialPath === "/settings" ? "primary" : "inherit"}
-                  primary={"Settings"}
-                />
+                >
+                  Settings
+                </FATypography>
               </Box>
             </ListItem>
             <ListItem onClick={handleLogOut}>

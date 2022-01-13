@@ -14,6 +14,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
+import { FATypography } from "@Atoms/FATypography";
 import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
@@ -143,8 +144,11 @@ export const FOSideBar = memo((props: IFOSideBar) => {
                   <ListItem button key={index} onClick={handleClick}>
                     <Box
                       sx={pathMarkerSidebar(oneSection.path)}
+                      color={
+                        initialPath === oneSection.path ? "primary" : "inherit"
+                      }
                       bgcolor={
-                        initialPath === "/settings"
+                        initialPath === oneSection.path
                           ? "primary.light"
                           : "inherit"
                       }
@@ -161,14 +165,18 @@ export const FOSideBar = memo((props: IFOSideBar) => {
                           {oneSection.icon}
                         </FAIcon>
                       </ListItemIcon>
-                      <ListItemText
+                      <FATypography
+                        testID="typography-sidebar"
+                        variant="body2"
+                        fontWeight={initialPath === oneSection.path ? 600 : 400}
                         color={
                           initialPath === oneSection.path
                             ? "primary"
                             : "inherit"
                         }
-                        primary={oneSection.title}
-                      />
+                      >
+                        {oneSection.title}
+                      </FATypography>
 
                       {isDrawerChildOpen ? <ExpandLess /> : <ExpandMore />}
                     </Box>
@@ -182,8 +190,32 @@ export const FOSideBar = memo((props: IFOSideBar) => {
                         key={i}
                         onClick={() => window.location.assign(oneChildren.path)}
                       >
-                        <ListItem button sx={{ pl: 4 }}>
-                          <ListItemText primary={oneChildren.title} />
+                        <ListItem
+                          button
+                          sx={{
+                            pl: 4,
+                            ...pathMarkerSidebar(
+                              `${oneSection.path}/${oneChildren.path}`
+                            ),
+                          }}
+                        >
+                          <FATypography
+                            testID="typography-sidebar"
+                            fontWeight={
+                              initialPath ===
+                              `${oneSection.path}/${oneChildren.path}`
+                                ? 600
+                                : 400
+                            }
+                            color={
+                              initialPath ===
+                              `${oneSection.path}/${oneChildren.path}`
+                                ? "primary"
+                                : "inherit"
+                            }
+                          >
+                            {oneChildren.title}
+                          </FATypography>
                         </ListItem>
                       </List>
                     ))}
