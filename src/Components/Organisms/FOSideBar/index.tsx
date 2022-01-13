@@ -235,6 +235,7 @@ export const FOSideBar = memo((props: IFOSideBar) => {
                 <ListItem
                   button
                   key={index}
+                  sx={{ margin: "6px 0" }}
                   onClick={() => window.location.assign(oneSection.path)}
                 >
                   <Box
