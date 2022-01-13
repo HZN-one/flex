@@ -25,6 +25,7 @@ import { FOSideBar } from "@Organisms/FOSideBar";
 
 export interface IFLSettingsNavbarLayout {
   testID: `header-${string}`;
+  isDrawerCloseable?: boolean;
   title?: string;
   popUp?: ReactNode;
   children?: ReactNode;
@@ -58,9 +59,16 @@ const Main = styled("main", { shouldForwardProp: prop => prop !== "open" })<{
 }));
 
 export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
-  const { testID, popUp, handleLogOut, headbarPosition, sections, title } =
-    props;
-  const [open, setOpen] = React.useState(false);
+  const {
+    testID,
+    popUp,
+    isDrawerCloseable,
+    handleLogOut,
+    headbarPosition,
+    sections,
+    title,
+  } = props;
+  const [open, setOpen] = React.useState(true);
 
   const initialPath = window.location.pathname;
   const pathMarkerSidebar = (path: string) => {
@@ -99,16 +107,18 @@ export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
         open={open}
         startAdornment={
           <>
-            <FAIconButton
-              testID="icon-button-layoutSettings"
-              color="inherit"
-              aria-label="open drawer"
-              onClick={open ? handleDrawerClose : handleDrawerOpen}
-              edge="start"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </FAIconButton>
+            {isDrawerCloseable && (
+              <FAIconButton
+                testID="icon-button-layoutSettings"
+                color="inherit"
+                aria-label="open drawer"
+                onClick={open ? handleDrawerClose : handleDrawerOpen}
+                edge="start"
+                sx={{ mr: 2 }}
+              >
+                <MenuIcon />
+              </FAIconButton>
+            )}
             <FATypography
               testID="typography-layoutSettings"
               variant="h6"

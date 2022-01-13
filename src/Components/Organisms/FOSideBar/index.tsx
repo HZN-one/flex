@@ -46,6 +46,7 @@ export const FOSideBar = memo((props: IFOSideBar) => {
   const {
     testID,
     open,
+    isDrawerCloseable,
     color,
     footer,
     sections,
@@ -102,7 +103,7 @@ export const FOSideBar = memo((props: IFOSideBar) => {
         sx={sx}
         variant="persistent"
         anchor="left"
-        open={isDrawerOpen}
+        open={isDrawerCloseable ? isDrawerOpen : true}
         {...materialUIProps}
       >
         <DrawerHeader>
