@@ -9,7 +9,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import SettingsIcon from "@mui/icons-material/Settings";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 
 // appbar
 import MenuIcon from "@mui/icons-material/Menu";
@@ -146,6 +146,7 @@ export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
           },
         }}
         testID="side-bar-settings"
+        isDrawerCloseable={isDrawerCloseable}
         open={open}
         sections={sections}
         footer={
@@ -154,11 +155,21 @@ export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
               button
               onClick={() => window.location.assign("/settings")}
             >
-              <Box sx={pathMarkerSidebar("/settings")}>
-                <ListItemIcon>
-                  <SettingsIcon />
+              <Box
+                sx={pathMarkerSidebar("/settings")}
+                bgcolor={
+                  initialPath === "/settings" ? "primary.light" : "inherit"
+                }
+              >
+                <ListItemIcon sx={{ minWidth: 0, mr: "10px" }}>
+                  <SettingsOutlinedIcon
+                    color={initialPath === "/settings" ? "primary" : "inherit"}
+                  />
                 </ListItemIcon>
-                <ListItemText primary={"Settings"} />
+                <ListItemText
+                  color={initialPath === "/settings" ? "primary" : "inherit"}
+                  primary={"Settings"}
+                />
               </Box>
             </ListItem>
             <ListItem onClick={handleLogOut}>

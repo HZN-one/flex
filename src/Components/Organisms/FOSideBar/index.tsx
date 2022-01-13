@@ -60,6 +60,7 @@ export const FOSideBar = memo((props: IFOSideBar) => {
     if (initialPath === path) {
       return {
         bgcolor: "#FDEBEA",
+        color: "#DC3931",
         width: "100%",
         display: "flex",
         alignItems: "center",
@@ -140,13 +141,34 @@ export const FOSideBar = memo((props: IFOSideBar) => {
               oneSection?.children?.length ? (
                 <>
                   <ListItem button key={index} onClick={handleClick}>
-                    <Box sx={pathMarkerSidebar(oneSection.path)}>
-                      <ListItemIcon>
-                        <FAIcon testID="icon-drawerChild">
+                    <Box
+                      sx={pathMarkerSidebar(oneSection.path)}
+                      bgcolor={
+                        initialPath === "/settings"
+                          ? "primary.light"
+                          : "inherit"
+                      }
+                    >
+                      <ListItemIcon sx={{ minWidth: 0, mr: "10px" }}>
+                        <FAIcon
+                          testID="icon-drawerChild"
+                          color={
+                            initialPath === oneSection.path
+                              ? "primary"
+                              : "inherit"
+                          }
+                        >
                           {oneSection.icon}
                         </FAIcon>
                       </ListItemIcon>
-                      <ListItemText primary={oneSection.title} />
+                      <ListItemText
+                        color={
+                          initialPath === oneSection.path
+                            ? "primary"
+                            : "inherit"
+                        }
+                        primary={oneSection.title}
+                      />
 
                       {isDrawerChildOpen ? <ExpandLess /> : <ExpandMore />}
                     </Box>
