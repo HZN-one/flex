@@ -211,7 +211,9 @@ export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
         }
       ></FOSideBar>
       <Main open={open}>
-        <Container maxWidth="xl">{props.children}</Container>
+        <Container maxWidth="xl" sx={{ minHeight: "87vh" }}>
+          {props.children}
+        </Container>
       </Main>
     </Box>
   );
