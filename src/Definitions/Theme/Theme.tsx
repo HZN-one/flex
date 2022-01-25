@@ -14,6 +14,13 @@ export const baseTheme = (props: ThemeProps) =>
           },
         },
       },
+      MuiInput: {
+        styleOverrides: {
+          root: {
+            fontSize: "14px",
+          },
+        },
+      },
       MuiDrawer: props.components?.MuiDrawer || {
         styleOverrides: {
           root: {
