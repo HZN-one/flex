@@ -14,7 +14,7 @@ export const baseTheme = (props: ThemeProps) =>
           },
         },
       },
-      MuiInput: {
+      MuiTextField: {
         styleOverrides: {
           root: {
             fontSize: "14px",
