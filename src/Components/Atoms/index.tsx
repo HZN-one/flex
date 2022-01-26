@@ -16,3 +16,4 @@ export * from "./FATypography";
 export * from "./FALogo";
 export * from "./FAOutlinedInput";
 export * from "./FAInput";
+export * from "./FALink";

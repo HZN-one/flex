@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 import { ThemeProps } from "./Theme.interface";
 
-const drawerWidth = 240;
+const drawerWidth = 250;
 
 // Create a theme instance.
 export const baseTheme = (props: ThemeProps) =>

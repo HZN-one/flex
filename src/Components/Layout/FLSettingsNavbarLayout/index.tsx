@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { Box, Container } from "@mui/material";
+import { Box, Container, ListItemText } from "@mui/material";
 
 import type { ReactNode } from "react";
 import { styled } from "@mui/material/styles";
@@ -8,8 +8,7 @@ import { styled } from "@mui/material/styles";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import SettingsIcon from "@mui/icons-material/Settings";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 
 // appbar
 import MenuIcon from "@mui/icons-material/Menu";
@@ -25,6 +24,7 @@ import { FOSideBar } from "@Organisms/FOSideBar";
 
 export interface IFLSettingsNavbarLayout {
   testID: `header-${string}`;
+  isDrawerCloseable?: boolean;
   title?: string;
   popUp?: ReactNode;
   children?: ReactNode;
@@ -58,9 +58,16 @@ const Main = styled("main", { shouldForwardProp: prop => prop !== "open" })<{
 }));
 
 export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
-  const { testID, popUp, handleLogOut, headbarPosition, sections, title } =
-    props;
-  const [open, setOpen] = React.useState(false);
+  const {
+    testID,
+    popUp,
+    isDrawerCloseable,
+    handleLogOut,
+    headbarPosition,
+    sections,
+    title,
+  } = props;
+  const [open, setOpen] = React.useState(true);
 
   const initialPath = window.location.pathname;
   const pathMarkerSidebar = (path: string) => {
@@ -99,16 +106,18 @@ export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
         open={open}
         startAdornment={
           <>
-            <FAIconButton
-              testID="icon-button-layoutSettings"
-              color="inherit"
-              aria-label="open drawer"
-              onClick={open ? handleDrawerClose : handleDrawerOpen}
-              edge="start"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </FAIconButton>
+            {isDrawerCloseable && (
+              <FAIconButton
+                testID="icon-button-layoutSettings"
+                color="inherit"
+                aria-label="open drawer"
+                onClick={open ? handleDrawerClose : handleDrawerOpen}
+                edge="start"
+                sx={{ mr: 2 }}
+              >
+                <MenuIcon />
+              </FAIconButton>
+            )}
             <FATypography
               testID="typography-layoutSettings"
               variant="h6"
@@ -136,6 +145,7 @@ export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
           },
         }}
         testID="side-bar-settings"
+        isDrawerCloseable={isDrawerCloseable}
         open={open}
         sections={sections}
         footer={
@@ -144,11 +154,28 @@ export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
               button
               onClick={() => window.location.assign("/settings")}
             >
-              <Box sx={pathMarkerSidebar("/settings")}>
-                <ListItemIcon>
-                  <SettingsIcon />
+              <Box
+                sx={pathMarkerSidebar("/settings")}
+                color={initialPath === "/settings" ? "primary" : "inherit"}
+                bgcolor={
+                  initialPath === "/settings" ? "primary.light" : "inherit"
+                }
+              >
+                <ListItemIcon sx={{ minWidth: 0, mr: "10px" }}>
+                  <SettingsOutlinedIcon
+                    color={initialPath === "/settings" ? "primary" : "inherit"}
+                  />
                 </ListItemIcon>
-                <ListItemText primary={"Settings"} />
+                <ListItemText>
+                  <FATypography
+                    testID="typography-sidebar"
+                    variant="body2"
+                    fontWeight={initialPath === "/settings" ? 600 : 400}
+                    color={initialPath === "/settings" ? "primary" : "inherit"}
+                  >
+                    Settings
+                  </FATypography>
+                </ListItemText>
               </Box>
             </ListItem>
             <ListItem onClick={handleLogOut}>

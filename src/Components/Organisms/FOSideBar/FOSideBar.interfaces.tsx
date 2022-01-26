@@ -6,6 +6,7 @@ import { Theme } from "@mui/material";
 export interface IFOSideBar extends DrawerProps {
   testID: `side-bar-${string}`;
   open: boolean;
+  isDrawerCloseable?: boolean;
   sections: {
     title: string;
     path: string;
