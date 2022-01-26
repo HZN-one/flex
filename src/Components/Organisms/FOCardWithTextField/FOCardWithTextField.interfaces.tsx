@@ -6,7 +6,7 @@ export interface IFOCardWithTextField extends CardProps {
   testID: `card-${string}`;
   actions?: ReactChild;
   onSubmit?: any;
-  form?: any;
+  form?: ReactChild;
   title?: string;
   subtitle?: ReactChild | string;
   firstLink?: ReactChild | string;
