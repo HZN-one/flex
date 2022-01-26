@@ -30,7 +30,7 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextField) => {
       }}
     >
       <CardContent>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} noValidate>
           <FATypography
             testID="typography-signIn"
             textAlign="left"
