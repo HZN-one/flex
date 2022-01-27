@@ -16,4 +16,5 @@ export interface IFOCardWithTextField extends CardProps {
   buttonSecondary?: string;
   option?: React.ReactElement<any, any>;
   optionLabel?: string;
+  noValidate?: boolean;
 }
