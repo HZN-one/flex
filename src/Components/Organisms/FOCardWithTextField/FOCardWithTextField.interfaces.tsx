@@ -5,7 +5,7 @@ import { SxProps, Theme } from "@mui/material/styles";
 export interface IFOCardWithTextField extends CardProps {
   testID: `card-${string}`;
   actions?: ReactChild;
-  onSubmit?: any;
+  onSubmit?: React.FormEventHandler;
   form?: ReactChild;
   title?: string;
   subtitle?: ReactChild | string;
