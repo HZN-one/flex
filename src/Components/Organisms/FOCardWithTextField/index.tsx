@@ -51,8 +51,9 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextField) => {
         >
           {subtitle}
         </FATypography>
-        <form onSubmit={onSubmit} noValidate={noValidate}>
-          <Box>{form}</Box>
+        <Box>{form}</Box>
+        <Box>{props.children}</Box>
+        {/* <form onSubmit={onSubmit} noValidate={noValidate}>
 
           <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
             <FALink testID="link-signIn" href="/forgot-password">
@@ -74,6 +75,7 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextField) => {
           </FAButton>
           <Box sx={{ mt: "10px" }}>{secondLink}</Box>
         </form>
+       */}
       </CardContent>
       {actions && <CardActions>{actions}</CardActions>}
     </Card>
