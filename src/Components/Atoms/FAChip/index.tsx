@@ -3,7 +3,15 @@ import { Chip, Avatar } from "@mui/material";
 import { IFAChip } from "./FAChip.interface";
 
 export const FAChip = memo((props: IFAChip) => {
-  const { testID, variant, color, label, avatar, onDelete } = props;
+  const {
+    testID,
+    variant,
+    color,
+    label,
+    avatar,
+    onDelete,
+    ...materialUIProps
+  } = props;
 
   if (avatar) {
     return (
@@ -14,6 +22,7 @@ export const FAChip = memo((props: IFAChip) => {
         onDelete={onDelete}
         variant={variant}
         color={color}
+        {...materialUIProps}
       />
     );
   }
@@ -25,6 +34,7 @@ export const FAChip = memo((props: IFAChip) => {
       onDelete={onDelete}
       variant={variant}
       color={color}
+      {...materialUIProps}
     />
   );
 });
