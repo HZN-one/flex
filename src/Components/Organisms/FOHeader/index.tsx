@@ -34,6 +34,7 @@ const AppBar = styled(MuiAppBar, {
 
 export const FOHeader = memo((props: IFOHeader) => {
   const {
+    testID,
     logo,
     title,
     position,
@@ -54,6 +55,7 @@ export const FOHeader = memo((props: IFOHeader) => {
 
   return (
     <AppBar
+      data-testid={testID}
       position={position}
       color="inherit"
       {...materialUIProps}
