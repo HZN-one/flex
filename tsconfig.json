@@ -2,6 +2,7 @@
   // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
   "extends": "@tsconfig/create-react-app/tsconfig.json",
   "include": ["src", "types", "test", "example", "stories", "stories2"],
+  "exclude": ["node_modules", "dist"],
 
   "compilerOptions": {
     "baseUrl": ".",
@@ -25,6 +26,11 @@
       "@src/*": ["./*"],
       "@src": ["."],
     },
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
     "lib": ["es6", "dom"],
     "noImplicitAny": true,
     "noImplicitThis": true,
