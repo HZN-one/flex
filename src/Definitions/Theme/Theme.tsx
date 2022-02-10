@@ -3,6 +3,17 @@ import { ThemeProps } from "./Theme.interface";
 
 const drawerWidth = 250;
 
+declare module "@mui/material/styles" {
+  interface Palette {
+    bluegrey: Palette["grey"];
+  }
+
+  // allow configuration using `createTheme`
+  interface PaletteOptions {
+    bluegrey?: PaletteOptions["grey"];
+  }
+}
+
 // Create a theme instance.
 export const baseTheme = (props: ThemeProps) =>
   createTheme({
@@ -170,6 +181,30 @@ export const baseTheme = (props: ThemeProps) =>
             ? props.replaceTheme?.palette?.success?.light
             : undefined
           : "#34D399",
+      },
+      grey: {
+        "50": props.replaceTheme?.palette?.grey?.[50] ?? "#FAFAFA",
+        "100": props.replaceTheme?.palette?.grey?.[100] ?? "#F5F5F5",
+        "200": props.replaceTheme?.palette?.grey?.[200] ?? "#E5E5E5",
+        "300": props.replaceTheme?.palette?.grey?.[300] ?? "#D4D4D4",
+        "400": props.replaceTheme?.palette?.grey?.[400] ?? "#A3A3A3",
+        "500": props.replaceTheme?.palette?.grey?.[500] ?? "#737373",
+        "600": props.replaceTheme?.palette?.grey?.[600] ?? "#525252",
+        "700": props.replaceTheme?.palette?.grey?.[700] ?? "#404040",
+        "800": props.replaceTheme?.palette?.grey?.[800] ?? "#262626",
+        "900": props.replaceTheme?.palette?.grey?.[900] ?? "#171717",
+      },
+      bluegrey: {
+        "50": props.replaceTheme?.palette?.bluegrey?.[50] ?? "#F8FAFC",
+        "100": props.replaceTheme?.palette?.bluegrey?.[100] ?? "#F1F5F9",
+        "200": props.replaceTheme?.palette?.bluegrey?.[200] ?? "#E2E8F0",
+        "300": props.replaceTheme?.palette?.bluegrey?.[300] ?? "#CBD5E1",
+        "400": props.replaceTheme?.palette?.bluegrey?.[400] ?? "#94A3B8",
+        "500": props.replaceTheme?.palette?.bluegrey?.[500] ?? "#64748B",
+        "600": props.replaceTheme?.palette?.bluegrey?.[600] ?? "#475569",
+        "700": props.replaceTheme?.palette?.bluegrey?.[700] ?? "#334155",
+        "800": props.replaceTheme?.palette?.bluegrey?.[800] ?? "#1E293B",
+        "900": props.replaceTheme?.palette?.bluegrey?.[900] ?? "#0F172A",
       },
       contrastThreshold: props.replaceTheme?.palette?.contrastThreshold || 3,
       tonalOffset: props.replaceTheme?.palette?.tonalOffset || 0.2,
