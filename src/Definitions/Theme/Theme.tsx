@@ -110,7 +110,7 @@ export const baseTheme = (props: ThemeProps) =>
               {
                 fontSize: "14px",
               },
-            ".css-9e2kpf-MuiInputBase-root-MuiInput-root": {
+            ".css-1g9t0cs-MuiInputBase-root-MuiInput-root": {
               paddingBottom: "12px",
             },
           },
