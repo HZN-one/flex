@@ -113,6 +113,11 @@ export const baseTheme = (props: ThemeProps) =>
             ".css-1g9t0cs-MuiInputBase-root-MuiInput-root": {
               paddingBottom: "12px",
             },
+            ".css-ittuaa-MuiInputAdornment-root": {
+              ".css-1b82i9m-MuiTypography-root": {
+                fontSize: "14px",
+              },
+            },
           },
         },
       },
