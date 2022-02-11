@@ -76,6 +76,10 @@ export const baseTheme = (props: ThemeProps) =>
             },
             ".css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input": {
               fontSize: "14px",
+              height: "23px",
+            },
+            ".css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input": {
+              height: "31px !important",
             },
           },
         },
@@ -97,7 +101,6 @@ export const baseTheme = (props: ThemeProps) =>
             },
             ".MuiInput-input": {
               fontSize: "14px",
-              padding: "6px 0px 12px 0px",
             },
             ".MuiSelect-nativeInput": {
               border: "1px solid red",
