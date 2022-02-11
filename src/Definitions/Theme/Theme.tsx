@@ -76,6 +76,10 @@ export const baseTheme = (props: ThemeProps) =>
             },
             ".css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input": {
               fontSize: "14px",
+              height: "23px",
+            },
+            ".css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input": {
+              height: "31px !important",
             },
           },
         },
