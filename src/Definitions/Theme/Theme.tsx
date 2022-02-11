@@ -97,7 +97,6 @@ export const baseTheme = (props: ThemeProps) =>
             },
             ".MuiInput-input": {
               fontSize: "14px",
-              padding: "6px 0px 12px 0px",
             },
             ".MuiSelect-nativeInput": {
               border: "1px solid red",
@@ -107,6 +106,9 @@ export const baseTheme = (props: ThemeProps) =>
               {
                 fontSize: "14px",
               },
+            ".css-9e2kpf-MuiInputBase-root-MuiInput-root": {
+              paddingBottom: "12px",
+            },
           },
         },
       },
