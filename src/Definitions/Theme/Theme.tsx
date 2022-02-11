@@ -65,6 +65,48 @@ export const baseTheme = (props: ThemeProps) =>
                 borderBottomStyle: "solid",
               },
             },
+            fontSize: "14px",
+            "& > label > span": {
+              color: "red",
+            },
+            "& > label": {
+              color: "#221F20",
+              fontWeight: 600,
+              letterSpacing: "0.2px",
+            },
+            ".css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input": {
+              fontSize: "14px",
+            },
+          },
+        },
+      },
+      MuiOutlinedInput: {
+        styleOverrides: {
+          root: {
+            ".MuiSelect-select.MuiSelect-select": {
+              fontSize: "14px",
+            },
+          },
+        },
+      },
+      MuiFormControl: {
+        styleOverrides: {
+          root: {
+            "& > label > span": {
+              color: "red",
+            },
+            ".MuiInput-input": {
+              fontSize: "14px",
+              padding: "6px 0px 12px 0px",
+            },
+            ".MuiSelect-nativeInput": {
+              border: "1px solid red",
+              color: "red",
+            },
+            ".css-1dyt4r5-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select":
+              {
+                fontSize: "14px",
+              },
           },
         },
       },
