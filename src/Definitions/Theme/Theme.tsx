@@ -93,11 +93,19 @@ export const baseTheme = (props: ThemeProps) =>
               //setting font size and heigh when input outlined and small size
             },
             ".css-1ua80n0-MuiInputBase-input-MuiOutlinedInput-input": {
-              //setting height small input with adorment
+              //setting height small input with start adorment
               height: "31px !important",
             },
             ".css-1o9s3wi-MuiInputBase-input-MuiOutlinedInput-input": {
-              //setting height medium input with adorment
+              //setting height medium input with start adorment
+              height: "23px",
+            },
+            ".css-19qh8xo-MuiInputBase-input-MuiOutlinedInput-input": {
+              //setting height small input with end adorment
+              height: "31px !important",
+            },
+            ".css-nxo287-MuiInputBase-input-MuiOutlinedInput-input": {
+              //setting height medium input with end adorment
               height: "23px",
             },
             ".css-10m3xgx-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-10m3xgx-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-10m3xgx-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input":
@@ -111,6 +119,14 @@ export const baseTheme = (props: ThemeProps) =>
                 //change sizing small select input
                 paddingTop: "18px",
                 paddingBottom: "18px",
+              },
+            ".css-dgem98-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-dgem98-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-dgem98-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input":
+              {
+                height: "23px",
+              },
+            ".css-p9abup-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-p9abup-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-p9abup-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input":
+              {
+                height: "31px",
               },
           },
         },
@@ -136,6 +152,9 @@ export const baseTheme = (props: ThemeProps) =>
                 fontSize: "14px",
               },
             "label + .css-j82al8-MuiInputBase-root-MuiInput-root": {
+              paddingBottom: "12px",
+            },
+            "label + .css-q6svtz-MuiInputBase-root-MuiInput-root": {
               paddingBottom: "12px",
             },
             ".css-hd63pv-MuiSvgIcon-root-MuiSelect-icon": {
