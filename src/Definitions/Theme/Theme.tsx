@@ -74,13 +74,6 @@ export const baseTheme = (props: ThemeProps) =>
               fontWeight: 600,
               letterSpacing: "0.2px",
             },
-            ".css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input": {
-              fontSize: "14px",
-              height: "23px",
-            },
-            ".css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input": {
-              height: "31px !important",
-            },
           },
         },
       },
@@ -90,6 +83,35 @@ export const baseTheme = (props: ThemeProps) =>
             ".MuiSelect-select.MuiSelect-select": {
               fontSize: "14px",
             },
+            ".css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input": {
+              fontSize: "14px",
+              height: "23px",
+              //setting font size and heigh when input outlined and medium size
+            },
+            ".css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input": {
+              height: "31px !important",
+              //setting font size and heigh when input outlined and small size
+            },
+            ".css-1ua80n0-MuiInputBase-input-MuiOutlinedInput-input": {
+              //setting height small input with adorment
+              height: "31px !important",
+            },
+            ".css-1o9s3wi-MuiInputBase-input-MuiOutlinedInput-input": {
+              //setting height medium input with adorment
+              height: "23px",
+            },
+            ".css-10m3xgx-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-10m3xgx-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-10m3xgx-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input":
+              {
+                //change sizing medium select input
+                paddingTop: "14px",
+                paddingBottom: "14px",
+              },
+            ".css-17nr37i-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-17nr37i-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-17nr37i-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input":
+              {
+                //change sizing small select input
+                paddingTop: "18px",
+                paddingBottom: "18px",
+              },
           },
         },
       },
@@ -106,16 +128,22 @@ export const baseTheme = (props: ThemeProps) =>
               border: "1px solid red",
               color: "red",
             },
+            ".css-16ulblx-MuiFormLabel-root-MuiInputLabel-root ": {
+              lineHeight: "30px",
+            },
             ".css-1dyt4r5-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select":
               {
                 fontSize: "14px",
               },
-            ".css-1g9t0cs-MuiInputBase-root-MuiInput-root": {
+            "label + .css-j82al8-MuiInputBase-root-MuiInput-root": {
               paddingBottom: "12px",
+            },
+            ".css-hd63pv-MuiSvgIcon-root-MuiSelect-icon": {
+              top: "calc(50% - 0.7em)", // change position icon arrow_down in select input
             },
             ".css-ittuaa-MuiInputAdornment-root": {
               ".css-1b82i9m-MuiTypography-root": {
-                fontSize: "14px",
+                fontSize: "14px", // make adorment fontsize 14px in input
               },
             },
           },
