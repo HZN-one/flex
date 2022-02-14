@@ -19,7 +19,6 @@ const useStyles = makeStyles(() => ({
     "& li .Mui-selected": {
       width: "32px",
       height: "32px",
-      // height: "100%",
       borderRadius: "20px",
     },
     "& li button": {
