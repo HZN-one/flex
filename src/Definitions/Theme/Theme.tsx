@@ -134,8 +134,10 @@ export const baseTheme = createTheme({
         },
         root: {
           "&.MuiInput-underline": {
-            paddingBottom: "12px",
             marginTop: "24px",
+            "& .MuiInputBase-input": {
+              paddingBottom: "12px",
+            },
           },
         },
       },
@@ -152,6 +154,7 @@ export const baseTheme = createTheme({
     MuiInputAdornment: {
       styleOverrides: {
         standard: {
+          marginBottom: "12px",
           "& .material-icons": {
             fontSize: "20px",
           },
