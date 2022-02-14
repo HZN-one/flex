@@ -118,6 +118,13 @@ export const baseTheme = createTheme({
         },
       },
     },
+    MuiCardContent: {
+      styleOverrides: {
+        root: sx({
+          padding: 3,
+        }),
+      },
+    },
     MuiSvgIcon: {
       styleOverrides: {
         root: {
