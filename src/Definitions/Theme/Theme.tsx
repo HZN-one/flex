@@ -1,5 +1,8 @@
 import { createTheme, experimental_sx as sx } from "@mui/material/styles";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 27b684a (Fixing Atom)
 const drawerWidth = 250;
 
 declare module "@mui/material/styles" {
