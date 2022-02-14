@@ -3,7 +3,7 @@ name: "Chromatic publish Storybook CD workflow"
 on:
   push:
     branches:
-      - release/staging
+      - main
 
 jobs:
   release:
