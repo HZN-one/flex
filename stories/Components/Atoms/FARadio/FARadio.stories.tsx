@@ -10,23 +10,36 @@ const story = {
   argTypes: {
     children: { control: "text" },
   },
-  args: {
-    children: "Welcome!",
-  },
 };
 
 export default story;
 
 const Template: ComponentStory<typeof FARadio> = (props: IFARadio) => (
   <>
-    <FARadio {...props} />
-    <FARadio {...props} disabled />
-    <FARadio {...props} checked color="primary" />
-    <FARadio {...props} checked color="secondary" />
-    <FARadio {...props} checked color="success" />
-    <FARadio {...props} checked color="warning" />
-    <FARadio {...props} checked color="error" />
-    <FARadio {...props} checked color="info" />
+    <div>
+      <FARadio {...props} />
+    </div>
+    <div>
+      <FARadio {...props} disabled />
+    </div>
+    <div>
+      <FARadio {...props} checked color="primary" />
+    </div>
+    <div>
+      <FARadio {...props} checked color="secondary" />
+    </div>
+    <div>
+      <FARadio {...props} checked color="success" />
+    </div>
+    <div>
+      <FARadio {...props} checked color="warning" />
+    </div>
+    <div>
+      <FARadio {...props} checked color="error" />
+    </div>
+    <div>
+      <FARadio {...props} checked color="info" />
+    </div>
   </>
 );
 export const Default = (props: IFARadio) => (
@@ -45,125 +58,220 @@ export const Medium = Template.bind({});
 Medium.args = {
   size: "medium",
 };
-export const WithLabel = (props: IFAFormControlLabel) => (
+export const WithLabelMedium = (props: IFAFormControlLabel) => (
   <>
-    <FAFormControlLabel
-      {...props}
-      label="default"
-      testID="ControlLabel-test"
-      control={<FARadio testID="radio-default" />}
-    />
-    <FAFormControlLabel
-      {...props}
-      label="disabled"
-      testID="ControlLabel-test"
-      control={<FARadio disabled testID="radio-disabled" />}
-    />
-    <FAFormControlLabel
-      {...props}
-      label="primary"
-      testID="ControlLabel-test"
-      control={<FARadio checked color="primary" testID="radio-primary" />}
-    />
-    <FAFormControlLabel
-      {...props}
-      label="secondary"
-      testID="ControlLabel-test"
-      control={<FARadio checked color="secondary" testID="radio-secondary" />}
-    />
-    <FAFormControlLabel
-      {...props}
-      label="success"
-      testID="ControlLabel-test"
-      control={<FARadio checked color="success" testID="radio-success" />}
-    />
-    <FAFormControlLabel
-      {...props}
-      label="warning"
-      testID="ControlLabel-test"
-      control={<FARadio checked color="warning" testID="radio-warning" />}
-    />
-    <FAFormControlLabel
-      {...props}
-      label="error"
-      testID="ControlLabel-test"
-      control={<FARadio checked color="error" testID="radio-error" />}
-    />
-    <FAFormControlLabel
-      {...props}
-      label="info"
-      testID="ControlLabel-test"
-      control={<FARadio checked color="info" testID="radio-info" />}
-    />
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="default"
+        testID="ControlLabel-test"
+        size="medium"
+        control={<FARadio testID="radio-default" size="medium" />}
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="disabled"
+        testID="ControlLabel-test"
+        size="medium"
+        control={<FARadio disabled testID="radio-disabled" size="medium" />}
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="primary"
+        testID="ControlLabel-test"
+        size="medium"
+        control={
+          <FARadio
+            checked
+            color="primary"
+            testID="radio-primary"
+            size="medium"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="secondary"
+        testID="ControlLabel-test"
+        size="medium"
+        control={
+          <FARadio
+            checked
+            color="secondary"
+            testID="radio-secondary"
+            size="medium"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="success"
+        testID="ControlLabel-test"
+        size="medium"
+        control={
+          <FARadio
+            checked
+            color="success"
+            testID="radio-success"
+            size="medium"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="warning"
+        testID="ControlLabel-test"
+        size="medium"
+        control={
+          <FARadio
+            checked
+            color="warning"
+            testID="radio-warning"
+            size="medium"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="error"
+        testID="ControlLabel-test"
+        size="medium"
+        control={
+          <FARadio checked color="error" testID="radio-error" size="medium" />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="info"
+        testID="ControlLabel-test"
+        size="medium"
+        control={
+          <FARadio checked color="info" testID="radio-info" size="medium" />
+        }
+      />
+    </div>
   </>
 );
 
 export const WithLabelSmall = (props: IFAFormControlLabel) => (
   <>
-    <FAFormControlLabel
-      {...props}
-      label="default"
-      testID="ControlLabel-test"
-      control={<FARadio testID="radio-default" size="small" />}
-    />
-    <FAFormControlLabel
-      {...props}
-      label="disabled"
-      testID="ControlLabel-test"
-      control={<FARadio disabled testID="radio-disabled" size="small" />}
-    />
-    <FAFormControlLabel
-      {...props}
-      label="primary"
-      testID="ControlLabel-test"
-      control={
-        <FARadio checked color="primary" testID="radio-primary" size="small" />
-      }
-    />
-    <FAFormControlLabel
-      {...props}
-      label="secondary"
-      testID="ControlLabel-test"
-      control={
-        <FARadio
-          checked
-          color="secondary"
-          testID="radio-secondary"
-          size="small"
-        />
-      }
-    />
-    <FAFormControlLabel
-      {...props}
-      label="success"
-      testID="ControlLabel-test"
-      control={
-        <FARadio checked color="success" testID="radio-success" size="small" />
-      }
-    />
-    <FAFormControlLabel
-      {...props}
-      label="warning"
-      testID="ControlLabel-test"
-      control={
-        <FARadio checked color="warning" testID="radio-warning" size="small" />
-      }
-    />
-    <FAFormControlLabel
-      {...props}
-      label="error"
-      testID="ControlLabel-test"
-      control={
-        <FARadio checked color="error" testID="radio-error" size="small" />
-      }
-    />
-    <FAFormControlLabel
-      {...props}
-      label="info"
-      testID="ControlLabel-test"
-      control={
-        <FARadio checked color="info" testID="radio-info" size="small" />
-      }
-    />
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="default"
+        testID="ControlLabel-test"
+        size="small"
+        control={<FARadio testID="radio-default" size="small" />}
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="disabled"
+        testID="ControlLabel-test"
+        size="small"
+        control={<FARadio disabled testID="radio-disabled" size="small" />}
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="primary"
+        testID="ControlLabel-test"
+        size="small"
+        control={
+          <FARadio
+            checked
+            color="primary"
+            testID="radio-primary"
+            size="small"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="secondary"
+        testID="ControlLabel-test"
+        size="small"
+        control={
+          <FARadio
+            checked
+            color="secondary"
+            testID="radio-secondary"
+            size="small"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="success"
+        testID="ControlLabel-test"
+        size="small"
+        control={
+          <FARadio
+            checked
+            color="success"
+            testID="radio-success"
+            size="small"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="warning"
+        testID="ControlLabel-test"
+        size="small"
+        control={
+          <FARadio
+            checked
+            color="warning"
+            testID="radio-warning"
+            size="small"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="error"
+        testID="ControlLabel-test"
+        size="small"
+        control={
+          <FARadio checked color="error" testID="radio-error" size="small" />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="info"
+        testID="ControlLabel-test"
+        size="small"
+        control={
+          <FARadio checked color="info" testID="radio-info" size="small" />
+        }
+      />
+    </div>
   </>
 );

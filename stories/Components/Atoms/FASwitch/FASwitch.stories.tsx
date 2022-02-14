@@ -9,9 +9,6 @@ const story = {
   argTypes: {
     children: { control: "text" },
   },
-  args: {
-    children: "Welcome!",
-  },
 };
 
 export default story;
@@ -23,131 +20,285 @@ export const Default = (props: IFASwitch) => (
 
 export const Small = (props: IFASwitch) => (
   <>
-    <FASwitch {...props} color="default" checked size="small" />
-    <FASwitch {...props} color="primary" checked size="small" />
-    <FASwitch {...props} color="secondary" checked size="small" />
-    <FASwitch {...props} color="error" checked size="small" />
-    <FASwitch {...props} color="warning" checked size="small" />
-    <FASwitch {...props} color="info" checked size="small" />
-    <FASwitch {...props} color="success" checked size="small" />
+    <div>
+      <FASwitch {...props} color="default" defaultChecked size="small" />
+    </div>
+    <div>
+      <FASwitch {...props} color="primary" defaultChecked size="small" />
+    </div>
+    <div>
+      <FASwitch {...props} color="secondary" defaultChecked size="small" />
+    </div>
+    <div>
+      <FASwitch {...props} color="error" defaultChecked size="small" />
+    </div>
+    <div>
+      <FASwitch {...props} color="warning" defaultChecked size="small" />
+    </div>
+    <div>
+      <FASwitch {...props} color="info" defaultChecked size="small" />
+    </div>
+    <div>
+      <FASwitch {...props} color="success" defaultChecked size="small" />
+    </div>
   </>
 );
 export const Medium = (props: IFASwitch) => (
   <>
-    <FASwitch {...props} color="default" checked />
-    <FASwitch {...props} color="primary" checked />
-    <FASwitch {...props} color="secondary" checked />
-    <FASwitch {...props} color="error" checked />
-    <FASwitch {...props} color="warning" checked />
-    <FASwitch {...props} color="info" checked />
-    <FASwitch {...props} color="success" checked />
+    <div>
+      <FASwitch {...props} color="default" defaultChecked size="medium" />
+    </div>
+    <div>
+      <FASwitch {...props} color="primary" defaultChecked size="medium" />
+    </div>
+    <div>
+      <FASwitch {...props} color="secondary" defaultChecked size="medium" />
+    </div>
+    <div>
+      <FASwitch {...props} color="error" defaultChecked size="medium" />
+    </div>
+    <div>
+      <FASwitch {...props} color="warning" defaultChecked size="medium" />
+    </div>
+    <div>
+      <FASwitch {...props} color="info" defaultChecked size="medium" />
+    </div>
+    <div>
+      <FASwitch {...props} color="success" defaultChecked size="medium" />
+    </div>
   </>
 );
 
-export const WithLabel = (props: IFAFormControlLabel) => (
+export const WithLabelMedium = (props: IFAFormControlLabel) => (
   <>
-    <FAFormControlLabel
-      {...props}
-      label="default"
-      testID="ControlLabel-test"
-      control={<FASwitch testID="switch-test" color="default" checked />}
-    />
-    <FAFormControlLabel
-      {...props}
-      label="primary"
-      testID="ControlLabel-test"
-      control={<FASwitch testID="switch-test" color="primary" checked />}
-    />
-    <FAFormControlLabel
-      {...props}
-      label="secondary"
-      testID="ControlLabel-test"
-      control={<FASwitch testID="switch-test" color="secondary" checked />}
-    />
-    <FAFormControlLabel
-      {...props}
-      label="error"
-      testID="ControlLabel-test"
-      control={<FASwitch testID="switch-test" color="error" checked />}
-    />
-    <FAFormControlLabel
-      {...props}
-      label="warning"
-      testID="ControlLabel-test"
-      control={<FASwitch testID="switch-test" color="warning" checked />}
-    />
-    <FAFormControlLabel
-      {...props}
-      label="info"
-      testID="ControlLabel-test"
-      control={<FASwitch testID="switch-test" color="info" checked />}
-    />
-    <FAFormControlLabel
-      {...props}
-      label="success"
-      testID="ControlLabel-test"
-      control={<FASwitch testID="switch-test" color="success" checked />}
-    />
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="default"
+        testID="ControlLabel-test"
+        size="medium"
+        control={
+          <FASwitch
+            testID="switch-test"
+            color="default"
+            defaultChecked
+            size="medium"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="primary"
+        testID="ControlLabel-test"
+        size="medium"
+        control={
+          <FASwitch
+            testID="switch-test"
+            color="primary"
+            defaultChecked
+            size="medium"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="secondary"
+        testID="ControlLabel-test"
+        size="medium"
+        control={
+          <FASwitch
+            testID="switch-test"
+            color="secondary"
+            defaultChecked
+            size="medium"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="error"
+        testID="ControlLabel-test"
+        size="medium"
+        control={
+          <FASwitch
+            testID="switch-test"
+            color="error"
+            defaultChecked
+            size="medium"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="warning"
+        testID="ControlLabel-test"
+        size="medium"
+        control={
+          <FASwitch
+            testID="switch-test"
+            color="warning"
+            defaultChecked
+            size="medium"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="info"
+        testID="ControlLabel-test"
+        size="medium"
+        control={
+          <FASwitch
+            testID="switch-test"
+            color="info"
+            defaultChecked
+            size="medium"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="success"
+        testID="ControlLabel-test"
+        size="medium"
+        control={
+          <FASwitch
+            testID="switch-test"
+            color="success"
+            defaultChecked
+            size="medium"
+          />
+        }
+      />
+    </div>
   </>
 );
 
 export const WithLabelSmall = (props: IFAFormControlLabel) => (
   <>
-    <FAFormControlLabel
-      {...props}
-      label="default"
-      testID="ControlLabel-test"
-      control={
-        <FASwitch testID="switch-test" color="default" checked size="small" />
-      }
-    />
-    <FAFormControlLabel
-      {...props}
-      label="primary"
-      testID="ControlLabel-test"
-      control={
-        <FASwitch testID="switch-test" color="primary" checked size="small" />
-      }
-    />
-    <FAFormControlLabel
-      {...props}
-      label="test"
-      testID="ControlLabel-test"
-      control={
-        <FASwitch testID="switch-test" color="secondary" checked size="small" />
-      }
-    />
-    <FAFormControlLabel
-      {...props}
-      label="error"
-      testID="ControlLabel-test"
-      control={
-        <FASwitch testID="switch-test" color="error" checked size="small" />
-      }
-    />
-    <FAFormControlLabel
-      {...props}
-      label="warning"
-      testID="ControlLabel-test"
-      control={
-        <FASwitch testID="switch-test" color="warning" checked size="small" />
-      }
-    />
-    <FAFormControlLabel
-      {...props}
-      label="info"
-      testID="ControlLabel-test"
-      control={
-        <FASwitch testID="switch-test" color="info" checked size="small" />
-      }
-    />
-    <FAFormControlLabel
-      {...props}
-      label="success"
-      testID="ControlLabel-test"
-      control={
-        <FASwitch testID="switch-test" color="success" checked size="small" />
-      }
-    />
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="default"
+        testID="ControlLabel-test"
+        size="small"
+        control={
+          <FASwitch
+            testID="switch-test"
+            color="default"
+            defaultChecked
+            size="small"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="primary"
+        testID="ControlLabel-test"
+        size="small"
+        control={
+          <FASwitch
+            testID="switch-test"
+            color="primary"
+            defaultChecked
+            size="small"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="secondary"
+        testID="ControlLabel-test"
+        size="small"
+        control={
+          <FASwitch
+            testID="switch-test"
+            color="secondary"
+            defaultChecked
+            size="small"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="error"
+        testID="ControlLabel-test"
+        size="small"
+        control={
+          <FASwitch
+            testID="switch-test"
+            color="error"
+            defaultChecked
+            size="small"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="warning"
+        testID="ControlLabel-test"
+        size="small"
+        control={
+          <FASwitch
+            testID="switch-test"
+            color="warning"
+            defaultChecked
+            size="small"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="info"
+        testID="ControlLabel-test"
+        size="small"
+        control={
+          <FASwitch
+            testID="switch-test"
+            color="info"
+            defaultChecked
+            size="small"
+          />
+        }
+      />
+    </div>
+    <div>
+      <FAFormControlLabel
+        {...props}
+        label="success"
+        testID="ControlLabel-test"
+        size="small"
+        control={
+          <FASwitch
+            testID="switch-test"
+            color="success"
+            defaultChecked
+            size="small"
+          />
+        }
+      />
+    </div>
   </>
 );
