@@ -118,6 +118,13 @@ export const baseTheme = createTheme({
         },
       },
     },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: "8px",
+        },
+      },
+    },
     MuiCardContent: {
       styleOverrides: {
         root: sx({
