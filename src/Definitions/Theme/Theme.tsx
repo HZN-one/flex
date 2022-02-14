@@ -74,12 +74,9 @@ export const baseTheme = (props: ThemeProps) =>
               fontWeight: 600,
               letterSpacing: "0.2px",
             },
-            ".css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input": {
+            ".MuiOutlinedInput-input": {
               fontSize: "14px",
               height: "23px",
-            },
-            ".css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input": {
-              height: "31px !important",
             },
           },
         },
@@ -87,8 +84,23 @@ export const baseTheme = (props: ThemeProps) =>
       MuiOutlinedInput: {
         styleOverrides: {
           root: {
+            borderRadius: "8px",
             ".MuiSelect-select.MuiSelect-select": {
               fontSize: "14px",
+              padding: "13.5px 16px",
+            },
+          },
+        },
+      },
+      MuiTextField: {
+        styleOverrides: {
+          root: {
+            ".MuiInput-underline": {
+              paddingBottom: "12px",
+            },
+            ".MuiFormHelperText-root": {
+              paddingTop: "8px",
+              marginTop: "0px",
             },
           },
         },
@@ -106,12 +118,14 @@ export const baseTheme = (props: ThemeProps) =>
               border: "1px solid red",
               color: "red",
             },
-            ".css-1dyt4r5-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select":
-              {
-                fontSize: "14px",
-              },
-            ".css-1g9t0cs-MuiInputBase-root-MuiInput-root": {
+            ".MuiSelect-select": {
+              fontSize: "14px",
+            },
+            ".MuiInput-underline": {
               paddingBottom: "12px",
+            },
+            ".MuiFormHelperText-root": {
+              paddingTop: "4px",
             },
           },
         },

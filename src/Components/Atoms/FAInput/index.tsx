@@ -1,6 +1,7 @@
 import React, { forwardRef, memo } from "react";
-import { FormControl, InputLabel, Input } from "@mui/material";
+import { FormControl, Input, FormHelperText } from "@mui/material";
 import { IInput } from "./FAInput.interfaces";
+import { FATypography } from "@Atoms/FATypography";
 
 export const FAInput = memo(
   forwardRef((props: IInput, ref) => {
@@ -15,8 +16,6 @@ export const FAInput = memo(
       className,
       placeholder,
       required,
-      htmlFor,
-      shrink,
       endAdornment,
       startAdornment,
       ...materialUIProps
@@ -30,9 +29,18 @@ export const FAInput = memo(
           required={required}
           className={className}
         >
-          <InputLabel htmlFor={htmlFor} shrink={shrink}>
-            {label}
-          </InputLabel>
+          <FATypography
+            testID="typography-input"
+            sx={{
+              fontSize: "12px",
+              color: "#221F20",
+              fontWeight: 600,
+              letterSpacing: "0.2px",
+            }}
+          >
+            {label}{" "}
+            <>{required && <span style={{ color: "#F43F5E" }}>*</span>}</>
+          </FATypography>
           <Input
             {...materialUIProps}
             inputRef={ref}
@@ -40,11 +48,14 @@ export const FAInput = memo(
             endAdornment={endAdornment}
             startAdornment={startAdornment}
             {...hook}
+            required
             error={error}
             type={type}
             placeholder={placeholder}
           />
-          {helperText}
+          <FormHelperText sx={{ mt: "8px", color: error ? "red" : "inherit" }}>
+            {helperText}
+          </FormHelperText>
         </FormControl>
       </>
     );

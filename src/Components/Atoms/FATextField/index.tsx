@@ -1,6 +1,17 @@
 import React, { forwardRef, memo } from "react";
 import { TextField, InputAdornment } from "@mui/material";
 import { IInput } from "./Input.interface";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles(() => ({
+  default: {
+    "& .MuiInputLabel-root": {
+      fontSize: "12px",
+      fontWeight: 600,
+      color: "#221F20",
+    },
+  },
+}));
 
 export const FATextField = memo(
   forwardRef((props: IInput, ref) => {
@@ -12,7 +23,7 @@ export const FATextField = memo(
       variants,
       ...materialUIProps
     } = props;
-
+    const classes = useStyles();
     const AddAdornment = () => {
       return <InputAdornment position="start">{adornment}</InputAdornment>;
     };
@@ -25,6 +36,7 @@ export const FATextField = memo(
 
     return (
       <TextField
+        className={!props.select ? classes.default : ""}
         inputRef={ref}
         data-testid={testID}
         name={name}

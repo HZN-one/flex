@@ -3,6 +3,7 @@ import { ComponentStory } from "@storybook/react";
 import { FATextField, FAFormControl } from "@Atoms";
 import { IInput } from "@Atoms/FATextField/Input.interface";
 import { IFAFormControl } from "@Atoms/FAFormControl/FAFormControl.interfaces";
+import { MenuItem } from "@mui/material";
 
 const story = {
   title: "Atom/Text Field",
@@ -31,7 +32,23 @@ const Template2: ComponentStory<typeof FAFormControl> = (
 
 export const Default = (props: IInput) => (
   <>
-    <FATextField {...props}>{props.children}</FATextField>
+    <FATextField
+      {...props}
+      variant="standard"
+      helperText="test"
+      placeholder="Placeholder"
+      required
+    >
+      {props.children}
+    </FATextField>
+  </>
+);
+
+export const Select = (props: IInput) => (
+  <>
+    <FATextField {...props} select value={1} sx={{ width: "220px" }}>
+      <MenuItem value={1}>This is filled</MenuItem>
+    </FATextField>
   </>
 );
 
