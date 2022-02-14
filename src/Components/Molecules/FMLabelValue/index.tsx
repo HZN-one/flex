@@ -10,9 +10,8 @@ export const FMLabelValue = memo((props: IFMLabelValue) => {
     <Box sx={{ mb: 2 }}>
       <FATypography
         testID="typography-label"
-        variant="caption"
-        fontWeight={600}
-        sx={{ mb: "5px" }}
+        variant="captionSemiBold"
+        sx={{ mb: 1 }}
         {...propLabel}
       >
         {label}
