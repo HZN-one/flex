@@ -76,7 +76,6 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
         {...props}
         label="default"
         testID="ControlLabel-test"
-        size="medium"
         control={
           <FASwitch
             testID="switch-test"
@@ -92,7 +91,6 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
         {...props}
         label="primary"
         testID="ControlLabel-test"
-        size="medium"
         control={
           <FASwitch
             testID="switch-test"
@@ -108,7 +106,6 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
         {...props}
         label="secondary"
         testID="ControlLabel-test"
-        size="medium"
         control={
           <FASwitch
             testID="switch-test"
@@ -124,7 +121,6 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
         {...props}
         label="error"
         testID="ControlLabel-test"
-        size="medium"
         control={
           <FASwitch
             testID="switch-test"
@@ -140,7 +136,6 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
         {...props}
         label="warning"
         testID="ControlLabel-test"
-        size="medium"
         control={
           <FASwitch
             testID="switch-test"
@@ -156,7 +151,6 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
         {...props}
         label="info"
         testID="ControlLabel-test"
-        size="medium"
         control={
           <FASwitch
             testID="switch-test"
@@ -172,7 +166,6 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
         {...props}
         label="success"
         testID="ControlLabel-test"
-        size="medium"
         control={
           <FASwitch
             testID="switch-test"
@@ -193,7 +186,6 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
         {...props}
         label="default"
         testID="ControlLabel-test"
-        size="small"
         control={
           <FASwitch
             testID="switch-test"
@@ -209,7 +201,6 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
         {...props}
         label="primary"
         testID="ControlLabel-test"
-        size="small"
         control={
           <FASwitch
             testID="switch-test"
@@ -225,7 +216,6 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
         {...props}
         label="secondary"
         testID="ControlLabel-test"
-        size="small"
         control={
           <FASwitch
             testID="switch-test"
@@ -241,7 +231,6 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
         {...props}
         label="error"
         testID="ControlLabel-test"
-        size="small"
         control={
           <FASwitch
             testID="switch-test"
@@ -257,7 +246,6 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
         {...props}
         label="warning"
         testID="ControlLabel-test"
-        size="small"
         control={
           <FASwitch
             testID="switch-test"
@@ -273,7 +261,6 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
         {...props}
         label="info"
         testID="ControlLabel-test"
-        size="small"
         control={
           <FASwitch
             testID="switch-test"
@@ -289,7 +276,6 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
         {...props}
         label="success"
         testID="ControlLabel-test"
-        size="small"
         control={
           <FASwitch
             testID="switch-test"

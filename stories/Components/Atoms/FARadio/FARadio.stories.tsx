@@ -65,7 +65,6 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
         {...props}
         label="default"
         testID="ControlLabel-test"
-        size="medium"
         control={<FARadio testID="radio-default" size="medium" />}
       />
     </div>
@@ -74,7 +73,6 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
         {...props}
         label="disabled"
         testID="ControlLabel-test"
-        size="medium"
         control={<FARadio disabled testID="radio-disabled" size="medium" />}
       />
     </div>
@@ -83,7 +81,6 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
         {...props}
         label="primary"
         testID="ControlLabel-test"
-        size="medium"
         control={
           <FARadio
             checked
@@ -99,7 +96,6 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
         {...props}
         label="secondary"
         testID="ControlLabel-test"
-        size="medium"
         control={
           <FARadio
             checked
@@ -115,7 +111,6 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
         {...props}
         label="success"
         testID="ControlLabel-test"
-        size="medium"
         control={
           <FARadio
             checked
@@ -131,7 +126,6 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
         {...props}
         label="warning"
         testID="ControlLabel-test"
-        size="medium"
         control={
           <FARadio
             checked
@@ -147,7 +141,6 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
         {...props}
         label="error"
         testID="ControlLabel-test"
-        size="medium"
         control={
           <FARadio checked color="error" testID="radio-error" size="medium" />
         }
@@ -158,7 +151,6 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
         {...props}
         label="info"
         testID="ControlLabel-test"
-        size="medium"
         control={
           <FARadio checked color="info" testID="radio-info" size="medium" />
         }
@@ -174,7 +166,6 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
         {...props}
         label="default"
         testID="ControlLabel-test"
-        size="small"
         control={<FARadio testID="radio-default" size="small" />}
       />
     </div>
@@ -183,7 +174,6 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
         {...props}
         label="disabled"
         testID="ControlLabel-test"
-        size="small"
         control={<FARadio disabled testID="radio-disabled" size="small" />}
       />
     </div>
@@ -192,7 +182,6 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
         {...props}
         label="primary"
         testID="ControlLabel-test"
-        size="small"
         control={
           <FARadio
             checked
@@ -208,7 +197,6 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
         {...props}
         label="secondary"
         testID="ControlLabel-test"
-        size="small"
         control={
           <FARadio
             checked
@@ -224,7 +212,6 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
         {...props}
         label="success"
         testID="ControlLabel-test"
-        size="small"
         control={
           <FARadio
             checked
@@ -240,7 +227,6 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
         {...props}
         label="warning"
         testID="ControlLabel-test"
-        size="small"
         control={
           <FARadio
             checked
@@ -256,7 +242,6 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
         {...props}
         label="error"
         testID="ControlLabel-test"
-        size="small"
         control={
           <FARadio checked color="error" testID="radio-error" size="small" />
         }
@@ -267,7 +252,6 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
         {...props}
         label="info"
         testID="ControlLabel-test"
-        size="small"
         control={
           <FARadio checked color="info" testID="radio-info" size="small" />
         }
