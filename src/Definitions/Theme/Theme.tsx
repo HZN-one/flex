@@ -50,22 +50,20 @@ declare module "@mui/material/Typography" {
 export const baseTheme = (props: ThemeProps) =>
   createTheme({
     components: {
-      MuiPagination: {
+      MuiPaginationItem: {
         styleOverrides: {
-          root: {
-            ".MuiPaginationItem-sizeSmall.Mui-selected": {
-              width: "32px",
-              height: "32px",
-              borderRadius: "20px",
-              fontSize: "14px",
-            },
-            ".MuiPaginationItem-sizeLarge.Mui-selected": {
-              minWidth: "40px",
-              minHeight: "40px",
-              height: "100%",
-              borderRadius: "20px",
-              fontSize: "16px",
-            },
+          sizeSmall: {
+            width: "32px",
+            height: "32px",
+            borderRadius: "20px",
+            fontSize: "14px",
+          },
+          sizeLarge: {
+            minWidth: "40px",
+            minHeight: "40px",
+            height: "100%",
+            borderRadius: "20px",
+            fontSize: "16px",
           },
         },
       },
