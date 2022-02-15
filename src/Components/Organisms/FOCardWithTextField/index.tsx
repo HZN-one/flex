@@ -26,8 +26,9 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextField) => {
       data-testid={testID}
       {...materialUIProps}
       sx={{
-        ...sx,
+        maxWidth: 560,
         boxShadow: "0px 0px 16px rgba(0, 0, 0, 0.1)",
+        ...sx,
       }}
     >
       <CardContent>
@@ -47,7 +48,7 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextField) => {
           variant="body1"
           letterSpacing="0.2px"
           color="textSecondary"
-          sx={{ p: "0 0 38px 0" }}
+          sx={{ pb: 3.75, mt: 1 }}
         >
           {subtitle}
         </FATypography>
