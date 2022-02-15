@@ -12,7 +12,10 @@ import { DUMMY_IMAGE_URL } from "@Definitions/constants";
 describe("FOCardWithImage", () => {
   it("should match snapshot", () => {
     const { container } = render(
-      <FOCardWithImage testID="card-example" imageUrl={DUMMY_IMAGE_URL} />
+      <FOCardWithImage
+        testID="card-example"
+        image={<img src={DUMMY_IMAGE_URL} />}
+      />
     );
     expect(container).toMatchSnapshot();
   });

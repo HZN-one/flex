@@ -12,7 +12,7 @@ export const FOCardWithImage = memo((props: IFOCardWithImage) => {
     actions,
     subtitle,
     title,
-    imageUrl,
+    image,
     option,
     optionLabel,
     handleButtonPrimary,
@@ -43,7 +43,7 @@ export const FOCardWithImage = memo((props: IFOCardWithImage) => {
         )}
         <Box display="flex" justifyContent="center" width="100%">
           <Box display="flex" mb={3} sx={{ width: "250px", height: "180px" }}>
-            <img src={imageUrl} style={{ objectFit: "cover" }} />
+            {image}
           </Box>
         </Box>
         <FATypography

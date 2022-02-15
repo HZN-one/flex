@@ -20,7 +20,7 @@ const Template: Story<IFOCardWithImage> = props => (
 export const Default = Template.bind({});
 
 Default.args = {
-  imageUrl: DUMMY_IMAGE_URL,
+  image: <img src={DUMMY_IMAGE_URL} />,
   option: <FARadio testID="radio-test" />,
   title: "Card Title",
   subtitle: "Card Subtitle",
@@ -30,7 +30,7 @@ Default.args = {
 
 export const withAction = Default.bind({});
 withAction.args = {
-  imageUrl: DUMMY_IMAGE_URL,
+  image: <img src={DUMMY_IMAGE_URL} />,
   title: "Card Title",
   subtitle: "Card Subtitle",
   buttonPrimary: "buttonPrimary",
