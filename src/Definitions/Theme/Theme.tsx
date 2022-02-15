@@ -5,7 +5,6 @@ declare module "@mui/material/styles" {
   interface Palette {
     bluegrey: Palette["grey"];
   }
-
   // allow configuration using `createTheme`
   interface PaletteOptions {
     bluegrey?: PaletteOptions["grey"];
