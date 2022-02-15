@@ -1,77 +1,59 @@
 import React from "react";
 import { FAChip } from "@Atoms/FAChip";
+import { IFAChip } from "@Atoms/FAChip/FAChip.interface";
 
 const story = {
   title: "Atom/Chip",
   component: FAChip,
-  argTypes: {
-    children: { control: "text" },
-  },
-  args: {
-    children: "Welcome!",
-  },
 };
 
 export default story;
 
-export const Default = () => (
+export const Default = (props: IFAChip) => (
   <>
     <FAChip
-      testID="chip-test"
-      color="default"
-      // {...props}
-      label="test"
-      sx={{ marginRight: "1vw", marginBottom: "1vh" }}
-    />
-    <FAChip
-      testID="chip-test"
       color="primary"
-      label="test"
-      onDelete={console.log("ew")}
-      // {...props}
-      sx={{ marginRight: "1vw", marginBottom: "1vh" }}
+      label="Chip"
+      size="medium"
+      {...props}
+      testID="chip-test"
     />
   </>
 );
 
-export const WithAvatar = () => (
+export const WithAvatar = (props: IFAChip) => (
   <>
     <FAChip
-      testID="chip-test"
-      color="default"
-      // {...props}
-      label="test"
-      avatar={<>s</>}
-      sx={{ marginRight: "1vw", marginBottom: "1vh" }}
-    />
-    <FAChip
-      testID="chip-test"
       color="primary"
-      label="test"
-      // {...props}
-      avatar={<>s</>}
-      sx={{ marginRight: "1vw", marginBottom: "1vh" }}
+      label="Chip"
+      avatar={<>F</>}
+      {...props}
+      testID="chip-test"
     />
   </>
 );
 
-export const Deleteable = () => (
+export const Removeable = (props: IFAChip) => (
   <>
     <FAChip
-      testID="chip-test"
-      color="default"
-      // {...props}
-      label="test"
-      sx={{ marginRight: "1vw", marginBottom: "1vh" }}
-      onDelete={() => console.log("delete")}
-    />
-    <FAChip
-      testID="chip-test"
       color="primary"
-      label="test"
+      label="Chip"
       onDelete={() => console.log("delete")}
-      // {...props}
-      sx={{ marginRight: "1vw", marginBottom: "1vh" }}
+      {...props}
+      testID="chip-test"
+    />
+  </>
+);
+
+export const ThumbnailRemoveable = (props: IFAChip) => (
+  <>
+    <FAChip
+      color="primary"
+      label="Chip"
+      onDelete={() => console.log("delete")}
+      {...props}
+      testID="chip-test"
+      avatar={<>F</>}
     />
   </>
 );
