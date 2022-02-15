@@ -30,28 +30,52 @@ export const WithArrow = (props: IFATooltip) => (
     }}
   >
     <div style={{ padding: "20px 0" }}>
-      <FATooltip {...props} title="top" arrow placement="top">
+      <FATooltip
+        {...props}
+        title="My Tooltip"
+        arrow
+        placement="top"
+        open={true}
+      >
         <span style={{ border: "1px solid grey", padding: "5px" }}>
           Top Arrow Tooltip
         </span>
       </FATooltip>
     </div>
     <div style={{ padding: "20px 0" }}>
-      <FATooltip {...props} title="right" arrow placement="right">
+      <FATooltip
+        {...props}
+        title="My Tooltip"
+        arrow
+        placement="right"
+        open={true}
+      >
         <span style={{ border: "1px solid grey", padding: "5px" }}>
           Right Arrow Tooltip
         </span>
       </FATooltip>
     </div>
     <div style={{ padding: "20px 0" }}>
-      <FATooltip {...props} title="bottom" arrow placement="bottom">
+      <FATooltip
+        {...props}
+        title="My Tooltip"
+        arrow
+        placement="bottom"
+        open={true}
+      >
         <span style={{ border: "1px solid grey", padding: "5px" }}>
           Bottom Arrow Tooltip
         </span>
       </FATooltip>
     </div>
     <div style={{ padding: "20px 0" }}>
-      <FATooltip {...props} title="left" arrow placement="left">
+      <FATooltip
+        {...props}
+        title="My Tooltip"
+        arrow
+        placement="left"
+        open={true}
+      >
         <span style={{ border: "1px solid grey", padding: "5px" }}>
           Left Arrow Tooltip
         </span>

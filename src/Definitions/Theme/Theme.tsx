@@ -156,6 +156,20 @@ export const baseTheme = createTheme({
         },
       },
     },
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: sx({
+          backgroundColor: "#E5E5E5",
+          color: "#221F20",
+          fontSize: "12px",
+          fontWeight: "400",
+          lineHeight: "19.2px",
+        }),
+        arrow: sx({
+          color: "#E5E5E5",
+        }),
+      },
+    },
     MuiTextField: {
       defaultProps: {
         InputLabelProps: { shrink: true },
