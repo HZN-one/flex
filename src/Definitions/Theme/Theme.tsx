@@ -202,6 +202,15 @@ export const baseTheme = createTheme({
         },
       },
     },
+    MuiFormControlLabel: {
+      styleOverrides: {
+        label: ({ ownerState }) => ({
+          ...(ownerState.control.props.size === "small" && {
+            fontSize: "0.875rem",
+          }),
+        }),
+      },
+    },
     MuiFormControl: {
       styleOverrides: {
         root: {
