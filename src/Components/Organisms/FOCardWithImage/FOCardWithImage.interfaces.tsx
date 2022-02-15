@@ -4,8 +4,8 @@ import { SxProps, Theme } from "@mui/material/styles";
 
 export interface IFOCardWithImage extends CardProps {
   testID: `card-${string}`;
+  imageUrl: string;
   actions?: ReactChild;
-  svg?: ReactChild;
   title?: string;
   subtitle?: string;
   sx?: SxProps<Theme>;

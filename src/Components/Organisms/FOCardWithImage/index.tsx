@@ -12,7 +12,7 @@ export const FOCardWithImage = memo((props: IFOCardWithImage) => {
     actions,
     subtitle,
     title,
-    svg,
+    imageUrl,
     option,
     optionLabel,
     handleButtonPrimary,
@@ -38,9 +38,14 @@ export const FOCardWithImage = memo((props: IFOCardWithImage) => {
             label={optionLabel || "optionLabel"}
             testID="ControlLabel-test"
             control={option}
+            sx={{ mb: 3 }}
           ></FAFormControlLabel>
         )}
-        {svg}
+        <Box display="flex" justifyContent="center" width="100%">
+          <Box display="flex" mb={3} sx={{ width: "250px", height: "180px" }}>
+            <img src={imageUrl} style={{ objectFit: "cover" }} />
+          </Box>
+        </Box>
         <FATypography
           testID="typography-launchpad"
           textAlign="center"
