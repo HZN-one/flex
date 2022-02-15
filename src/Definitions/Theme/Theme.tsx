@@ -156,6 +156,12 @@ export const baseTheme = createTheme({
         },
       },
     },
+    MuiTextField: {
+      defaultProps: {
+        InputLabelProps: { shrink: true },
+        margin: "normal",
+      },
+    },
     MuiSelect: {
       styleOverrides: {
         outlined: sx({
