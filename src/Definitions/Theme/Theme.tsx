@@ -155,6 +155,14 @@ export const baseTheme = createTheme({
         },
       },
     },
+    MuiRadio: {
+      styleOverrides: {
+        root: {
+          height: "40px",
+          width: "40px",
+        },
+      },
+    },
     MuiTooltip: {
       styleOverrides: {
         tooltip: sx({
