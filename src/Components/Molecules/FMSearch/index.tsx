@@ -1,7 +1,8 @@
 import React, { memo } from "react";
 import { TextField, InputAdornment } from "@mui/material";
-import { IFMSearch } from "./FMSearch.interfaces";
 import SearchIcon from "@mui/icons-material/Search";
+
+import { IFMSearch } from "./FMSearch.interfaces";
 
 export const FMSearch = memo((props: IFMSearch) => {
   const {
@@ -25,11 +26,10 @@ export const FMSearch = memo((props: IFMSearch) => {
       variant={variants}
       onChange={onChange}
       value={value}
-      placeholder="Search"
       InputProps={{
         startAdornment: (
           <InputAdornment position="start">
-            <SearchIcon color="secondary"></SearchIcon>
+            <SearchIcon color="primary"></SearchIcon>
           </InputAdornment>
         ),
       }}

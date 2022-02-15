@@ -82,6 +82,9 @@ export const baseTheme = createTheme({
           fontSize: "14px",
           lineHeight: "20px",
         }),
+        root: {
+          borderRadius: "8px",
+        },
       },
     },
     MuiInputLabel: {
