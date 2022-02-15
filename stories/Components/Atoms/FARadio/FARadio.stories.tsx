@@ -64,7 +64,7 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="default"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={<FARadio testID="radio-default" size="medium" />}
       />
     </div>
@@ -72,7 +72,7 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="disabled"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={<FARadio disabled testID="radio-disabled" size="medium" />}
       />
     </div>
@@ -80,7 +80,7 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="primary"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FARadio
             checked
@@ -95,7 +95,7 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="secondary"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FARadio
             checked
@@ -110,7 +110,7 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="success"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FARadio
             checked
@@ -125,7 +125,7 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="warning"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FARadio
             checked
@@ -140,7 +140,7 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="error"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FARadio checked color="error" testID="radio-error" size="medium" />
         }
@@ -150,7 +150,7 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="info"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FARadio checked color="info" testID="radio-info" size="medium" />
         }
@@ -165,7 +165,7 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="default"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={<FARadio testID="radio-default" size="small" />}
       />
     </div>
@@ -173,7 +173,7 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="disabled"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={<FARadio disabled testID="radio-disabled" size="small" />}
       />
     </div>
@@ -181,7 +181,7 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="primary"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FARadio
             checked
@@ -196,7 +196,7 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="secondary"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FARadio
             checked
@@ -211,7 +211,7 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="success"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FARadio
             checked
@@ -226,7 +226,7 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="warning"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FARadio
             checked
@@ -241,7 +241,7 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="error"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FARadio checked color="error" testID="radio-error" size="small" />
         }
@@ -251,7 +251,7 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="info"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FARadio checked color="info" testID="radio-info" size="small" />
         }

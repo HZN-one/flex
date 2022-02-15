@@ -75,7 +75,7 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="default"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FASwitch
             testID="switch-test"
@@ -90,7 +90,7 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="primary"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FASwitch
             testID="switch-test"
@@ -105,7 +105,7 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="secondary"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FASwitch
             testID="switch-test"
@@ -120,7 +120,7 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="error"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FASwitch
             testID="switch-test"
@@ -135,7 +135,7 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="warning"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FASwitch
             testID="switch-test"
@@ -150,7 +150,7 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="info"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FASwitch
             testID="switch-test"
@@ -165,7 +165,7 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="success"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FASwitch
             testID="switch-test"
@@ -185,7 +185,7 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="default"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FASwitch
             testID="switch-test"
@@ -200,7 +200,7 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="primary"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FASwitch
             testID="switch-test"
@@ -215,7 +215,7 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="secondary"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FASwitch
             testID="switch-test"
@@ -230,7 +230,7 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="error"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FASwitch
             testID="switch-test"
@@ -245,7 +245,7 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="warning"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FASwitch
             testID="switch-test"
@@ -260,7 +260,7 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="info"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FASwitch
             testID="switch-test"
@@ -275,7 +275,7 @@ export const WithLabelSmall = (props: IFAFormControlLabel) => (
       <FAFormControlLabel
         {...props}
         label="success"
-        testID="ControlLabel-test"
+        testID="form-control-label-test"
         control={
           <FASwitch
             testID="switch-test"

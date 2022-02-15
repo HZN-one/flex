@@ -4,13 +4,7 @@ import { IIcon } from "./Icon.interface";
 
 export const FAIcon = memo((props: IIcon) => {
   const { testID, ...materialUIProps } = props;
-  return (
-    <Icon
-      data-testid={testID}
-      className="material-icons-outlined"
-      {...materialUIProps}
-    />
-  );
+  return <Icon data-testid={testID} {...materialUIProps} />;
 });
 
 FAIcon.displayName = "FAIcon";

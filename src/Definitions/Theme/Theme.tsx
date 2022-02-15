@@ -139,6 +139,11 @@ export const baseTheme = createTheme({
         },
       },
     },
+    MuiIcon: {
+      defaultProps: {
+        className: "material-icons-outlined",
+      },
+    },
     MuiInput: {
       styleOverrides: {
         input: {
@@ -156,11 +161,19 @@ export const baseTheme = createTheme({
       },
     },
     MuiRadio: {
+      defaultProps: {
+        size: "small",
+      },
       styleOverrides: {
         root: {
           height: "40px",
           width: "40px",
         },
+      },
+    },
+    MuiSwitch: {
+      defaultProps: {
+        size: "small",
       },
     },
     MuiTooltip: {
