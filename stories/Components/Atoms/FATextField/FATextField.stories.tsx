@@ -1,9 +1,7 @@
 import React from "react";
-import { ComponentStory } from "@storybook/react";
-import { FATextField, FAFormControl } from "@Atoms";
+import { FATextField, FAIcon } from "@Atoms";
 import { IInput } from "@Atoms/FATextField/Input.interface";
-import { IFAFormControl } from "@Atoms/FAFormControl/FAFormControl.interfaces";
-import { MenuItem } from "@mui/material";
+import { Box } from "@mui/system";
 
 const story = {
   title: "Atom/Text Field",
@@ -18,76 +16,43 @@ const story = {
 
 export default story;
 
-const Template: ComponentStory<typeof FATextField> = props => (
-  <FATextField {...props} />
-);
-
-const Template2: ComponentStory<typeof FAFormControl> = (
-  props: IFAFormControl
-) => (
-  <FAFormControl {...props}>
-    <FATextField testID="input-test" label="test"></FATextField>
-  </FAFormControl>
-);
-
 export const Default = (props: IInput) => (
-  <>
-    <FATextField
-      {...props}
-      variant="standard"
-      helperText="test"
-      placeholder="Placeholder"
-      required
-    >
-      {props.children}
-    </FATextField>
-  </>
+  <Box width={"300px"}>
+    <FATextField fullWidth {...props} />
+  </Box>
 );
-
-export const Select = (props: IInput) => (
-  <>
-    <FATextField
-      {...props}
-      select
-      value={1}
-      sx={{ width: "220px" }}
-      adornment="kg"
-      adornmentPosition="start"
-    >
-      <MenuItem value={1}>This is filled</MenuItem>
-    </FATextField>
-  </>
-);
-
-export const WithAdornment = Template.bind({});
-WithAdornment.args = {
-  adornment: "kg",
-  adornmentPosition: "start",
+export const NoIcon = (props: IInput) => {
+  return (
+    <Box width={"300px"}>
+      <FATextField fullWidth variants="standard" {...props} />
+    </Box>
+  );
 };
 
-export const WithAdornmentAtEnd = Template.bind({});
-WithAdornmentAtEnd.args = {
-  adornment: "kg",
-  adornmentPosition: "end",
+export const RightIcon = (props: IInput) => {
+  return (
+    <Box width={"300px"}>
+      <FATextField
+        fullWidth
+        variants="standard"
+        adornmentPosition="end"
+        adornment={"kg"}
+        {...props}
+      />
+    </Box>
+  );
 };
 
-export const WithHelperText = Template2.bind({});
-WithHelperText.args = {
-  helperText: `it can't be empty`,
+export const LeftIcon = (props: IInput) => {
+  return (
+    <Box width={"300px"}>
+      <FATextField
+        fullWidth
+        variants="standard"
+        adornmentPosition="start"
+        adornment={<FAIcon testID="icon-add">email</FAIcon>}
+        {...props}
+      />
+    </Box>
+  );
 };
-
-export const Outlined = (props: IInput) => (
-  <>
-    <FATextField variants="outlined" {...props}>
-      {props.children}
-    </FATextField>
-  </>
-);
-
-export const Filled = (props: IInput) => (
-  <>
-    <FATextField variants="filled" {...props}>
-      {props.children}
-    </FATextField>
-  </>
-);

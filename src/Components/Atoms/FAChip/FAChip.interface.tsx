@@ -3,9 +3,7 @@ import { ChipProps } from "@mui/material";
 export interface IFAChip extends ChipProps {
   testID: `chip-${string}`;
   label?: string;
-  avatar?:
-    | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-    | undefined;
+  avatar?: React.ReactElement<any, string | React.JSXElementConstructor<any>>;
   onDelete?: any;
   color?:
     | "default"

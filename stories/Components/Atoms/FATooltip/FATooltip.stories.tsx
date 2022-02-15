@@ -5,65 +5,81 @@ import { IFATooltip } from "@Atoms/FATooltip/FATooltip.interface";
 const story = {
   title: "Atom/Tooltip",
   component: FATooltip,
-  argTypes: {
-    children: { control: "text" },
-  },
-  args: {
-    children: "Welcome!",
-  },
 };
 
 export default story;
 export const Default = (props: IFATooltip) => (
-  <div style={{ width: "10%" }}>
+  <div
+    style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+  >
     <FATooltip {...props} title="test">
-      <button>test</button>
+      <span style={{ border: "1px solid grey", padding: "5px" }}>
+        Default Tooltip
+      </span>
     </FATooltip>
   </div>
 );
 
 export const WithArrow = (props: IFATooltip) => (
   <div
-    style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      margin: "20px 0px",
+    }}
   >
-    <FATooltip
-      {...props}
-      title="top"
-      style={{ margin: "20px 0", padding: "5px 0", minWidth: "7%" }}
-      arrow
-      placement="top"
-    >
-      <button>test</button>
-    </FATooltip>
-
-    <FATooltip
-      {...props}
-      title="right"
-      style={{ margin: "20px 0", padding: "5px 0", minWidth: "7%" }}
-      arrow
-      placement="right"
-    >
-      <button>test</button>
-    </FATooltip>
-
-    <FATooltip
-      {...props}
-      title="bottom"
-      style={{ margin: "20px 0", padding: "5px 0", minWidth: "7%" }}
-      arrow
-      placement="bottom"
-    >
-      <button>test</button>
-    </FATooltip>
-
-    <FATooltip
-      {...props}
-      title="left"
-      style={{ margin: "20px 0", padding: "5px 0", minWidth: "7%" }}
-      arrow
-      placement="left"
-    >
-      <button>test</button>
-    </FATooltip>
+    <div style={{ padding: "20px 0" }}>
+      <FATooltip
+        {...props}
+        title="My Tooltip"
+        arrow
+        placement="top"
+        open={true}
+      >
+        <span style={{ border: "1px solid grey", padding: "5px" }}>
+          Top Arrow Tooltip
+        </span>
+      </FATooltip>
+    </div>
+    <div style={{ padding: "20px 0" }}>
+      <FATooltip
+        {...props}
+        title="My Tooltip"
+        arrow
+        placement="right"
+        open={true}
+      >
+        <span style={{ border: "1px solid grey", padding: "5px" }}>
+          Right Arrow Tooltip
+        </span>
+      </FATooltip>
+    </div>
+    <div style={{ padding: "20px 0" }}>
+      <FATooltip
+        {...props}
+        title="My Tooltip"
+        arrow
+        placement="bottom"
+        open={true}
+      >
+        <span style={{ border: "1px solid grey", padding: "5px" }}>
+          Bottom Arrow Tooltip
+        </span>
+      </FATooltip>
+    </div>
+    <div style={{ padding: "20px 0" }}>
+      <FATooltip
+        {...props}
+        title="My Tooltip"
+        arrow
+        placement="left"
+        open={true}
+      >
+        <span style={{ border: "1px solid grey", padding: "5px" }}>
+          Left Arrow Tooltip
+        </span>
+      </FATooltip>
+    </div>
   </div>
 );

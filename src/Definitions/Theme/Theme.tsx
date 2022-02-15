@@ -1,12 +1,10 @@
 import { createTheme, experimental_sx as sx } from "@mui/material/styles";
-
 const drawerWidth = 250;
 
 declare module "@mui/material/styles" {
   interface Palette {
     bluegrey: Palette["grey"];
   }
-
   // allow configuration using `createTheme`
   interface PaletteOptions {
     bluegrey?: PaletteOptions["grey"];
@@ -162,6 +160,11 @@ export const baseTheme = createTheme({
         },
       },
     },
+    MuiIcon: {
+      defaultProps: {
+        className: "material-icons-outlined",
+      },
+    },
     MuiInput: {
       styleOverrides: {
         input: {
@@ -170,10 +173,48 @@ export const baseTheme = createTheme({
         },
         root: {
           "&.MuiInput-underline": {
-            paddingBottom: "12px",
             marginTop: "24px",
+            "& .MuiInputBase-input": {
+              paddingBottom: "12px",
+            },
           },
         },
+      },
+    },
+    MuiRadio: {
+      defaultProps: {
+        size: "small",
+      },
+      styleOverrides: {
+        root: {
+          height: "40px",
+          width: "40px",
+        },
+      },
+    },
+    MuiSwitch: {
+      defaultProps: {
+        size: "small",
+      },
+    },
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: sx({
+          backgroundColor: "#D4D4D4",
+          color: "#221F20",
+          fontSize: "12px",
+          fontWeight: "400",
+          lineHeight: "19.2px",
+        }),
+        arrow: sx({
+          color: "#D4D4D4",
+        }),
+      },
+    },
+    MuiTextField: {
+      defaultProps: {
+        InputLabelProps: { shrink: true },
+        margin: "normal",
       },
     },
     MuiSelect: {
@@ -188,6 +229,7 @@ export const baseTheme = createTheme({
     MuiInputAdornment: {
       styleOverrides: {
         standard: {
+          marginBottom: "12px",
           "& .material-icons": {
             fontSize: "20px",
           },
@@ -219,6 +261,15 @@ export const baseTheme = createTheme({
           lineHeight: "19.2px",
           marginTop: "8px",
         },
+      },
+    },
+    MuiFormControlLabel: {
+      styleOverrides: {
+        label: ({ ownerState }) => ({
+          ...(ownerState.control.props.size === "small" && {
+            fontSize: "0.875rem",
+          }),
+        }),
       },
     },
     MuiFormControl: {

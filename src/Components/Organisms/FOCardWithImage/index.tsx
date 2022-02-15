@@ -35,7 +35,7 @@ export const FOCardWithImage = memo((props: IFOCardWithImage) => {
         {option && (
           <FAFormControlLabel
             label={optionLabel || "optionLabel"}
-            testID="ControlLabel-test"
+            testID="form-control-label-test"
             control={option}
           ></FAFormControlLabel>
         )}
