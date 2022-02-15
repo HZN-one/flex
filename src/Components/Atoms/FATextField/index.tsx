@@ -11,6 +11,11 @@ const useStyles = makeStyles(() => ({
       color: "#221F20",
     },
   },
+  adorned: {
+    "& .MuiOutlinedInput-root .MuiSelect-select.MuiSelect-select": {
+      paddingLeft: 0,
+    },
+  },
 }));
 
 export const FATextField = memo(
@@ -34,9 +39,22 @@ export const FATextField = memo(
     const endAdornment =
       adornment && adornmentPosition === "end" ? AddAdornment() : null;
 
+    function checkClass() {
+      let newClass = "";
+      if (!props.select) {
+        newClass = newClass + classes.default;
+      }
+
+      if (adornment && adornmentPosition) {
+        newClass = newClass + classes.adorned;
+      }
+
+      return newClass;
+    }
+
     return (
       <TextField
-        className={!props.select ? classes.default : ""}
+        className={checkClass()}
         inputRef={ref}
         data-testid={testID}
         name={name}

@@ -46,7 +46,14 @@ export const Default = (props: IInput) => (
 
 export const Select = (props: IInput) => (
   <>
-    <FATextField {...props} select value={1} sx={{ width: "220px" }}>
+    <FATextField
+      {...props}
+      select
+      value={1}
+      sx={{ width: "220px" }}
+      adornment="kg"
+      adornmentPosition="start"
+    >
       <MenuItem value={1}>This is filled</MenuItem>
     </FATextField>
   </>
