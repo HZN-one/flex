@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
-import { withDesign } from 'storybook-addon-designs';
+import { withDesign } from "storybook-addon-designs";
 import { FAButton } from "@Atoms/FAButton";
 import { IButton } from "@Atoms/FAButton/Button.interface";
 
@@ -24,7 +24,7 @@ const Template: ComponentStory<typeof FAButton> = (props: IButton) => (
   <FAButton {...props} />
 );
 
-export const Overview = (props: IButton) => (
+export const Default = (props: IButton) => (
   <FAButton {...props}>{props.children}</FAButton>
 );
 
@@ -43,9 +43,9 @@ Text.args = {
   variant: "text",
 };
 
-Overview.parameters = {
-    design: {
-        type: "figma",
-        url: 'https://www.figma.com/file/q2CQUOtypaKMoDl1CLAann/Flex-Design-System?node-id=8%3A10696',
-    }
-}
+Default.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/q2CQUOtypaKMoDl1CLAann/Flex-Design-System?node-id=233%3A1965",
+  },
+};

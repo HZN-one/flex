@@ -16,7 +16,7 @@ const story = {
 
 export default story;
 
-export const Variant = (props: IFACheckbox) => (
+export const Default = (props: IFACheckbox) => (
   <>
     <FACheckbox {...props} />
   </>
