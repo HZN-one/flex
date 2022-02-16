@@ -27,7 +27,7 @@ export const WithLabel = (props: IFAFormControlLabel) => (
     <FAFormControlLabel
       {...props}
       label="test"
-      testID="ControlLabel-test"
+      testID="form-control-label-test"
       control={<FACheckbox testID="checkbox-test" />}
     />
   </>
