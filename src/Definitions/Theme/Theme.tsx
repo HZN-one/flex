@@ -377,6 +377,9 @@ export const baseTheme = createTheme({
         }),
         standard: sx({
           height: "20.125px",
+          "&.MuiSelect-multiple": {
+            height: "auto",
+          },
         }),
       },
     },
