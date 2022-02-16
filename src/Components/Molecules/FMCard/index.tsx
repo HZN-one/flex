@@ -7,7 +7,7 @@ import { IFMCard } from "./FMCard.interfaces";
 import { FATypography } from "@Atoms/FATypography";
 
 export const FMCard = memo((props: IFMCard) => {
-  const { testID, actions, title, ...materialUIProps } = props;
+  const { testID, actions, title, children, ...materialUIProps } = props;
   return (
     <Card data-testid={testID} {...materialUIProps}>
       <CardContent>
@@ -17,12 +17,13 @@ export const FMCard = memo((props: IFMCard) => {
               testID="typography-card"
               variant="h6"
               fontWeight={700}
+              sx={{ marginBottom: 3.75 }}
             >
               {title}
             </FATypography>
           </>
         )}
-        {props.children}
+        {children}
       </CardContent>
       {actions && <CardActions>{actions}</CardActions>}
     </Card>

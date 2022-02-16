@@ -12,7 +12,7 @@ import { render } from "@testing-library/react";
 describe("FAPagination", () => {
   it("should match snapshot", () => {
     const { container } = render(
-      <FAPagination count={10} testID="pagination-example" />
+      <FAPagination size="small" count={10} testID="pagination-example" />
     );
     expect(container).toMatchSnapshot();
   });

@@ -5,9 +5,7 @@ import { IButton } from "./Button.interface";
 export const FAButton = memo((props: IButton) => {
   const { testID, ...materialUIProps } = props;
 
-  return (
-    <Button data-testid={testID} variant="contained" {...materialUIProps} />
-  );
+  return <Button data-testid={testID} {...materialUIProps} />;
 });
 
 FAButton.displayName = "FAButton";

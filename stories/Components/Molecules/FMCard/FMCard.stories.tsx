@@ -1,19 +1,32 @@
 import React from "react";
-import { ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 import { FMCard } from "@Molecules";
+
 import { FAButton } from "@Atoms/FAButton";
 import { IFMCard } from "@Molecules/FMCard/FMCard.interfaces";
 
-const story = {
+const meta: Meta = {
   title: "Molecules/Card",
   component: FMCard,
 };
 
-export default story;
+export default meta;
 
-const Template: ComponentStory<typeof FMCard> = (props: IFMCard) => (
+const Template: Story<IFMCard> = (props: IFMCard) => (
   <FMCard sx={{ width: "20vw" }} {...props} />
 );
+
+export const Default = Template.bind({});
+
+Default.args = {
+  title: "Card Title",
+  children: "Card Content",
+  actions: (
+    <FAButton testID="button-card" size="small">
+      Learn More
+    </FAButton>
+  ),
+};
 
 export const withCustomChildren = (props: IFMCard) => (
   <>

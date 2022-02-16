@@ -8,7 +8,7 @@ import { baseTheme } from "../../..";
 
 export const ThemeProviderWrapper: FC<Props> = function (props) {
   return (
-    <ThemeProvider theme={baseTheme(props)}>
+    <ThemeProvider theme={baseTheme}>
       <CssBaseline />
       {props.children}
     </ThemeProvider>

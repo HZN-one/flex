@@ -1,9 +1,7 @@
 import React from "react";
-import { ComponentStory } from "@storybook/react";
+import { Story } from "@storybook/react";
 import { FMSearch } from "@Molecules";
-import { FAFormControl } from "@Atoms";
 import { IFMSearch } from "@Molecules/FMSearch/FMSearch.interfaces";
-import { IFAFormControl } from "@Atoms/FAFormControl/FAFormControl.interfaces";
 
 const story = {
   title: "Molecules/Search",
@@ -12,27 +10,24 @@ const story = {
     placeholder: { control: "text" },
   },
   args: {
-    placeholder: "placeholder",
+    placeholder: "Search",
   },
 };
 
 export default story;
 
-export const Default = (props: IFMSearch) => (
-  <>
-    <FMSearch {...props}>{props.children}</FMSearch>
-  </>
+const Template: Story<IFMSearch> = props => (
+  <FMSearch {...props} testID="search-textfield"></FMSearch>
 );
 
-const Template2: ComponentStory<typeof FAFormControl> = (
-  props: IFAFormControl
-) => (
-  <FAFormControl {...props}>
-    <FMSearch testID="search-test"></FMSearch>
-  </FAFormControl>
-);
+export const Default = Template.bind({});
 
-export const WithHelperText = Template2.bind({});
-WithHelperText.args = {
-  helperText: `it can't be empty`,
+Default.args = {
+  size: "small",
+};
+
+export const Large = Template.bind({});
+
+Large.args = {
+  size: "medium",
 };
