@@ -10,6 +10,12 @@ export const FATextField = memo(
       adornment,
       adornmentPosition,
       variants,
+      required,
+      disabled,
+      size,
+      helperText,
+      error,
+      placeholder,
       ...materialUIProps
     } = props;
 
@@ -29,6 +35,12 @@ export const FATextField = memo(
         data-testid={testID}
         name={name}
         variant={variants}
+        disabled={disabled}
+        required={required}
+        size={size}
+        helperText={helperText}
+        error={error}
+        placeholder={placeholder}
         {...materialUIProps}
         InputProps={{
           startAdornment: startAdornment,

@@ -12,6 +12,7 @@
                     "@Molecules": "./src/Components/Molecules",
                     "@Organisms": "./src/Components/Organisms",
                     "@Components": "./src/Components",
+                    "@Definitions": "./src/Definitions",
                     "@src": "./src"
                 }
             }

@@ -1,9 +1,7 @@
 export * from "./FAButton";
 export * from "./FAIconButton";
 export * from "./Icon";
-export * from "../Molecules/FMFormTextField";
 export * from "./FATextField";
-export * from "../Molecules/FMSelect";
 export * from "./FACheckbox";
 export * from "./FASwitch";
 export * from "./FARadio";
@@ -14,7 +12,5 @@ export * from "./FAFormControlLabel";
 export * from "./FAFormControl";
 export * from "./FATypography";
 export * from "./FALogo";
-export * from "./FAOutlinedInput";
-export * from "./FAInput";
 export * from "./FALink";
 export * from "./FASkeleton";

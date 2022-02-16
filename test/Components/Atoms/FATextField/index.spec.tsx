@@ -5,13 +5,13 @@
 import * as React from "react";
 import "@testing-library/jest-dom";
 
-import { FMSelect } from "@Molecules";
+import { FATextField } from "@Atoms";
 
 import { render } from "@testing-library/react";
 
-describe("FMSelect", () => {
+describe("FATextField", () => {
   it("should match snapshot", () => {
-    const { container } = render(<FMSelect testID="select-example" />);
+    const { container } = render(<FATextField testID="input-example" />);
     expect(container).toMatchSnapshot();
   });
 });
