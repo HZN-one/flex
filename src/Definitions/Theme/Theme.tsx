@@ -49,6 +49,23 @@ declare module "@mui/material/Typography" {
 // Create a theme instance.
 export const baseTheme = createTheme({
   components: {
+    MuiPaginationItem: {
+      styleOverrides: {
+        sizeLarge: sx({
+          px: 2,
+          py: 1,
+          borderRadius: "50%",
+          typography: "bodySemiBold1",
+        }),
+        sizeSmall: sx({
+          py: 0.6875,
+          px: 1.5625,
+          height: "100%",
+          borderRadius: "50%",
+          typography: "bodySemiBold2",
+        }),
+      },
+    },
     MuiButton: {
       defaultProps: {
         disableElevation: true,
@@ -84,6 +101,10 @@ export const baseTheme = createTheme({
           "&.MuiInput-root.Mui-disabled": {
             ":before": {
               borderBottomStyle: "solid",
+            },
+            ".MuiOutlinedInput-input": {
+              fontSize: "14px",
+              height: "23px",
             },
           },
           "& > label > span": {
