@@ -14,7 +14,9 @@ const meta: Meta = {
 export default meta;
 
 const Template: Story<IFOCardWithTextField> = props => (
-  <FOCardWithTextField {...props} />
+  <Box maxWidth={560}>
+    <FOCardWithTextField {...props} />
+  </Box>
 );
 
 export const Default = Template.bind({});
