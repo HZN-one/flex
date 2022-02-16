@@ -1,39 +1,27 @@
 import React, { memo } from "react";
-import { TextField, InputAdornment } from "@mui/material";
+import { Box, InputAdornment } from "@mui/material";
+
+import { FAIcon, FATextField } from "@Atoms";
 import { IFMSearch } from "./FMSearch.interfaces";
-import SearchIcon from "@mui/icons-material/Search";
 
 export const FMSearch = memo((props: IFMSearch) => {
-  const {
-    disabled,
-    variants,
-    type,
-    testID,
-    value,
-    label,
-    onChange,
-    ...materialUIProps
-  } = props;
+  const { testID, ...materialUIProps } = props;
 
   return (
-    <TextField
-      data-testid={testID}
-      {...materialUIProps}
-      disabled={disabled}
-      type={type}
-      label={label}
-      variant={variants}
-      onChange={onChange}
-      value={value}
-      placeholder="Search"
-      InputProps={{
-        startAdornment: (
+    <Box data-testid={testID}>
+      <FATextField
+        testID="input-search"
+        adornment={
           <InputAdornment position="start">
-            <SearchIcon color="secondary"></SearchIcon>
+            <FAIcon testID="icon-search" color="primary">
+              search
+            </FAIcon>
           </InputAdornment>
-        ),
-      }}
-    />
+        }
+        adornmentPosition="start"
+        {...materialUIProps}
+      />
+    </Box>
   );
 });
 

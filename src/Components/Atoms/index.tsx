@@ -1,7 +1,6 @@
 export * from "./FAButton";
 export * from "./FAIconButton";
 export * from "./Icon";
-export * from "../Molecules/FMFormTextField";
 export * from "./FATextField";
 export * from "./FACheckbox";
 export * from "./FASwitch";

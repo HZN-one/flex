@@ -25,9 +25,9 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextField) => {
     <Card
       data-testid={testID}
       {...materialUIProps}
+      elevation={1}
       sx={{
         ...sx,
-        boxShadow: "0px 0px 16px rgba(0, 0, 0, 0.1)",
       }}
     >
       <CardContent>
@@ -35,7 +35,6 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextField) => {
           testID="typography-signIn"
           textAlign="left"
           variant="h3"
-          fontWeight={700}
           color="text.primary"
         >
           {title}
@@ -45,9 +44,8 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextField) => {
           testID="typography-signIn"
           textAlign="left"
           variant="body1"
-          letterSpacing="0.2px"
           color="textSecondary"
-          sx={{ p: "0 0 38px 0" }}
+          sx={{ pb: 3.75, mt: 1 }}
         >
           {subtitle}
         </FATypography>
@@ -61,10 +59,9 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextField) => {
           </Box>
           <FAButton
             testID="button-submit"
+            color="primary"
             sx={{
-              marginTop: "10px",
-              bgcolor: "primary",
-              borderRadius: "8px",
+              mt: 1,
             }}
             variant="contained"
             type="submit"
