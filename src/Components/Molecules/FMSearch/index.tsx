@@ -1,6 +1,6 @@
 import React, { memo } from "react";
-import { InputAdornment } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
+import { Box, InputAdornment } from "@mui/material";
+import { FAIcon } from "@Atoms/Icon";
 
 import { IFMSearch } from "./FMSearch.interfaces";
 import { FATextField } from "@Atoms/FATextField";
@@ -9,18 +9,20 @@ export const FMSearch = memo((props: IFMSearch) => {
   const { testID, ...materialUIProps } = props;
 
   return (
-    <div data-testid={testID}>
+    <Box data-testid={testID}>
       <FATextField
         testID="input-search"
         adornment={
           <InputAdornment position="start">
-            <SearchIcon color="primary"></SearchIcon>
+            <FAIcon testID="icon-search" color="primary">
+              search
+            </FAIcon>
           </InputAdornment>
         }
         adornmentPosition="start"
         {...materialUIProps}
       />
-    </div>
+    </Box>
   );
 });
 

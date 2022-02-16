@@ -91,12 +91,6 @@ export const FOHeader = memo((props: IFOHeader) => {
           {search && (
             <FMSearch
               size="small"
-              sx={{
-                bgcolor: "#fff",
-                borderRadius: "8px",
-                flexGrow: 0.2,
-                mr: 3,
-              }}
               testID="search-header"
               onChange={handleSearch}
             ></FMSearch>
