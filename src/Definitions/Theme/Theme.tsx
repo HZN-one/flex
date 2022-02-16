@@ -14,7 +14,8 @@ declare module "@mui/material/styles" {
     subtitleBold: React.CSSProperties;
     bodySemiBold1: React.CSSProperties;
     bodySemiBold2: React.CSSProperties;
-    buttonBold: React.CSSProperties;
+    buttonBold1: React.CSSProperties;
+    buttonBold2: React.CSSProperties;
     buttonSemiBold: React.CSSProperties;
     captionSemiBold: React.CSSProperties;
   }
@@ -25,7 +26,8 @@ declare module "@mui/material/styles" {
     subtitleBold: React.CSSProperties;
     bodySemiBold1: React.CSSProperties;
     bodySemiBold2: React.CSSProperties;
-    buttonBold: React.CSSProperties;
+    buttonBold1: React.CSSProperties;
+    buttonBold2: React.CSSProperties;
     buttonSemiBold: React.CSSProperties;
     captionSemiBold?: React.CSSProperties;
   }
@@ -37,7 +39,8 @@ declare module "@mui/material/Typography" {
     subtitleBold: true;
     bodySemiBold1: true;
     bodySemiBold2: true;
-    buttonBold: true;
+    buttonBold1: true;
+    buttonBold2: true;
     buttonSemiBold: true;
     captionSemiBold: true;
   }
@@ -179,6 +182,134 @@ export const baseTheme = createTheme({
         size: "small",
       },
     },
+    MuiChip: {
+      defaultProps: {
+        size: "small",
+      },
+      styleOverrides: {
+        outlined: {
+          "&.MuiChip-colorDefault": {
+            "& .MuiChip-label": {
+              color: "#221F20",
+            },
+            "& .MuiChip-deleteIconColorDefault": {
+              color: "#D4D4D4",
+            },
+          },
+          "&.MuiChip-colorPrimary": {
+            "& .MuiChip-label": {
+              color: "#DC3931",
+            },
+          },
+          "&.MuiChip-colorSecondary": {
+            "& .MuiChip-label": {
+              color: "#525252",
+            },
+          },
+          "&  .MuiAvatar-root.MuiChip-avatarColorError": {
+            color: "#FFFFFF",
+            background: "#F43F5E",
+          },
+          "& .MuiAvatar-root.MuiChip-avatarColorWarning": {
+            background: "#F59E0B",
+            color: "#FFFFFF",
+          },
+          "& .MuiAvatar-root.MuiChip-avatarColorInfo": {
+            background: "#3B82F6",
+            color: "#FFFFFF",
+          },
+          "& .MuiAvatar-root.MuiChip-avatarColorSuccess": {
+            background: "#22C55E",
+            color: "#FFFFFF",
+          },
+        },
+        filled: {
+          "&.MuiChip-colorDefault": {
+            background: "#E5E5E5",
+            "& .MuiChip-label": {
+              color: "#221F20",
+            },
+            "& .MuiChip-deleteIconColorDefault": {
+              color: "#A3A3A3",
+            },
+            "& .MuiAvatar-root.MuiChip-avatarColorDefault": {
+              background: "#A3A3A3",
+            },
+          },
+          "&.MuiChip-colorError ": {
+            background: "#FB7185",
+            "& .MuiAvatar-root.MuiChip-avatarColorError": {
+              color: "#FFFFFF",
+              background: "#F43F5E",
+            },
+          },
+          "&.MuiChip-colorWarning ": {
+            background: "#FBBF24",
+            "& .MuiAvatar-root.MuiChip-avatarColorWarning": {
+              background: "#F59E0B",
+              color: "#FFFFFF",
+            },
+            "& .MuiChip-deleteIconColorWarning": {
+              color: "#FFFFFF",
+            },
+            "& .MuiChip-label": {
+              color: "#FFFFFF",
+            },
+          },
+          "&.MuiChip-colorInfo": {
+            background: "#629BF8",
+            "& .MuiAvatar-root.MuiChip-avatarColorInfo": {
+              background: "#3B82F6",
+              color: "#FFFFFF",
+            },
+            "& .MuiChip-deleteIconColorWarning": {
+              color: "#FFFFFF",
+            },
+          },
+          "&.MuiChip-colorSuccess": {
+            background: "#4ED17E",
+            "& .MuiAvatar-root.MuiChip-avatarColorSuccess": {
+              background: "#22C55E",
+              color: "#FFFFFF",
+            },
+            "& .MuiChip-deleteIconColorSuccess": {
+              color: "#FFFFFF",
+            },
+            "& .MuiChip-label": {
+              color: "#FFFFFF",
+            },
+          },
+        },
+        root: {
+          padding: "4px 8px",
+          height: "auto",
+        },
+        avatar: sx({
+          typography: "caption",
+          marginRight: "8px",
+          marginLeft: 0,
+        }),
+        label: sx({
+          p: 0,
+          m: 0,
+        }),
+        deleteIcon: sx({
+          margin: 0,
+        }),
+        labelMedium: sx({
+          typography: "body1",
+        }),
+        deleteIconMedium: sx({
+          marginLeft: "10px",
+        }),
+        labelSmall: sx({
+          typography: "body2",
+        }),
+        deleteIconSmall: sx({
+          marginLeft: "8px",
+        }),
+      },
+    },
     MuiTooltip: {
       styleOverrides: {
         tooltip: sx({
@@ -282,7 +413,7 @@ export const baseTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Inter",
+    fontFamily: ['"Inter"', "sans-serif"].join(","),
     htmlFontSize: 16,
     fontSize: 14,
     h1: {
@@ -345,20 +476,25 @@ export const baseTheme = createTheme({
       fontWeight: 600,
       lineHeight: "21px",
     },
-    buttonBold: {
+    buttonBold1: {
+      fontSize: "1.125rem",
+      fontWeight: 700,
+      lineHeight: 1,
+    },
+    buttonBold2: {
       fontSize: "1rem",
       fontWeight: 700,
       lineHeight: 1,
     },
     buttonSemiBold: {
       fontSize: "0.875rem",
-      fontWeight: 700,
+      fontWeight: 600,
       lineHeight: 1,
     },
     caption: {
       fontSize: "0.75rem",
       fontWeight: 400,
-      lineHeight: 1,
+      lineHeight: "19.2px",
     },
     captionSemiBold: {
       fontSize: "0.75rem",
@@ -374,7 +510,7 @@ export const baseTheme = createTheme({
   palette: {
     primary: {
       main: "#DC3931",
-      dark: "#B02D27",
+      dark: "#B02E27",
       light: "#E3615A",
     },
     secondary: {
@@ -396,11 +532,12 @@ export const baseTheme = createTheme({
       main: "#F59E0B",
       dark: "#B45309",
       light: "#FBBF24",
+      contrastText: "#FFFFFF",
     },
     success: {
       main: "#22C55E",
       dark: "#15803D",
-      light: "#34D399",
+      light: "#4ED17E",
     },
     grey: {
       "50": "#FAFAFA",
