@@ -10,7 +10,7 @@ export const FMTableSkeleton = memo((props: IFMTableSkeletonProps) => {
   for (let c = 0; c < columns; c++) {
     tableColumns.push(
       <TableCell key={c}>
-        <Skeleton animation="wave" height={24} />
+        <Skeleton animation="wave" height={20} />
       </TableCell>
     );
   }

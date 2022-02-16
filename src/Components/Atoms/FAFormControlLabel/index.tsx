@@ -3,15 +3,8 @@ import { FormControlLabel } from "@mui/material";
 import { IFAFormControlLabel } from "./FAFormControlLabel.interfaces";
 
 export const FAFormControlLabel = memo((props: IFAFormControlLabel) => {
-  const { testID, label, control, ...materialUIProps } = props;
-  return (
-    <FormControlLabel
-      data-testid={testID}
-      control={control}
-      {...materialUIProps}
-      label={label}
-    />
-  );
+  const { testID, ...materialUIProps } = props;
+  return <FormControlLabel data-testid={testID} {...materialUIProps} />;
 });
 
 FAFormControlLabel.displayName = "FAFormControlLabel";

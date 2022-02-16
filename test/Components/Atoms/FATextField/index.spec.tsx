@@ -4,15 +4,14 @@
 
 import * as React from "react";
 import "@testing-library/jest-dom";
-import { FMFormTextField } from "@Molecules";
+
+import { FATextField } from "@Atoms";
 
 import { render } from "@testing-library/react";
 
-describe("FMFormTextField", () => {
+describe("FATextField", () => {
   it("should match snapshot", () => {
-    const { container } = render(
-      <FMFormTextField variant="outlined" testID="input-example" />
-    );
+    const { container } = render(<FATextField testID="input-example" />);
     expect(container).toMatchSnapshot();
   });
 });

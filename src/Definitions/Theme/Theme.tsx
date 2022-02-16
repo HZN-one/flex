@@ -5,7 +5,6 @@ declare module "@mui/material/styles" {
   interface Palette {
     bluegrey: Palette["grey"];
   }
-
   // allow configuration using `createTheme`
   interface PaletteOptions {
     bluegrey?: PaletteOptions["grey"];
@@ -79,6 +78,325 @@ export const baseTheme = createTheme({
         }),
       },
     },
+    MuiInputBase: {
+      styleOverrides: {
+        root: {
+          "&.MuiInput-root.Mui-disabled": {
+            ":before": {
+              borderBottomStyle: "solid",
+            },
+          },
+          "& > label > span": {
+            color: "red",
+          },
+          "& > label": {
+            color: "#221F20",
+            fontWeight: 600,
+            letterSpacing: "0.2px",
+          },
+        },
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        sizeSmall: sx({
+          input: {
+            py: 1.75,
+          },
+          fontSize: "14px",
+          lineHeight: "20px",
+        }),
+        root: {
+          borderRadius: "8px",
+        },
+      },
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        sizeSmall: {
+          fontSize: "14px",
+          lineHeight: "20px",
+          top: "4px",
+          "&.Mui-focused": {
+            top: 0,
+          },
+          "&.MuiInputLabel-shrink": {
+            top: 0,
+          },
+          "&.MuiFormLabel-filled": {
+            top: 0,
+          },
+        },
+        standard: {
+          fontSize: "14px",
+          lineHeight: "21px",
+          top: "4px",
+          "&.Mui-focused": {
+            top: 0,
+          },
+          "&.MuiInputLabel-shrink": {
+            top: 0,
+          },
+          "&.MuiFormLabel-filled": {
+            top: 0,
+          },
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: "8px",
+        },
+      },
+    },
+    MuiCardContent: {
+      styleOverrides: {
+        root: sx({
+          padding: 3,
+        }),
+      },
+    },
+    MuiSvgIcon: {
+      styleOverrides: {
+        root: {
+          "&.MuiSelect-iconStandard": {
+            top: 0,
+          },
+        },
+      },
+    },
+    MuiIcon: {
+      defaultProps: {
+        className: "material-icons-outlined",
+      },
+    },
+    MuiInput: {
+      styleOverrides: {
+        input: {
+          fontSize: "14px",
+          padding: 0,
+        },
+        root: {
+          "&.MuiInput-underline": {
+            marginTop: "24px",
+            "& .MuiInputBase-input": {
+              paddingBottom: "12px",
+            },
+          },
+        },
+      },
+    },
+    MuiRadio: {
+      defaultProps: {
+        size: "small",
+      },
+      styleOverrides: {
+        root: {
+          height: "40px",
+          width: "40px",
+        },
+      },
+    },
+    MuiSwitch: {
+      defaultProps: {
+        size: "small",
+      },
+    },
+    MuiChip: {
+      defaultProps: {
+        size: "small",
+      },
+      styleOverrides: {
+        outlined: {
+          "&.MuiChip-colorDefault": {
+            "& .MuiChip-label": {
+              color: "#221F20",
+            },
+            "& .MuiChip-deleteIconColorDefault": {
+              color: "#D4D4D4",
+            },
+          },
+          "&.MuiChip-colorPrimary": {
+            "& .MuiChip-label": {
+              color: "#DC3931",
+            },
+          },
+          "&.MuiChip-colorSecondary": {
+            "& .MuiChip-label": {
+              color: "#525252",
+            },
+          },
+          "&  .MuiAvatar-root.MuiChip-avatarColorError": {
+            color: "#FFFFFF",
+            background: "#F43F5E",
+          },
+          "& .MuiAvatar-root.MuiChip-avatarColorWarning": {
+            background: "#F59E0B",
+            color: "#FFFFFF",
+          },
+          "& .MuiAvatar-root.MuiChip-avatarColorInfo": {
+            background: "#3B82F6",
+            color: "#FFFFFF",
+          },
+          "& .MuiAvatar-root.MuiChip-avatarColorSuccess": {
+            background: "#22C55E",
+            color: "#FFFFFF",
+          },
+        },
+        filled: {
+          "&.MuiChip-colorDefault": {
+            background: "#E5E5E5",
+            "& .MuiChip-label": {
+              color: "#221F20",
+            },
+            "& .MuiChip-deleteIconColorDefault": {
+              color: "#A3A3A3",
+            },
+            "& .MuiAvatar-root.MuiChip-avatarColorDefault": {
+              background: "#A3A3A3",
+            },
+          },
+          "&.MuiChip-colorError ": {
+            background: "#FB7185",
+            "& .MuiAvatar-root.MuiChip-avatarColorError": {
+              color: "#FFFFFF",
+              background: "#F43F5E",
+            },
+          },
+          "&.MuiChip-colorWarning ": {
+            background: "#FBBF24",
+            "& .MuiAvatar-root.MuiChip-avatarColorWarning": {
+              background: "#F59E0B",
+              color: "#FFFFFF",
+            },
+            "& .MuiChip-deleteIconColorWarning": {
+              color: "#FFFFFF",
+            },
+            "& .MuiChip-label": {
+              color: "#FFFFFF",
+            },
+          },
+          "&.MuiChip-colorInfo": {
+            background: "#629BF8",
+            "& .MuiAvatar-root.MuiChip-avatarColorInfo": {
+              background: "#3B82F6",
+              color: "#FFFFFF",
+            },
+            "& .MuiChip-deleteIconColorWarning": {
+              color: "#FFFFFF",
+            },
+          },
+          "&.MuiChip-colorSuccess": {
+            background: "#4ED17E",
+            "& .MuiAvatar-root.MuiChip-avatarColorSuccess": {
+              background: "#22C55E",
+              color: "#FFFFFF",
+            },
+            "& .MuiChip-deleteIconColorSuccess": {
+              color: "#FFFFFF",
+            },
+            "& .MuiChip-label": {
+              color: "#FFFFFF",
+            },
+          },
+        },
+        root: {
+          padding: "4px 8px",
+          height: "auto",
+        },
+        avatar: sx({
+          typography: "caption",
+          marginRight: "8px",
+          marginLeft: 0,
+        }),
+        label: sx({
+          p: 0,
+          m: 0,
+        }),
+        deleteIcon: sx({
+          margin: 0,
+        }),
+        labelMedium: sx({
+          typography: "body1",
+        }),
+        deleteIconMedium: sx({
+          marginLeft: "10px",
+        }),
+        labelSmall: sx({
+          typography: "body2",
+        }),
+        deleteIconSmall: sx({
+          marginLeft: "8px",
+        }),
+      },
+    },
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: sx({
+          backgroundColor: "#D4D4D4",
+          color: "#221F20",
+          fontSize: "12px",
+          fontWeight: "400",
+          lineHeight: "19.2px",
+        }),
+        arrow: sx({
+          color: "#D4D4D4",
+        }),
+      },
+    },
+    MuiTextField: {
+      defaultProps: {
+        InputLabelProps: { shrink: true },
+        margin: "normal",
+      },
+    },
+    MuiSelect: {
+      styleOverrides: {
+        outlined: sx({
+          "&.MuiInputBase-inputSizeSmall": {
+            py: 1.75,
+          },
+        }),
+      },
+    },
+    MuiInputAdornment: {
+      styleOverrides: {
+        standard: {
+          marginBottom: "12px",
+          "& .material-icons": {
+            fontSize: "20px",
+          },
+          "& .MuiTypography-root": {
+            fontSize: "14px",
+            lineHeight: "15px",
+          },
+        },
+        outlined: {
+          "&.MuiInputAdornment-outlined.MuiInputAdornment-sizeSmall": {
+            "& .material-icons": {
+              fontSize: "20px",
+            },
+            "& .MuiTypography-root": {
+              fontSize: "14px",
+              lineHeight: "15px",
+            },
+          },
+        },
+      },
+    },
+    MuiFormHelperText: {
+      styleOverrides: {
+        contained: {
+          lineHeight: "20px",
+          margin: 0,
+        },
+        root: {
+          lineHeight: "19.2px",
+          marginTop: "8px",
+        },
+      },
+    },
     MuiFormControlLabel: {
       styleOverrides: {
         label: ({ ownerState }) => ({
@@ -86,6 +404,19 @@ export const baseTheme = createTheme({
             fontSize: "0.875rem",
           }),
         }),
+      },
+    },
+    MuiFormControl: {
+      styleOverrides: {
+        root: {
+          "& > label > span": {
+            color: "red",
+          },
+          ".MuiSelect-nativeInput": {
+            border: "1px solid red",
+            color: "red",
+          },
+        },
       },
     },
     MuiDrawer: {
@@ -185,7 +516,7 @@ export const baseTheme = createTheme({
     caption: {
       fontSize: "0.75rem",
       fontWeight: 400,
-      lineHeight: 1,
+      lineHeight: "19.2px",
     },
     captionSemiBold: {
       fontSize: "0.75rem",
@@ -228,7 +559,7 @@ export const baseTheme = createTheme({
     success: {
       main: "#22C55E",
       dark: "#15803D",
-      light: "#34D399",
+      light: "#4ED17E",
     },
     grey: {
       "50": "#FAFAFA",
