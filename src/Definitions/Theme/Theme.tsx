@@ -14,7 +14,8 @@ declare module "@mui/material/styles" {
     subtitleBold: React.CSSProperties;
     bodySemiBold1: React.CSSProperties;
     bodySemiBold2: React.CSSProperties;
-    buttonBold: React.CSSProperties;
+    buttonBold1: React.CSSProperties;
+    buttonBold2: React.CSSProperties;
     buttonSemiBold: React.CSSProperties;
     captionSemiBold: React.CSSProperties;
   }
@@ -25,7 +26,8 @@ declare module "@mui/material/styles" {
     subtitleBold: React.CSSProperties;
     bodySemiBold1: React.CSSProperties;
     bodySemiBold2: React.CSSProperties;
-    buttonBold: React.CSSProperties;
+    buttonBold1: React.CSSProperties;
+    buttonBold2: React.CSSProperties;
     buttonSemiBold: React.CSSProperties;
     captionSemiBold?: React.CSSProperties;
   }
@@ -37,7 +39,8 @@ declare module "@mui/material/Typography" {
     subtitleBold: true;
     bodySemiBold1: true;
     bodySemiBold2: true;
-    buttonBold: true;
+    buttonBold1: true;
+    buttonBold2: true;
     buttonSemiBold: true;
     captionSemiBold: true;
   }
@@ -407,7 +410,7 @@ export const baseTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Inter",
+    fontFamily: ['"Inter"', "sans-serif"].join(","),
     htmlFontSize: 16,
     fontSize: 14,
     h1: {
@@ -470,14 +473,19 @@ export const baseTheme = createTheme({
       fontWeight: 600,
       lineHeight: "21px",
     },
-    buttonBold: {
+    buttonBold1: {
+      fontSize: "1.125rem",
+      fontWeight: 700,
+      lineHeight: 1,
+    },
+    buttonBold2: {
       fontSize: "1rem",
       fontWeight: 700,
       lineHeight: 1,
     },
     buttonSemiBold: {
       fontSize: "0.875rem",
-      fontWeight: 700,
+      fontWeight: 600,
       lineHeight: 1,
     },
     caption: {
@@ -499,7 +507,7 @@ export const baseTheme = createTheme({
   palette: {
     primary: {
       main: "#DC3931",
-      dark: "#B02D27",
+      dark: "#B02E27",
       light: "#E3615A",
     },
     secondary: {
@@ -521,6 +529,7 @@ export const baseTheme = createTheme({
       main: "#F59E0B",
       dark: "#B45309",
       light: "#FBBF24",
+      contrastText: "#FFFFFF",
     },
     success: {
       main: "#22C55E",
