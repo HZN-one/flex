@@ -1,14 +1,7 @@
-import { ReactChild } from "react";
+import { IInput } from "@Atoms/FATextField/Input.interface";
 import { StandardTextFieldProps } from "@mui/material";
 
-export interface IFMSearch extends StandardTextFieldProps {
+export interface IFMSearch extends Omit<IInput, "testID"> {
   testID: `search-${string}`;
-  label?: string;
-  adornment?: ReactChild;
-  helperText?: string;
-  onChange?: any;
-  value?: any;
-  variants?: "standard" | "outlined" | "filled";
-  type?: string;
-  disabled?: boolean;
+  sx?: StandardTextFieldProps["sx"];
 }
