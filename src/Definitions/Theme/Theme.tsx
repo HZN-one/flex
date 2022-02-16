@@ -200,10 +200,10 @@ export const baseTheme = createTheme({
               color: "#525252",
             },
           },
-          "&  .MuiAvatar-root.MuiChip-avatarColorError": sx({
+          "&  .MuiAvatar-root.MuiChip-avatarColorError": {
             color: "#FFFFFF",
             background: "#F43F5E",
-          }),
+          },
           "& .MuiAvatar-root.MuiChip-avatarColorWarning": {
             background: "#F59E0B",
             color: "#FFFFFF",
@@ -261,7 +261,7 @@ export const baseTheme = createTheme({
             },
           },
           "&.MuiChip-colorSuccess": {
-            background: "#4ed17e",
+            background: "#4ED17E",
             "& .MuiAvatar-root.MuiChip-avatarColorSuccess": {
               background: "#22C55E",
               color: "#FFFFFF",
@@ -525,7 +525,7 @@ export const baseTheme = createTheme({
     success: {
       main: "#22C55E",
       dark: "#15803D",
-      light: "#34D399",
+      light: "#4ED17E",
     },
     grey: {
       "50": "#FAFAFA",
