@@ -1,6 +1,5 @@
 import React, { memo } from "react";
 import { Card, Box } from "@mui/material";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 
 import { IFOCardWithImage } from "./FOCardWithImage.interfaces";
@@ -13,7 +12,7 @@ export const FOCardWithImage = memo((props: IFOCardWithImage) => {
     actions,
     subtitle,
     title,
-    svg,
+    image,
     option,
     optionLabel,
     handleButtonPrimary,
@@ -28,18 +27,30 @@ export const FOCardWithImage = memo((props: IFOCardWithImage) => {
       {...materialUIProps}
       sx={{
         ...sx,
-        border: "1px solid #D4D4D4",
+        borderWidth: "1px",
+        borderStyle: "solid",
+        borderColor: "grey.300",
       }}
     >
       <CardContent>
         {option && (
           <FAFormControlLabel
             label={optionLabel || "optionLabel"}
-            testID="ControlLabel-test"
+            testID="form-control-label"
             control={option}
+            sx={{ mb: 3 }}
           ></FAFormControlLabel>
         )}
-        {svg}
+        <Box
+          display="flex"
+          justifyContent="center"
+          width="100%"
+          mx="auto"
+          sx={{ maxWidth: "250px", maxHeight: "180px" }}
+          mb={3}
+        >
+          {image}
+        </Box>
         <FATypography
           testID="typography-launchpad"
           textAlign="center"
@@ -87,8 +98,8 @@ export const FOCardWithImage = memo((props: IFOCardWithImage) => {
             </FAButton>
           )}
         </Box>
+        {actions && <Box sx={{ mt: 3 }}>{actions}</Box>}
       </CardContent>
-      {actions && <CardActions>{actions}</CardActions>}
     </Card>
   );
 });

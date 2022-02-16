@@ -24,6 +24,12 @@
       "@Components": [
         "src/Components"
       ],
+      "@Definitions/*": [
+        "src/Definitions/*"
+      ],
+      "@Definitions": [
+        "src/Definitions"
+      ],
       "@src/*": ["./*"],
       "@src": ["."],
     },
