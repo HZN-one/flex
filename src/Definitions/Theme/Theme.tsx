@@ -1,5 +1,5 @@
 import { createTheme, experimental_sx as sx } from "@mui/material/styles";
-const drawerWidth = 250;
+import type {} from "@mui/lab/themeAugmentation";
 
 declare module "@mui/material/styles" {
   interface Palette {
@@ -50,10 +50,32 @@ declare module "@mui/material/Typography" {
 export const baseTheme = createTheme({
   components: {
     MuiButton: {
+      defaultProps: {
+        disableElevation: true,
+        variant: "contained",
+      },
       styleOverrides: {
-        root: {
+        root: sx({
           textTransform: "none",
-        },
+          lineHeight: 1,
+          letterSpacing: 0.2,
+          borderRadius: 2,
+        }),
+        sizeSmall: sx({
+          px: 1.25,
+          py: 1.25,
+          typography: "buttonSemiBold",
+        }),
+        sizeMedium: sx({
+          px: 2,
+          py: 1.75,
+          typography: "buttonBold2",
+        }),
+        sizeLarge: sx({
+          px: 2.25,
+          py: 2,
+          typography: "buttonBold1",
+        }),
       },
     },
     MuiInputBase: {
@@ -78,7 +100,6 @@ export const baseTheme = createTheme({
     MuiOutlinedInput: {
       styleOverrides: {
         sizeSmall: sx({
-          // height: "3rem",
           input: {
             py: 1.75,
           },
@@ -402,16 +423,17 @@ export const baseTheme = createTheme({
       styleOverrides: {
         root: {
           position: "relative",
-          width: drawerWidth,
+          width: 250,
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: drawerWidth,
+            width: 250,
             boxSizing: "border-box",
           },
         },
       },
     },
   },
+  spacing: 8,
   typography: {
     fontFamily: ['"Inter"', "sans-serif"].join(","),
     htmlFontSize: 16,
