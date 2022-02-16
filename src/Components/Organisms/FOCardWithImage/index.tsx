@@ -41,10 +41,15 @@ export const FOCardWithImage = memo((props: IFOCardWithImage) => {
             sx={{ mb: 3 }}
           ></FAFormControlLabel>
         )}
-        <Box display="flex" justifyContent="center" width="100%">
-          <Box display="flex" mb={3} sx={{ width: "250px", height: "180px" }}>
-            {image}
-          </Box>
+        <Box
+          display="flex"
+          justifyContent="center"
+          width="100%"
+          mx="auto"
+          sx={{ maxWidth: "250px", maxHeight: "180px" }}
+          mb={3}
+        >
+          {image}
         </Box>
         <FATypography
           testID="typography-launchpad"
