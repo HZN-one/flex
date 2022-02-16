@@ -1,17 +1,26 @@
-
-// https://storybook.js.org/docs/react/writing-stories/parameters#global-parameters
-// export const parameters = {
-//     // https://storybook.js.org/docs/react/essentials/actions#automatically-matching-args
-//     actions: { argTypesRegex: '^on.*' },
-// }
-
-import { ThemeProvider as MUIThemeProvider } from '@mui/material/styles';
-import { ThemeProvider } from '@storybook/theming'
+import { ThemeProviderWrapper as MUIThemeProvider } from '../src/Components/Layout/Initiator';
+import { ThemeProvider } from '@storybook/theming';
 import { baseTheme } from '../src/Definitions/Theme';
+
+export const parameters = {
+    options: {
+        storySort: {
+            method: 'alphabetical',
+            order: ['Atom', 'Molecules', 'Organisms', 'Layout', '*'],
+        },
+    },
+    viewMode: "docs",
+    previewTabs: {
+        "storybook/docs/panel": {
+            index: -1
+        },
+        canvas: { title: "Playground" }
+    },
+};
 
 export const decorators = [
     (Story) => (
-        <MUIThemeProvider theme={baseTheme}>
+        <MUIThemeProvider>
             <ThemeProvider theme={baseTheme}>
                 {Story()}
             </ThemeProvider>
