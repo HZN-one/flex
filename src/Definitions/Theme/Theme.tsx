@@ -102,10 +102,6 @@ export const baseTheme = createTheme({
             ":before": {
               borderBottomStyle: "solid",
             },
-            ".MuiOutlinedInput-input": {
-              fontSize: "14px",
-              height: "23px",
-            },
           },
           "& > label > span": {
             color: "red",
@@ -135,8 +131,7 @@ export const baseTheme = createTheme({
     MuiInputLabel: {
       styleOverrides: {
         sizeSmall: {
-          fontSize: "14px",
-          lineHeight: "20px",
+          lineHeight: "19.2px",
           top: "4px",
           "&.Mui-focused": {
             top: 0,
@@ -148,9 +143,10 @@ export const baseTheme = createTheme({
             top: 0,
           },
         },
-        standard: {
-          fontSize: "14px",
-          lineHeight: "21px",
+        standard: sx({
+          typography: "bodySemiBold1",
+          lineHeight: "19.2px",
+          color: "#221F20",
           top: "4px",
           "&.Mui-focused": {
             top: 0,
@@ -161,7 +157,7 @@ export const baseTheme = createTheme({
           "&.MuiFormLabel-filled": {
             top: 0,
           },
-        },
+        }),
       },
     },
     MuiCard: {
@@ -379,6 +375,12 @@ export const baseTheme = createTheme({
             py: 1.75,
           },
         }),
+        standard: sx({
+          height: "20.125px",
+          "&.MuiSelect-multiple": {
+            height: "auto",
+          },
+        }),
       },
     },
     MuiInputAdornment: {
@@ -437,6 +439,10 @@ export const baseTheme = createTheme({
             border: "1px solid red",
             color: "red",
           },
+        },
+        marginNormal: {
+          marginTop: "0px",
+          marginBottom: "12px",
         },
       },
     },
