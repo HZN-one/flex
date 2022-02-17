@@ -8,6 +8,7 @@ import CardContent from "@mui/material/CardContent";
 import { FAIcon } from "@Atoms/Icon";
 import { IFMCard } from "./FMCard.interfaces";
 import { FATypography } from "@Atoms/FATypography";
+import { FAIconButton } from "@Atoms/FAIconButton";
 
 export const FMCard = memo((props: IFMCard) => {
   const {
@@ -29,6 +30,7 @@ export const FMCard = memo((props: IFMCard) => {
               display: "flex",
               justifyContent: "space-between",
               marginBottom: isOpen ? 3.75 : 0,
+              alignItems: "center",
             }}
           >
             <FATypography
@@ -39,17 +41,14 @@ export const FMCard = memo((props: IFMCard) => {
               {title}
             </FATypography>
             {isCollapsible && (
-              <Box>
-                <FAIcon
-                  onClick={() => {
-                    setIsOpen(!isOpen);
-                  }}
-                  style={{ cursor: "pointer" }}
-                  testID="icon-arrow-collapse"
-                >
-                  arrow_drop_down
-                </FAIcon>
-              </Box>
+              <FAIconButton
+                testID="icon-button-arrow-collapse"
+                onClick={() => {
+                  setIsOpen(!isOpen);
+                }}
+              >
+                <FAIcon testID="icon-arrow-collapse">arrow_drop_down</FAIcon>
+              </FAIconButton>
             )}
           </Box>
         )}
