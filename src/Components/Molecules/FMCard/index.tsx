@@ -18,17 +18,22 @@ export const FMCard = memo((props: IFMCard) => {
     ...materialUIProps
   } = props;
 
-  const [open, setOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(true);
   return (
     <Card data-testid={testID} {...materialUIProps}>
       <CardContent>
         {title && (
-          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginBottom: isOpen ? 3.75 : 0,
+            }}
+          >
             <FATypography
               testID="typography-card"
               variant="h6"
               fontWeight={700}
-              sx={{ marginBottom: open ? 3.75 : 0 }}
             >
               {title}
             </FATypography>
@@ -36,7 +41,7 @@ export const FMCard = memo((props: IFMCard) => {
               <Box>
                 <FAIcon
                   onClick={() => {
-                    setOpen(!open);
+                    setIsOpen(!isOpen);
                   }}
                   style={{ cursor: "pointer" }}
                   testID="icon-arrow-collapse"
@@ -47,12 +52,12 @@ export const FMCard = memo((props: IFMCard) => {
             )}
           </Box>
         )}
-        <Collapse in={open} timeout="auto" unmountOnExit>
+        <Collapse in={isOpen} timeout="auto" unmountOnExit>
           {children}
         </Collapse>
       </CardContent>
       {actions && (
-        <Collapse in={open} timeout="auto" unmountOnExit>
+        <Collapse in={isOpen} timeout="auto" unmountOnExit>
           <CardActions>{actions}</CardActions>
         </Collapse>
       )}
