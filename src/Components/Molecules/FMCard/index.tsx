@@ -28,7 +28,7 @@ export const FMCard = memo((props: IFMCard) => {
               testID="typography-card"
               variant="h6"
               fontWeight={700}
-              sx={{ marginBottom: 3.75 }}
+              sx={{ marginBottom: open ? 3.75 : 0 }}
             >
               {title}
             </FATypography>
