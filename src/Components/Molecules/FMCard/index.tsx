@@ -14,7 +14,7 @@ export const FMCard = memo((props: IFMCard) => {
     actions,
     title,
     children,
-    isCollapseAble,
+    isCollapsible,
     ...materialUIProps
   } = props;
 
@@ -37,7 +37,7 @@ export const FMCard = memo((props: IFMCard) => {
             >
               {title}
             </FATypography>
-            {isCollapseAble && (
+            {isCollapsible && (
               <Box>
                 <FAIcon
                   onClick={() => {

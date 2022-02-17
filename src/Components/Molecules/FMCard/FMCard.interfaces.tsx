@@ -5,5 +5,5 @@ export interface IFMCard extends CardProps {
   testID: `card-${string}`;
   actions?: ReactChild;
   title?: string;
-  isCollapseAble?: boolean;
+  isCollapsible?: boolean;
 }
