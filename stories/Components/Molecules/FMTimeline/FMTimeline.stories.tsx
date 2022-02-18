@@ -1,4 +1,3 @@
-// Create storybook stories from FMTimeline component
 import React from "react";
 import { Story, Meta } from "@storybook/react";
 import { FMTimeline } from "@Molecules";
