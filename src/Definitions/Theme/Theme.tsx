@@ -212,11 +212,22 @@ export const baseTheme = createTheme({
         },
         root: {
           "&.MuiInput-underline": {
-            marginTop: "24px",
+            marginTop: "21px",
+            marginBottom: "3px",
             "& .MuiInputBase-input": {
               paddingBottom: "12px",
             },
           },
+        },
+      },
+    },
+    MuiCheckbox: {
+      defaultProps: {
+        size: "small",
+      },
+      styleOverrides: {
+        root: {
+          py: 0,
         },
       },
     },
@@ -458,7 +469,7 @@ export const baseTheme = createTheme({
         },
         marginNormal: sx({
           mt: 0,
-          mb: 2,
+          mb: 1.875,
         }),
       },
     },
