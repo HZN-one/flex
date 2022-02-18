@@ -4,7 +4,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 
 import { IFOCardWithTextField } from "./FOCardWithTextField.interfaces";
-import { FATypography, FAButton, FALink } from "@Atoms";
+import { FATypography, FAButton } from "@Atoms";
 
 export const FOCardWithTextField = memo((props: IFOCardWithTextField) => {
   const {
@@ -53,9 +53,7 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextField) => {
           <Box>{form}</Box>
 
           <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-            <FALink testID="link-signIn" href="/forgot-password">
-              {firstLink}
-            </FALink>
+            {firstLink}
           </Box>
           <FAButton
             testID="button-submit"
