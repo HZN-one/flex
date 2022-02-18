@@ -1,7 +1,8 @@
 import React from "react";
-import { ComponentStory } from "@storybook/react";
 import { withDesign } from "storybook-addon-designs";
-import { FAButton } from "@Atoms/FAButton";
+import { Stack } from "@mui/material";
+import { FAButton, FAIcon } from "@Atoms";
+import LoadingButton from "@mui/lab/LoadingButton";
 import { IButton } from "@Atoms/FAButton/Button.interface";
 
 const story = {
@@ -20,28 +21,97 @@ const story = {
 
 export default story;
 
-const Template: ComponentStory<typeof FAButton> = (props: IButton) => (
-  <FAButton {...props} />
-);
-
 export const Default = (props: IButton) => (
   <FAButton {...props}>{props.children}</FAButton>
 );
 
-export const Contained = Template.bind({});
-Contained.args = {
-  variant: "contained",
-};
+export const Variant = (props: IButton) => (
+  <Stack direction="row" spacing={2}>
+    <FAButton {...props} variant="contained">
+      Contained
+    </FAButton>
+    <FAButton {...props} variant="outlined">
+      Outlined
+    </FAButton>
+    <FAButton {...props} variant="text">
+      Text
+    </FAButton>
+  </Stack>
+);
 
-export const Outlined = Template.bind({});
-Outlined.args = {
-  variant: "outlined",
-};
+export const Size = (props: IButton) => (
+  <Stack direction="row" spacing={2}>
+    <FAButton {...props} size="small">
+      Small
+    </FAButton>
+    <FAButton {...props} size="medium">
+      Medium
+    </FAButton>
+    <FAButton {...props} size="large">
+      Large
+    </FAButton>
+  </Stack>
+);
 
-export const Text = Template.bind({});
-Text.args = {
-  variant: "text",
-};
+export const Color = (props: IButton) => (
+  <Stack direction="row" spacing={2}>
+    <FAButton {...props} color="primary">
+      Primary
+    </FAButton>
+    <FAButton {...props} color="secondary">
+      Secondary
+    </FAButton>
+    <FAButton {...props} color="success">
+      Success
+    </FAButton>
+    <FAButton {...props} color="info">
+      Info
+    </FAButton>
+    <FAButton {...props} color="warning">
+      Warning
+    </FAButton>
+    <FAButton {...props} color="error">
+      Error
+    </FAButton>
+    <FAButton {...props} color="inherit">
+      Inherit
+    </FAButton>
+  </Stack>
+);
+
+export const WithIcon = (props: IButton) => (
+  <Stack direction="row" spacing={2}>
+    <FAButton
+      {...props}
+      size="small"
+      startIcon={<FAIcon testID="icon-arrow-forward">arrow_forward_ios</FAIcon>}
+    >
+      Start Icon
+    </FAButton>
+    <FAButton
+      {...props}
+      endIcon={<FAIcon testID="icon-arrow-forward">arrow_forward_ios</FAIcon>}
+    >
+      End Icon
+    </FAButton>
+  </Stack>
+);
+
+export const State = (props: IButton) => (
+  <Stack direction="row" spacing={2}>
+    <FAButton {...props} disabled>
+      Disabled
+    </FAButton>
+    <LoadingButton
+      loading
+      loadingPosition="start"
+      variant="contained"
+      startIcon={<FAIcon testID="icon-save">save</FAIcon>}
+    >
+      Loading
+    </LoadingButton>
+  </Stack>
+);
 
 Default.parameters = {
   design: {

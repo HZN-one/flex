@@ -77,6 +77,7 @@ export const baseTheme = createTheme({
           lineHeight: 1,
           letterSpacing: 0.2,
           borderRadius: 2,
+          height: "100%",
         }),
         sizeSmall: sx({
           px: 1.25,
@@ -92,6 +93,21 @@ export const baseTheme = createTheme({
           px: 2.25,
           py: 2,
           typography: "buttonBold1",
+        }),
+        iconSizeSmall: sx({
+          "& > *:first-child": {
+            typography: "buttonSemiBold",
+          },
+        }),
+        iconSizeMedium: sx({
+          "& > *:first-child": {
+            typography: "buttonBold2",
+          },
+        }),
+        iconSizeLarge: sx({
+          "& > *:first-child": {
+            typography: "buttonBold1",
+          },
         }),
       },
     },
@@ -196,11 +212,22 @@ export const baseTheme = createTheme({
         },
         root: {
           "&.MuiInput-underline": {
-            marginTop: "24px",
+            marginTop: "21px",
+            marginBottom: "3px",
             "& .MuiInputBase-input": {
               paddingBottom: "12px",
             },
           },
+        },
+      },
+    },
+    MuiCheckbox: {
+      defaultProps: {
+        size: "small",
+      },
+      styleOverrides: {
+        root: {
+          py: 0,
         },
       },
     },
@@ -440,10 +467,10 @@ export const baseTheme = createTheme({
             color: "red",
           },
         },
-        marginNormal: {
-          marginTop: "0px",
-          marginBottom: "12px",
-        },
+        marginNormal: sx({
+          mt: 0,
+          mb: 1.875,
+        }),
       },
     },
     MuiDrawer: {
@@ -457,6 +484,25 @@ export const baseTheme = createTheme({
             boxSizing: "border-box",
           },
         },
+      },
+    },
+    MuiTimelineDot: {
+      styleOverrides: {
+        root: sx({
+          p: 0,
+          mx: 0,
+          my: 1,
+          border: "none",
+        }),
+      },
+    },
+    MuiTimelineConnector: {
+      styleOverrides: {
+        root: sx({
+          backgroundColor: "transparent",
+          border: "1px dashed",
+          borderColor: "divider",
+        }),
       },
     },
   },
@@ -557,6 +603,7 @@ export const baseTheme = createTheme({
     },
   },
   palette: {
+    divider: "#E0E0E0",
     primary: {
       main: "#DC3931",
       dark: "#B02E27",
@@ -587,6 +634,12 @@ export const baseTheme = createTheme({
       main: "#22C55E",
       dark: "#15803D",
       light: "#4ED17E",
+      contrastText: "#FFFFFF",
+    },
+    text: {
+      primary: "#221F20",
+      secondary: "#64748B",
+      disabled: "#999999",
     },
     grey: {
       "50": "#FAFAFA",
