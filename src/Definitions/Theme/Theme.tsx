@@ -49,6 +49,17 @@ declare module "@mui/material/Typography" {
 // Create a theme instance.
 export const baseTheme = createTheme({
   components: {
+    MuiTableCell: {
+      styleOverrides: {
+        root: {
+          borderBottom: "1px solid",
+          borderColor: "#E0E0E0",
+        },
+        head: sx({
+          typography: "bodySemiBold2",
+        }),
+      },
+    },
     MuiPaginationItem: {
       styleOverrides: {
         sizeLarge: sx({
