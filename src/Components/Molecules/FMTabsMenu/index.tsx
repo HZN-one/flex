@@ -2,10 +2,9 @@ import React from "react";
 import styled from "@mui/system/styled";
 import Box from "@mui/material/Box";
 import TabsUnstyled from "@mui/base/TabsUnstyled";
-import TabUnstyled from "@mui/base/TabUnstyled";
-import tabUnstyledClasses from "@mui/base/TabUnstyled/tabUnstyledClasses";
+import TabUnstyled, { tabUnstyledClasses } from "@mui/base/TabUnstyled";
 import TabsListUnstyled from "@mui/base/TabsListUnstyled";
-import buttonUnstyledClasses from "@mui/base/ButtonUnstyled/buttonUnstyledClasses";
+import { buttonUnstyledClasses } from "@mui/base/ButtonUnstyled";
 
 import { FAIcon } from "@Atoms/Icon";
 import { FATypography } from "@Atoms/FATypography";
@@ -71,9 +70,9 @@ export const FMTabsMenu = ({
   return (
     <Tabs
       data-testid={testID}
+      {...materialUiProps}
       defaultValue={0}
       orientation="vertical"
-      {...materialUiProps}
     >
       <TabsList>
         {tabs.map(({ label, iconName }, idx) => (
@@ -94,3 +93,5 @@ export const FMTabsMenu = ({
     </Tabs>
   );
 };
+
+FMTabsMenu.displayName = "FMTabsMenu";

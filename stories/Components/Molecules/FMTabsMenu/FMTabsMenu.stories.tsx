@@ -32,11 +32,7 @@ withMaxWidthWrapper.args = {
 };
 
 withMaxWidthWrapper.decorators = [
-  StoryDecoractors => (
-    <Box maxWidth={200}>
-      <StoryDecoractors />
-    </Box>
-  ),
+  StoryDecoractors => <Box maxWidth={200}>{StoryDecoractors()}</Box>,
 ];
 
 export const withContent = Template.bind({});
@@ -53,14 +49,14 @@ withContent.decorators = [
         }}
       >
         <Box maxWidth={200}>
-          <StoryDecoractors
-            args={{
+          {StoryDecoractors({
+            args: {
               value: activeIndex,
               testID: "tabs-with-content",
               tabs: TabsData,
               onChange: (evt, index) => setActiveIndex(Number(index)),
-            }}
-          />
+            },
+          })}
         </Box>
 
         {activeIndex === 0 && (
