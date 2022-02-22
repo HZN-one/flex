@@ -397,6 +397,9 @@ export const baseTheme = createTheme({
       defaultProps: {
         InputLabelProps: { shrink: true },
         margin: "normal",
+        SelectProps: {
+          displayEmpty: true,
+        },
       },
     },
     MuiSelect: {
