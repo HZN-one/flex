@@ -72,6 +72,10 @@ export const baseTheme = createTheme({
         variant: "contained",
       },
       styleOverrides: {
+        outlined: {
+          border: "none",
+          outline: "1px solid",
+        },
         root: sx({
           textTransform: "none",
           lineHeight: 1,
