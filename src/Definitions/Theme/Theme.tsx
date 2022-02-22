@@ -75,6 +75,9 @@ export const baseTheme = createTheme({
         outlined: {
           border: "none",
           outline: "1px solid",
+          "&:hover": {
+            border: "none",
+          },
         },
         root: sx({
           textTransform: "none",
@@ -112,6 +115,13 @@ export const baseTheme = createTheme({
           "& > *:first-child": {
             typography: "buttonBold1",
           },
+        }),
+        outlinedSecondary: sx({
+          color: "text.primary",
+          borderColor: "text.primary",
+        }),
+        textSecondary: sx({
+          color: "text.primary",
         }),
       },
     },
