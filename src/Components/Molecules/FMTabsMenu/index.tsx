@@ -33,7 +33,6 @@ const Tab = styled(TabUnstyled)`
   width: 100%;
   border: none;
   display: flex;
-  justify-content: center;
   position: relative;
 
   &:hover {
@@ -65,6 +64,7 @@ const Tab = styled(TabUnstyled)`
 export const FMTabsMenu = ({
   testID,
   tabs,
+  disabledIndex,
   ...materialUiProps
 }: IFMTabsMenu) => {
   return (
@@ -75,20 +75,30 @@ export const FMTabsMenu = ({
       orientation="vertical"
     >
       <TabsList>
-        {tabs.map(({ label, iconName }, idx) => (
-          <Tab key={idx} sx={{ padding: 0 }}>
-            <Box
-              padding={2}
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              gap={1}
-            >
-              <FAIcon testID="icon-tab">{iconName}</FAIcon>
-              <FATypography testID="typography-tab">{label}</FATypography>
-            </Box>
-          </Tab>
-        ))}
+        {tabs.map(({ label, iconName }, idx) => {
+          const isDisabled = disabledIndex?.some(index => index === idx);
+          const isActive = idx === materialUiProps.value;
+
+          return (
+            <Tab key={idx} sx={{ padding: 0 }} disabled={isDisabled}>
+              <Box
+                padding={2}
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                gap={1.5}
+              >
+                <FAIcon testID="icon-tab">{iconName}</FAIcon>
+                <FATypography
+                  testID="typography-tab"
+                  variant={isActive ? "bodySemiBold2" : "body2"}
+                >
+                  {label}
+                </FATypography>
+              </Box>
+            </Tab>
+          );
+        })}
       </TabsList>
     </Tabs>
   );

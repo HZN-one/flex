@@ -12,12 +12,21 @@ const meta: Meta = {
   component: FMTabsMenu,
 };
 
-const Template: Story<IFMTabsMenu> = props => <FMTabsMenu {...props} />;
-
 const TabsData = [
   { label: "Individual", iconName: "person_outline" },
   { label: "Company", iconName: "home_work" },
 ];
+
+const Template: Story<IFMTabsMenu> = props => {
+  const [activeIndex, setActiveIndex] = React.useState(0);
+  return (
+    <FMTabsMenu
+      onChange={(evt, idx) => setActiveIndex(Number(idx))}
+      value={activeIndex}
+      {...props}
+    />
+  );
+};
 
 export const Default = Template.bind({});
 
@@ -34,6 +43,13 @@ withMaxWidthWrapper.args = {
 withMaxWidthWrapper.decorators = [
   StoryDecoractors => <Box maxWidth={200}>{StoryDecoractors()}</Box>,
 ];
+
+export const withTabDisabled = Template.bind({});
+
+withTabDisabled.args = {
+  disabledIndex: [1, 2],
+  tabs: [...TabsData, { label: "Test", iconName: "abc" }],
+};
 
 export const withContent = Template.bind({});
 

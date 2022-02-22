@@ -6,4 +6,5 @@ export default interface IFMTabsMenu extends Partial<TabsUnstyledOwnProps> {
     label: string;
     iconName: string;
   }[];
+  disabledIndex?: number[];
 }
