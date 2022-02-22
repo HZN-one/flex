@@ -3,8 +3,8 @@ import { Story, Meta } from "@storybook/react";
 import Box from "@mui/material/Box";
 
 import { FMTabsMenu } from "@Molecules/FMTabsMenu";
-import IFMTabsMenu from "@Molecules/FMTabsMenu/FMTabsMenu.interface";
 import { FMCard } from "@Molecules/FMCard";
+import IFMTabsMenu from "@Molecules/FMTabsMenu/FMTabsMenu.interface";
 import { FATypography } from "@Atoms/FATypography";
 
 const meta: Meta = {
