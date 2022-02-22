@@ -7,8 +7,10 @@ import tabUnstyledClasses from "@mui/base/TabUnstyled/tabUnstyledClasses";
 import TabsListUnstyled from "@mui/base/TabsListUnstyled";
 import buttonUnstyledClasses from "@mui/base/ButtonUnstyled/buttonUnstyledClasses";
 
-import { baseTheme } from "@Definitions/Theme";
+import { FAIcon } from "@Atoms/Icon";
 import { FATypography } from "@Atoms/FATypography";
+import { baseTheme } from "@Definitions/Theme";
+import IFMTabsMenu from "./FMTabsMenu.interface";
 
 const Tabs = styled(TabsUnstyled)`
   overflow: hidden;
@@ -61,33 +63,34 @@ const Tab = styled(TabUnstyled)`
   }
 `;
 
-export const FMTabsMenu = () => {
+export const FMTabsMenu = ({
+  testID,
+  tabs,
+  ...materialUiProps
+}: IFMTabsMenu) => {
   return (
-    <Box
-      sx={{
-        flexGrow: 1,
-        display: "flex",
-      }}
+    <Tabs
+      data-testid={testID}
+      defaultValue={0}
+      orientation="vertical"
+      {...materialUiProps}
     >
-      <Tabs defaultValue={0} orientation="vertical">
-        <TabsList>
-          <Tab>
-            <Box sx={{ padding: 2 }}>
-              <FATypography testID="typography-tab">One</FATypography>
+      <TabsList>
+        {tabs.map(({ label, iconName }, idx) => (
+          <Tab key={idx} sx={{ padding: 0 }}>
+            <Box
+              padding={2}
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              gap={1}
+            >
+              <FAIcon testID="icon-tab">{iconName}</FAIcon>
+              <FATypography testID="typography-tab">{label}</FATypography>
             </Box>
           </Tab>
-          <Tab>
-            <Box sx={{ padding: 2 }}>
-              <FATypography testID="typography-tab">Two</FATypography>
-            </Box>
-          </Tab>
-          <Tab>
-            <Box sx={{ padding: 2 }}>
-              <FATypography testID="typography-tab">Three</FATypography>
-            </Box>
-          </Tab>
-        </TabsList>
-      </Tabs>
-    </Box>
+        ))}
+      </TabsList>
+    </Tabs>
   );
 };
