@@ -205,7 +205,7 @@ export const baseTheme = createTheme({
     },
     MuiIcon: {
       defaultProps: {
-        className: "material-icons-outlined",
+        baseClassName: "material-icons-outlined",
       },
     },
     MuiInput: {
