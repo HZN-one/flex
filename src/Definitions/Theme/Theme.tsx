@@ -401,6 +401,15 @@ export const baseTheme = createTheme({
           displayEmpty: true,
         },
       },
+      styleOverrides: {
+        root: sx({
+          "&.flex-textfield-placeholder": {
+            "& .MuiSelect-select": {
+              color: "text.secondary",
+            },
+          },
+        }),
+      },
     },
     MuiSelect: {
       styleOverrides: {
