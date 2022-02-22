@@ -8,24 +8,25 @@ import { FAButton, FAIcon } from "@Atoms";
 import { Grid } from "@mui/material";
 
 export const FMStepper = memo((props: IFMStepperProps) => {
-  const { testID, data, buttonSubmit } = props;
+  const { testID, data } = props;
   const [activeStep, setActiveStep] = React.useState(0);
   const [previousTitle, setPreviousTitle] = React.useState(data[0].title);
   const [activeChildren, setActiveChildren] = React.useState(data[0].children);
 
   const handleNext = () => {
+    data[activeStep].onSubmitNext();
     setActiveStep(prevActiveStep => prevActiveStep + 1);
     setPreviousTitle(data[activeStep].title);
     setActiveChildren(data[activeStep + 1].children);
   };
 
   const handleBack = () => {
+    data[activeStep].onSubmitBack();
     setActiveStep(prevActiveStep => prevActiveStep - 1);
     if (activeStep > 1) {
       setPreviousTitle(data[activeStep - 2].title);
     }
     setActiveChildren(data[activeStep - 1].children);
-    console.log(previousTitle, activeStep);
   };
 
   return (
@@ -60,17 +61,13 @@ export const FMStepper = memo((props: IFMStepperProps) => {
           )}
         </Grid>
         <Grid item xs="auto">
-          {activeStep === data.length - 1 ? (
-            <React.Fragment>{buttonSubmit}</React.Fragment>
-          ) : (
-            <FAButton
-              testID={`button-${testID}`}
-              size="small"
-              onClick={handleNext}
-            >
-              Next
-            </FAButton>
-          )}
+          <FAButton
+            testID={`button-${testID}`}
+            size="small"
+            onClick={handleNext}
+          >
+            {data[activeStep].buttonLabel}
+          </FAButton>
         </Grid>
       </Grid>
     </Box>

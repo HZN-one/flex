@@ -5,6 +5,8 @@ export default interface IFMStepperProps {
   data: Array<{
     title: string;
     children: ReactNode;
+    onSubmitNext: () => void;
+    onSubmitBack: () => void;
+    buttonLabel: string;
   }>;
-  buttonSubmit: JSX.Element;
 }
