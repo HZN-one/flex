@@ -408,6 +408,12 @@ export const baseTheme = createTheme({
               color: "text.secondary",
             },
           },
+          input: {
+            "&::placeholder": {
+              color: "text.secondary",
+              opacity: 1,
+            },
+          },
         }),
       },
     },
