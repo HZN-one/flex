@@ -51,6 +51,9 @@ export const baseTheme = createTheme({
   components: {
     MuiAccordion: {
       styleOverrides: {
+        expanded: sx({
+          mb: 3,
+        }),
         root: sx({
           p: 3,
         }),
