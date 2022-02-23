@@ -3,11 +3,18 @@ import React, { memo } from "react";
 import { FATypography } from "@Atoms/FATypography";
 import { IFMLabelValue } from "./FMLabelValue.interface";
 
+const defaultProps = {
+  margin: "normal",
+};
+
 export const FMLabelValue = memo((props: IFMLabelValue) => {
-  const { label, value, propLabel, propValue } = props;
+  const { label, value, propLabel, propValue, margin } = {
+    ...defaultProps,
+    ...props,
+  };
 
   return (
-    <Box sx={{ mb: 2 }}>
+    <Box sx={{ mb: margin === "none" ? 0 : 2 }}>
       <FATypography
         testID="typography-label"
         variant="captionSemiBold"

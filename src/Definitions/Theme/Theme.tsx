@@ -49,6 +49,40 @@ declare module "@mui/material/Typography" {
 // Create a theme instance.
 export const baseTheme = createTheme({
   components: {
+    MuiAccordion: {
+      styleOverrides: {
+        root: sx({
+          p: 3,
+          mb: 3,
+          "&.Mui-expanded": {
+            ":last-of-type": {
+              mb: 3,
+            },
+          },
+        }),
+      },
+    },
+    MuiAccordionSummary: {
+      styleOverrides: {
+        content: sx({
+          m: 0,
+        }),
+        root: sx({
+          m: 0,
+          p: 0,
+          minHeight: 0,
+        }),
+      },
+    },
+    MuiAccordionDetails: {
+      styleOverrides: {
+        root: sx({
+          m: 0,
+          p: 0,
+          minHeight: 0,
+        }),
+      },
+    },
     MuiPaginationItem: {
       styleOverrides: {
         sizeLarge: sx({
@@ -72,6 +106,13 @@ export const baseTheme = createTheme({
         variant: "contained",
       },
       styleOverrides: {
+        outlined: {
+          border: "none",
+          outline: "1px solid",
+          "&:hover": {
+            border: "none",
+          },
+        },
         root: sx({
           textTransform: "none",
           lineHeight: 1,
@@ -108,6 +149,13 @@ export const baseTheme = createTheme({
           "& > *:first-child": {
             typography: "buttonBold1",
           },
+        }),
+        outlinedSecondary: sx({
+          color: "text.primary",
+          borderColor: "text.primary",
+        }),
+        textSecondary: sx({
+          color: "text.primary",
         }),
       },
     },
@@ -164,6 +212,9 @@ export const baseTheme = createTheme({
           lineHeight: "19.2px",
           color: "#221F20",
           top: "4px",
+          "&.Mui-disabled": {
+            color: "text.secondary",
+          },
           "&.Mui-focused": {
             top: 0,
           },
@@ -201,7 +252,7 @@ export const baseTheme = createTheme({
     },
     MuiIcon: {
       defaultProps: {
-        className: "material-icons-outlined",
+        baseClassName: "material-icons-outlined",
       },
     },
     MuiInput: {
@@ -210,15 +261,18 @@ export const baseTheme = createTheme({
           fontSize: "14px",
           padding: 0,
         },
-        root: {
+        root: sx({
           "&.MuiInput-underline": {
             marginTop: "21px",
             marginBottom: "3px",
+            ":before": {
+              borderBottomColor: "grey.300",
+            },
             "& .MuiInputBase-input": {
               paddingBottom: "12px",
             },
           },
-        },
+        }),
       },
     },
     MuiCheckbox: {
@@ -393,6 +447,24 @@ export const baseTheme = createTheme({
       defaultProps: {
         InputLabelProps: { shrink: true },
         margin: "normal",
+        SelectProps: {
+          displayEmpty: true,
+        },
+      },
+      styleOverrides: {
+        root: sx({
+          "&.flex-textfield-placeholder": {
+            "& .MuiSelect-select": {
+              color: "text.secondary",
+            },
+          },
+          input: {
+            "&::placeholder": {
+              color: "text.secondary",
+              opacity: 1,
+            },
+          },
+        }),
       },
     },
     MuiSelect: {
