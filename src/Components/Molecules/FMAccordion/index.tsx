@@ -8,15 +8,7 @@ import { FAIcon } from "@Atoms/Icon";
 export const FMAccordion = memo((props: IFMAccordion) => {
   const { testID, title, summary, children, ...materialUIProps } = props;
   return (
-    <Accordion
-      data-testid={testID}
-      square
-      disableGutters
-      {...materialUIProps}
-      sx={{
-        mb: "24px",
-      }}
-    >
+    <Accordion data-testid={testID} square disableGutters {...materialUIProps}>
       <AccordionSummary
         expandIcon={
           <FAIcon testID="icon-accordion" sx={{ color: "text.primary" }}>
