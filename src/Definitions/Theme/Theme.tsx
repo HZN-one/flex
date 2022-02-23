@@ -209,11 +209,12 @@ export const baseTheme = createTheme({
     },
     MuiSvgIcon: {
       styleOverrides: {
-        root: {
+        root: sx({
           "&.MuiSelect-iconStandard": {
             top: 0,
+            color: "text.primary",
           },
-        },
+        }),
       },
     },
     MuiIcon: {
