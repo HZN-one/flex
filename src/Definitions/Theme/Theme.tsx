@@ -178,6 +178,9 @@ export const baseTheme = createTheme({
           lineHeight: "19.2px",
           color: "#221F20",
           top: "4px",
+          "&.Mui-disabled": {
+            color: "text.secondary",
+          },
           "&.Mui-focused": {
             top: 0,
           },
@@ -224,15 +227,18 @@ export const baseTheme = createTheme({
           fontSize: "14px",
           padding: 0,
         },
-        root: {
+        root: sx({
           "&.MuiInput-underline": {
             marginTop: "21px",
             marginBottom: "3px",
+            ":before": {
+              borderBottomColor: "grey.300",
+            },
             "& .MuiInputBase-input": {
               paddingBottom: "12px",
             },
           },
-        },
+        }),
       },
     },
     MuiCheckbox: {
