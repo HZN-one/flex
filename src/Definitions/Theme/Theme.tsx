@@ -49,6 +49,34 @@ declare module "@mui/material/Typography" {
 // Create a theme instance.
 export const baseTheme = createTheme({
   components: {
+    MuiAccordion: {
+      styleOverrides: {
+        root: sx({
+          p: 3,
+        }),
+      },
+    },
+    MuiAccordionSummary: {
+      styleOverrides: {
+        content: sx({
+          m: 0,
+        }),
+        root: sx({
+          m: 0,
+          p: 0,
+          minHeight: 0,
+        }),
+      },
+    },
+    MuiAccordionDetails: {
+      styleOverrides: {
+        root: sx({
+          m: 0,
+          p: 0,
+          minHeight: 0,
+        }),
+      },
+    },
     MuiPaginationItem: {
       styleOverrides: {
         sizeLarge: sx({

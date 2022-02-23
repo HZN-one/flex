@@ -1,3 +1,4 @@
+export * from "./FMAccordion";
 export * from "./FMSearch";
 export * from "./FMCard";
 export * from "./FMStepper";
