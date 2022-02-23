@@ -798,7 +798,6 @@ export const baseTheme = createTheme({
     },
     action: {
       active: "#EE9C98",
-      hover: "#FBEBEA",
     },
     contrastThreshold: 3,
     tonalOffset: 0.2,
