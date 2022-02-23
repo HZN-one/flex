@@ -55,9 +55,9 @@ export const baseTheme = createTheme({
           p: 3,
           mb: 3,
           "&.Mui-expanded": {
-            ":last-of-type": sx({
-              mb: "24px",
-            }),
+            ":last-of-type": {
+              mb: 3,
+            },
           },
         }),
       },

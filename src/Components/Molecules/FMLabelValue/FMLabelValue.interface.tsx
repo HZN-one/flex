@@ -5,4 +5,5 @@ export interface IFMLabelValue {
   value?: string;
   propLabel?: Omit<IFATypography, "TestID">;
   propValue?: Omit<IFATypography, "TestID">;
+  margin?: "normal" | "none";
 }
