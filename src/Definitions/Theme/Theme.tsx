@@ -796,6 +796,10 @@ export const baseTheme = createTheme({
       "800": "#1E293B",
       "900": "#0F172A",
     },
+    action: {
+      active: "#EE9C98",
+      hover: "#FBEBEA",
+    },
     contrastThreshold: 3,
     tonalOffset: 0.2,
   },

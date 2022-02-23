@@ -4,3 +4,4 @@ export * from "./FMStepper";
 export * from "./FMTableSkeleton";
 export * from "./FMTimeline";
 export * from "./FMLabelValue";
+export * from "./FMTabsMenu";
