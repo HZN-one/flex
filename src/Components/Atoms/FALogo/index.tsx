@@ -1,7 +1,7 @@
 import React, { memo } from "react";
-import ILogo from "./FALogo.interfaces";
+import IFALogo from "./FALogo.interfaces";
 
-export const FALogo = memo((props: ILogo) => {
+export const FALogo = memo((props: IFALogo) => {
   return (
     <svg
       data-testid={props.testID}
@@ -11,9 +11,9 @@ export const FALogo = memo((props: ILogo) => {
       viewBox="0 0 673 116"
       version="1.1"
     >
-      <title>logo-rzn-red-white</title>
+      <title>logo-hzn</title>
       <g
-        id="logo-rzn-red-white"
+        id="logo-hzn"
         stroke="none"
         strokeWidth="1"
         fill="none"

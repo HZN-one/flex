@@ -3,7 +3,6 @@
  */
 import * as React from "react";
 import "@testing-library/jest-dom";
-import { FAButton } from "@Atoms";
 import { FMStepper } from "@Molecules";
 import { render } from "@testing-library/react";
 
@@ -14,27 +13,50 @@ describe("FMStepper", () => {
         testID="stepper-example"
         data={[
           {
-            children: "Description 1",
             title: "Title 1",
+            children: "Description 1",
+            buttonLabel: "Next",
+            onSubmitBack: () => {
+              console.log("onSubmitBack");
+            },
+            onSubmitNext: () => {
+              console.log("onSubmitNext");
+            },
           },
           {
-            children: "Description 2",
             title: "Title 2",
+            children: "Description 2",
+            buttonLabel: "Next",
+            onSubmitBack: () => {
+              console.log("onSubmitBack");
+            },
+            onSubmitNext: () => {
+              console.log("onSubmitNext");
+            },
           },
           {
-            children: "Description 3",
             title: "Title 3",
+            children: "Description 3",
+            buttonLabel: "Next",
+            onSubmitBack: () => {
+              console.log("onSubmitBack");
+            },
+            onSubmitNext: () => {
+              console.log("onSubmitNext");
+            },
           },
           {
-            children: "Description 4",
             title: "Title 4",
+            children: "Description 4",
+            buttonLabel: "Submit",
+            onSubmitBack: () => {
+              console.log("onSubmitBack");
+            },
+            onSubmitNext: () => {
+              console.log("onSubmitNext");
+            },
           },
         ]}
-        buttonSubmit={
-          <FAButton testID="button-test" size="small">
-            Submit
-          </FAButton>
-        }
       />
     );
     expect(container).toMatchSnapshot();

@@ -83,6 +83,14 @@ export const baseTheme = createTheme({
         }),
       },
     },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          boxShadow: "0px 1px 0px 0px #E0E0E0",
+          borderRadius: 0,
+        },
+      },
+    },
     MuiPaginationItem: {
       styleOverrides: {
         sizeLarge: sx({
@@ -136,17 +144,17 @@ export const baseTheme = createTheme({
           typography: "buttonBold1",
         }),
         iconSizeSmall: sx({
-          "& > *:first-child": {
+          "& > *:first-of-type": {
             typography: "buttonSemiBold",
           },
         }),
         iconSizeMedium: sx({
-          "& > *:first-child": {
+          "& > *:first-of-type": {
             typography: "buttonBold2",
           },
         }),
         iconSizeLarge: sx({
-          "& > *:first-child": {
+          "& > *:first-of-type": {
             typography: "buttonBold1",
           },
         }),
@@ -243,11 +251,12 @@ export const baseTheme = createTheme({
     },
     MuiSvgIcon: {
       styleOverrides: {
-        root: {
+        root: sx({
           "&.MuiSelect-iconStandard": {
             top: 0,
+            color: "text.primary",
           },
-        },
+        }),
       },
     },
     MuiIcon: {
@@ -674,6 +683,15 @@ export const baseTheme = createTheme({
             flex: "none",
             p: 0,
           },
+        }),
+      },
+    },
+    MuiToolbar: {
+      styleOverrides: {
+        root: sx({
+          pt: 1,
+          pb: 1,
+          minHeight: 80,
         }),
       },
     },
