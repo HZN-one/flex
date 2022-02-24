@@ -14,7 +14,6 @@ interface IFOHeaderAuth extends IFOHeaderGeneral {
   buttonRegister: Pick<IFAButton, "children" | "href" | "LinkComponent">;
 }
 
-// create interface props when headerType is standar, other props are optional
 interface IFOHeaderDefault extends IFOHeaderGeneral {
   headerType: "default";
   search?: Omit<IFMSearch, "testID">;
