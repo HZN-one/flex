@@ -195,9 +195,13 @@ export const baseTheme = createTheme({
           fontSize: "14px",
           lineHeight: "20px",
         }),
-        root: {
+        root: sx({
           borderRadius: "8px",
-        },
+          "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+            borderColor: "secondary.main",
+            borderWidth: "1px",
+          },
+        }),
       },
     },
     MuiInputLabel: {
@@ -220,17 +224,29 @@ export const baseTheme = createTheme({
           lineHeight: "19.2px",
           color: "#221F20",
           top: "4px",
+          "&.Mui-error": {
+            color: "inherit",
+          },
           "&.Mui-disabled": {
             color: "text.secondary",
           },
           "&.Mui-focused": {
             top: 0,
+            color: "inherit",
           },
           "&.MuiInputLabel-shrink": {
             top: 0,
           },
           "&.MuiFormLabel-filled": {
             top: 0,
+          },
+        }),
+        outlined: sx({
+          "&.MuiInputLabel-sizeSmall": {
+            top: "2px",
+          },
+          "&.Mui-focused": {
+            color: "inherit",
           },
         }),
       },
@@ -256,6 +272,9 @@ export const baseTheme = createTheme({
             top: 0,
             color: "text.primary",
           },
+          "&.MuiSelect-iconOutlined": {
+            color: "text.primary",
+          },
         }),
       },
     },
@@ -276,6 +295,16 @@ export const baseTheme = createTheme({
             marginBottom: "3px",
             ":before": {
               borderBottomColor: "grey.300",
+            },
+            "&.Mui-error": {
+              ":after": {
+                borderBottom: "none",
+              },
+            },
+            "&.Mui-focused": {
+              ":after": {
+                borderBottom: "2px solid #221F20",
+              },
             },
             "& .MuiInputBase-input": {
               paddingBottom: "12px",
@@ -836,14 +865,14 @@ export const baseTheme = createTheme({
       light: "#737373",
     },
     info: {
-      main: "#3A82F6",
-      dark: "#1E4ED8",
+      main: "#3B82F6",
+      dark: "#1D4ED8",
       light: "#629BF8",
     },
     error: {
       main: "#F43F5E",
       dark: "#BE123C",
-      light: "#FB7185",
+      light: "#9CC0FA",
     },
     warning: {
       main: "#F59E0B",
