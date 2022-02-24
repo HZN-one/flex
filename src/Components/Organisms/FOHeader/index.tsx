@@ -1,126 +1,104 @@
 import React, { memo } from "react";
-import "../../../../i18n";
-import { useTranslation } from "react-i18next";
-import { Toolbar, Box } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import { AppBar, Avatar, Box, Grid, Toolbar } from "@mui/material";
 import { IFOHeader } from "./FOHeader.interfaces";
-import { FAButton, FATypography, FAIconButton } from "@Atoms";
+import { FAButton, FALogo, FATypography } from "@Atoms";
 import { FMSearch } from "@Molecules";
 
-import { styled } from "@mui/material/styles";
-import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
-
-const drawerWidth = 250;
-interface AppBarProps extends MuiAppBarProps {
-  open?: boolean;
-}
-
-const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: prop => prop !== "open",
-})<AppBarProps>(({ theme, open }) => ({
-  transition: theme.transitions.create(["margin", "width"], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  ...(open && {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: `${drawerWidth}px`,
-    transition: theme.transitions.create(["margin", "width"], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  }),
-}));
-
 export const FOHeader = memo((props: IFOHeader) => {
-  const {
-    testID,
-    logo,
-    title,
-    position,
-    handleLogin,
-    handleRegister,
-    handleMenuIcon,
-    handleSearch,
-    logout,
-    menuIcon,
-    search,
-    startAdornment,
-    endAdornment,
-    open,
-    ...materialUIProps
-  } = props;
-
-  const { t } = useTranslation();
+  const { testID, logo, position, headerType } = props;
 
   return (
     <AppBar
       data-testid={testID}
       position={position}
       color="inherit"
-      {...materialUIProps}
-      open={open}
+      elevation={0}
     >
-      <Toolbar>
-        <Box style={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
-          {menuIcon && (
-            <>
-              <FAIconButton
-                testID="icon-button-header"
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-                sx={{ mr: 1 }}
-                onClick={handleMenuIcon}
-              >
-                <MenuIcon />
-              </FAIconButton>
-            </>
+      <Toolbar variant="dense">
+        <Grid
+          container
+          justifyContent="space-between"
+          alignItems="center"
+          columnSpacing={2}
+        >
+          {logo && (
+            <Grid item xs>
+              <Box display="flex">
+                <FALogo
+                  testID="logo-header"
+                  width={119}
+                  height={20}
+                  iconColor="#D8232A"
+                  textColor="#1A1919"
+                />
+              </Box>
+            </Grid>
           )}
-          {logo && <Box sx={{ mr: 3 }}>{logo}</Box>}
-          {title && (
-            <FATypography
-              sx={{ mr: 3 }}
-              testID="typography-header"
-              variant="h6"
-            >
-              {title}
-            </FATypography>
+          {headerType === "auth" && (
+            <React.Fragment>
+              <Grid item xs="auto">
+                <FAButton
+                  testID="button-login"
+                  href={props.buttonLogin.href}
+                  LinkComponent={props.buttonLogin.LinkComponent}
+                  variant="text"
+                  color="secondary"
+                >
+                  {props.buttonLogin.children}
+                </FAButton>
+              </Grid>
+              <Grid item xs="auto">
+                <FAButton
+                  testID="button-register"
+                  href={props.buttonRegister.href}
+                  LinkComponent={props.buttonRegister.LinkComponent}
+                  variant="contained"
+                  color="primary"
+                >
+                  {props.buttonRegister.children}
+                </FAButton>
+              </Grid>
+            </React.Fragment>
           )}
-          {search && (
-            <FMSearch
-              size="small"
-              testID="search-header"
-              onChange={handleSearch}
-            ></FMSearch>
+          {headerType === "default" && (
+            <React.Fragment>
+              {props.title && (
+                <Grid item xs="auto">
+                  <FATypography testID="typography-header-title" variant="h5">
+                    {props.title}
+                  </FATypography>
+                </Grid>
+              )}
+              {props.search && (
+                <Grid item xs={6}>
+                  <FMSearch
+                    testID="search-header"
+                    placeholder={props.search.placeholder}
+                    onChange={props.search.onChange}
+                    onSubmit={props.search.onSubmit}
+                    margin="none"
+                    fullWidth
+                  />
+                </Grid>
+              )}
+              <Grid item xs="auto">
+                <Box display="flex" justifyContent="center" alignItems="center">
+                  <Avatar
+                    src={props.userAvatarSrc}
+                    sx={{ bgcolor: "secondary.main" }}
+                  />
+                  <FATypography
+                    testID="typography-header-company-name"
+                    variant="body1"
+                    sx={{ ml: 1 }}
+                  >
+                    {props.companyName}
+                  </FATypography>
+                </Box>
+              </Grid>
+            </React.Fragment>
           )}
-          {startAdornment}
-        </Box>
-
-        {logout && !endAdornment ? (
-          <>
-            <FAButton
-              testID="button-login"
-              variant="text"
-              color="inherit"
-              sx={{ mr: 2 }}
-              onClick={handleLogin}
-            >
-              {t("description.signIn")}
-            </FAButton>
-            <FAButton
-              testID="button-register"
-              variant="contained"
-              color="primary"
-              onClick={handleRegister}
-            >
-              {t("description.register")}
-            </FAButton>
-          </>
-        ) : (
-          <>{endAdornment}</>
-        )}
+        </Grid>
       </Toolbar>
     </AppBar>
   );
