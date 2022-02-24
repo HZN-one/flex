@@ -1,4 +1,4 @@
-export default interface ILogo {
+export default interface IFALogo {
   testID: `logo-${string}`;
   iconColor: string;
   textColor: string;
