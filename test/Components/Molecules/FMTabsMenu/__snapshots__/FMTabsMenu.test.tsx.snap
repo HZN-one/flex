@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FMStepper should match snapshot 1`] = `
+<div>
+  <div
+    class="TabsUnstyled-root TabsUnstyled-vertical css-1incz6f"
+    data-testid="tabs-example"
+  >
+    <div
+      aria-orientation="vertical"
+      class="css-19ihvrq TabsListUnstyled-root TabsListUnstyled-vertical"
+      role="tablist"
+    >
+      <button
+        aria-controls="mui-1-P-0"
+        aria-selected="true"
+        class="TabUnstyled-root Mui-selected css-ftvnd8"
+        id="mui-1-T-0"
+        role="tab"
+        tabindex="0"
+      >
+        <div
+          class="MuiBox-root css-zo3waq"
+        >
+          <span
+            aria-hidden="true"
+            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-kp9ftd-MuiIcon-root"
+            data-testid="icon-tab"
+          >
+            person_outline
+          </span>
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+            data-testid="typography-tab"
+          >
+            Individual
+          </p>
+        </div>
+      </button>
+      <button
+        aria-controls="mui-1-P-1"
+        aria-selected="false"
+        class="TabUnstyled-root css-ftvnd8"
+        id="mui-1-T-1"
+        role="tab"
+        tabindex="-1"
+      >
+        <div
+          class="MuiBox-root css-zo3waq"
+        >
+          <span
+            aria-hidden="true"
+            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-kp9ftd-MuiIcon-root"
+            data-testid="icon-tab"
+          >
+            home_work
+          </span>
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+            data-testid="typography-tab"
+          >
+            Company
+          </p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;

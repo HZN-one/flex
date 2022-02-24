@@ -49,21 +49,46 @@ declare module "@mui/material/Typography" {
 // Create a theme instance.
 export const baseTheme = createTheme({
   components: {
+    MuiAccordion: {
+      styleOverrides: {
+        root: sx({
+          p: 3,
+          mb: 3,
+          "&.Mui-expanded": {
+            ":last-of-type": {
+              mb: 3,
+            },
+          },
+        }),
+      },
+    },
+    MuiAccordionSummary: {
+      styleOverrides: {
+        content: sx({
+          m: 0,
+        }),
+        root: sx({
+          m: 0,
+          p: 0,
+          minHeight: 0,
+        }),
+      },
+    },
+    MuiAccordionDetails: {
+      styleOverrides: {
+        root: sx({
+          m: 0,
+          p: 0,
+          minHeight: 0,
+        }),
+      },
+    },
     MuiAppBar: {
       styleOverrides: {
         root: {
           boxShadow: "0px 1px 0px 0px #E0E0E0",
           borderRadius: 0,
         },
-      },
-    },
-    MuiToolbar: {
-      styleOverrides: {
-        root: sx({
-          pt: 1,
-          pb: 1,
-          minHeight: 80,
-        }),
       },
     },
     MuiPaginationItem: {
@@ -661,6 +686,15 @@ export const baseTheme = createTheme({
         }),
       },
     },
+    MuiToolbar: {
+      styleOverrides: {
+        root: sx({
+          pt: 1,
+          pb: 1,
+          minHeight: 80,
+        }),
+      },
+    },
   },
   shadows: [
     "none",
@@ -851,6 +885,9 @@ export const baseTheme = createTheme({
       "700": "#334155",
       "800": "#1E293B",
       "900": "#0F172A",
+    },
+    action: {
+      active: "#EE9C98",
     },
     contrastThreshold: 3,
     tonalOffset: 0.2,
