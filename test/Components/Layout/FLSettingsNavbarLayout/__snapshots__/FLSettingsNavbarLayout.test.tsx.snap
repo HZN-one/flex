@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FLSettingsNavbarLayout should match snapshot 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-0"
+    data-testid="header-settings"
+  >
+    <header
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorInherit MuiAppBar-positionStatic css-7reuwd-MuiPaper-root-MuiAppBar-root"
+      data-testid="header-settings"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-dense css-10ltm04-MuiToolbar-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-1ugee5g-MuiGrid-root"
+        />
+      </div>
+    </header>
+    <div
+      class="MuiDrawer-root MuiDrawer-docked css-l7ddnh-MuiDrawer-docked"
+      data-testid="side-bar-settings"
+    >
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-12i7wg6-MuiPaper-root-MuiDrawer-paper"
+      >
+        <div
+          class="css-3v9zut"
+        >
+          <button
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-69rnh3-MuiButtonBase-root-MuiIconButton-root"
+            data-testid="icon-button-drawer"
+            tabindex="0"
+            type="button"
+          >
+            <div
+              class="MuiBox-root css-fk96wx"
+            >
+              <svg
+                data-testid="logo-sidebar"
+                height="28"
+                version="1.1"
+                viewBox="0 0 673 116"
+                width="129"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  logo-hzn
+                </title>
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                  id="logo-hzn"
+                  stroke="none"
+                  stroke-width="1"
+                >
+                  <polyline
+                    fill="#000"
+                    id="Fill-1"
+                    points="204.818 17.049 226.366 16.956 226.74 101.699 205.192 101.794 205.047 69.228 181.197 69.331 181.342 101.898 159.671 101.993 159.298 17.25 180.968 17.153 181.106 48.509 204.955 48.405 204.818 17.049"
+                  />
+                  <path
+                    d="M264.882,75.684 C269.255,79.983 274.714,82.118 281.251,82.0892915 C287.789,82.06 293.228,79.877 297.568,75.539 C301.907,71.206 304.062,65.689 304.030351,58.989 C304.002,52.29 301.799,46.791 297.421,42.489 C293.045,38.193 287.589,36.058 281.051,36.0867085 C274.513,36.115 269.072,38.299 264.735,42.634 C260.395,46.971 258.24,52.49 258.268711,59.189 C258.301,65.888 260.503,71.387 264.882,75.684 Z M312.826,90.364 C304.267,98.916 293.772,103.223 281.345,103.275551 C268.915,103.331 258.385,99.118 249.753,90.642 C241.119,82.163 236.777,71.713 236.720511,59.283 C236.668,46.855 240.919,36.363 249.476,27.812 C258.035,19.259 268.528,14.955 280.957,14.8995058 C293.384,14.847 303.917,19.057 312.549,27.534 C321.183,36.012 325.526,46.465 325.579527,58.893 C325.634,71.322 321.384,81.812 312.826,90.364 L312.826,90.364 Z"
+                    fill="#000"
+                    id="Fill-2"
+                  />
+                  <path
+                    d="M357.199,36.359 L357.281,55.365 L369.266,55.312 C371.928,55.381 374.107,54.524 375.793,52.74 C377.476,50.96 378.314,48.653 378.302127,45.829 C378.29,43.005 377.432,40.709 375.731,38.939 C374.03,37.173 371.846,36.294 369.184,36.3058788 L357.199,36.359 Z M379.998,101.024 L365.111,73.73 L357.363,73.766 L357.484,101.126 L335.813,101.22 L335.44,16.476 L369.337,16.325649 C377.969,16.29 385.225,19.023 391.1,24.527 C396.975,30.028 399.935,37.017 399.973,45.492 C399.994,50.576 398.72,55.242 396.158,59.493 C393.594,63.738 390.098,67.127 385.668,69.645 L403.243,100.924 L379.998,101.024 L379.998,101.024 Z"
+                    fill="#000"
+                    id="Fill-3"
+                  />
+                  <polyline
+                    fill="#000"
+                    id="Fill-4"
+                    points="410.496 16.146 432.167 16.052 432.541 100.796 410.87 100.89 410.496 16.146"
+                  />
+                  <polyline
+                    fill="#000"
+                    id="Fill-5"
+                    points="471.172 79.682 502.043 79.547 502.137 100.49 443.192 100.748 443.117 84.041 472.813 36.819 443.515 36.947 443.423 16.001 500.8 15.751 500.874 32.453 471.172 79.682"
+                  />
+                  <path
+                    d="M533.149,74.505 C537.523,78.805 542.981,80.939 549.518,80.9132347 C556.056,80.884 561.494,78.701 565.835,74.363 C570.175,70.028 572.329,64.51 572.29833,57.811 C572.269,51.111 570.067,45.612 565.688,41.313 C561.312,37.017 555.856,34.881 549.319,34.9106884 C542.78,34.937 537.339,37.12 533.002,41.456 C528.661,45.793 526.507,51.312 526.535711,58.01 C526.568,64.71 528.77,70.209 533.149,74.505 Z M581.093,89.186 C572.533,97.74 562.039,102.044 549.612,102.100476 C537.183,102.152 526.652,97.94 518.02,89.463 C509.386,80.987 505.043,70.534 504.987511,58.105 C504.935,45.677 509.186,35.188 517.743,26.633 C526.303,18.081 536.795,13.777 549.224,13.7234683 C561.652,13.669 572.185,17.881 580.817,26.356 C589.45,34.834 593.793,45.29 593.846546,57.716 C593.902,70.147 589.651,80.634 581.093,89.186 L581.093,89.186 Z"
+                    fill="#000"
+                    id="Fill-6"
+                  />
+                  <polyline
+                    fill="#000"
+                    id="Fill-7"
+                    points="650.435 15.092 671.983 14.999 672.356 99.743 655.649 99.815 625.561 57.334 625.749 99.947 604.08 100.042 603.706 15.297 620.531 15.225 650.622 57.707 650.435 15.092"
+                  />
+                  <polyline
+                    fill="#D8232A"
+                    id="Fill-8"
+                    points="114.355 0.999 45.728 0.999 45.728 46.996 68.592 46.996 68.592 23.863 91.49 23.863 91.49 116 114.355 116 114.355 0.999"
+                  />
+                  <polyline
+                    fill="#D8232A"
+                    id="Fill-9"
+                    points="0 116 68.628 116 68.628 70.004 45.763 70.004 45.763 93.136 22.865 93.136 22.865 0.999 0 0.999 0 116"
+                  />
+                </g>
+              </svg>
+            </div>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <hr
+          class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+        />
+        <div
+          style="flex-grow: 1;"
+        />
+        <div
+          style="width: 100%;"
+        >
+          <hr
+            class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+          />
+          <ul
+            class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
+          >
+            <div
+              class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-button css-bshv44-MuiButtonBase-root-MuiListItem-root"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiBox-root css-firzqq"
+              >
+                <div
+                  class="MuiListItemIcon-root css-18x0xl8-MuiListItemIcon-root"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="SettingsOutlinedIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.09-.16-.26-.25-.44-.25-.06 0-.12.01-.17.03l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.06-.02-.12-.03-.18-.03-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.09.16.26.25.44.25.06 0 .12-.01.17-.03l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="MuiListItemText-root css-tlelie-MuiListItemText-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-1fj7vcm-MuiTypography-root"
+                      data-testid="typography-sidebar"
+                    >
+                      Settings
+                    </p>
+                  </span>
+                </div>
+              </div>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </div>
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+            >
+              <button
+                class="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-fullWidth MuiButtonBase-root  css-10hibg0-MuiButtonBase-root-MuiButton-root"
+                data-testid="button-layoutSettings"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+                >
+                  <svg
+                    fill="none"
+                    height="16"
+                    viewBox="0 0 17 16"
+                    width="17"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.833 4.66667L10.893 5.60667L12.613 7.33333H5.83301V8.66667H12.613L10.893 10.3867L11.833 11.3333L15.1663 8L11.833 4.66667ZM3.16634 3.33333H8.49967V2H3.16634C2.43301 2 1.83301 2.6 1.83301 3.33333V12.6667C1.83301 13.4 2.43301 14 3.16634 14H8.49967V12.6667H3.16634V3.33333Z"
+                      fill="#221F20"
+                    />
+                  </svg>
+                </span>
+                Log Out
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <main
+      class="css-12jh8f8"
+    >
+      <div
+        class="MuiContainer-root MuiContainer-maxWidthXl css-ppik1p-MuiContainer-root"
+      />
+    </main>
+  </div>
+</div>
+`;

@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FMStepper should match snapshot 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-0"
+    data-testid="stepper-example"
+  >
+    <div
+      class="MuiStepper-root MuiStepper-horizontal css-m5vj9m-MuiStepper-root"
+    >
+      <div
+        class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+      >
+        <span
+          class="MuiStepLabel-root MuiStepLabel-horizontal css-ascpo7-MuiStepLabel-root"
+        >
+          <span
+            class="MuiStepLabel-iconContainer css-vnkopk-MuiStepLabel-iconContainer"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root Mui-active css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="12"
+              />
+              <text
+                class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                text-anchor="middle"
+                x="12"
+                y="16"
+              >
+                1
+              </text>
+            </svg>
+          </span>
+          <span
+            class="MuiStepLabel-labelContainer css-16ubnlw-MuiStepLabel-labelContainer"
+          >
+            <span
+              class="MuiStepLabel-label Mui-active css-qivjh0-MuiStepLabel-label"
+            >
+              Title 1
+            </span>
+          </span>
+        </span>
+      </div>
+      <div
+        class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+      >
+        <span
+          class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+        />
+      </div>
+      <div
+        class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+      >
+        <span
+          class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+        >
+          <span
+            class="MuiStepLabel-iconContainer css-vnkopk-MuiStepLabel-iconContainer"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="12"
+              />
+              <text
+                class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                text-anchor="middle"
+                x="12"
+                y="16"
+              >
+                2
+              </text>
+            </svg>
+          </span>
+          <span
+            class="MuiStepLabel-labelContainer css-16ubnlw-MuiStepLabel-labelContainer"
+          >
+            <span
+              class="MuiStepLabel-label Mui-disabled css-qivjh0-MuiStepLabel-label"
+            >
+              Title 2
+            </span>
+          </span>
+        </span>
+      </div>
+      <div
+        class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+      >
+        <span
+          class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+        />
+      </div>
+      <div
+        class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+      >
+        <span
+          class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+        >
+          <span
+            class="MuiStepLabel-iconContainer css-vnkopk-MuiStepLabel-iconContainer"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="12"
+              />
+              <text
+                class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                text-anchor="middle"
+                x="12"
+                y="16"
+              >
+                3
+              </text>
+            </svg>
+          </span>
+          <span
+            class="MuiStepLabel-labelContainer css-16ubnlw-MuiStepLabel-labelContainer"
+          >
+            <span
+              class="MuiStepLabel-label Mui-disabled css-qivjh0-MuiStepLabel-label"
+            >
+              Title 3
+            </span>
+          </span>
+        </span>
+      </div>
+      <div
+        class="MuiStepConnector-root MuiStepConnector-horizontal Mui-disabled css-j5w0w9-MuiStepConnector-root"
+      >
+        <span
+          class="MuiStepConnector-line MuiStepConnector-lineHorizontal css-z7uhs0-MuiStepConnector-line"
+        />
+      </div>
+      <div
+        class="MuiStep-root MuiStep-horizontal css-1bw0nnu-MuiStep-root"
+      >
+        <span
+          class="MuiStepLabel-root MuiStepLabel-horizontal Mui-disabled css-ascpo7-MuiStepLabel-root"
+        >
+          <span
+            class="MuiStepLabel-iconContainer css-vnkopk-MuiStepLabel-iconContainer"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiStepIcon-root css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="12"
+              />
+              <text
+                class="MuiStepIcon-text css-117w1su-MuiStepIcon-text"
+                text-anchor="middle"
+                x="12"
+                y="16"
+              >
+                4
+              </text>
+            </svg>
+          </span>
+          <span
+            class="MuiStepLabel-labelContainer css-16ubnlw-MuiStepLabel-labelContainer"
+          >
+            <span
+              class="MuiStepLabel-label Mui-disabled css-qivjh0-MuiStepLabel-label"
+            >
+              Title 4
+            </span>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root css-1l6icon"
+    >
+      Description 1
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container css-1xzqqmo-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+      />
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto css-1wrgmsj-MuiGrid-root"
+      >
+        <button
+          class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButtonBase-root  css-1knaqv7-MuiButtonBase-root-MuiButton-root"
+          data-testid="button-stepper-example"
+          tabindex="0"
+          type="button"
+        >
+          Next
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
