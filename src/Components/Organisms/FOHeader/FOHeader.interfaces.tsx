@@ -19,7 +19,7 @@ interface IFOHeaderDefault extends IFOHeaderGeneral {
   search?: Omit<IFMSearch, "testID">;
   title?: string;
   userAvatarSrc?: string;
-  companyName?: string;
+  accountName?: string;
   endAdornmentMenuChildren?: ReactChild;
 }
 

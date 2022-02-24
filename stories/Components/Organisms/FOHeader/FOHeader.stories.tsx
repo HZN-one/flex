@@ -9,13 +9,13 @@ const story = {
     testID: { control: "text" },
     position: { control: "text" },
     userAvatarSrc: { control: "text" },
-    companyName: { control: "text" },
+    accountName: { control: "text" },
   },
   args: {
     testID: "header-storybook",
     position: "static",
     userAvatarSrc: "#",
-    companyName: "Company Name",
+    accountName: "Company Name",
   },
 };
 

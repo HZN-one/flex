@@ -92,7 +92,7 @@ export const FOHeader = memo((props: IFOHeader) => {
                     variant="body1"
                     sx={{ ml: 1 }}
                   >
-                    {props.companyName}
+                    {props.accountName}
                   </FATypography>
                 </Box>
               </Grid>

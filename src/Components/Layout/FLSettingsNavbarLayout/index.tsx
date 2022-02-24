@@ -10,12 +10,8 @@ import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 
-// appbar
-import MenuIcon from "@mui/icons-material/Menu";
-
 // get from flex
 import { FATypography } from "@Atoms/FATypography";
-import { FAIconButton } from "@Atoms/FAIconButton";
 import { FAButton } from "@Atoms/FAButton";
 
 // main components
@@ -26,9 +22,11 @@ export interface IFLSettingsNavbarLayout {
   testID: `header-${string}`;
   isDrawerCloseable?: boolean;
   title?: string;
+  userAvatarSrc?: string;
+  accountName?: string;
   popUp?: ReactNode;
   children?: ReactNode;
-  headbarPosition?: "fixed" | "absolute" | "relative" | "static" | "sticky";
+  headbarPosition: "fixed" | "absolute" | "relative" | "static" | "sticky";
   sections: {
     title: string;
     path: string;
@@ -60,14 +58,13 @@ const Main = styled("main", { shouldForwardProp: prop => prop !== "open" })<{
 export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
   const {
     testID,
-    popUp,
-    isDrawerCloseable,
     handleLogOut,
     headbarPosition,
     sections,
     title,
+    userAvatarSrc,
+    accountName,
   } = props;
-  const [open, setOpen] = React.useState(true);
 
   const initialPath = window.location.pathname;
   const pathMarkerSidebar = (path: string) => {
@@ -90,51 +87,16 @@ export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
     };
   };
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
-
   return (
     <Box data-testid={testID}>
       <FOHeader
-        position={headbarPosition ?? "static"}
         testID="header-settings"
-        open={open}
-        startAdornment={
-          <>
-            {isDrawerCloseable && (
-              <FAIconButton
-                testID="icon-button-layoutSettings"
-                color="inherit"
-                aria-label="open drawer"
-                onClick={open ? handleDrawerClose : handleDrawerOpen}
-                edge="start"
-                sx={{ mr: 2 }}
-              >
-                <MenuIcon />
-              </FAIconButton>
-            )}
-            <FATypography
-              testID="typography-layoutSettings"
-              variant="h6"
-              noWrap
-            >
-              {title}
-            </FATypography>
-            <Box
-              sx={{
-                flexGrow: 1,
-                ml: 2,
-              }}
-            />
-            <Box sx={{ ml: 1 }}>{popUp}</Box>
-          </>
-        }
-      ></FOHeader>
+        headerType="default"
+        position={headbarPosition}
+        title={title}
+        userAvatarSrc={userAvatarSrc}
+        accountName={accountName}
+      />
       <FOSideBar
         sx={{
           width: 250,
@@ -145,8 +107,8 @@ export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
           },
         }}
         testID="side-bar-settings"
-        isDrawerCloseable={isDrawerCloseable}
-        open={open}
+        isDrawerCloseable={false}
+        open
         sections={sections}
         footer={
           <List>
@@ -210,7 +172,7 @@ export const FLSettingsNavbarLayout = memo((props: IFLSettingsNavbarLayout) => {
           </List>
         }
       ></FOSideBar>
-      <Main open={open}>
+      <Main open>
         <Container maxWidth="xl" sx={{ minHeight: "87vh" }}>
           {props.children}
         </Container>
