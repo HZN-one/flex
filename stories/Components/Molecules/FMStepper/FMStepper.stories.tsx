@@ -16,6 +16,7 @@ export const Default = Template.bind({});
 
 Default.args = {
   testID: "stepper-test",
+  stepperColumn: 8,
   data: [
     {
       title: "Title 1",

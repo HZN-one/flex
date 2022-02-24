@@ -8,16 +8,20 @@ import { FAButton, FAIcon } from "@Atoms";
 import { Grid } from "@mui/material";
 
 export const FMStepper = memo((props: IFMStepperProps) => {
-  const { testID, data } = props;
+  const { testID, data, stepperColumn } = props;
   const [activeStep, setActiveStep] = React.useState(0);
   const [previousTitle, setPreviousTitle] = React.useState(data[0].title);
   const [activeChildren, setActiveChildren] = React.useState(data[0].children);
+  const isLastStep = data.length - 1 === activeStep;
 
   const handleNext = () => {
     data[activeStep].onSubmitNext();
-    setActiveStep(prevActiveStep => prevActiveStep + 1);
-    setPreviousTitle(data[activeStep].title);
-    setActiveChildren(data[activeStep + 1].children);
+
+    if (!isLastStep) {
+      setActiveStep(prevActiveStep => prevActiveStep + 1);
+      setPreviousTitle(data[activeStep].title);
+      setActiveChildren(data[activeStep + 1].children);
+    }
   };
 
   const handleBack = () => {
@@ -31,15 +35,19 @@ export const FMStepper = memo((props: IFMStepperProps) => {
 
   return (
     <Box data-testid={testID}>
-      <Stepper activeStep={activeStep}>
-        {data.map((item, index) => {
-          return (
-            <Step key={index}>
-              <StepLabel>{item.title}</StepLabel>
-            </Step>
-          );
-        })}
-      </Stepper>
+      <Grid container justifyContent="center">
+        <Grid item sm={stepperColumn}>
+          <Stepper activeStep={activeStep}>
+            {data.map((item, index) => {
+              return (
+                <Step key={index}>
+                  <StepLabel>{item.title}</StepLabel>
+                </Step>
+              );
+            })}
+          </Stepper>
+        </Grid>
+      </Grid>
       <Box sx={{ mt: 3.75, mb: 4.125 }}>{activeChildren}</Box>
       <Grid container justifyContent="space-between">
         <Grid item xs="auto">

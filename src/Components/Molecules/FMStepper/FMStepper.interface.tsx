@@ -9,4 +9,5 @@ export default interface IFMStepperProps {
     onSubmitBack: () => void;
     buttonLabel: string;
   }>;
+  stepperColumn: number;
 }
