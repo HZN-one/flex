@@ -1,3 +1,4 @@
+export * from "./FAAvatar";
 export * from "./FAButton";
 export * from "./FAIconButton";
 export * from "./Icon";
