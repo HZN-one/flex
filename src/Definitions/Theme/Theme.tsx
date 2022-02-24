@@ -49,6 +49,23 @@ declare module "@mui/material/Typography" {
 // Create a theme instance.
 export const baseTheme = createTheme({
   components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          boxShadow: "0px 1px 0px 0px #E0E0E0",
+          borderRadius: 0,
+        },
+      },
+    },
+    MuiToolbar: {
+      styleOverrides: {
+        root: sx({
+          pt: 1,
+          pb: 1,
+          minHeight: 80,
+        }),
+      },
+    },
     MuiPaginationItem: {
       styleOverrides: {
         sizeLarge: sx({
@@ -102,17 +119,17 @@ export const baseTheme = createTheme({
           typography: "buttonBold1",
         }),
         iconSizeSmall: sx({
-          "& > *:first-child": {
+          "& > *:first-of-type": {
             typography: "buttonSemiBold",
           },
         }),
         iconSizeMedium: sx({
-          "& > *:first-child": {
+          "& > *:first-of-type": {
             typography: "buttonBold2",
           },
         }),
         iconSizeLarge: sx({
-          "& > *:first-child": {
+          "& > *:first-of-type": {
             typography: "buttonBold1",
           },
         }),
