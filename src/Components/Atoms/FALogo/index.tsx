@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import IFALogo from "./FALogo.interfaces";
+import IFALogo from "./FALogo.interface";
 
 export const FALogo = memo((props: IFALogo) => {
   return (

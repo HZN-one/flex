@@ -2,7 +2,7 @@ import React from "react";
 import { Meta, Story } from "@storybook/react";
 
 import { FAButton, FARadio } from "@Atoms";
-import { IFOCardWithImage } from "@Organisms/FOCardWithImage/FOCardWithImage.interfaces";
+import { IFOCardWithImage } from "@Organisms/FOCardWithImage/FOCardWithImage.interface";
 import { FOCardWithImage } from "@Organisms/FOCardWithImage";
 import { DUMMY_IMAGE_URL } from "@Definitions/constants";
 

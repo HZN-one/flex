@@ -1,6 +1,6 @@
 import React from "react";
 import { FASkeleton } from "@Atoms";
-import { IFASkeleton } from "@Atoms/FASkeleton/FASkeleton.interfaces";
+import { IFASkeleton } from "@Atoms/FASkeleton/FASkeleton.interface";
 import { Stack } from "@mui/material";
 
 const story = {

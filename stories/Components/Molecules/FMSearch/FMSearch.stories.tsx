@@ -1,7 +1,7 @@
 import React from "react";
 import { Story } from "@storybook/react";
 import { FMSearch } from "@Molecules";
-import { IFMSearch } from "@Molecules/FMSearch/FMSearch.interfaces";
+import { IFMSearch } from "@Molecules/FMSearch/FMSearch.interface";
 
 const story = {
   title: "Molecules/Search",

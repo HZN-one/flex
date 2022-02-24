@@ -1,7 +1,7 @@
 import React from "react";
 import { FASwitch, FAFormControlLabel } from "@Atoms";
 import { IFASwitch } from "@Atoms/FASwitch/FASwitch.interface";
-import { IFAFormControlLabel } from "@Atoms/FAFormControlLabel/FAFormControlLabel.interfaces";
+import { IFAFormControlLabel } from "@Atoms/FAFormControlLabel/FAFormControlLabel.interface";
 
 const story = {
   title: "Atom/Switch",

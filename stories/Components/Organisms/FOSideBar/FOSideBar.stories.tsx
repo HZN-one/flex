@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
 import { FOSideBar } from "@Organisms";
-import { IFOSideBar } from "@Organisms/FOSideBar/FOSideBar.interfaces";
+import { IFOSideBar } from "@Organisms/FOSideBar/FOSideBar.interface";
 import StarBorder from "@mui/icons-material/StarBorder";
 
 const story = {

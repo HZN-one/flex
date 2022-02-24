@@ -17,7 +17,7 @@ import { FATypography } from "@Atoms/FATypography";
 import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import { IFOSideBar, IStyle } from "./FOSideBar.interfaces";
+import { IFOSideBar, IStyle } from "./FOSideBar.interface";
 
 const useStyles = makeStyles({
   color: {

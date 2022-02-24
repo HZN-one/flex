@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
 
-import { IFMAccordion } from "./FMAccordion.interfaces";
+import { IFMAccordion } from "./FMAccordion.interface";
 import { FATypography } from "@Atoms/FATypography";
 import { FAIcon } from "@Atoms/Icon";
 

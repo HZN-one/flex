@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import { Card, Box } from "@mui/material";
 import CardContent from "@mui/material/CardContent";
 
-import { IFOCardWithImage } from "./FOCardWithImage.interfaces";
+import { IFOCardWithImage } from "./FOCardWithImage.interface";
 import { FATypography, FAButton, FAFormControlLabel } from "@Atoms";
 
 export const FOCardWithImage = memo((props: IFOCardWithImage) => {

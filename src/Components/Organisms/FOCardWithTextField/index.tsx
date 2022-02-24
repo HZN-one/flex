@@ -3,7 +3,7 @@ import { Card, Box } from "@mui/material";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 
-import { IFOCardWithTextField } from "./FOCardWithTextField.interfaces";
+import { IFOCardWithTextField } from "./FOCardWithTextField.interface";
 import { FATypography, FAButton } from "@Atoms";
 
 export const FOCardWithTextField = memo((props: IFOCardWithTextField) => {

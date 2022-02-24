@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import { AppBar, Avatar, Box, Grid, Toolbar } from "@mui/material";
-import { IFOHeader } from "./FOHeader.interfaces";
+import { IFOHeader } from "./FOHeader.interface";
 import { FAButton, FALogo, FATypography } from "@Atoms";
 import { FMSearch } from "@Molecules";
 
