@@ -1,8 +1,7 @@
 import React from "react";
-import {
-  FLSettingsNavbarLayout,
-  IFLSettingsNavbarLayout,
-} from "@Components/Layout";
+import { FLSettingsNavbarLayout } from "@Components/Layout";
+
+import { IFLSettingsNavbarLayout } from "@Components/Layout/FLSettingsNavbarLayout/FLSettingNavbarLayout.interface";
 
 const story = {
   title: "Layout/Settings Navbar",
