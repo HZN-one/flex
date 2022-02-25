@@ -1,12 +1,7 @@
 import React, { useEffect, memo } from "react";
-// import Router from "next/router";
-import IDashboardSidebarProps from "./FOTMSSidebar.interfaces";
-
 import { Box, Icon, Collapse } from "@mui/material";
-
 import { styled, useTheme } from "@mui/material/styles";
 import Drawer from "@mui/material/Drawer";
-
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
@@ -15,11 +10,12 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-
 import Button from "@mui/material/Button";
 import SettingsIcon from "@mui/icons-material/Settings";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
+
+import IDashboardSidebarProps from "./FOTMSSidebar.interface";
 
 const drawerWidth = 300;
 

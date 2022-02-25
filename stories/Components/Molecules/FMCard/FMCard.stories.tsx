@@ -1,9 +1,9 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
-import { FMCard } from "@Molecules";
 
+import { FMCard } from "@Molecules";
 import { FAButton } from "@Atoms/FAButton";
-import { IFMCard } from "@Molecules/FMCard/FMCard.interfaces";
+import { IFMCard } from "@Molecules/FMCard/FMCard.interface";
 
 const meta: Meta = {
   title: "Molecules/Card",

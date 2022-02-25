@@ -1,7 +1,8 @@
 import React from "react";
+
 import { FACheckbox, FAFormControlLabel } from "@Atoms";
 import { IFACheckbox } from "@Atoms/FACheckbox/FACheckbox.interface";
-import { IFAFormControlLabel } from "@Atoms/FAFormControlLabel/FAFormControlLabel.interfaces";
+import { IFAFormControlLabel } from "@Atoms/FAFormControlLabel/FAFormControlLabel.interface";
 
 const story = {
   title: "Atom/Checkbox",

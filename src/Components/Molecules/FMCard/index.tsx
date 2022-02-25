@@ -3,8 +3,9 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 
-import { IFMCard } from "./FMCard.interfaces";
 import { FATypography } from "@Atoms/FATypography";
+
+import { IFMCard } from "./FMCard.interface";
 
 export const FMCard = memo((props: IFMCard) => {
   const { testID, actions, title, children, ...materialUIProps } = props;

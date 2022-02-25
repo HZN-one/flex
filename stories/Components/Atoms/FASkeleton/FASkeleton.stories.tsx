@@ -1,7 +1,8 @@
 import React from "react";
-import { FASkeleton } from "@Atoms";
-import { IFASkeleton } from "@Atoms/FASkeleton/FASkeleton.interfaces";
 import { Stack } from "@mui/material";
+
+import { IFASkeleton } from "@Atoms/FASkeleton/FASkeleton.interface";
+import { FASkeleton } from "@Atoms";
 
 const story = {
   title: "Atom/Skeleton",

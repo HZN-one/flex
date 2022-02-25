@@ -1,8 +1,10 @@
 import React, { memo } from "react";
 import { AppBar, Avatar, Box, Grid, Toolbar } from "@mui/material";
-import { IFOHeader } from "./FOHeader.interfaces";
+
 import { FAButton, FALogo, FATypography } from "@Atoms";
 import { FMSearch } from "@Molecules";
+
+import { IFOHeader } from "./FOHeader.interface";
 
 export const FOHeader = memo((props: IFOHeader) => {
   const { testID, logo, position, headerType } = props;

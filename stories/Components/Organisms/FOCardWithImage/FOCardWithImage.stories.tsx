@@ -2,9 +2,10 @@ import React from "react";
 import { Meta, Story } from "@storybook/react";
 
 import { FAButton, FARadio } from "@Atoms";
-import { IFOCardWithImage } from "@Organisms/FOCardWithImage/FOCardWithImage.interfaces";
 import { FOCardWithImage } from "@Organisms/FOCardWithImage";
 import { DUMMY_IMAGE_URL } from "@Definitions/constants";
+
+import { IFOCardWithImage } from "@Organisms/FOCardWithImage/FOCardWithImage.interface";
 
 const meta: Meta = {
   title: "Organisms/Card With Image",

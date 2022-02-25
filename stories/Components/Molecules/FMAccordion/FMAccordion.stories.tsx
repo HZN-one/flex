@@ -1,7 +1,8 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
+
 import { FMAccordion } from "@Molecules";
-import { IFMAccordion } from "@Molecules/FMAccordion/FMAccordion.interfaces";
+import { IFMAccordion } from "@Molecules/FMAccordion/FMAccordion.interface";
 
 const meta: Meta = {
   title: "Molecules/Accordion",

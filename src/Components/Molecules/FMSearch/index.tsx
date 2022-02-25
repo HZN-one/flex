@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import { Box, InputAdornment } from "@mui/material";
 
 import { FAIcon, FATextField } from "@Atoms";
-import { IFMSearch } from "./FMSearch.interfaces";
+import { IFMSearch } from "./FMSearch.interface";
 
 export const FMSearch = memo((props: IFMSearch) => {
   const { testID, ...materialUIProps } = props;

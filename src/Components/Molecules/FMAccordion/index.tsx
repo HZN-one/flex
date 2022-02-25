@@ -1,9 +1,9 @@
 import React, { memo } from "react";
 import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
-
-import { IFMAccordion } from "./FMAccordion.interfaces";
 import { FATypography } from "@Atoms/FATypography";
 import { FAIcon } from "@Atoms/Icon";
+
+import { IFMAccordion } from "./FMAccordion.interface";
 
 export const FMAccordion = memo((props: IFMAccordion) => {
   const { testID, title, summary, children, ...materialUIProps } = props;

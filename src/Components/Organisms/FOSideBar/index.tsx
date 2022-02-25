@@ -1,23 +1,22 @@
 import React, { memo, useEffect } from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import makeStyles from "@mui/styles/makeStyles";
-
 import Drawer from "@mui/material/Drawer";
 import CssBaseline from "@mui/material/CssBaseline";
 import List from "@mui/material/List";
-
 import Divider from "@mui/material/Divider";
-import { FAIconButton, FAIcon, FALogo } from "@Atoms";
-
 import { Box, ListItemText } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import { FATypography } from "@Atoms/FATypography";
 import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import { IFOSideBar, IStyle } from "./FOSideBar.interfaces";
+
+import { FAIconButton, FAIcon, FALogo } from "@Atoms";
+import { FATypography } from "@Atoms/FATypography";
+
+import { IFOSideBar, IStyle } from "./FOSideBar.interface";
 
 const useStyles = makeStyles({
   color: {

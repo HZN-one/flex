@@ -1,7 +1,6 @@
 import { ReactChild } from "react";
-import { DrawerProps } from "@mui/material";
+import { DrawerProps, Theme } from "@mui/material";
 import { SxProps } from "@mui/system";
-import { Theme } from "@mui/material";
 
 export interface IFOSideBar extends DrawerProps {
   testID: `side-bar-${string}`;
