@@ -2,28 +2,49 @@ import React, { memo } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
+import Box from "@mui/material/Box";
 
 import { FATypography } from "@Atoms/FATypography";
 
 import { IFMCard } from "./FMCard.interface";
 
 export const FMCard = memo((props: IFMCard) => {
-  const { testID, actions, title, children, ...materialUIProps } = props;
+  const {
+    testID,
+    actions,
+    title,
+    titleTypographyVariant,
+    subtitle,
+    subtitleTypographyVariant,
+    children,
+    ...materialUIProps
+  } = props;
   return (
     <Card data-testid={testID} {...materialUIProps}>
       <CardContent>
-        {title && (
-          <>
-            <FATypography
-              testID="typography-card"
-              variant="h6"
-              fontWeight={700}
-              sx={{ marginBottom: 3.75 }}
-            >
-              {title}
-            </FATypography>
-          </>
-        )}
+        <Box mb={title || subtitle ? 3.75 : 0}>
+          {title && (
+            <Box mb={subtitle ? 1 : 0}>
+              <FATypography
+                testID="typography-card"
+                variant={titleTypographyVariant || "h6"}
+              >
+                {title}
+              </FATypography>
+            </Box>
+          )}
+
+          {subtitle && (
+            <Box>
+              <FATypography
+                testID="typography-card"
+                variant={subtitleTypographyVariant || "subtitle"}
+              >
+                {subtitle}
+              </FATypography>
+            </Box>
+          )}
+        </Box>
         {children}
       </CardContent>
       {actions && <CardActions>{actions}</CardActions>}

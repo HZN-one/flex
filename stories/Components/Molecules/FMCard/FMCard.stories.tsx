@@ -13,30 +13,30 @@ const meta: Meta = {
 export default meta;
 
 const Template: Story<IFMCard> = (props: IFMCard) => (
-  <FMCard sx={{ width: "20vw" }} {...props} />
+  <FMCard sx={{ width: "20vw" }} {...props}>
+    Card Content
+  </FMCard>
 );
 
 export const Default = Template.bind({});
 
 Default.args = {
   title: "Card Title",
-  children: "Card Content",
-  actions: (
-    <FAButton testID="button-card" size="small">
-      Learn More
-    </FAButton>
-  ),
 };
-
-export const withCustomChildren = (props: IFMCard) => (
-  <>
-    <FMCard sx={{ width: "20vw" }} {...props}>
-      <p>This is card custom content</p>
-    </FMCard>
-  </>
-);
 
 export const withAction = Template.bind({});
 withAction.args = {
+  actions: <FAButton testID="button-card">Button test</FAButton>,
+};
+
+export const withSubtitle = Template.bind({});
+withSubtitle.args = {
+  subtitle: "To continue, please register to Horizon platform.",
+};
+
+export const completeCard = Template.bind({});
+completeCard.args = {
+  title: "Card Title",
+  subtitle: "To continue, please register to Horizon platform.",
   actions: <FAButton testID="button-card">Button test</FAButton>,
 };
