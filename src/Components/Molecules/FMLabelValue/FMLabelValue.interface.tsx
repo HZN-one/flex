@@ -1,4 +1,4 @@
-import { IFATypography } from "@Atoms/FATypography/FATypography.interfaces";
+import { IFATypography } from "../../Atoms/FATypography/FATypography.interfaces";
 
 export interface IFMLabelValue {
   label: string;

@@ -1,6 +1,7 @@
-import { IFAButton } from "@Atoms/FAButton/Button.interface";
-import { IFMSearch } from "@Molecules/FMSearch/FMSearch.interfaces";
 import { ReactChild } from "react";
+
+import { IFAButton } from "../../Atoms/FAButton/Button.interface";
+import { IFMSearch } from "../../Molecules/FMSearch/FMSearch.interfaces";
 
 interface IFOHeaderGeneral {
   testID: `header-${string}`;
