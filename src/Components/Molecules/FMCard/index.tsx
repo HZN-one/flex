@@ -39,6 +39,7 @@ export const FMCard = memo((props: IFMCardProps) => {
               <FATypography
                 testID="typography-card"
                 variant={subtitleTypographyVariant || "subtitle"}
+                color="text.secondary"
               >
                 {subtitle}
               </FATypography>
