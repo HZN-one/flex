@@ -1,7 +1,7 @@
 import React from "react";
 
 import { FOHeader } from "@Organisms";
-import { IFOHeader } from "@Organisms/FOHeader/FOHeader.interface";
+import { IFOHeaderProps } from "@Organisms/FOHeader/FOHeader.interface";
 
 const story = {
   title: "Organisms/Header",
@@ -22,15 +22,15 @@ const story = {
 
 export default story;
 
-export const Default = (props: IFOHeader) => (
+export const Default = (props: IFOHeaderProps) => (
   <FOHeader {...props} logo position="static" headerType="default" />
 );
 
-export const DefaultWithTitle = (props: IFOHeader) => (
+export const DefaultWithTitle = (props: IFOHeaderProps) => (
   <FOHeader {...props} position="static" headerType="default" title="Title" />
 );
 
-export const DefaultWithSearch = (props: IFOHeader) => (
+export const DefaultWithSearch = (props: IFOHeaderProps) => (
   <FOHeader
     {...props}
     headerType="default"
@@ -40,7 +40,7 @@ export const DefaultWithSearch = (props: IFOHeader) => (
   />
 );
 
-export const Auth = (props: IFOHeader) => (
+export const Auth = (props: IFOHeaderProps) => (
   <FOHeader
     {...props}
     logo

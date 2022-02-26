@@ -2,7 +2,7 @@ import { ReactChild } from "react";
 import { DrawerProps, Theme } from "@mui/material";
 import { SxProps } from "@mui/system";
 
-export interface IFOSideBar extends DrawerProps {
+export interface IFOSideBarProps extends DrawerProps {
   testID: `side-bar-${string}`;
   open: boolean;
   isDrawerCloseable?: boolean;

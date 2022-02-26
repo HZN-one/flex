@@ -5,9 +5,9 @@ import CardContent from "@mui/material/CardContent";
 
 import { FATypography, FAButton } from "@Atoms";
 
-import { IFOCardWithTextField } from "./FOCardWithTextField.interface";
+import { IFOCardWithTextFieldProps } from "./FOCardWithTextField.interface";
 
-export const FOCardWithTextField = memo((props: IFOCardWithTextField) => {
+export const FOCardWithTextField = memo((props: IFOCardWithTextFieldProps) => {
   const {
     sx,
     testID,

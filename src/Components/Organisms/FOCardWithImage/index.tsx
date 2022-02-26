@@ -4,9 +4,9 @@ import CardContent from "@mui/material/CardContent";
 
 import { FATypography, FAButton, FAFormControlLabel } from "@Atoms";
 
-import { IFOCardWithImage } from "./FOCardWithImage.interface";
+import { IFOCardWithImageProps } from "./FOCardWithImage.interface";
 
-export const FOCardWithImage = memo((props: IFOCardWithImage) => {
+export const FOCardWithImage = memo((props: IFOCardWithImageProps) => {
   const {
     sx,
     testID,

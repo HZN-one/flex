@@ -5,7 +5,7 @@ import { FAButton, FARadio } from "@Atoms";
 import { FOCardWithImage } from "@Organisms/FOCardWithImage";
 import { DUMMY_IMAGE_URL } from "@Definitions/constants";
 
-import { IFOCardWithImage } from "@Organisms/FOCardWithImage/FOCardWithImage.interface";
+import { IFOCardWithImageProps } from "@Organisms/FOCardWithImage/FOCardWithImage.interface";
 
 const meta: Meta = {
   title: "Organisms/Card With Image",
@@ -14,7 +14,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<IFOCardWithImage> = props => (
+const Template: Story<IFOCardWithImageProps> = props => (
   <FOCardWithImage sx={{ maxWidth: "408px" }} {...props} />
 );
 

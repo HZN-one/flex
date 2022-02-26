@@ -3,7 +3,7 @@ import { Story, Meta } from "@storybook/react";
 import { Box } from "@mui/material";
 
 import { FAButton, FATextField } from "@Atoms";
-import { IFOCardWithTextField } from "@Organisms/FOCardWithTextField/FOCardWithTextField.interface";
+import { IFOCardWithTextFieldProps } from "@Organisms/FOCardWithTextField/FOCardWithTextField.interface";
 import { FOCardWithTextField } from "@Organisms/FOCardWithTextField";
 
 const meta: Meta = {
@@ -13,7 +13,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<IFOCardWithTextField> = props => (
+const Template: Story<IFOCardWithTextFieldProps> = props => (
   <Box maxWidth={560}>
     <FOCardWithTextField {...props} />
   </Box>

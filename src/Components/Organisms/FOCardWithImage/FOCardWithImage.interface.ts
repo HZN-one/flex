@@ -2,7 +2,7 @@ import { CardProps } from "@mui/material";
 import { ReactChild } from "react";
 import { SxProps, Theme } from "@mui/material/styles";
 
-export interface IFOCardWithImage extends CardProps {
+export interface IFOCardWithImageProps extends CardProps {
   testID: `card-${string}`;
   image: ReactChild;
   actions?: ReactChild;

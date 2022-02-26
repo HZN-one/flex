@@ -2,7 +2,7 @@ import { CardProps } from "@mui/material";
 import { ReactChild } from "react";
 import { SxProps, Theme } from "@mui/material/styles";
 
-export interface IFOCardWithTextField extends CardProps {
+export interface IFOCardWithTextFieldProps extends CardProps {
   testID: `card-${string}`;
   actions?: ReactChild;
   onSubmit?: React.FormEventHandler;

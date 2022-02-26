@@ -25,4 +25,4 @@ interface IFOHeaderDefault extends IFOHeaderGeneral {
   endAdornmentMenuChildren?: ReactChild;
 }
 
-export type IFOHeader = IFOHeaderAuth | IFOHeaderDefault;
+export type IFOHeaderProps = IFOHeaderAuth | IFOHeaderDefault;

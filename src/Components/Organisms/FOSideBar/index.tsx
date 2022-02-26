@@ -16,7 +16,7 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import { FAIconButton, FAIcon, FALogo } from "@Atoms";
 import { FATypography } from "@Atoms/FATypography";
 
-import { IFOSideBar, IStyle } from "./FOSideBar.interface";
+import { IFOSideBarProps, IStyle } from "./FOSideBar.interface";
 
 const useStyles = makeStyles({
   color: {
@@ -41,7 +41,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   justifyContent: "flex-end",
 }));
 
-export const FOSideBar = memo((props: IFOSideBar) => {
+export const FOSideBar = memo((props: IFOSideBarProps) => {
   const {
     testID,
     open,
