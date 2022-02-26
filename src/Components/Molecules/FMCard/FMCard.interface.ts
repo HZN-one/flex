@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { CardProps, TypographyTypeMap } from "@mui/material";
 
-export interface IFMCard extends CardProps {
+export interface IFMCardProps extends CardProps {
   testID: `card-${string}`;
   actions?: ReactNode;
   title?: string;

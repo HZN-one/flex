@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 
 import { FMCard } from "@Molecules";
 import { FAButton } from "@Atoms/FAButton";
-import { IFMCard } from "@Molecules/FMCard/FMCard.interface";
+import { IFMCardProps } from "@Molecules/FMCard/FMCard.interface";
 
 const meta: Meta = {
   title: "Molecules/Card",
@@ -12,7 +12,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<IFMCard> = (props: IFMCard) => (
+const Template: Story<IFMCardProps> = (props: IFMCardProps) => (
   <FMCard sx={{ width: "20vw" }} {...props}>
     Card Content
   </FMCard>

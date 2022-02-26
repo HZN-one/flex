@@ -6,9 +6,9 @@ import Box from "@mui/material/Box";
 
 import { FATypography } from "@Atoms/FATypography";
 
-import { IFMCard } from "./FMCard.interface";
+import { IFMCardProps } from "./FMCard.interface";
 
-export const FMCard = memo((props: IFMCard) => {
+export const FMCard = memo((props: IFMCardProps) => {
   const {
     testID,
     actions,

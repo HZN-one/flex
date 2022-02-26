@@ -1,8 +1,8 @@
 import React from "react";
 
 import { FACheckbox, FAFormControlLabel } from "@Atoms";
-import { IFACheckbox } from "@Atoms/FACheckbox/FACheckbox.interface";
-import { IFAFormControlLabel } from "@Atoms/FAFormControlLabel/FAFormControlLabel.interface";
+import { IFACheckboxProps } from "@Atoms/FACheckbox/FACheckbox.interface";
+import { IFAFormControlLabelProps } from "@Atoms/FAFormControlLabel/FAFormControlLabel.interface";
 
 const story = {
   title: "Atom/Checkbox",
@@ -17,13 +17,13 @@ const story = {
 
 export default story;
 
-export const Default = (props: IFACheckbox) => (
+export const Default = (props: IFACheckboxProps) => (
   <>
     <FACheckbox {...props} />
   </>
 );
 
-export const WithLabel = (props: IFAFormControlLabel) => (
+export const WithLabel = (props: IFAFormControlLabelProps) => (
   <>
     <FAFormControlLabel
       {...props}

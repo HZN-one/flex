@@ -6,7 +6,7 @@ import TabUnstyled, { tabUnstyledClasses } from "@mui/base/TabUnstyled";
 import TabsListUnstyled from "@mui/base/TabsListUnstyled";
 import { buttonUnstyledClasses } from "@mui/base/ButtonUnstyled";
 
-import { FAIcon } from "@Atoms/Icon";
+import { FAIcon } from "@Atoms/FAIcon";
 import { FATypography } from "@Atoms/FATypography";
 import { baseTheme } from "@Definitions/Theme";
 

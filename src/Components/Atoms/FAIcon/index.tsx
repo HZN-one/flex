@@ -1,8 +1,9 @@
 import React, { memo } from "react";
 import { Icon } from "@mui/material";
-import { IIcon } from "./Icon.interface";
 
-export const FAIcon = memo((props: IIcon) => {
+import { FAIconProps } from "./FAIcon.interface";
+
+export const FAIcon = memo((props: FAIconProps) => {
   const { testID, baseClassName, ...materialUIProps } = props;
   return (
     <Icon

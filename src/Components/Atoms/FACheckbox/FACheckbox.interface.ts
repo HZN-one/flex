@@ -1,5 +1,5 @@
 import { CheckboxProps } from "@mui/material";
 
-export interface IFACheckbox extends CheckboxProps {
+export interface IFACheckboxProps extends CheckboxProps {
   testID: `checkbox-${string}`;
 }

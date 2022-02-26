@@ -1,5 +1,5 @@
 import { SkeletonProps } from "@mui/material";
 
-export interface IFASkeleton extends SkeletonProps {
+export interface IFASkeletonProps extends SkeletonProps {
   testID: `skeleton-${string}`;
 }

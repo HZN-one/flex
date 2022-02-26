@@ -1,5 +1,5 @@
 import { ButtonProps } from "@mui/material";
 
-export interface IFAButton extends ButtonProps {
+export interface IFAButtonProps extends ButtonProps {
   testID: `button-${string}`;
 }

@@ -1,5 +1,5 @@
 import { LinkProps } from "@mui/material";
 
-export interface ILink extends LinkProps {
+export interface IFALinkProps extends LinkProps {
   testID: `link-${string}`;
 }

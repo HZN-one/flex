@@ -1,7 +1,8 @@
 import React from "react";
-import { FATextField, FAIcon } from "@Atoms";
-import { IInput } from "@Atoms/FATextField/Input.interface";
 import { Box } from "@mui/system";
+
+import { FATextField, FAIcon } from "@Atoms";
+import { IFATextFieldProps } from "@Atoms/FATextField/FATextField.interface";
 
 const story = {
   title: "Atom/Text Field",
@@ -16,12 +17,12 @@ const story = {
 
 export default story;
 
-export const Default = (props: IInput) => (
+export const Default = (props: IFATextFieldProps) => (
   <Box width={"300px"}>
     <FATextField fullWidth {...props} />
   </Box>
 );
-export const NoIcon = (props: IInput) => {
+export const NoIcon = (props: IFATextFieldProps) => {
   return (
     <Box width={"300px"}>
       <FATextField fullWidth variants="standard" {...props} />
@@ -29,7 +30,7 @@ export const NoIcon = (props: IInput) => {
   );
 };
 
-export const RightIcon = (props: IInput) => {
+export const RightIcon = (props: IFATextFieldProps) => {
   return (
     <Box width={"300px"}>
       <FATextField
@@ -43,7 +44,7 @@ export const RightIcon = (props: IInput) => {
   );
 };
 
-export const LeftIcon = (props: IInput) => {
+export const LeftIcon = (props: IFATextFieldProps) => {
   return (
     <Box width={"300px"}>
       <FATextField

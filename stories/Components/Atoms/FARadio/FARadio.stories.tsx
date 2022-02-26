@@ -2,8 +2,8 @@ import React from "react";
 import { ComponentStory } from "@storybook/react";
 
 import { FARadio, FAFormControlLabel } from "@Atoms";
-import { IFARadio } from "@Atoms/FARadio/FARadio.interface";
-import { IFAFormControlLabel } from "@Atoms/FAFormControlLabel/FAFormControlLabel.interface";
+import { IFARadioProps } from "@Atoms/FARadio/FARadio.interface";
+import { IFAFormControlLabelProps } from "@Atoms/FAFormControlLabel/FAFormControlLabel.interface";
 
 const story = {
   title: "Atom/Radio",
@@ -15,7 +15,7 @@ const story = {
 
 export default story;
 
-const Template: ComponentStory<typeof FARadio> = (props: IFARadio) => (
+const Template: ComponentStory<typeof FARadio> = (props: IFARadioProps) => (
   <>
     <div>
       <FARadio {...props} />
@@ -43,7 +43,7 @@ const Template: ComponentStory<typeof FARadio> = (props: IFARadio) => (
     </div>
   </>
 );
-export const Default = (props: IFARadio) => (
+export const Default = (props: IFARadioProps) => (
   <>
     <FARadio {...props} />
     <FARadio {...props} disabled />
@@ -59,7 +59,7 @@ export const Medium = Template.bind({});
 Medium.args = {
   size: "medium",
 };
-export const WithLabelMedium = (props: IFAFormControlLabel) => (
+export const WithLabelMedium = (props: IFAFormControlLabelProps) => (
   <>
     <div>
       <FAFormControlLabel
@@ -160,7 +160,7 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
   </>
 );
 
-export const WithLabelSmall = (props: IFAFormControlLabel) => (
+export const WithLabelSmall = (props: IFAFormControlLabelProps) => (
   <>
     <div>
       <FAFormControlLabel

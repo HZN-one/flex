@@ -1,5 +1,5 @@
 import { TypographyProps } from "@mui/material";
 
-export interface IFATypography extends TypographyProps {
+export interface IFATypographyProps extends TypographyProps {
   testID: `typography-${string}`;
 }

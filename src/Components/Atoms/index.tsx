@@ -1,6 +1,6 @@
 export * from "./FAButton";
 export * from "./FAIconButton";
-export * from "./Icon";
+export * from "./FAIcon";
 export * from "./FATextField";
 export * from "./FACheckbox";
 export * from "./FASwitch";

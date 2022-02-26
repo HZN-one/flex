@@ -1,7 +1,7 @@
 import { ReactChild } from "react";
 import { StandardTextFieldProps } from "@mui/material";
 
-export interface IInput extends Omit<StandardTextFieldProps, "sx"> {
+export interface IFATextFieldProps extends Omit<StandardTextFieldProps, "sx"> {
   testID: `input-${string}`;
   name?: string;
   adornment?: ReactChild;
