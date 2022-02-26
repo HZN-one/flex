@@ -1,20 +1,17 @@
 import React from "react";
 import type { FC } from "react";
-// import Router from "next/router";
-import { Box, Container } from "@mui/material";
 
+import { Box, Container } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
 
 import { FOTMSSidebar } from "..";
 
-import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-
-import Typography from "@mui/material/Typography";
-
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import IDashboardNavbarProps from "./DashboardNavbar.interface";
+import { IDashboardNavbarProps } from "./DashboardNavbar.interface";
 
 const drawerWidth = 250;
 

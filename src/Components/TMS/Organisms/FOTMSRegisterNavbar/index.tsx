@@ -1,8 +1,9 @@
 import React, { memo } from "react";
-import { FAButton } from "@Atoms";
 import { AppBar, Toolbar } from "@mui/material";
-import IDashboardNavbarProps from "./Header.interface";
 import { useTranslation } from "next-i18next";
+
+import { FAButton } from "@Atoms";
+import { IDashboardNavbarProps } from "./Header.interface";
 
 export const FOTMSRegisterNavbar = memo((props: IDashboardNavbarProps) => {
   const { testID, ...other } = props;

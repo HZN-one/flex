@@ -15,7 +15,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 
-import IDashboardSidebarProps from "./FOTMSSidebar.interface";
+import { IDashboardSidebarProps } from "./FOTMSSidebar.interface";
 
 const drawerWidth = 300;
 

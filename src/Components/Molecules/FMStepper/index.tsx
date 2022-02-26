@@ -3,9 +3,11 @@ import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
-import IFMStepperProps from "./FMStepper.interface";
-import { FAButton, FAIcon } from "@Atoms";
 import { Grid } from "@mui/material";
+
+import { FAButton, FAIcon } from "@Atoms";
+
+import { IFMStepperProps } from "./FMStepper.interface";
 
 export const FMStepper = memo((props: IFMStepperProps) => {
   const { testID, data, stepperColumn } = props;

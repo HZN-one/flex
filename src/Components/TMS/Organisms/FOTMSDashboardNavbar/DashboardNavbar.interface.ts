@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-export default interface IDashboardNavbarProps {
+export interface IDashboardNavbarProps {
   testID: `header-${string}`;
   open?: boolean;
   children?: ReactNode;

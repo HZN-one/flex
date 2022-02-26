@@ -1,4 +1,4 @@
-export default interface IDashboardSidebarProps {
+export interface IDashboardSidebarProps {
   testID: `sidebar-${string}`;
   open: boolean;
   content: (

@@ -1,4 +1,4 @@
-export default interface IFMTableSkeletonProps {
+export interface IFMTableSkeletonProps {
   testID: `table-skeleton-${string}`;
   columns: number;
   rows: number;

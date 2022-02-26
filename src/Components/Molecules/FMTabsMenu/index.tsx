@@ -9,7 +9,8 @@ import { buttonUnstyledClasses } from "@mui/base/ButtonUnstyled";
 import { FAIcon } from "@Atoms/Icon";
 import { FATypography } from "@Atoms/FATypography";
 import { baseTheme } from "@Definitions/Theme";
-import IFMTabsMenu from "./FMTabsMenu.interface";
+
+import { IFMTabsMenu } from "./FMTabsMenu.interface";
 
 const Tabs = styled(TabsUnstyled)`
   overflow: hidden;

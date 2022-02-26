@@ -4,8 +4,9 @@ import Box from "@mui/material/Box";
 
 import { FMTabsMenu } from "@Molecules/FMTabsMenu";
 import { FMCard } from "@Molecules/FMCard";
-import IFMTabsMenu from "@Molecules/FMTabsMenu/FMTabsMenu.interface";
 import { FATypography } from "@Atoms/FATypography";
+
+import { IFMTabsMenu } from "@Molecules/FMTabsMenu/FMTabsMenu.interface";
 
 const meta: Meta = {
   title: "Molecules/TabsMenu",
