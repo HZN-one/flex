@@ -6,7 +6,7 @@ import { FMStepper } from "@Molecules/FMStepper";
 
 import { IFOCardWithStepperProps } from "./FOCardWithStepper.interface";
 
-const FOCardWithStepper = memo((props: IFOCardWithStepperProps) => {
+export const FOCardWithStepper = memo((props: IFOCardWithStepperProps) => {
   const { cardProps, stepperProps } = props;
   return (
     <Box>
@@ -16,5 +16,3 @@ const FOCardWithStepper = memo((props: IFOCardWithStepperProps) => {
     </Box>
   );
 });
-
-export default FOCardWithStepper;

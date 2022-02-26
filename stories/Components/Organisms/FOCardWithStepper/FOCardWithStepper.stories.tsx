@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
 
-import FOCardWithStepper from "@Organisms/FOCardWithStepper";
+import { FOCardWithStepper } from "@Organisms/FOCardWithStepper";
 import { IFOCardWithStepperProps } from "@Organisms/FOCardWithStepper/FOCardWithStepper.interface";
 
 const meta: Meta = {
