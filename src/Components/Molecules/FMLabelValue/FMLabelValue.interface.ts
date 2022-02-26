@@ -1,6 +1,6 @@
 import { IFATypographyProps } from "../../Atoms/FATypography/FATypography.interface";
 
-export interface IFMLabelValue {
+export interface IFMLabelValueProps {
   label: string;
   value?: string;
   propLabel?: Omit<IFATypographyProps, "TestID">;

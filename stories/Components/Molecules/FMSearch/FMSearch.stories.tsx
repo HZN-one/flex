@@ -1,7 +1,7 @@
 import React from "react";
 import { Story } from "@storybook/react";
 import { FMSearch } from "@Molecules";
-import { IFMSearch } from "@Molecules/FMSearch/FMSearch.interface";
+import { IFMSearchProps } from "@Molecules/FMSearch/FMSearch.interface";
 
 const story = {
   title: "Molecules/Search",
@@ -16,7 +16,7 @@ const story = {
 
 export default story;
 
-const Template: Story<IFMSearch> = props => (
+const Template: Story<IFMSearchProps> = props => (
   <FMSearch {...props} testID="search-textfield"></FMSearch>
 );
 

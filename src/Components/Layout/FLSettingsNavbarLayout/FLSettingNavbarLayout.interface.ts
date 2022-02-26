@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export interface IFLSettingsNavbarLayout {
+export interface IFLSettingsNavbarLayoutProps {
   testID: `header-${string}`;
   isDrawerCloseable?: boolean;
   title?: string;

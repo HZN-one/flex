@@ -4,9 +4,9 @@ import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
 import { FATypography } from "@Atoms/FATypography";
 import { FAIcon } from "@Atoms/FAIcon";
 
-import { IFMAccordion } from "./FMAccordion.interface";
+import { IFMAccordionProps } from "./FMAccordion.interface";
 
-export const FMAccordion = memo((props: IFMAccordion) => {
+export const FMAccordion = memo((props: IFMAccordionProps) => {
   const { testID, title, summary, children, ...materialUIProps } = props;
   return (
     <Accordion data-testid={testID} square disableGutters {...materialUIProps}>

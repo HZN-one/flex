@@ -6,7 +6,7 @@ import { FMTabsMenu } from "@Molecules/FMTabsMenu";
 import { FMCard } from "@Molecules/FMCard";
 import { FATypography } from "@Atoms/FATypography";
 
-import { IFMTabsMenu } from "@Molecules/FMTabsMenu/FMTabsMenu.interface";
+import { IFMTabsMenuProps } from "@Molecules/FMTabsMenu/FMTabsMenu.interface";
 
 const meta: Meta = {
   title: "Molecules/TabsMenu",
@@ -18,7 +18,7 @@ const TabsData = [
   { label: "Company", iconName: "home_work" },
 ];
 
-const Template: Story<IFMTabsMenu> = props => {
+const Template: Story<IFMTabsMenuProps> = props => {
   const [activeIndex, setActiveIndex] = React.useState(0);
   return (
     <FMTabsMenu

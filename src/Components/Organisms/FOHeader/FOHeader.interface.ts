@@ -1,7 +1,7 @@
 import { ReactChild } from "react";
 
 import { IFAButtonProps } from "../../Atoms/FAButton/Button.interface";
-import { IFMSearch } from "../../Molecules/FMSearch/FMSearch.interface";
+import { IFMSearchProps } from "../../Molecules/FMSearch/FMSearch.interface";
 
 interface IFOHeaderGeneral {
   testID: `header-${string}`;
@@ -18,7 +18,7 @@ interface IFOHeaderAuth extends IFOHeaderGeneral {
 // create interface props when headerType is standar, other props are optional
 interface IFOHeaderDefault extends IFOHeaderGeneral {
   headerType: "default";
-  search?: Omit<IFMSearch, "testID">;
+  search?: Omit<IFMSearchProps, "testID">;
   title?: string;
   userAvatarSrc?: string;
   companyName?: string;

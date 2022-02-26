@@ -1,13 +1,13 @@
 import { Box } from "@mui/system";
 import React, { memo } from "react";
 import { FATypography } from "@Atoms/FATypography";
-import { IFMLabelValue } from "./FMLabelValue.interface";
+import { IFMLabelValueProps } from "./FMLabelValue.interface";
 
 const defaultProps = {
   margin: "normal",
 };
 
-export const FMLabelValue = memo((props: IFMLabelValue) => {
+export const FMLabelValue = memo((props: IFMLabelValueProps) => {
   const { label, value, propLabel, propValue, margin } = {
     ...defaultProps,
     ...props,

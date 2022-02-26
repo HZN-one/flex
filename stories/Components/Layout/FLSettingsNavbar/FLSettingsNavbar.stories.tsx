@@ -1,7 +1,7 @@
 import React from "react";
 import { FLSettingsNavbarLayout } from "@Components/Layout";
 
-import { IFLSettingsNavbarLayout } from "@Components/Layout/FLSettingsNavbarLayout/FLSettingNavbarLayout.interface";
+import { IFLSettingsNavbarLayoutProps } from "@Components/Layout/FLSettingsNavbarLayout/FLSettingNavbarLayout.interface";
 
 const story = {
   title: "Layout/Settings Navbar",
@@ -64,7 +64,7 @@ const story = {
 };
 
 export default story;
-export const Default = (props: IFLSettingsNavbarLayout) => (
+export const Default = (props: IFLSettingsNavbarLayoutProps) => (
   <>
     <FLSettingsNavbarLayout {...props}></FLSettingsNavbarLayout>
   </>
