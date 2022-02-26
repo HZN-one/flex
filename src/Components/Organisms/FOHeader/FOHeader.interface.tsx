@@ -1,4 +1,4 @@
-import { IFAButton } from "@Atoms/FAButton/Button.interface";
+import { IFAButton } from "@Atoms/FAButton/FAButton.interface";
 import { IFMSearch } from "@Molecules/FMSearch/FMSearch.interface";
 import { ReactChild } from "react";
 
