@@ -13,8 +13,9 @@ export const FOHeader = memo((props: IFOHeader) => {
       position={position}
       color="inherit"
       elevation={0}
+      sx={{ width: headerType === "auth" ? "100%" : "calc(100% - 250px)" }}
     >
-      <Toolbar variant="dense">
+      <Toolbar>
         <Grid
           container
           justifyContent="space-between"
@@ -40,7 +41,7 @@ export const FOHeader = memo((props: IFOHeader) => {
                 <FAButton
                   testID="button-login"
                   href={props.buttonLogin.href}
-                  LinkComponent={props.buttonLogin.LinkComponent}
+                  LinkComponent={props.linkComponent}
                   variant="text"
                   color="secondary"
                 >
@@ -51,7 +52,7 @@ export const FOHeader = memo((props: IFOHeader) => {
                 <FAButton
                   testID="button-register"
                   href={props.buttonRegister.href}
-                  LinkComponent={props.buttonRegister.LinkComponent}
+                  LinkComponent={props.linkComponent}
                   variant="contained"
                   color="primary"
                 >

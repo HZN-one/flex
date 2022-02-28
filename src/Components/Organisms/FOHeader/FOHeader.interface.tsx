@@ -1,5 +1,5 @@
-import { IFAButton } from "@Atoms/FAButton/FAButton.interface";
-import { IFMSearch } from "@Molecules/FMSearch/FMSearch.interface";
+import { IFAButton } from "../../Atoms/FAButton/FAButton.interface";
+import { IFMSearch } from "../../Molecules/FMSearch/FMSearch.interface";
 import { ReactChild } from "react";
 
 interface IFOHeaderGeneral {
@@ -8,13 +8,14 @@ interface IFOHeaderGeneral {
   logo?: boolean;
   headerType: "auth" | "default";
 }
-interface IFOHeaderAuth extends IFOHeaderGeneral {
+export interface IFOHeaderAuth extends IFOHeaderGeneral {
   headerType: "auth";
-  buttonLogin: Pick<IFAButton, "children" | "href" | "LinkComponent">;
-  buttonRegister: Pick<IFAButton, "children" | "href" | "LinkComponent">;
+  buttonLogin: Pick<IFAButton, "children" | "href">;
+  buttonRegister: Pick<IFAButton, "children" | "href">;
+  linkComponent: React.ElementType;
 }
 
-interface IFOHeaderDefault extends IFOHeaderGeneral {
+export interface IFOHeaderDefault extends IFOHeaderGeneral {
   headerType: "default";
   search?: Omit<IFMSearch, "testID">;
   title?: string;

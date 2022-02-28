@@ -47,12 +47,11 @@ export const Auth = (props: IFOHeader) => (
     buttonLogin={{
       children: "Login",
       href: "/login",
-      LinkComponent: "a",
     }}
     buttonRegister={{
       children: "Register",
       href: "/register",
-      LinkComponent: "a",
     }}
+    linkComponent="a"
   />
 );

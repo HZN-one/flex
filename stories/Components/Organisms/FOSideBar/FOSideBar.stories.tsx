@@ -2,10 +2,9 @@ import React from "react";
 import { ComponentStory } from "@storybook/react";
 import { FOSideBar } from "@Organisms";
 import { IFOSideBar } from "@Organisms/FOSideBar/FOSideBar.interface";
-import StarBorder from "@mui/icons-material/StarBorder";
 
 const story = {
-  title: "Organisms/SideBar",
+  title: "Organisms/Sidebar",
   component: FOSideBar,
 };
 
@@ -15,29 +14,41 @@ const Template: ComponentStory<typeof FOSideBar> = (props: IFOSideBar) => (
   <FOSideBar {...props} />
 );
 
-export const OpenSideBar = Template.bind({});
-OpenSideBar.args = {
-  open: true,
-  sections: [
-    { title: "Driver", path: "/dashboard/customers", icon: <StarBorder /> },
+export const Default = Template.bind({});
+Default.args = {
+  testID: "sidebar-open",
+  linkComponent: "a",
+  menu: [
     {
-      title: "Customers",
-      path: "/dashboard/customers",
-      icon: <StarBorder />,
-      children: [
+      title: "Dashboard",
+      path: "/",
+      icon: "dashboard",
+    },
+    {
+      title: "Users",
+      path: "/users",
+      icon: "people",
+      subMenu: [
         {
           title: "List",
-          path: "/dashboard/customers",
+          path: "/users/list",
         },
         {
-          title: "Details",
-          path: "/dashboard/customers/1",
-        },
-        {
-          title: "Edit",
-          path: "/dashboard/customers/1/edit",
+          title: "Create",
+          path: "/users/create",
         },
       ],
     },
   ],
+  footerMenu: [
+    {
+      title: "Settings",
+      path: "/settings",
+      icon: "settings",
+    },
+  ],
+  buttonLogout: {
+    children: "Logout",
+    onClick: () => {},
+  },
 };

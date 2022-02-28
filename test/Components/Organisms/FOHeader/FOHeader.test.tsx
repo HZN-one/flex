@@ -19,13 +19,12 @@ describe("FOHeader", () => {
         buttonLogin={{
           children: "Login",
           href: "/login",
-          LinkComponent: "a",
         }}
         buttonRegister={{
           children: "Register",
           href: "/register",
-          LinkComponent: "a",
         }}
+        linkComponent="a"
       />
     );
     expect(container).toMatchSnapshot();
