@@ -604,7 +604,7 @@ export const baseTheme = createTheme({
         root: {
           height: 32,
           width: 32,
-          color: "transparent",
+          color: "rgba(0, 0, 0, 0.04)",
         },
       },
     },
