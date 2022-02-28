@@ -91,6 +91,13 @@ export const baseTheme = createTheme({
         },
       },
     },
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: sx({
+          p: 3,
+        }),
+      },
+    },
     MuiPaginationItem: {
       styleOverrides: {
         sizeLarge: sx({
@@ -585,15 +592,50 @@ export const baseTheme = createTheme({
     },
     MuiDrawer: {
       styleOverrides: {
-        root: {
-          position: "relative",
-          width: 250,
+        root: sx({
           flexShrink: 0,
-          "& .MuiDrawer-paper": {
-            width: 250,
-            boxSizing: "border-box",
+          width: 250,
+          "& .MuiCollapse-wrapperInner": {
+            "& .MuiList-root": {
+              ml: 3.5,
+            },
           },
-        },
+          "& .MuiList-padding": {
+            px: 2,
+          },
+          "& .MuiListItemButton-root": {
+            borderRadius: 2,
+            mb: 1,
+            color: "secondary.main",
+            typography: "body2",
+            "&.Mui-selected": {
+              backgroundColor: "#FBEBEA",
+              color: "primary.main",
+              fontWeight: 600,
+            },
+          },
+          "& .MuiListItemIcon-root": {
+            minWidth: 28,
+            color: "inherit",
+          },
+          "& .MuiListItemText-root": {
+            my: 0.25,
+          },
+          "& .MuiListItemText-primary": {
+            font: "inherit",
+          },
+          "& .MuiListSubheader-root": {
+            typography: "subtitle",
+            mb: 2,
+            px: 1,
+            py: 3,
+            display: "flex",
+          },
+        }),
+        paper: sx({
+          borderRadius: 0,
+          width: 250,
+        }),
       },
     },
     MuiPaper: {
@@ -715,13 +757,12 @@ export const baseTheme = createTheme({
         }),
       },
     },
-    MuiToolbar: {
-      styleOverrides: {
-        root: sx({
-          pt: 1,
-          pb: 1,
-          minHeight: 80,
-        }),
+  },
+  mixins: {
+    toolbar: {
+      minHeight: 80,
+      "@media (min-width:600px)": {
+        minHeight: 80,
       },
     },
   },
@@ -849,6 +890,9 @@ export const baseTheme = createTheme({
     },
   },
   palette: {
+    background: {
+      default: "#F1F5F9",
+    },
     common: {
       black: "#000",
       white: "#fff",
