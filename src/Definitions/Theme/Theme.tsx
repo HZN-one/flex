@@ -476,6 +476,15 @@ export const baseTheme = createTheme({
         }),
       },
     },
+    MuiFormLabel: {
+      styleOverrides: {
+        root: sx({
+          fontSize: "12px",
+          color: "text.primary",
+          fontWeight: 600,
+        }),
+      },
+    },
     MuiSelect: {
       styleOverrides: {
         outlined: sx({
