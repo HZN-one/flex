@@ -16,13 +16,15 @@ export const FMLabelValue = memo((props: IFMLabelValue) => {
   return (
     <Box sx={{ mb: margin === "none" ? 0 : 2 }}>
       <FATypography
+        paragraph={true}
         testID="typography-label"
         variant="captionSemiBold"
-        sx={{ mb: 1 }}
+        sx={{ mb: "6.82px" }}
         {...propLabel}
       >
         {label}
       </FATypography>
+
       <FATypography testID="typography-value" variant="body2" {...propValue}>
         {value}
       </FATypography>
