@@ -1,8 +1,9 @@
 import React, { memo } from "react";
 import { Link } from "@mui/material";
-import { ILink } from "./FALink.interfaces";
 
-export const FALink = memo((props: ILink) => {
+import { IFALinkProps } from "./FALink.interface";
+
+export const FALink = memo((props: IFALinkProps) => {
   const { testID, ...materialUIProps } = props;
 
   return (

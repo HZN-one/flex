@@ -476,6 +476,15 @@ export const baseTheme = createTheme({
         }),
       },
     },
+    MuiFormLabel: {
+      styleOverrides: {
+        root: sx({
+          fontSize: "12px",
+          color: "text.primary",
+          fontWeight: 600,
+        }),
+      },
+    },
     MuiSelect: {
       styleOverrides: {
         outlined: sx({
@@ -595,7 +604,7 @@ export const baseTheme = createTheme({
         root: {
           height: 32,
           width: 32,
-          color: "transparent",
+          color: "rgba(0, 0, 0, 0.04)",
         },
       },
     },

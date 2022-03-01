@@ -1,6 +1,6 @@
 import React from "react";
 import { FATooltip } from "@Atoms/FATooltip";
-import { IFATooltip } from "@Atoms/FATooltip/FATooltip.interface";
+import { IFATooltipProps } from "@Atoms/FATooltip/FATooltip.interface";
 
 const story = {
   title: "Atom/Tooltip",
@@ -8,7 +8,7 @@ const story = {
 };
 
 export default story;
-export const Default = (props: IFATooltip) => (
+export const Default = (props: IFATooltipProps) => (
   <div
     style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
   >
@@ -20,7 +20,7 @@ export const Default = (props: IFATooltip) => (
   </div>
 );
 
-export const WithArrow = (props: IFATooltip) => (
+export const WithArrow = (props: IFATooltipProps) => (
   <div
     style={{
       display: "flex",

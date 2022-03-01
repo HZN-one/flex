@@ -1,6 +1,6 @@
 import React from "react";
 import { FAPagination } from "@Atoms";
-import { IFAPagination } from "@Atoms/FAPagination/FAPagination.interface";
+import { IFAPaginationProps } from "@Atoms/FAPagination/FAPagination.interface";
 import { Box } from "@mui/material";
 
 const story = {
@@ -10,7 +10,7 @@ const story = {
 
 export default story;
 
-export const Default = (props: IFAPagination) => (
+export const Default = (props: IFAPaginationProps) => (
   <>
     <h3>Default</h3>
     <FAPagination {...props} color="primary" variant="text" />
@@ -61,7 +61,7 @@ export const Default = (props: IFAPagination) => (
   </>
 );
 
-export const Outlined = (props: IFAPagination) => (
+export const Outlined = (props: IFAPaginationProps) => (
   <>
     <FAPagination {...props} variant="outlined" />
     <FAPagination

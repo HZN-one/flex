@@ -1,8 +1,9 @@
 import React, { memo } from "react";
 import { Button } from "@mui/material";
-import { IFAButton } from "./Button.interface";
 
-export const FAButton = memo((props: IFAButton) => {
+import { IFAButtonProps } from "./Button.interface";
+
+export const FAButton = memo((props: IFAButtonProps) => {
   const { testID, ...materialUIProps } = props;
 
   return <Button data-testid={testID} {...materialUIProps} />;

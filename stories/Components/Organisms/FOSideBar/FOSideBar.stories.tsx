@@ -1,8 +1,9 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
-import { FOSideBar } from "@Organisms";
-import { IFOSideBar } from "@Organisms/FOSideBar/FOSideBar.interfaces";
 import StarBorder from "@mui/icons-material/StarBorder";
+
+import { FOSideBar } from "@Organisms";
+import { IFOSideBarProps } from "@Organisms/FOSideBar/FOSideBar.interface";
 
 const story = {
   title: "Organisms/SideBar",
@@ -11,7 +12,7 @@ const story = {
 
 export default story;
 
-const Template: ComponentStory<typeof FOSideBar> = (props: IFOSideBar) => (
+const Template: ComponentStory<typeof FOSideBar> = (props: IFOSideBarProps) => (
   <FOSideBar {...props} />
 );
 

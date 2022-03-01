@@ -1,9 +1,10 @@
 import React, { forwardRef, memo } from "react";
 import { TextField, InputAdornment } from "@mui/material";
-import { IInput } from "./Input.interface";
+
+import { IFATextFieldProps } from "./FATextField.interface";
 
 export const FATextField = memo(
-  forwardRef((props: IInput, ref) => {
+  forwardRef((props: IFATextFieldProps, ref) => {
     const {
       name,
       testID,

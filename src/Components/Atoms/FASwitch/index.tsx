@@ -1,8 +1,8 @@
 import React, { memo } from "react";
 import { Switch } from "@mui/material";
-import { IFASwitch } from "./FASwitch.interface";
+import { IFASwitchProps } from "./FASwitch.interface";
 
-export const FASwitch = memo((props: IFASwitch) => {
+export const FASwitch = memo((props: IFASwitchProps) => {
   const { testID, ...materialUIProps } = props;
   return <Switch data-testid={testID} {...materialUIProps} />;
 });
