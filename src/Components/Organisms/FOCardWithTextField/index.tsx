@@ -3,10 +3,11 @@ import { Card, Box } from "@mui/material";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 
-import { IFOCardWithTextField } from "./FOCardWithTextField.interface";
 import { FATypography, FAButton } from "@Atoms";
 
-export const FOCardWithTextField = memo((props: IFOCardWithTextField) => {
+import { IFOCardWithTextFieldProps } from "./FOCardWithTextField.interface";
+
+export const FOCardWithTextField = memo((props: IFOCardWithTextFieldProps) => {
   const {
     sx,
     testID,

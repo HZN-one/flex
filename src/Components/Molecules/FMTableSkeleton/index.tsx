@@ -1,6 +1,7 @@
 import { Skeleton, TableBody, TableCell, TableRow } from "@mui/material";
 import React, { memo } from "react";
-import IFMTableSkeletonProps from "./FMTableSkeleton.interface";
+
+import { IFMTableSkeletonProps } from "./FMTableSkeleton.interface";
 
 export const FMTableSkeleton = memo((props: IFMTableSkeletonProps) => {
   const { testID, columns, rows } = props;

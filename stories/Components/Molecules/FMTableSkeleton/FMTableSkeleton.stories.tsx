@@ -3,7 +3,7 @@ import { Story, Meta } from "@storybook/react";
 import { Table } from "@mui/material";
 
 import { FMTableSkeleton } from "@Molecules";
-import IFMTableSkeletonProps from "@Molecules/FMTableSkeleton/FMTableSkeleton.interface";
+import { IFMTableSkeletonProps } from "@Molecules/FMTableSkeleton/FMTableSkeleton.interface";
 
 const meta: Meta = {
   title: "Molecules/Table Skeleton",

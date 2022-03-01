@@ -6,10 +6,11 @@ import TabUnstyled, { tabUnstyledClasses } from "@mui/base/TabUnstyled";
 import TabsListUnstyled from "@mui/base/TabsListUnstyled";
 import { buttonUnstyledClasses } from "@mui/base/ButtonUnstyled";
 
-import { FAIcon } from "@Atoms/Icon";
+import { FAIcon } from "@Atoms/FAIcon";
 import { FATypography } from "@Atoms/FATypography";
 import { baseTheme } from "@Definitions/Theme";
-import IFMTabsMenu from "./FMTabsMenu.interface";
+
+import { IFMTabsMenuProps } from "./FMTabsMenu.interface";
 
 const Tabs = styled(TabsUnstyled)`
   overflow: hidden;
@@ -66,7 +67,7 @@ export const FMTabsMenu = ({
   tabs,
   disabledIndex,
   ...materialUiProps
-}: IFMTabsMenu) => {
+}: IFMTabsMenuProps) => {
   return (
     <Tabs
       data-testid={testID}

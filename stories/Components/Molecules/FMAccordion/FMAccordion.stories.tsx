@@ -1,7 +1,8 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
+
 import { FMAccordion } from "@Molecules";
-import { IFMAccordion } from "@Molecules/FMAccordion/FMAccordion.interface";
+import { IFMAccordionProps } from "@Molecules/FMAccordion/FMAccordion.interface";
 
 const meta: Meta = {
   title: "Molecules/Accordion",
@@ -10,7 +11,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<IFMAccordion> = (props: IFMAccordion) => (
+const Template: Story<IFMAccordionProps> = (props: IFMAccordionProps) => (
   <FMAccordion sx={{ width: "20vw" }} {...props} />
 );
 
@@ -21,7 +22,7 @@ Default.args = {
   children: "Card Content",
 };
 
-export const withCustomChildren = (props: IFMAccordion) => (
+export const withCustomChildren = (props: IFMAccordionProps) => (
   <>
     <FMAccordion sx={{ width: "20vw" }} {...props}>
       <p>This is accordion custom content</p>

@@ -1,5 +1,5 @@
 import { IconButtonProps } from "@mui/material";
 
-export interface IIconButton extends IconButtonProps {
+export interface IFAIconButtonProps extends IconButtonProps {
   testID: `icon-button-${string}`;
 }

@@ -1,6 +1,6 @@
 import { ChipProps } from "@mui/material";
 
-export interface IFAChip extends ChipProps {
+export interface IFAChipProps extends ChipProps {
   testID: `chip-${string}`;
   label?: string;
   avatar?: React.ReactElement<any, string | React.JSXElementConstructor<any>>;

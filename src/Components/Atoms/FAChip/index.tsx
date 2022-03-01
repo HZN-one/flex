@@ -1,8 +1,8 @@
 import React, { memo } from "react";
 import { Chip, Avatar } from "@mui/material";
-import { IFAChip } from "./FAChip.interface";
+import { IFAChipProps } from "./FAChip.interface";
 
-export const FAChip = memo((props: IFAChip) => {
+export const FAChip = memo((props: IFAChipProps) => {
   const {
     testID,
     variant,

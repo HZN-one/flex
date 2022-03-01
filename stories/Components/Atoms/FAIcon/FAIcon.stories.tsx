@@ -1,6 +1,7 @@
 import React from "react";
+
 import { FAIcon } from "@Atoms";
-import { IIcon } from "@Atoms/Icon/Icon.interface";
+import { FAIconProps } from "@Atoms/FAIcon/FAIcon.interface";
 
 const story = {
   title: "Atom/Icon",
@@ -15,7 +16,7 @@ const story = {
 
 export default story;
 
-export const Default = (props: IIcon) => {
+export const Default = (props: FAIconProps) => {
   return (
     <FAIcon {...props} testID="icon-add">
       {props.children}

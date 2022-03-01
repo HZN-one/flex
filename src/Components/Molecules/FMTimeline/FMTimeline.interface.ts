@@ -1,4 +1,4 @@
-export default interface IFMTimelineProps {
+export interface IFMTimelineProps {
   testID: `timeline-${string}`;
   data: Array<{
     title: string;

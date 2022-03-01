@@ -1,7 +1,8 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react";
+
 import { FMStepper } from "@Molecules";
-import IFMStepperProps from "@Molecules/FMStepper/FMStepper.interface";
+import { IFMStepperProps } from "@Molecules/FMStepper/FMStepper.interface";
 
 const meta: Meta = {
   title: "Molecules/Stepper",
@@ -16,6 +17,7 @@ export const Default = Template.bind({});
 
 Default.args = {
   testID: "stepper-test",
+  stepperColumn: 8,
   data: [
     {
       title: "Title 1",

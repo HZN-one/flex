@@ -1,8 +1,9 @@
 import React, { memo } from "react";
 import { FormControl, FormHelperText } from "@mui/material";
-import { IFAFormControl } from "./FAFormControl.interface";
 
-export const FAFormControl = memo((props: IFAFormControl) => {
+import { IFAFormControlProps } from "./FAFormControl.interface";
+
+export const FAFormControl = memo((props: IFAFormControlProps) => {
   const { testID, helperText, ...materialUIProps } = props;
   return (
     <FormControl data-testid={testID} {...materialUIProps}>

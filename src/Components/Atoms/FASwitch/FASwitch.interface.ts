@@ -1,5 +1,5 @@
 import { SwitchProps } from "@mui/material";
 
-export interface IFASwitch extends SwitchProps {
+export interface IFASwitchProps extends SwitchProps {
   testID: `switch-${string}`;
 }

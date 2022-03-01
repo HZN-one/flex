@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-export default interface IFMStepperProps {
+export interface IFMStepperProps {
   testID: `stepper-${string}`;
   data: Array<{
     title: string;
@@ -9,4 +9,5 @@ export default interface IFMStepperProps {
     onSubmitBack: () => void;
     buttonLabel: string;
   }>;
+  stepperColumn: number;
 }

@@ -1,6 +1,6 @@
 import { TooltipProps } from "@mui/material";
 
-export interface IFATooltip extends TooltipProps {
+export interface IFATooltipProps extends TooltipProps {
   testID: `tooltip-${string}`;
   title: string;
 }

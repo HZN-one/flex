@@ -1,6 +1,6 @@
 import { IconProps } from "@mui/material";
 
-export interface IIcon extends IconProps {
+export interface FAIconProps extends IconProps {
   testID: `icon-${string}`;
   baseClassName?:
     | "material-icons"

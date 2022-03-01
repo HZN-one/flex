@@ -1,8 +1,8 @@
 import React, { memo } from "react";
 import { Tooltip } from "@mui/material";
-import { IFATooltip } from "./FATooltip.interface";
+import { IFATooltipProps } from "./FATooltip.interface";
 
-export const FATooltip = memo((props: IFATooltip) => {
+export const FATooltip = memo((props: IFATooltipProps) => {
   const { testID, title, ...materialUIProps } = props;
 
   return (
