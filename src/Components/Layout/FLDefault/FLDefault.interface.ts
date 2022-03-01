@@ -1,8 +1,8 @@
 import { ReactChild } from "react";
 import { IFOHeaderDefault } from "../../Organisms/FOHeader/FOHeader.interface";
-import { IFOSideBar } from "../../Organisms/FOSideBar/FOSideBar.interface";
+import { IFOSideBarProps } from "../../Organisms/FOSideBar/FOSideBar.interface";
 
-export interface IFLDefault extends Omit<IFOSideBar, "testID"> {
+export interface IFLDefault extends Omit<IFOSideBarProps, "testID"> {
   testID: `layout-default-${string}`;
   children: ReactChild;
   header: Pick<

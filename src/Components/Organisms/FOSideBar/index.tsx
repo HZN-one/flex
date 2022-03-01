@@ -12,9 +12,9 @@ import {
   ListSubheader,
 } from "@mui/material";
 import { FAButton, FAIcon, FALogo } from "@Atoms";
-import { IFOSideBar } from "./FOSideBar.interface";
+import { IFOSideBarProps } from "./FOSideBar.interface";
 
-export const FOSideBar = memo((props: IFOSideBar) => {
+export const FOSideBar = memo((props: IFOSideBarProps) => {
   const { testID, menu, footerMenu, buttonLogout, linkComponent } = props;
   const [open, setOpen] = useState(true);
 

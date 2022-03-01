@@ -2,9 +2,9 @@ import React, { memo } from "react";
 import { Box, Grid } from "@mui/material";
 import { FATypography } from "@Atoms";
 import { FOHeader } from "@Organisms";
-import { IFLAuthentication } from "./FLAuthentication.interface";
+import { IFLAuthenticationProps } from "./FLAuthentication.interface";
 
-export const FLAuthentication = memo((props: IFLAuthentication) => {
+export const FLAuthentication = memo((props: IFLAuthenticationProps) => {
   const { testID, children, header, isCenter, childrenGridWidth } = props;
 
   return (

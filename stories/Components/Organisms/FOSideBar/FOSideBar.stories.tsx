@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
 import { FOSideBar } from "@Organisms";
-import { IFOSideBar } from "@Organisms/FOSideBar/FOSideBar.interface";
+import { IFOSideBarProps } from "@Organisms/FOSideBar/FOSideBar.interface";
 
 const story = {
   title: "Organisms/Sidebar",
@@ -10,7 +10,7 @@ const story = {
 
 export default story;
 
-const Template: ComponentStory<typeof FOSideBar> = (props: IFOSideBar) => (
+const Template: ComponentStory<typeof FOSideBar> = (props: IFOSideBarProps) => (
   <FOSideBar {...props} />
 );
 

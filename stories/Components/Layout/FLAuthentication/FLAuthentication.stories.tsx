@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory } from "@storybook/react";
 import { FLAuthentication } from "@Components/Layout";
-import { IFLAuthentication } from "@Components/Layout/FLAuthentication/FLAuthentication.interface";
+import { IFLAuthenticationProps } from "@Components/Layout/FLAuthentication/FLAuthentication.interface";
 
 const story = {
   title: "Layout/Authentication",
@@ -11,7 +11,7 @@ const story = {
 export default story;
 
 const Template: ComponentStory<typeof FLAuthentication> = (
-  props: IFLAuthentication
+  props: IFLAuthenticationProps
 ) => <FLAuthentication {...props} />;
 
 export const Authentication = Template.bind({});

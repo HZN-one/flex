@@ -2,7 +2,7 @@ import React from "react";
 import { Stack } from "@mui/material";
 import { FAAvatar } from "@Atoms";
 
-import { IFAAvatar } from "@Atoms/FAAvatar/FAAvatar.interface";
+import { IFAAvatarProps } from "@Atoms/FAAvatar/FAAvatar.interface";
 
 const story = {
   title: "Atom/Avatar",
@@ -25,9 +25,9 @@ const story = {
 
 export default story;
 
-export const Default = (props: IFAAvatar) => <FAAvatar {...props} />;
+export const Default = (props: IFAAvatarProps) => <FAAvatar {...props} />;
 
-export const Variant = (props: IFAAvatar) => (
+export const Variant = (props: IFAAvatarProps) => (
   <Stack direction="row" spacing={2}>
     <FAAvatar {...props} variant="circular">
       C
@@ -41,7 +41,7 @@ export const Variant = (props: IFAAvatar) => (
   </Stack>
 );
 
-export const Fallback = (props: IFAAvatar) => (
+export const Fallback = (props: IFAAvatarProps) => (
   <Stack direction="row" spacing={2}>
     <FAAvatar {...props} />
     <FAAvatar testID="avatar-storybook" alt="Image" src="/broken-image.jpg" />

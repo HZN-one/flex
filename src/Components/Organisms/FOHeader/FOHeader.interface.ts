@@ -1,5 +1,4 @@
 import { ReactChild } from "react";
-
 import { IFAButtonProps } from "../../Atoms/FAButton/Button.interface";
 import { IFMSearchProps } from "../../Molecules/FMSearch/FMSearch.interface";
 
@@ -9,19 +8,19 @@ interface IFOHeaderGeneral {
   logo?: boolean;
   headerType: "auth" | "default";
 }
-interface IFOHeaderAuth extends IFOHeaderGeneral {
+export interface IFOHeaderAuth extends IFOHeaderGeneral {
   headerType: "auth";
-  buttonLogin: Pick<IFAButtonProps, "children" | "href" | "LinkComponent">;
-  buttonRegister: Pick<IFAButtonProps, "children" | "href" | "LinkComponent">;
+  buttonLogin: Pick<IFAButtonProps, "children" | "href">;
+  buttonRegister: Pick<IFAButtonProps, "children" | "href">;
+  linkComponent: React.ElementType;
 }
 
-// create interface props when headerType is standar, other props are optional
-interface IFOHeaderDefault extends IFOHeaderGeneral {
+export interface IFOHeaderDefault extends IFOHeaderGeneral {
   headerType: "default";
   search?: Omit<IFMSearchProps, "testID">;
   title?: string;
   userAvatarSrc?: string;
-  companyName?: string;
+  accountName?: string;
   endAdornmentMenuChildren?: ReactChild;
 }
 

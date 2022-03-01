@@ -1,5 +1,5 @@
 import { AvatarProps } from "@mui/material";
 
-export interface IFAAvatar extends AvatarProps {
+export interface IFAAvatarProps extends AvatarProps {
   testID: `avatar-${string}`;
 }

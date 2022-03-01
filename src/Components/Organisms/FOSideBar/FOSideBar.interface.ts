@@ -1,25 +1,22 @@
-import { ReactChild } from "react";
-import { DrawerProps, Theme } from "@mui/material";
-import { SxProps } from "@mui/system";
+import React from "react";
+import { IFAButtonProps } from "../../Atoms/FAButton/Button.interface";
 
-export interface IFOSideBarProps extends DrawerProps {
-  testID: `side-bar-${string}`;
-  open: boolean;
-  isDrawerCloseable?: boolean;
-  sections: {
+export interface IFOSideBarProps {
+  testID: `sidebar-${string}`;
+  linkComponent: React.ElementType;
+  menu: {
     title: string;
-    path: string;
-    icon: JSX.Element;
-    children?: {
+    path?: string;
+    icon: string;
+    subMenu?: {
       title: string;
       path: string;
     }[];
   }[];
-  footer?: ReactChild;
-  sx?: SxProps<Theme>;
-  logo?: ReactChild;
-}
-
-export interface IStyle {
-  color?: string;
+  footerMenu: {
+    title: string;
+    path: string;
+    icon: string;
+  }[];
+  buttonLogout: Pick<IFAButtonProps, "children" | "onClick">;
 }

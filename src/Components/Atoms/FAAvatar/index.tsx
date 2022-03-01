@@ -1,8 +1,8 @@
 import React, { memo } from "react";
 import { Avatar } from "@mui/material";
-import { IFAAvatar } from "./FAAvatar.interface";
+import { IFAAvatarProps } from "./FAAvatar.interface";
 
-export const FAAvatar = memo((props: IFAAvatar) => {
+export const FAAvatar = memo((props: IFAAvatarProps) => {
   const { testID, ...materialUIProps } = props;
 
   return <Avatar data-testid={testID} {...materialUIProps} />;
