@@ -11,7 +11,14 @@ import { render } from "@testing-library/react";
 
 describe("FMLabelValue", () => {
   it("should match snapshot", () => {
-    const { container } = render(<FMLabelValue label="Title" value="value" />);
+    const { container } = render(
+      <FMLabelValue
+        testID="label-value-test"
+        label="Title"
+        value="value"
+        valueProps={{ testID: "typography-test" }}
+      />
+    );
     expect(container).toMatchSnapshot();
   });
 });

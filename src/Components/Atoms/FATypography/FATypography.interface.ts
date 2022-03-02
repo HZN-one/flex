@@ -1,7 +1,9 @@
 import { TypographyProps } from "@mui/material";
+import React from "react";
 
-type componentOverride = "a" | "p" | "span";
-
-export type IFATypographyProps = {
+export type IFATypographyProps<C extends React.ElementType> = TypographyProps<
+  C,
+  { component?: C }
+> & {
   testID: `typography-${string}`;
-} & TypographyProps<componentOverride, { component?: componentOverride }>;
+};
