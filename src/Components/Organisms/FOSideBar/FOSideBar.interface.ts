@@ -1,5 +1,5 @@
 import React from "react";
-import { IFAButtonProps } from "../../Atoms/FAButton/Button.interface";
+import { IFAButtonProps } from "../../Atoms/FAButton/FAButton.interface";
 
 export interface IFOSideBarProps {
   testID: `sidebar-${string}`;

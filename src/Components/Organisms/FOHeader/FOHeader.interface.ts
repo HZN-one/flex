@@ -1,5 +1,5 @@
 import { ReactChild } from "react";
-import { IFAButtonProps } from "../../Atoms/FAButton/Button.interface";
+import { IFAButtonProps } from "../../Atoms/FAButton/FAButton.interface";
 import { IFMSearchProps } from "../../Molecules/FMSearch/FMSearch.interface";
 
 interface IFOHeaderGeneral {

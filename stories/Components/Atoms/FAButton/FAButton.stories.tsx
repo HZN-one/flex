@@ -3,7 +3,7 @@ import { withDesign } from "storybook-addon-designs";
 import { Stack } from "@mui/material";
 import { FAButton, FAIcon } from "@Atoms";
 import LoadingButton from "@mui/lab/LoadingButton";
-import { IFAButtonProps } from "@Atoms/FAButton/Button.interface";
+import { IFAButtonProps } from "@Atoms/FAButton/FAButton.interface";
 
 const story = {
   title: "Atom/Button",
