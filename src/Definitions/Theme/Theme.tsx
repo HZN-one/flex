@@ -86,7 +86,6 @@ export const baseTheme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          boxShadow: "0px 1px 0px 0px #E0E0E0",
           borderRadius: 0,
         },
       },

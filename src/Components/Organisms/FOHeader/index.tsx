@@ -12,8 +12,11 @@ export const FOHeader = memo((props: IFOHeaderProps) => {
       data-testid={testID}
       position={position}
       color="inherit"
-      elevation={0}
-      sx={{ width: headerType === "auth" ? "100%" : "calc(100% - 250px)" }}
+      sx={{
+        width: headerType === "auth" ? "100%" : "calc(100% - 250px)",
+        boxShadow: theme =>
+          headerType === "auth" ? theme.shadows[5] : "0px 1px 0px #E0E0E0",
+      }}
     >
       <Toolbar>
         <Grid
