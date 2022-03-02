@@ -93,8 +93,8 @@ export const baseTheme = createTheme({
     MuiAvatar: {
       styleOverrides: {
         root: sx({
-          height: "50px",
-          width: "50px",
+          height: 40,
+          width: 40,
           typography: "h4",
         }),
         colorDefault: sx({
@@ -555,10 +555,15 @@ export const baseTheme = createTheme({
     },
     MuiInputAdornment: {
       styleOverrides: {
+        root: sx({
+          "& .MuiIcon-root": {
+            color: "text.primary",
+          },
+        }),
         standard: {
           marginBottom: "12px",
-          "& .material-icons": {
-            fontSize: "20px",
+          "& .MuiIcon-root": {
+            fontSize: 20,
           },
           "& .MuiTypography-root": {
             fontSize: "14px",
@@ -567,8 +572,8 @@ export const baseTheme = createTheme({
         },
         outlined: {
           "&.MuiInputAdornment-outlined.MuiInputAdornment-sizeSmall": {
-            "& .material-icons": {
-              fontSize: "20px",
+            "& .MuiIcon-root": {
+              fontSize: 20,
             },
             "& .MuiTypography-root": {
               fontSize: "14px",

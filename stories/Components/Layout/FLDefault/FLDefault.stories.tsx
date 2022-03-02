@@ -1,17 +1,17 @@
-// Create storybook for FLDefault
 import React from "react";
-import { ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 import { FLDefault } from "@Components/Layout";
-import { IFLDefault } from "@Components/Layout/FLDefault/FLDefault.interface";
 
-const story = {
+import { IFLDefaultProps } from "@Components/Layout/FLDefault/FLDefault.interface";
+
+const meta: Meta = {
   title: "Layout/Default",
   component: FLDefault,
 };
 
-export default story;
+export default meta;
 
-const Template: ComponentStory<typeof FLDefault> = (props: IFLDefault) => (
+const Template: Story<IFLDefaultProps> = (props: IFLDefaultProps) => (
   <FLDefault {...props} />
 );
 

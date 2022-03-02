@@ -1,9 +1,9 @@
 import React, { memo } from "react";
 import { Box } from "@mui/material";
 import { FOHeader, FOSideBar } from "@Organisms";
-import { IFLDefault } from "./FLDefault.interface";
+import { IFLDefaultProps } from "./FLDefault.interface";
 
-export const FLDefault = memo((props: IFLDefault) => {
+export const FLDefault = memo((props: IFLDefaultProps) => {
   const { testID, children, header, ...sidebarProps } = props;
 
   return (

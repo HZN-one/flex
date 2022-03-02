@@ -1,16 +1,16 @@
 import React from "react";
-import { ComponentStory } from "@storybook/react";
+import { Meta, Story } from "@storybook/react";
 import { FLAuthentication } from "@Components/Layout";
 import { IFLAuthenticationProps } from "@Components/Layout/FLAuthentication/FLAuthentication.interface";
 
-const story = {
+const meta: Meta = {
   title: "Layout/Authentication",
   component: FLAuthentication,
 };
 
-export default story;
+export default meta;
 
-const Template: ComponentStory<typeof FLAuthentication> = (
+const Template: Story<IFLAuthenticationProps> = (
   props: IFLAuthenticationProps
 ) => <FLAuthentication {...props} />;
 

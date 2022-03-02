@@ -1,5 +1,6 @@
 import React, { memo } from "react";
 import { Avatar } from "@mui/material";
+
 import { IFAAvatarProps } from "./FAAvatar.interface";
 
 export const FAAvatar = memo((props: IFAAvatarProps) => {

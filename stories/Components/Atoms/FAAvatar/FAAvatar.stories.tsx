@@ -1,10 +1,11 @@
 import React from "react";
+import { Meta, Story } from "@storybook/react";
 import { Stack } from "@mui/material";
 import { FAAvatar } from "@Atoms";
 
 import { IFAAvatarProps } from "@Atoms/FAAvatar/FAAvatar.interface";
 
-const story = {
+const meta: Meta = {
   title: "Atom/Avatar",
   component: FAAvatar,
   argTypes: {
@@ -13,6 +14,7 @@ const story = {
     size: { control: "text" },
     color: { control: "text" },
     src: { control: "text" },
+    variant: { control: "text" },
   },
   args: {
     testID: "avatar-storybook",
@@ -20,31 +22,34 @@ const story = {
     size: "medium",
     color: "primary",
     src: "https://mui.com/static/images/avatar/1.jpg",
+    variant: "circular",
   },
 };
 
-export default story;
+export default meta;
 
-export const Default = (props: IFAAvatarProps) => <FAAvatar {...props} />;
-
-export const Variant = (props: IFAAvatarProps) => (
-  <Stack direction="row" spacing={2}>
-    <FAAvatar {...props} variant="circular">
-      C
-    </FAAvatar>
-    <FAAvatar {...props} variant="rounded">
-      R
-    </FAAvatar>
-    <FAAvatar {...props} variant="square">
-      S
-    </FAAvatar>
-  </Stack>
+const Template: Story<IFAAvatarProps> = (props: IFAAvatarProps) => (
+  <FAAvatar {...props} />
 );
 
-export const Fallback = (props: IFAAvatarProps) => (
-  <Stack direction="row" spacing={2}>
-    <FAAvatar {...props} />
-    <FAAvatar testID="avatar-storybook" alt="Image" src="/broken-image.jpg" />
-    <FAAvatar testID="avatar-storybook" src="/broken-image.jpg" />
-  </Stack>
-);
+Template.decorators = [
+  StoryDecoractors => (
+    <Stack direction="row" spacing={3}>
+      {StoryDecoractors()}
+    </Stack>
+  ),
+];
+
+export const Default = Template.bind({});
+
+export const Variant = Template.bind({});
+
+Variant.args = {
+  variant: "square",
+};
+
+export const Fallback = Template.bind({});
+
+Fallback.args = {
+  src: "",
+};
