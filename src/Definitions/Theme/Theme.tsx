@@ -91,6 +91,24 @@ export const baseTheme = createTheme({
         },
       },
     },
+    MuiAvatar: {
+      styleOverrides: {
+        root: sx({
+          height: "50px",
+          width: "50px",
+          typography: "h4",
+        }),
+        colorDefault: sx({
+          backgroundColor: "secondary.main",
+          color: "common.white",
+        }),
+        fallback: sx({
+          width: "64%",
+          height: "64%",
+          color: "common.white",
+        }),
+      },
+    },
     MuiCssBaseline: {
       styleOverrides: {
         body: sx({

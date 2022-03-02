@@ -119,14 +119,7 @@ export const FOSideBar = memo((props: IFOSideBarProps) => {
           color="secondary"
           size="small"
           fullWidth
-          startIcon={
-            <FAIcon
-              testID="icon-sidebar-logout"
-              baseClassName="material-icons-outlined"
-            >
-              logout
-            </FAIcon>
-          }
+          startIcon={<FAIcon testID="icon-sidebar-logout">logout</FAIcon>}
           sx={{ height: "auto" }}
           variant="outlined"
           onClick={buttonLogout.onClick}
