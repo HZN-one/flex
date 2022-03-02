@@ -3,7 +3,7 @@ import { IFATypographyProps } from "../../Atoms/FATypography/FATypography.interf
 export interface IFMLabelValueProps {
   label: string;
   value?: string;
-  propLabel?: Omit<IFATypographyProps, "TestID">;
-  propValue?: Omit<IFATypographyProps, "TestID">;
+  propLabel?: Omit<IFATypographyProps, "testID">;
+  propValue?: Omit<IFATypographyProps, "testID">;
   margin?: "normal" | "none";
 }
