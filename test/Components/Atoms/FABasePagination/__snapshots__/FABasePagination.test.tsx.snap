@@ -16,14 +16,14 @@ exports[`FAPagination should match snapshot 1`] = `
         <li>
           <button
             aria-label="Go to previous page"
-            class="MuiButtonBase-root Mui-disabled MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular Mui-disabled MuiPaginationItem-previousNext css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+            class="MuiButtonBase-root Mui-disabled MuiPaginationItem-root MuiPaginationItem-sizeSmall MuiPaginationItem-text MuiPaginationItem-circular Mui-disabled MuiPaginationItem-previousNext css-1ba2zw7-MuiButtonBase-root-MuiPaginationItem-root"
             disabled=""
             tabindex="-1"
             type="button"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-tnzq9a-MuiSvgIcon-root-MuiPaginationItem-icon"
               data-testid="NavigateBeforeIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -38,7 +38,7 @@ exports[`FAPagination should match snapshot 1`] = `
           <button
             aria-current="true"
             aria-label="page 1"
-            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular Mui-selected MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeSmall MuiPaginationItem-text MuiPaginationItem-circular Mui-selected MuiPaginationItem-page css-1ba2zw7-MuiButtonBase-root-MuiPaginationItem-root"
             tabindex="0"
             type="button"
           >
@@ -51,7 +51,7 @@ exports[`FAPagination should match snapshot 1`] = `
         <li>
           <button
             aria-label="Go to page 2"
-            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeSmall MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-1ba2zw7-MuiButtonBase-root-MuiPaginationItem-root"
             tabindex="0"
             type="button"
           >
@@ -64,7 +64,7 @@ exports[`FAPagination should match snapshot 1`] = `
         <li>
           <button
             aria-label="Go to page 3"
-            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeSmall MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-1ba2zw7-MuiButtonBase-root-MuiPaginationItem-root"
             tabindex="0"
             type="button"
           >
@@ -77,7 +77,7 @@ exports[`FAPagination should match snapshot 1`] = `
         <li>
           <button
             aria-label="Go to page 4"
-            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeSmall MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-1ba2zw7-MuiButtonBase-root-MuiPaginationItem-root"
             tabindex="0"
             type="button"
           >
@@ -90,7 +90,7 @@ exports[`FAPagination should match snapshot 1`] = `
         <li>
           <button
             aria-label="Go to page 5"
-            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeSmall MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-1ba2zw7-MuiButtonBase-root-MuiPaginationItem-root"
             tabindex="0"
             type="button"
           >
@@ -102,7 +102,7 @@ exports[`FAPagination should match snapshot 1`] = `
         </li>
         <li>
           <div
-            class="MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-ellipsis css-1v2lvtn-MuiPaginationItem-root"
+            class="MuiPaginationItem-root MuiPaginationItem-sizeSmall MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-ellipsis css-1hfyor7-MuiPaginationItem-root"
           >
             …
           </div>
@@ -110,7 +110,7 @@ exports[`FAPagination should match snapshot 1`] = `
         <li>
           <button
             aria-label="Go to page 10"
-            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeSmall MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page css-1ba2zw7-MuiButtonBase-root-MuiPaginationItem-root"
             tabindex="0"
             type="button"
           >
@@ -123,13 +123,13 @@ exports[`FAPagination should match snapshot 1`] = `
         <li>
           <button
             aria-label="Go to next page"
-            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-previousNext css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root"
+            class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeSmall MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-previousNext css-1ba2zw7-MuiButtonBase-root-MuiPaginationItem-root"
             tabindex="0"
             type="button"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiPaginationItem-icon css-tnzq9a-MuiSvgIcon-root-MuiPaginationItem-icon"
               data-testid="NavigateNextIcon"
               focusable="false"
               viewBox="0 0 24 24"

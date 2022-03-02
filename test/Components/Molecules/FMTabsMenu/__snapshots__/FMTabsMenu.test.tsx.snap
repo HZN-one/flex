@@ -14,23 +14,23 @@ exports[`FMStepper should match snapshot 1`] = `
       <button
         aria-controls="mui-1-P-0"
         aria-selected="true"
-        class="TabUnstyled-root Mui-selected css-ftvnd8"
+        class="TabUnstyled-root Mui-selected css-c8w0k6"
         id="mui-1-T-0"
         role="tab"
         tabindex="0"
       >
         <div
-          class="MuiBox-root css-zo3waq"
+          class="MuiBox-root css-5i61f4"
         >
           <span
             aria-hidden="true"
-            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-kp9ftd-MuiIcon-root"
+            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1a42aau-MuiIcon-root"
             data-testid="icon-tab"
           >
             person_outline
           </span>
           <p
-            class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
             data-testid="typography-tab"
           >
             Individual
@@ -40,23 +40,23 @@ exports[`FMStepper should match snapshot 1`] = `
       <button
         aria-controls="mui-1-P-1"
         aria-selected="false"
-        class="TabUnstyled-root css-ftvnd8"
+        class="TabUnstyled-root css-c8w0k6"
         id="mui-1-T-1"
         role="tab"
         tabindex="-1"
       >
         <div
-          class="MuiBox-root css-zo3waq"
+          class="MuiBox-root css-5i61f4"
         >
           <span
             aria-hidden="true"
-            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-kp9ftd-MuiIcon-root"
+            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1a42aau-MuiIcon-root"
             data-testid="icon-tab"
           >
             home_work
           </span>
           <p
-            class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
             data-testid="typography-tab"
           >
             Company

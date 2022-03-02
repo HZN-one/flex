@@ -9,6 +9,7 @@ export const FAIcon = memo((props: FAIconProps) => {
     <Icon
       data-testid={testID}
       baseClassName={baseClassName}
+      sx={{ color: props.color ? props.color : "text.primary" }}
       {...materialUIProps}
     />
   );

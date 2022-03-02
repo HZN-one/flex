@@ -1,5 +1,4 @@
 import React from "react";
-
 import { FOHeader } from "@Organisms";
 import { IFOHeaderProps } from "@Organisms/FOHeader/FOHeader.interface";
 
@@ -10,13 +9,13 @@ const story = {
     testID: { control: "text" },
     position: { control: "text" },
     userAvatarSrc: { control: "text" },
-    companyName: { control: "text" },
+    accountName: { control: "text" },
   },
   args: {
     testID: "header-storybook",
     position: "static",
     userAvatarSrc: "#",
-    companyName: "Company Name",
+    accountName: "Company Name",
   },
 };
 
@@ -48,12 +47,11 @@ export const Auth = (props: IFOHeaderProps) => (
     buttonLogin={{
       children: "Login",
       href: "/login",
-      LinkComponent: "a",
     }}
     buttonRegister={{
       children: "Register",
       href: "/register",
-      LinkComponent: "a",
     }}
+    linkComponent="a"
   />
 );

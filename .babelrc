@@ -11,6 +11,7 @@
                     "@Atoms": "./src/Components/Atoms",
                     "@Molecules": "./src/Components/Molecules",
                     "@Organisms": "./src/Components/Organisms",
+                    "@Layouts": "./src/Components/Layouts",
                     "@Components": "./src/Components",
                     "@Definitions": "./src/Definitions",
                     "@src": "./src"

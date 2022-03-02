@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FMTimeline should match snapshot 1`] = `
+<div>
+  <ul
+    class="MuiTimeline-root MuiTimeline-positionRight css-55vwbm-MuiTimeline-root"
+    data-testid="timeline-example"
+  >
+    <li
+      class="MuiTimelineItem-root MuiTimelineItem-positionRight MuiTimelineItem-missingOppositeContent css-ha3bif-MuiTimelineItem-root"
+    >
+      <div
+        class="MuiTimelineSeparator-root css-1fe7e6p-MuiTimelineSeparator-root"
+      >
+        <span
+          class="MuiTimelineDot-root MuiTimelineDot-outlined MuiTimelineDot-outlinedGrey css-6xp33q-MuiTimelineDot-root"
+        >
+          <span
+            aria-hidden="true"
+            class="material-icons notranslate MuiIcon-root MuiIcon-colorInfo MuiIcon-fontSizeMedium material-icons-round css-97k5p9-MuiIcon-root"
+            data-testid="icon-timeline-example-title-0"
+          >
+            fiber_manual_record
+          </span>
+        </span>
+        <span
+          class="MuiTimelineConnector-root css-1ami7lv-MuiTimelineConnector-root"
+        />
+      </div>
+      <div
+        class="MuiTypography-root MuiTypography-body1 MuiTimelineContent-root MuiTimelineContent-positionRight css-18y2uza-MuiTypography-root-MuiTimelineContent-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-captionSemiBold css-jab4h0-MuiTypography-root"
+          data-testid="typography-timeline-example-title-0"
+        >
+          Title 1
+        </span>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-1yr8029-MuiTypography-root"
+          data-testid="typography-timeline-example-description-0"
+        >
+          Description 1
+        </p>
+      </div>
+    </li>
+    <li
+      class="MuiTimelineItem-root MuiTimelineItem-positionRight MuiTimelineItem-missingOppositeContent css-ha3bif-MuiTimelineItem-root"
+    >
+      <div
+        class="MuiTimelineSeparator-root css-1fe7e6p-MuiTimelineSeparator-root"
+      >
+        <span
+          class="MuiTimelineDot-root MuiTimelineDot-outlined MuiTimelineDot-outlinedGrey css-6xp33q-MuiTimelineDot-root"
+        >
+          <span
+            aria-hidden="true"
+            class="material-icons notranslate MuiIcon-root MuiIcon-colorPrimary MuiIcon-fontSizeMedium material-icons-round css-48jl1d-MuiIcon-root"
+            data-testid="icon-timeline-example-title-1"
+          >
+            location_on
+          </span>
+        </span>
+      </div>
+      <div
+        class="MuiTypography-root MuiTypography-body1 MuiTimelineContent-root MuiTimelineContent-positionRight css-18y2uza-MuiTypography-root-MuiTimelineContent-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-captionSemiBold css-jab4h0-MuiTypography-root"
+          data-testid="typography-timeline-example-title-1"
+        >
+          Title 2
+        </span>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-1yr8029-MuiTypography-root"
+          data-testid="typography-timeline-example-description-1"
+        >
+          Description 2
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

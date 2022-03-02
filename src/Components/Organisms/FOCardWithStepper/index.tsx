@@ -1,5 +1,4 @@
 import React, { memo } from "react";
-import Box from "@mui/material/Box";
 
 import { FMCard } from "@Molecules/FMCard";
 import { FMStepper } from "@Molecules/FMStepper";
@@ -14,3 +13,5 @@ export const FOCardWithStepper = memo((props: IFOCardWithStepperProps) => {
     </FMCard>
   );
 });
+
+FOCardWithStepper.displayName = "FOCardWithStepper";

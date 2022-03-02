@@ -1,5 +1,4 @@
 import React, { memo } from "react";
-
 import { IFALogoProps } from "./FALogo.interface";
 
 export const FALogo = memo((props: IFALogoProps) => {

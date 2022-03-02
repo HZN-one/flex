@@ -4,15 +4,13 @@
 
 import * as React from "react";
 import "@testing-library/jest-dom";
-import { FOTMSRegisterNavbar } from "../../../../../src/Components/TMS/Organisms/FOTMSRegisterNavbar";
-
 import { render } from "@testing-library/react";
 
-describe("FOTMSRegisterNavbar", () => {
+import { FAAvatar } from "@Atoms";
+
+describe("FAAvatar", () => {
   it("should match snapshot", () => {
-    const { container } = render(
-      <FOTMSRegisterNavbar testID="header-register" />
-    );
+    const { container } = render(<FAAvatar testID="avatar-example" />);
     expect(container).toMatchSnapshot();
   });
 });

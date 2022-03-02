@@ -20,6 +20,10 @@
       "@Organisms": [
         "src/Components/Organisms"
       ],
+      "@Layout/*": ["src/Components/Layout/*"],
+      "@Layout": [
+        "src/Components/Layout"
+      ],
       "@Components/*": ["src/Components/*"],
       "@Components": [
         "src/Components"
