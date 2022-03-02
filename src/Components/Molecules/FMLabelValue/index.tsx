@@ -28,9 +28,15 @@ export const FMLabelValue = <C extends React.ElementType>(
         {label}
       </FATypography>
 
-      <FATypography variant="body2" {...valueProps}>
-        {value}
-      </FATypography>
+      {valueProps ? (
+        <FATypography variant="body2" {...valueProps}>
+          {value}
+        </FATypography>
+      ) : (
+        <FATypography testID="typography-test" variant="body2">
+          {value}
+        </FATypography>
+      )}
     </Box>
   );
 };

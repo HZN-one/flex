@@ -6,6 +6,6 @@ export type IFMLabelValueProps<C extends React.ElementType> = {
   testID: `label-value-${string}`;
   label: string;
   value: string;
-  valueProps: IFATypographyProps<C>;
+  valueProps?: IFATypographyProps<C>;
   margin?: "normal" | "none";
 };
