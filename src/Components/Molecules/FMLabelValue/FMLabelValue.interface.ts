@@ -1,9 +1,11 @@
+import React from "react";
+
 import { IFATypographyProps } from "../../Atoms/FATypography/FATypography.interface";
 
-export interface IFMLabelValueProps {
+export type IFMLabelValueProps<C extends React.ElementType> = {
+  testID: `label-value-${string}`;
   label: string;
-  value?: string;
-  propLabel?: Omit<IFATypographyProps, "testID">;
-  propValue?: Omit<IFATypographyProps, "testID">;
+  value: string;
+  valueProps?: IFATypographyProps<C>;
   margin?: "normal" | "none";
-}
+};

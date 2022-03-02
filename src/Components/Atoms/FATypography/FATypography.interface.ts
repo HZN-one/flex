@@ -1,5 +1,9 @@
 import { TypographyProps } from "@mui/material";
+import React from "react";
 
-export interface IFATypographyProps extends TypographyProps {
+export type IFATypographyProps<C extends React.ElementType> = TypographyProps<
+  C,
+  { component?: C }
+> & {
   testID: `typography-${string}`;
-}
+};

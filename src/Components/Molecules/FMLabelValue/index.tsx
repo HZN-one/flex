@@ -1,35 +1,44 @@
-import { Box } from "@mui/system";
-import React, { memo } from "react";
+import Box from "@mui/material/Box";
+import React from "react";
+
 import { FATypography } from "@Atoms/FATypography";
+
 import { IFMLabelValueProps } from "./FMLabelValue.interface";
 
 const defaultProps = {
   margin: "normal",
 };
 
-export const FMLabelValue = memo((props: IFMLabelValueProps) => {
-  const { label, value, propLabel, propValue, margin } = {
+export const FMLabelValue = <C extends React.ElementType>(
+  props: IFMLabelValueProps<C>
+) => {
+  const { testID, label, value, margin, valueProps } = {
     ...defaultProps,
     ...props,
   };
 
   return (
-    <Box sx={{ mb: margin === "none" ? 0 : 2 }}>
+    <Box data-testid={testID} sx={{ mb: margin === "none" ? 0 : 2 }}>
       <FATypography
         paragraph={true}
         testID="typography-label"
         variant="captionSemiBold"
         sx={{ mb: "6.82px" }}
-        {...propLabel}
       >
         {label}
       </FATypography>
 
-      <FATypography testID="typography-value" variant="body2" {...propValue}>
-        {value}
-      </FATypography>
+      {valueProps ? (
+        <FATypography variant="body2" {...valueProps}>
+          {value}
+        </FATypography>
+      ) : (
+        <FATypography testID="typography-test" variant="body2">
+          {value}
+        </FATypography>
+      )}
     </Box>
   );
-});
+};
 
 FMLabelValue.displayName = "FMLabelValue";

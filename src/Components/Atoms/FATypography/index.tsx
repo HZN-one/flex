@@ -1,15 +1,18 @@
-import React, { memo } from "react";
-import { Typography } from "@mui/material";
+import React from "react";
+import Typography from "@mui/material/Typography";
 
 import { IFATypographyProps } from "./FATypography.interface";
 
-export const FATypography = memo((props: IFATypographyProps) => {
-  const { testID, ...materialUIProps } = props;
+export const FATypography = <C extends React.ElementType>(
+  props: IFATypographyProps<C>
+) => {
+  const { testID, children, ...materialUIProps } = props;
+
   return (
     <Typography data-testid={testID} {...materialUIProps}>
-      {props.children}
+      {children}
     </Typography>
   );
-});
+};
 
 FATypography.displayName = "FATypography";

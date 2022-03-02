@@ -532,9 +532,10 @@ export const baseTheme = createTheme({
     MuiFormLabel: {
       styleOverrides: {
         root: sx({
-          fontSize: "12px",
-          color: "text.primary",
-          fontWeight: 600,
+          "&.flex-formlabel-standard": {
+            typography: "captionSemiBold",
+            color: "text.primary",
+          },
         }),
       },
     },
