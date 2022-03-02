@@ -24,7 +24,7 @@ exports[`FMStepper should match snapshot 1`] = `
         >
           <span
             aria-hidden="true"
-            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-kp9ftd-MuiIcon-root"
+            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1a42aau-MuiIcon-root"
             data-testid="icon-tab"
           >
             person_outline
@@ -50,7 +50,7 @@ exports[`FMStepper should match snapshot 1`] = `
         >
           <span
             aria-hidden="true"
-            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-kp9ftd-MuiIcon-root"
+            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1a42aau-MuiIcon-root"
             data-testid="icon-tab"
           >
             home_work

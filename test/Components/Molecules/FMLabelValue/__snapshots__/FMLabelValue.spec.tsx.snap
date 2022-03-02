@@ -4,6 +4,7 @@ exports[`FMLabelValue should match snapshot 1`] = `
 <div>
   <div
     class="MuiBox-root css-1qm1lh"
+    data-testid="label-value-test"
   >
     <p
       class="MuiTypography-root MuiTypography-captionSemiBold MuiTypography-paragraph css-1uzr7kb-MuiTypography-root"
@@ -13,7 +14,7 @@ exports[`FMLabelValue should match snapshot 1`] = `
     </p>
     <p
       class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root"
-      data-testid="typography-value"
+      data-testid="typography-test"
     >
       value
     </p>

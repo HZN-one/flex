@@ -3,7 +3,7 @@
 exports[`FLAuthentication should match snapshot 1`] = `
 <div>
   <header
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorInherit MuiAppBar-positionFixed mui-fixed css-1t9age3-MuiPaper-root-MuiAppBar-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorInherit MuiAppBar-positionFixed mui-fixed css-1grci90-MuiPaper-root-MuiAppBar-root"
     data-testid="header-authentication"
   >
     <div

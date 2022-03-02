@@ -3,7 +3,7 @@
 exports[`FOHeader should match snapshot 1`] = `
 <div>
   <header
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorInherit MuiAppBar-positionStatic css-id9hxo-MuiPaper-root-MuiAppBar-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorInherit MuiAppBar-positionStatic css-avcepk-MuiPaper-root-MuiAppBar-root"
     data-testid="header-example"
   >
     <div

@@ -31,7 +31,7 @@ exports[`FMSearch should match snapshot 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="material-icons notranslate MuiIcon-root MuiIcon-colorPrimary MuiIcon-fontSizeMedium css-shoean-MuiIcon-root"
+              class="material-icons notranslate MuiIcon-root MuiIcon-colorPrimary MuiIcon-fontSizeMedium css-48jl1d-MuiIcon-root"
               data-testid="icon-search"
             >
               search

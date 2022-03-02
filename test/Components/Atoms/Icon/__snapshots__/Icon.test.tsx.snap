@@ -4,7 +4,7 @@ exports[`FAIcon should match snapshot 1`] = `
 <div>
   <span
     aria-hidden="true"
-    class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-kp9ftd-MuiIcon-root"
+    class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1a42aau-MuiIcon-root"
     data-testid="icon-example"
   >
     add_circle
