@@ -1,6 +1,8 @@
-import { Box } from "@mui/system";
+import Box from "@mui/material/Box";
 import React, { memo } from "react";
+
 import { FATypography } from "@Atoms/FATypography";
+
 import { IFMLabelValueProps } from "./FMLabelValue.interface";
 
 const defaultProps = {
