@@ -17,7 +17,7 @@ const story = {
 
 export default story;
 
-export const Default = (props: IFMLabelValueProps) => (
+export const Default = (props: IFMLabelValueProps<any>) => (
   <>
     <FMLabelValue {...props} />
   </>

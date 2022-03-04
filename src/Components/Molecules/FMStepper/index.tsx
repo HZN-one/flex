@@ -12,12 +12,7 @@ import { IFMStepperProps } from "./FMStepper.interface";
 export const FMStepper = memo((props: IFMStepperProps) => {
   const { testID, data, stepperColumn } = props;
   const [activeStep, setActiveStep] = React.useState(0);
-  const [previousTitle, setPreviousTitle] = React.useState(
-    data.length ? data[0].title : ""
-  );
-  const [activeChildren, setActiveChildren] = React.useState(
-    data.length ? data[0].children : ""
-  );
+
   const isLastStep = data.length - 1 === activeStep;
 
   const handleNext = () => {
@@ -25,18 +20,12 @@ export const FMStepper = memo((props: IFMStepperProps) => {
 
     if (!isLastStep) {
       setActiveStep(prevActiveStep => prevActiveStep + 1);
-      setPreviousTitle(data[activeStep].title);
-      setActiveChildren(data[activeStep + 1].children);
     }
   };
 
   const handleBack = () => {
     data[activeStep].onSubmitBack();
     setActiveStep(prevActiveStep => prevActiveStep - 1);
-    if (activeStep > 1) {
-      setPreviousTitle(data[activeStep - 2].title);
-    }
-    setActiveChildren(data[activeStep - 1].children);
   };
 
   if (data.length) {
@@ -55,7 +44,9 @@ export const FMStepper = memo((props: IFMStepperProps) => {
             </Stepper>
           </Grid>
         </Grid>
-        <Box sx={{ mt: 3.75, mb: 4.125 }}>{activeChildren}</Box>
+        <Box sx={{ mt: 3.75, mb: 4.125 }} key={activeStep}>
+          {data?.[activeStep].children}
+        </Box>
         <Grid container justifyContent="space-between">
           <Grid item xs="auto">
             {activeStep !== 0 && (
@@ -71,7 +62,7 @@ export const FMStepper = memo((props: IFMStepperProps) => {
                 }
                 onClick={handleBack}
               >
-                {previousTitle}
+                {data[activeStep - 1].title}
               </FAButton>
             )}
           </Grid>
