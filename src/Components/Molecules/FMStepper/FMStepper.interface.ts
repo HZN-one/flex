@@ -8,6 +8,8 @@ export interface IFMStepperProps {
     onSubmitNext: () => void;
     onSubmitBack: () => void;
     buttonLabel: string;
+    isPreventNext?: boolean;
+    isPreventBack?: boolean;
   }>;
   stepperColumn: number;
 }

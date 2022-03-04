@@ -18,14 +18,17 @@ export const FMStepper = memo((props: IFMStepperProps) => {
   const handleNext = () => {
     data[activeStep].onSubmitNext();
 
-    if (!isLastStep) {
+    if (!isLastStep || !data[activeStep].isPreventNext) {
       setActiveStep(prevActiveStep => prevActiveStep + 1);
     }
   };
 
   const handleBack = () => {
     data[activeStep].onSubmitBack();
-    setActiveStep(prevActiveStep => prevActiveStep - 1);
+
+    if (!data[activeStep].isPreventBack) {
+      setActiveStep(prevActiveStep => prevActiveStep - 1);
+    }
   };
 
   if (data.length) {
