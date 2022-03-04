@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useEffect } from "react";
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
@@ -10,27 +10,36 @@ import { FAButton, FAIcon } from "@Atoms";
 import { IFMStepperProps } from "./FMStepper.interface";
 
 export const FMStepper = memo((props: IFMStepperProps) => {
-  const { testID, data, stepperColumn } = props;
-  const [activeStep, setActiveStep] = React.useState(0);
+  const { testID, data, stepperColumn, stepperActiveStep } = props;
+  const [activeStep, setActiveStep] = React.useState(stepperActiveStep ?? 0);
+
+  useEffect(() => {
+    if (typeof stepperActiveStep !== "undefined") {
+      setActiveStep(stepperActiveStep);
+    }
+  }, [stepperActiveStep]);
 
   const isLastStep = data.length - 1 === activeStep;
+  const stepperActiveStepProvided = typeof stepperActiveStep !== "undefined";
+  const onSubmitNext = data[activeStep].onSubmitNext;
+  const onSubmitBack = data[activeStep].onSubmitBack;
 
   const handleNext = () => {
-    data[activeStep].onSubmitNext();
+    if (onSubmitNext) {
+      onSubmitNext();
+    }
 
-    const isPreventNext = data[activeStep].isPreventNext;
-
-    if (!isLastStep && !isPreventNext) {
+    if (!isLastStep && !stepperActiveStepProvided) {
       setActiveStep(prevActiveStep => prevActiveStep + 1);
     }
   };
 
   const handleBack = () => {
-    data[activeStep].onSubmitBack();
+    if (onSubmitBack) {
+      onSubmitBack();
+    }
 
-    const isPreventBack = data[activeStep].isPreventBack;
-
-    if (!isPreventBack) {
+    if (!stepperActiveStepProvided) {
       setActiveStep(prevActiveStep => prevActiveStep - 1);
     }
   };
