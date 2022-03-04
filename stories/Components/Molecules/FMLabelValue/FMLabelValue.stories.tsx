@@ -1,6 +1,6 @@
 import React from "react";
 import { FMLabelValue } from "@Molecules";
-import { IFMLabelValue } from "@Molecules/FMLabelValue/FMLabelValue.interface";
+import { IFMLabelValueProps } from "@Molecules/FMLabelValue/FMLabelValue.interface";
 
 const story = {
   title: "Molecules/Label Value",
@@ -17,7 +17,7 @@ const story = {
 
 export default story;
 
-export const Default = (props: IFMLabelValue) => (
+export const Default = (props: IFMLabelValueProps<any>) => (
   <>
     <FMLabelValue {...props} />
   </>

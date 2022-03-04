@@ -1,6 +1,6 @@
 import React from "react";
 import { FOHeader } from "@Organisms";
-import { IFOHeader } from "@Organisms/FOHeader/FOHeader.interfaces";
+import { IFOHeaderProps } from "@Organisms/FOHeader/FOHeader.interface";
 
 const story = {
   title: "Organisms/Header",
@@ -9,27 +9,27 @@ const story = {
     testID: { control: "text" },
     position: { control: "text" },
     userAvatarSrc: { control: "text" },
-    companyName: { control: "text" },
+    accountName: { control: "text" },
   },
   args: {
     testID: "header-storybook",
     position: "static",
     userAvatarSrc: "#",
-    companyName: "Company Name",
+    accountName: "Company Name",
   },
 };
 
 export default story;
 
-export const Default = (props: IFOHeader) => (
+export const Default = (props: IFOHeaderProps) => (
   <FOHeader {...props} logo position="static" headerType="default" />
 );
 
-export const DefaultWithTitle = (props: IFOHeader) => (
+export const DefaultWithTitle = (props: IFOHeaderProps) => (
   <FOHeader {...props} position="static" headerType="default" title="Title" />
 );
 
-export const DefaultWithSearch = (props: IFOHeader) => (
+export const DefaultWithSearch = (props: IFOHeaderProps) => (
   <FOHeader
     {...props}
     headerType="default"
@@ -39,7 +39,7 @@ export const DefaultWithSearch = (props: IFOHeader) => (
   />
 );
 
-export const Auth = (props: IFOHeader) => (
+export const Auth = (props: IFOHeaderProps) => (
   <FOHeader
     {...props}
     logo
@@ -47,12 +47,11 @@ export const Auth = (props: IFOHeader) => (
     buttonLogin={{
       children: "Login",
       href: "/login",
-      LinkComponent: "a",
     }}
     buttonRegister={{
       children: "Register",
       href: "/register",
-      LinkComponent: "a",
     }}
+    linkComponent="a"
   />
 );

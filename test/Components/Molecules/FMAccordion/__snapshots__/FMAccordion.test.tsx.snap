@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FMAccordion should match snapshot 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 MuiAccordion-root css-1xe9kig-MuiPaper-root-MuiAccordion-root"
+    data-testid="accordion-example"
+  >
+    <div
+      aria-expanded="false"
+      class="MuiButtonBase-root MuiAccordionSummary-root css-1pvvkxv-MuiButtonBase-root-MuiAccordionSummary-root"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiAccordionSummary-content css-1betqn-MuiAccordionSummary-content"
+      />
+      <div
+        class="MuiAccordionSummary-expandIconWrapper css-yw020d-MuiAccordionSummary-expandIconWrapper"
+      >
+        <span
+          aria-hidden="true"
+          class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1a42aau-MuiIcon-root"
+          data-testid="icon-accordion"
+        >
+          arrow_drop_down
+        </span>
+      </div>
+    </div>
+    <div
+      class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+      style="min-height: 0px;"
+    >
+      <div
+        class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+        >
+          <div
+            class="MuiAccordion-region"
+            role="region"
+          >
+            <div
+              class="MuiAccordionDetails-root css-15v22id-MuiAccordionDetails-root"
+            >
+              test
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

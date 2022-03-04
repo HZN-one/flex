@@ -3,7 +3,7 @@ import { withDesign } from "storybook-addon-designs";
 import { Stack } from "@mui/material";
 import { FAButton, FAIcon } from "@Atoms";
 import LoadingButton from "@mui/lab/LoadingButton";
-import { IFAButton } from "@Atoms/FAButton/Button.interface";
+import { IFAButtonProps } from "@Atoms/FAButton/FAButton.interface";
 
 const story = {
   title: "Atom/Button",
@@ -21,11 +21,11 @@ const story = {
 
 export default story;
 
-export const Default = (props: IFAButton) => (
+export const Default = (props: IFAButtonProps) => (
   <FAButton {...props}>{props.children}</FAButton>
 );
 
-export const Variant = (props: IFAButton) => (
+export const Variant = (props: IFAButtonProps) => (
   <Stack direction="row" spacing={2}>
     <FAButton {...props} variant="contained">
       Contained
@@ -39,7 +39,7 @@ export const Variant = (props: IFAButton) => (
   </Stack>
 );
 
-export const Size = (props: IFAButton) => (
+export const Size = (props: IFAButtonProps) => (
   <Stack direction="row" spacing={2}>
     <FAButton {...props} size="small">
       Small
@@ -53,7 +53,7 @@ export const Size = (props: IFAButton) => (
   </Stack>
 );
 
-export const Color = (props: IFAButton) => (
+export const Color = (props: IFAButtonProps) => (
   <Stack direction="row" spacing={2}>
     <FAButton {...props} color="primary">
       Primary
@@ -79,7 +79,7 @@ export const Color = (props: IFAButton) => (
   </Stack>
 );
 
-export const WithIcon = (props: IFAButton) => (
+export const WithIcon = (props: IFAButtonProps) => (
   <Stack direction="row" spacing={2}>
     <FAButton
       {...props}
@@ -97,7 +97,7 @@ export const WithIcon = (props: IFAButton) => (
   </Stack>
 );
 
-export const State = (props: IFAButton) => (
+export const State = (props: IFAButtonProps) => (
   <Stack direction="row" spacing={2}>
     <FAButton {...props} disabled>
       Disabled

@@ -11,6 +11,7 @@ describe("FMStepper", () => {
     const { container } = render(
       <FMStepper
         testID="stepper-example"
+        stepperColumn={8}
         data={[
           {
             title: "Title 1",

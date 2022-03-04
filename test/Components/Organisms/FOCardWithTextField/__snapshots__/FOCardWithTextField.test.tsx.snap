@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FOCardWithTextField should match snapshot 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
+    data-testid="card-example"
+  >
+    <div
+      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+    >
+      <h3
+        class="MuiTypography-root MuiTypography-h3 css-1ot9enh-MuiTypography-root"
+        data-testid="typography-signIn"
+      />
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-h9g4i5-MuiTypography-root"
+        data-testid="typography-signIn"
+      />
+      <form>
+        <div
+          class="MuiBox-root css-0"
+        />
+        <div
+          class="MuiBox-root css-1bvc4cc"
+        />
+        <button
+          class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButtonBase-root  css-79nr1p-MuiButtonBase-root-MuiButton-root"
+          data-testid="button-submit"
+          tabindex="0"
+          type="submit"
+        >
+          buttonPrimary
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <div
+          class="MuiBox-root css-1q7njkh"
+        />
+      </form>
+    </div>
+  </div>
+</div>
+`;

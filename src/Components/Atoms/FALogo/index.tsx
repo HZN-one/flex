@@ -1,7 +1,7 @@
 import React, { memo } from "react";
-import IFALogo from "./FALogo.interfaces";
+import { IFALogoProps } from "./FALogo.interface";
 
-export const FALogo = memo((props: IFALogo) => {
+export const FALogo = memo((props: IFALogoProps) => {
   return (
     <svg
       data-testid={props.testID}

@@ -1,7 +1,8 @@
 import React from "react";
 import { FASwitch, FAFormControlLabel } from "@Atoms";
-import { IFASwitch } from "@Atoms/FASwitch/FASwitch.interface";
-import { IFAFormControlLabel } from "@Atoms/FAFormControlLabel/FAFormControlLabel.interfaces";
+
+import { IFASwitchProps } from "@Atoms/FASwitch/FASwitch.interface";
+import { IFAFormControlLabelProps } from "@Atoms/FAFormControlLabel/FAFormControlLabel.interface";
 
 const story = {
   title: "Atom/Switch",
@@ -12,13 +13,13 @@ const story = {
 };
 
 export default story;
-export const Default = (props: IFASwitch) => (
+export const Default = (props: IFASwitchProps) => (
   <>
     <FASwitch {...props} />
   </>
 );
 
-export const Small = (props: IFASwitch) => (
+export const Small = (props: IFASwitchProps) => (
   <>
     <div>
       <FASwitch {...props} color="default" defaultChecked size="small" />
@@ -43,7 +44,7 @@ export const Small = (props: IFASwitch) => (
     </div>
   </>
 );
-export const Medium = (props: IFASwitch) => (
+export const Medium = (props: IFASwitchProps) => (
   <>
     <div>
       <FASwitch {...props} color="default" defaultChecked size="medium" />
@@ -69,7 +70,7 @@ export const Medium = (props: IFASwitch) => (
   </>
 );
 
-export const WithLabelMedium = (props: IFAFormControlLabel) => (
+export const WithLabelMedium = (props: IFAFormControlLabelProps) => (
   <>
     <div>
       <FAFormControlLabel
@@ -179,7 +180,7 @@ export const WithLabelMedium = (props: IFAFormControlLabel) => (
   </>
 );
 
-export const WithLabelSmall = (props: IFAFormControlLabel) => (
+export const WithLabelSmall = (props: IFAFormControlLabelProps) => (
   <>
     <div>
       <FAFormControlLabel

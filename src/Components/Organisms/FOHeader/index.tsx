@@ -1,10 +1,10 @@
 import React, { memo } from "react";
 import { AppBar, Avatar, Box, Grid, Toolbar } from "@mui/material";
-import { IFOHeader } from "./FOHeader.interfaces";
 import { FAButton, FALogo, FATypography } from "@Atoms";
 import { FMSearch } from "@Molecules";
+import { IFOHeaderProps } from "./FOHeader.interface";
 
-export const FOHeader = memo((props: IFOHeader) => {
+export const FOHeader = memo((props: IFOHeaderProps) => {
   const { testID, logo, position, headerType } = props;
 
   return (
@@ -12,9 +12,13 @@ export const FOHeader = memo((props: IFOHeader) => {
       data-testid={testID}
       position={position}
       color="inherit"
-      elevation={0}
+      sx={{
+        width: headerType === "auth" ? "100%" : "calc(100% - 250px)",
+        boxShadow: theme =>
+          headerType === "auth" ? theme.shadows[5] : "0px 1px 0px #E0E0E0",
+      }}
     >
-      <Toolbar variant="dense">
+      <Toolbar>
         <Grid
           container
           justifyContent="space-between"
@@ -40,7 +44,7 @@ export const FOHeader = memo((props: IFOHeader) => {
                 <FAButton
                   testID="button-login"
                   href={props.buttonLogin.href}
-                  LinkComponent={props.buttonLogin.LinkComponent}
+                  LinkComponent={props.linkComponent}
                   variant="text"
                   color="secondary"
                 >
@@ -51,7 +55,7 @@ export const FOHeader = memo((props: IFOHeader) => {
                 <FAButton
                   testID="button-register"
                   href={props.buttonRegister.href}
-                  LinkComponent={props.buttonRegister.LinkComponent}
+                  LinkComponent={props.linkComponent}
                   variant="contained"
                   color="primary"
                 >
@@ -92,7 +96,7 @@ export const FOHeader = memo((props: IFOHeader) => {
                     variant="body1"
                     sx={{ ml: 1 }}
                   >
-                    {props.companyName}
+                    {props.accountName}
                   </FATypography>
                 </Box>
               </Grid>

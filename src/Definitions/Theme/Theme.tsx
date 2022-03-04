@@ -86,9 +86,33 @@ export const baseTheme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          boxShadow: "0px 1px 0px 0px #E0E0E0",
           borderRadius: 0,
         },
+      },
+    },
+    MuiAvatar: {
+      styleOverrides: {
+        root: sx({
+          height: 40,
+          width: 40,
+          typography: "h4",
+        }),
+        colorDefault: sx({
+          backgroundColor: "secondary.main",
+          color: "common.white",
+        }),
+        fallback: sx({
+          width: "64%",
+          height: "64%",
+          color: "common.white",
+        }),
+      },
+    },
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: sx({
+          p: 3,
+        }),
       },
     },
     MuiPaginationItem: {
@@ -195,9 +219,13 @@ export const baseTheme = createTheme({
           fontSize: "14px",
           lineHeight: "20px",
         }),
-        root: {
+        root: sx({
           borderRadius: "8px",
-        },
+          "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+            borderColor: "secondary.main",
+            borderWidth: "1px",
+          },
+        }),
       },
     },
     MuiInputLabel: {
@@ -220,17 +248,29 @@ export const baseTheme = createTheme({
           lineHeight: "19.2px",
           color: "#221F20",
           top: "4px",
+          "&.Mui-error": {
+            color: "inherit",
+          },
           "&.Mui-disabled": {
             color: "text.secondary",
           },
           "&.Mui-focused": {
             top: 0,
+            color: "inherit",
           },
           "&.MuiInputLabel-shrink": {
             top: 0,
           },
           "&.MuiFormLabel-filled": {
             top: 0,
+          },
+        }),
+        outlined: sx({
+          "&.MuiInputLabel-sizeSmall": {
+            top: "2px",
+          },
+          "&.Mui-focused": {
+            color: "inherit",
           },
         }),
       },
@@ -256,6 +296,9 @@ export const baseTheme = createTheme({
             top: 0,
             color: "text.primary",
           },
+          "&.MuiSelect-iconOutlined": {
+            color: "text.primary",
+          },
         }),
       },
     },
@@ -276,6 +319,16 @@ export const baseTheme = createTheme({
             marginBottom: "3px",
             ":before": {
               borderBottomColor: "grey.300",
+            },
+            "&.Mui-error": {
+              ":after": {
+                borderBottom: "none",
+              },
+            },
+            "&.Mui-focused": {
+              ":after": {
+                borderBottom: "2px solid #221F20",
+              },
             },
             "& .MuiInputBase-input": {
               paddingBottom: "12px",
@@ -476,6 +529,16 @@ export const baseTheme = createTheme({
         }),
       },
     },
+    MuiFormLabel: {
+      styleOverrides: {
+        root: sx({
+          "&.flex-formlabel-standard": {
+            typography: "captionSemiBold",
+            color: "text.primary",
+          },
+        }),
+      },
+    },
     MuiSelect: {
       styleOverrides: {
         outlined: sx({
@@ -493,10 +556,15 @@ export const baseTheme = createTheme({
     },
     MuiInputAdornment: {
       styleOverrides: {
+        root: sx({
+          "& .MuiIcon-root": {
+            color: "text.primary",
+          },
+        }),
         standard: {
           marginBottom: "12px",
-          "& .material-icons": {
-            fontSize: "20px",
+          "& .MuiIcon-root": {
+            fontSize: 20,
           },
           "& .MuiTypography-root": {
             fontSize: "14px",
@@ -505,8 +573,8 @@ export const baseTheme = createTheme({
         },
         outlined: {
           "&.MuiInputAdornment-outlined.MuiInputAdornment-sizeSmall": {
-            "& .material-icons": {
-              fontSize: "20px",
+            "& .MuiIcon-root": {
+              fontSize: 20,
             },
             "& .MuiTypography-root": {
               fontSize: "14px",
@@ -556,15 +624,50 @@ export const baseTheme = createTheme({
     },
     MuiDrawer: {
       styleOverrides: {
-        root: {
-          position: "relative",
-          width: 250,
+        root: sx({
           flexShrink: 0,
-          "& .MuiDrawer-paper": {
-            width: 250,
-            boxSizing: "border-box",
+          width: 250,
+          "& .MuiCollapse-wrapperInner": {
+            "& .MuiList-root": {
+              ml: 3.5,
+            },
           },
-        },
+          "& .MuiList-padding": {
+            px: 2,
+          },
+          "& .MuiListItemButton-root": {
+            borderRadius: 2,
+            mb: 1,
+            color: "secondary.main",
+            typography: "body2",
+            "&.Mui-selected": {
+              backgroundColor: "#FBEBEA",
+              color: "primary.main",
+              fontWeight: 600,
+            },
+          },
+          "& .MuiListItemIcon-root": {
+            minWidth: 28,
+            color: "inherit",
+          },
+          "& .MuiListItemText-root": {
+            my: 0.25,
+          },
+          "& .MuiListItemText-primary": {
+            font: "inherit",
+          },
+          "& .MuiListSubheader-root": {
+            typography: "subtitle",
+            mb: 2,
+            px: 1,
+            py: 3,
+            display: "flex",
+          },
+        }),
+        paper: sx({
+          borderRadius: 0,
+          width: 250,
+        }),
       },
     },
     MuiPaper: {
@@ -595,7 +698,7 @@ export const baseTheme = createTheme({
         root: {
           height: 32,
           width: 32,
-          color: "transparent",
+          color: "rgba(0, 0, 0, 0.04)",
         },
       },
     },
@@ -686,13 +789,12 @@ export const baseTheme = createTheme({
         }),
       },
     },
-    MuiToolbar: {
-      styleOverrides: {
-        root: sx({
-          pt: 1,
-          pb: 1,
-          minHeight: 80,
-        }),
+  },
+  mixins: {
+    toolbar: {
+      minHeight: 80,
+      "@media (min-width:600px)": {
+        minHeight: 80,
       },
     },
   },
@@ -820,6 +922,9 @@ export const baseTheme = createTheme({
     },
   },
   palette: {
+    background: {
+      default: "#F1F5F9",
+    },
     common: {
       black: "#000",
       white: "#fff",
@@ -836,14 +941,14 @@ export const baseTheme = createTheme({
       light: "#737373",
     },
     info: {
-      main: "#3A82F6",
-      dark: "#1E4ED8",
+      main: "#3B82F6",
+      dark: "#1D4ED8",
       light: "#629BF8",
     },
     error: {
       main: "#F43F5E",
       dark: "#BE123C",
-      light: "#FB7185",
+      light: "#9CC0FA",
     },
     warning: {
       main: "#F59E0B",
