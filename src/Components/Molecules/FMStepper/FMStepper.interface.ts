@@ -11,4 +11,6 @@ export interface IFMStepperProps {
   }>;
   stepperColumn: number;
   stepperActiveStep?: number;
+  onSubmitFinish?: () => void;
+  finishButtonLabel?: string;
 }

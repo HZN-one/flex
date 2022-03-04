@@ -70,8 +70,7 @@ export const Controlled = Template.bind({});
 
 Controlled.decorators = [
   StoryDecoractors => {
-    const firstStep = 0;
-    const [stepperActiveStep, setStepperActiveStep] = React.useState(firstStep);
+    const [stepperActiveStep, setStepperActiveStep] = React.useState(0);
 
     const handleNextStep = () => {
       setStepperActiveStep(prevStepperActiveStep => prevStepperActiveStep + 1);
@@ -84,6 +83,8 @@ Controlled.decorators = [
             testID: "stepper-controlled",
             stepperColumn: 8,
             stepperActiveStep,
+            finishButtonLabel: "Submit Finish Button",
+            onSubmitFinish: () => alert("Finish button clicked"),
             data: [
               {
                 title: "Title 1",
@@ -95,13 +96,10 @@ Controlled.decorators = [
                 title: "Title 2",
                 children: "Description 2",
                 buttonLabel: "Next",
-                onSubmitBack: () => {
-                  if (!firstStep) {
-                    setStepperActiveStep(
-                      prevStepperActiveStep => prevStepperActiveStep - 1
-                    );
-                  }
-                },
+                onSubmitBack: () =>
+                  setStepperActiveStep(
+                    prevStepperActiveStep => prevStepperActiveStep - 1
+                  ),
                 onSubmitNext: () => handleNextStep(),
               },
             ],

@@ -10,19 +10,30 @@ import { FAButton, FAIcon } from "@Atoms";
 import { IFMStepperProps } from "./FMStepper.interface";
 
 export const FMStepper = memo((props: IFMStepperProps) => {
-  const { testID, data, stepperColumn, stepperActiveStep } = props;
-  const [activeStep, setActiveStep] = React.useState(stepperActiveStep ?? 0);
-
-  useEffect(() => {
-    if (typeof stepperActiveStep !== "undefined") {
-      setActiveStep(stepperActiveStep);
-    }
-  }, [stepperActiveStep]);
+  const {
+    testID,
+    data,
+    stepperColumn,
+    stepperActiveStep,
+    finishButtonLabel,
+    onSubmitFinish,
+  } = props;
+  const [activeStep, setActiveStep] = React.useState(stepperActiveStep || 0);
 
   const isLastStep = data.length - 1 === activeStep;
   const stepperActiveStepProvided = typeof stepperActiveStep !== "undefined";
   const onSubmitNext = data[activeStep].onSubmitNext;
   const onSubmitBack = data[activeStep].onSubmitBack;
+
+  useEffect(() => {
+    if (
+      typeof stepperActiveStep !== "undefined" &&
+      activeStep >= 0 &&
+      activeStep < data.length
+    ) {
+      setActiveStep(stepperActiveStep);
+    }
+  }, [stepperActiveStep]);
 
   const handleNext = () => {
     if (onSubmitNext) {
@@ -83,13 +94,23 @@ export const FMStepper = memo((props: IFMStepperProps) => {
             )}
           </Grid>
           <Grid item xs="auto">
-            <FAButton
-              testID={`button-${testID}`}
-              size="small"
-              onClick={handleNext}
-            >
-              {data[activeStep].buttonLabel}
-            </FAButton>
+            {!isLastStep || !stepperActiveStep ? (
+              <FAButton
+                testID={`button-${testID}`}
+                size="small"
+                onClick={handleNext}
+              >
+                {data[activeStep].buttonLabel}
+              </FAButton>
+            ) : (
+              <FAButton
+                testID={`button-${testID}`}
+                size="small"
+                onClick={onSubmitFinish}
+              >
+                {finishButtonLabel}
+              </FAButton>
+            )}
           </Grid>
         </Grid>
       </Box>
