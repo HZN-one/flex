@@ -1,8 +1,8 @@
 import React, { memo } from "react";
 import { IconButton } from "@mui/material";
-import { IIconButton } from "./FAIconButton.interface";
+import { IFAIconButtonProps } from "./FAIconButton.interface";
 
-export const FAIconButton = memo((props: IIconButton) => {
+export const FAIconButton = memo((props: IFAIconButtonProps) => {
   const { testID, ...materialUIProps } = props;
 
   return (

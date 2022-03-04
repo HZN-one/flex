@@ -1,8 +1,9 @@
 import React from "react";
-import { FATextField, FAIcon } from "@Atoms";
-import { IInput } from "@Atoms/FATextField/Input.interface";
 import { MenuItem } from "@mui/material";
 import { Box } from "@mui/system";
+
+import { FATextField, FAIcon } from "@Atoms";
+import { IFATextFieldProps } from "@Atoms/FATextField/FATextField.interface";
 
 const story = {
   title: "Atom/Text Field Select",
@@ -17,7 +18,7 @@ const story = {
 
 export default story;
 
-export const RightIcon = (props: IInput) => (
+export const RightIcon = (props: IFATextFieldProps) => (
   <Box width={"300px"}>
     <FATextField fullWidth {...props} select value={1}>
       <MenuItem value={1}>Standard</MenuItem>
@@ -25,7 +26,7 @@ export const RightIcon = (props: IInput) => (
   </Box>
 );
 
-export const LeftIcon = (props: IInput) => (
+export const LeftIcon = (props: IFATextFieldProps) => (
   <Box width={"300px"}>
     <FATextField
       fullWidth
@@ -41,7 +42,7 @@ export const LeftIcon = (props: IInput) => (
   </Box>
 );
 
-export const LeftRightIcon = (props: IInput) => (
+export const LeftRightIcon = (props: IFATextFieldProps) => (
   <Box width={"300px"}>
     <FATextField
       fullWidth

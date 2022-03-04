@@ -1,6 +1,6 @@
 import React from "react";
 import { FAChip } from "@Atoms/FAChip";
-import { IFAChip } from "@Atoms/FAChip/FAChip.interface";
+import { IFAChipProps } from "@Atoms/FAChip/FAChip.interface";
 
 const story = {
   title: "Atom/Chip",
@@ -9,7 +9,7 @@ const story = {
 
 export default story;
 
-export const Default = (props: IFAChip) => (
+export const Default = (props: IFAChipProps) => (
   <>
     <FAChip
       color="primary"
@@ -21,7 +21,7 @@ export const Default = (props: IFAChip) => (
   </>
 );
 
-export const WithAvatar = (props: IFAChip) => (
+export const WithAvatar = (props: IFAChipProps) => (
   <>
     <FAChip
       color="primary"
@@ -33,7 +33,7 @@ export const WithAvatar = (props: IFAChip) => (
   </>
 );
 
-export const Removeable = (props: IFAChip) => (
+export const Removeable = (props: IFAChipProps) => (
   <>
     <FAChip
       color="primary"
@@ -45,7 +45,7 @@ export const Removeable = (props: IFAChip) => (
   </>
 );
 
-export const ThumbnailRemoveable = (props: IFAChip) => (
+export const ThumbnailRemoveable = (props: IFAChipProps) => (
   <>
     <FAChip
       color="primary"

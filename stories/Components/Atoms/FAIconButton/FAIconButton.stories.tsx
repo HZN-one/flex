@@ -1,6 +1,6 @@
 import React from "react";
 import { FAIconButton } from "@Atoms/FAIconButton";
-import { IIconButton } from "@Atoms/FAIconButton/FAIconButton.interface";
+import { IFAIconButtonProps } from "@Atoms/FAIconButton/FAIconButton.interface";
 import MenuIcon from "@mui/icons-material/Menu";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AlarmIcon from "@mui/icons-material/Alarm";
@@ -19,7 +19,7 @@ const story = {
 
 export default story;
 
-export const Default = (props: IIconButton) => (
+export const Default = (props: IFAIconButtonProps) => (
   <>
     <FAIconButton {...props}>
       <MenuIcon />
