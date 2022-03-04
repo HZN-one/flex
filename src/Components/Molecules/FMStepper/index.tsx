@@ -10,47 +10,28 @@ import { FAButton, FAIcon } from "@Atoms";
 import { IFMStepperProps } from "./FMStepper.interface";
 
 export const FMStepper = memo((props: IFMStepperProps) => {
-  const {
-    testID,
-    data,
-    stepperColumn,
-    stepperActiveStep,
-    finishButtonLabel,
-    onSubmitFinish,
-  } = props;
-  const [activeStep, setActiveStep] = React.useState(stepperActiveStep || 0);
+  const { testID, data, stepperColumn, isControlled, onSubmitFinish } = props;
+  const [activeStep, setActiveStep] = React.useState(0);
 
   const isLastStep = data.length - 1 === activeStep;
-  const stepperActiveStepProvided = typeof stepperActiveStep !== "undefined";
-  const onSubmitNext = data[activeStep].onSubmitNext;
-  const onSubmitBack = data[activeStep].onSubmitBack;
-
-  useEffect(() => {
-    if (
-      typeof stepperActiveStep !== "undefined" &&
-      activeStep >= 0 &&
-      activeStep < data.length
-    ) {
-      setActiveStep(stepperActiveStep);
-    }
-  }, [stepperActiveStep]);
+  const isFirstStep = activeStep === 0;
 
   const handleNext = () => {
-    if (onSubmitNext) {
-      onSubmitNext();
-    }
+    if (isLastStep) return;
 
-    if (!isLastStep && !stepperActiveStepProvided) {
+    data[activeStep].onSubmitNext({ activeStep, setActiveStep });
+
+    if (!isControlled) {
       setActiveStep(prevActiveStep => prevActiveStep + 1);
     }
   };
 
   const handleBack = () => {
-    if (onSubmitBack) {
-      onSubmitBack();
-    }
+    if (isFirstStep) return;
 
-    if (!stepperActiveStepProvided) {
+    data[activeStep].onSubmitBack({ activeStep, setActiveStep });
+
+    if (!isControlled) {
       setActiveStep(prevActiveStep => prevActiveStep - 1);
     }
   };
@@ -94,23 +75,13 @@ export const FMStepper = memo((props: IFMStepperProps) => {
             )}
           </Grid>
           <Grid item xs="auto">
-            {!isLastStep || !stepperActiveStep ? (
-              <FAButton
-                testID={`button-${testID}`}
-                size="small"
-                onClick={handleNext}
-              >
-                {data[activeStep].buttonLabel}
-              </FAButton>
-            ) : (
-              <FAButton
-                testID={`button-${testID}`}
-                size="small"
-                onClick={onSubmitFinish}
-              >
-                {finishButtonLabel}
-              </FAButton>
-            )}
+            <FAButton
+              testID={`button-${testID}`}
+              size="small"
+              onClick={isLastStep ? onSubmitFinish : handleNext}
+            >
+              {data[activeStep].buttonLabel}
+            </FAButton>
           </Grid>
         </Grid>
       </Box>

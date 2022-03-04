@@ -68,44 +68,37 @@ Default.args = {
 
 export const Controlled = Template.bind({});
 
-Controlled.decorators = [
-  StoryDecoractors => {
-    const [stepperActiveStep, setStepperActiveStep] = React.useState(0);
-
-    const handleNextStep = () => {
-      setStepperActiveStep(prevStepperActiveStep => prevStepperActiveStep + 1);
-    };
-
-    return (
-      <>
-        {StoryDecoractors({
-          args: {
-            testID: "stepper-controlled",
-            stepperColumn: 8,
-            stepperActiveStep,
-            finishButtonLabel: "Submit Finish Button",
-            onSubmitFinish: () => alert("Finish button clicked"),
-            data: [
-              {
-                title: "Title 1",
-                children: "Description 1",
-                buttonLabel: "Next",
-                onSubmitNext: () => handleNextStep(),
-              },
-              {
-                title: "Title 2",
-                children: "Description 2",
-                buttonLabel: "Next",
-                onSubmitBack: () =>
-                  setStepperActiveStep(
-                    prevStepperActiveStep => prevStepperActiveStep - 1
-                  ),
-                onSubmitNext: () => handleNextStep(),
-              },
-            ],
-          },
-        })}
-      </>
-    );
-  },
-];
+Controlled.args = {
+  testID: "stepper-test",
+  isControlled: true,
+  stepperColumn: 8,
+  data: [
+    {
+      title: "Title 1",
+      children: "Description 1",
+      buttonLabel: "Next",
+      onSubmitBack: ({ setActiveStep, activeStep }) => {
+        console.log("onSubmitBack");
+        setActiveStep(activeStep - 1);
+      },
+      onSubmitNext: ({ setActiveStep, activeStep }) => {
+        console.log("onSubmitNext");
+        setActiveStep(activeStep + 1);
+      },
+    },
+    {
+      title: "Title 2",
+      children: "Description 2",
+      buttonLabel: "Submit",
+      onSubmitBack: ({ setActiveStep, activeStep }) => {
+        setActiveStep(activeStep - 1);
+        console.log("onSubmitBack");
+      },
+      onSubmitNext: ({ activeStep, setActiveStep }) => {
+        setActiveStep(activeStep + 1);
+        console.log("onSubmitNext");
+      },
+    },
+  ],
+  onSubmitFinish: () => alert("Submitted"),
+};
