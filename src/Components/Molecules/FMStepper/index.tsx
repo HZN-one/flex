@@ -81,6 +81,18 @@ export const FMStepper = memo((props: IFMStepperProps) => {
               testID={`button-${testID}`}
               size="small"
               onClick={isLastStep ? onSubmitFinish : handleNext}
+              {...(!isLastStep && {
+                endIcon: (
+                  <FAIcon
+                    testID={`icon-${testID}-arrow-back`}
+                    sx={{
+                      color: "white",
+                    }}
+                  >
+                    arrow_forward_ios
+                  </FAIcon>
+                ),
+              })}
             >
               {data[activeStep].buttonLabel}
             </FAButton>
