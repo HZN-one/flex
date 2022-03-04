@@ -44,7 +44,9 @@ export const FMStepper = memo((props: IFMStepperProps) => {
             </Stepper>
           </Grid>
         </Grid>
-        <Box sx={{ mt: 3.75, mb: 4.125 }}>{data?.[activeStep].children}</Box>
+        <Box sx={{ mt: 3.75, mb: 4.125 }} key={activeStep}>
+          {data?.[activeStep].children}
+        </Box>
         <Grid container justifyContent="space-between">
           <Grid item xs="auto">
             {activeStep !== 0 && (
