@@ -18,7 +18,9 @@ export const FMStepper = memo((props: IFMStepperProps) => {
   const handleNext = () => {
     data[activeStep].onSubmitNext();
 
-    if (!isLastStep || !data[activeStep].isPreventNext) {
+    const isPreventNext = data[activeStep].isPreventNext;
+
+    if (!isLastStep && !isPreventNext) {
       setActiveStep(prevActiveStep => prevActiveStep + 1);
     }
   };
@@ -26,7 +28,9 @@ export const FMStepper = memo((props: IFMStepperProps) => {
   const handleBack = () => {
     data[activeStep].onSubmitBack();
 
-    if (!data[activeStep].isPreventBack) {
+    const isPreventBack = data[activeStep].isPreventBack;
+
+    if (!isPreventBack) {
       setActiveStep(prevActiveStep => prevActiveStep - 1);
     }
   };
