@@ -4,10 +4,12 @@ import type {} from "@mui/lab/themeAugmentation";
 declare module "@mui/material/styles" {
   interface Palette {
     bluegrey: Palette["grey"];
+    accent: Palette["info"];
   }
   // allow configuration using `createTheme`
   interface PaletteOptions {
     bluegrey?: PaletteOptions["grey"];
+    accent?: PaletteOptions["info"];
   }
   interface TypographyVariants {
     subtitle: React.CSSProperties;
@@ -315,8 +317,7 @@ export const baseTheme = createTheme({
         },
         root: sx({
           "&.MuiInput-underline": {
-            marginTop: "21px",
-            marginBottom: "3px",
+            mt: "21px",
             ":before": {
               borderBottomColor: "grey.300",
             },
@@ -607,15 +608,20 @@ export const baseTheme = createTheme({
     },
     MuiFormControl: {
       styleOverrides: {
-        root: {
+        root: sx({
           "& > label > span": {
-            color: "red",
+            color: "error.main",
           },
           ".MuiSelect-nativeInput": {
             border: "1px solid red",
             color: "red",
           },
-        },
+          "&.flex-textfield-no-label": {
+            "& .MuiInput-root": {
+              mt: 0,
+            },
+          },
+        }),
         marginNormal: sx({
           mt: 0,
           mb: 1.875,
@@ -990,6 +996,11 @@ export const baseTheme = createTheme({
       "700": "#334155",
       "800": "#1E293B",
       "900": "#0F172A",
+    },
+    accent: {
+      main: "#6366F1",
+      dark: "#4338CA",
+      light: "#818CF8",
     },
     action: {
       active: "#EE9C98",
