@@ -301,6 +301,9 @@ export const baseTheme = createTheme({
           "&.MuiSelect-iconOutlined": {
             color: "text.primary",
           },
+          "&.MuiTablePagination-selectIcon": {
+            color: "inherit",
+          },
         }),
       },
     },
@@ -551,11 +554,6 @@ export const baseTheme = createTheme({
     },
     MuiInputAdornment: {
       styleOverrides: {
-        root: sx({
-          "& .MuiIcon-root": {
-            color: "text.primary",
-          },
-        }),
         standard: {
           marginBottom: "12px",
           "& .MuiIcon-root": {
