@@ -13,7 +13,6 @@ describe("FOHeader", () => {
     const { container } = render(
       <FOHeader
         testID="header-example"
-        logo
         position="static"
         headerType="auth"
         buttonLogin={{
