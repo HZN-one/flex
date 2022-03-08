@@ -521,12 +521,6 @@ export const baseTheme = createTheme({
               color: "text.secondary",
             },
           },
-          input: {
-            "&::placeholder": {
-              color: "text.secondary",
-              opacity: 1,
-            },
-          },
         }),
       },
     },
@@ -619,6 +613,12 @@ export const baseTheme = createTheme({
           "&.flex-textfield-no-label": {
             "& .MuiInput-root": {
               mt: 0,
+            },
+          },
+          input: {
+            "&::placeholder": {
+              color: "text.secondary",
+              opacity: 1,
             },
           },
         }),
