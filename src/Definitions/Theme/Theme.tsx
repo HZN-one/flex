@@ -301,6 +301,9 @@ export const baseTheme = createTheme({
           "&.MuiSelect-iconOutlined": {
             color: "text.primary",
           },
+          "&.MuiTablePagination-selectIcon": {
+            color: "inherit",
+          },
         }),
       },
     },
