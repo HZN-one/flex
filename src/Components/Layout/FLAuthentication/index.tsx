@@ -12,7 +12,6 @@ export const FLAuthentication = memo((props: IFLAuthenticationProps) => {
       <FOHeader
         testID="header-authentication"
         headerType="auth"
-        logo
         position="fixed"
         {...header}
       />

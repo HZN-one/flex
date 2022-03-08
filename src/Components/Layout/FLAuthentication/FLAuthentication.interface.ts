@@ -8,6 +8,6 @@ export interface IFLAuthenticationProps {
   isCenter: boolean;
   header: Pick<
     IFOHeaderAuth,
-    "buttonLogin" | "buttonRegister" | "linkComponent"
+    "buttonLogin" | "buttonRegister" | "linkComponent" | "logo"
   >;
 }

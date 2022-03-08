@@ -25,7 +25,7 @@ export const FOHeader = memo((props: IFOHeaderProps) => {
           alignItems="center"
           columnSpacing={2}
         >
-          {logo && (
+          {!logo ? (
             <Grid item xs>
               <Box display="flex">
                 <FALogo
@@ -35,6 +35,12 @@ export const FOHeader = memo((props: IFOHeaderProps) => {
                   iconColor="#D8232A"
                   textColor="#1A1919"
                 />
+              </Box>
+            </Grid>
+          ) : (
+            <Grid item xs>
+              <Box display="flex" minWidth={200} maxWidth={200} maxHeight={60}>
+                {logo}
               </Box>
             </Grid>
           )}

@@ -5,7 +5,7 @@ import { IFMSearchProps } from "../../Molecules/FMSearch/FMSearch.interface";
 interface IFOHeaderGeneral {
   testID: `header-${string}`;
   position: "fixed" | "absolute" | "sticky" | "static" | "relative";
-  logo?: boolean;
+  logo?: ReactChild;
   headerType: "auth" | "default";
 }
 export interface IFOHeaderAuth extends IFOHeaderGeneral {
