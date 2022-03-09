@@ -119,7 +119,7 @@ exports[`FLAuthentication should match snapshot 1`] = `
     </div>
   </header>
   <main
-    class="MuiGrid-root MuiGrid-container css-dy46iv-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container css-bzcd56-MuiGrid-root"
     data-testid="layout-authentication-test"
   >
     <div

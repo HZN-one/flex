@@ -8,11 +8,7 @@ exports[`FMCard should match snapshot 1`] = `
   >
     <div
       class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-    >
-      <div
-        class="MuiBox-root css-12595yo"
-      />
-    </div>
+    />
   </div>
 </div>
 `;

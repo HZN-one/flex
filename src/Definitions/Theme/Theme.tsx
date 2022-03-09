@@ -279,7 +279,7 @@ export const baseTheme = createTheme({
     },
     MuiCard: {
       defaultProps: {
-        className: "flex-paper-2",
+        className: "flex-paper-3",
       },
       styleOverrides: {
         root: sx({
@@ -299,10 +299,10 @@ export const baseTheme = createTheme({
         root: sx({
           px: 0,
           py: 3,
-          "&:first-child": {
+          "&:first-of-type": {
             pt: 0,
           },
-          "&:last-child": {
+          "&:last-of-type": {
             pb: 0,
           },
         }),
