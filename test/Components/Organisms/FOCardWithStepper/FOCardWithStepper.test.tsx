@@ -38,8 +38,10 @@ describe("FOCardWithImage", () => {
     const { container } = render(
       <FOCardWithStepper
         cardProps={{
-          title: "Card Title",
-          subtitle: "Card Subtilte",
+          header: {
+            title: "Card Title",
+            subheader: "Card Subtitle",
+          },
         }}
         stepperProps={{ data: stepperData, stepperColumn: 8 }}
       />
