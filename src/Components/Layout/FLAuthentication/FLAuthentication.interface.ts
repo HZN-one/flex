@@ -1,9 +1,10 @@
-import { ReactChild } from "react";
+import React from "react";
+
 import { IFOHeaderAuth } from "../../Organisms/FOHeader/FOHeader.interface";
 
 export interface IFLAuthenticationProps {
   testID: `layout-authentication-${string}`;
-  children: ReactChild;
+  children: React.ReactNode;
   childrenGridWidth: number;
   isCenter: boolean;
   header: Pick<
