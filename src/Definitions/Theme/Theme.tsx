@@ -134,6 +134,12 @@ export const baseTheme = createTheme({
         }),
       },
     },
+    MuiLoadingButton: {
+      defaultProps: {
+        disableElevation: true,
+        variant: "contained",
+      },
+    },
     MuiButton: {
       defaultProps: {
         disableElevation: true,
