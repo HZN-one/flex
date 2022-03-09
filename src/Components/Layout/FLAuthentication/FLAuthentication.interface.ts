@@ -1,13 +1,13 @@
-import { ReactChild } from "react";
+import { ReactNode } from "react";
 import { IFOHeaderAuth } from "../../Organisms/FOHeader/FOHeader.interface";
 
 export interface IFLAuthenticationProps {
   testID: `layout-authentication-${string}`;
-  children: ReactChild;
+  children: ReactNode;
   childrenGridWidth: number;
   isCenter: boolean;
   header: Pick<
     IFOHeaderAuth,
-    "buttonLogin" | "buttonRegister" | "linkComponent" | "logo"
+    "buttonLogin" | "buttonRegister" | "linkComponent" | "logo" | "companyLogo"
   >;
 }

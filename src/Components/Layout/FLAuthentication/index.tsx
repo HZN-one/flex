@@ -1,7 +1,9 @@
 import React, { memo } from "react";
 import { Box, Grid } from "@mui/material";
+
 import { FATypography } from "@Atoms";
 import { FOHeader } from "@Organisms";
+
 import { IFLAuthenticationProps } from "./FLAuthentication.interface";
 
 export const FLAuthentication = memo((props: IFLAuthenticationProps) => {
@@ -9,12 +11,7 @@ export const FLAuthentication = memo((props: IFLAuthenticationProps) => {
 
   return (
     <React.Fragment>
-      <FOHeader
-        testID="header-authentication"
-        headerType="auth"
-        position="fixed"
-        {...header}
-      />
+      <FOHeader testID="header-authentication" headerType="auth" {...header} />
       <Grid
         data-testid={testID}
         component="main"
@@ -27,7 +24,7 @@ export const FLAuthentication = memo((props: IFLAuthenticationProps) => {
           flexGrow: 1,
           minHeight: theme =>
             `calc(100vh - ${theme.mixins.toolbar.minHeight}px - ${theme.spacing(
-              9
+              11
             )})`,
           marginTop: theme => `${theme.mixins.toolbar.minHeight}px`,
         }}
