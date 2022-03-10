@@ -1,11 +1,14 @@
 import React from "react";
-import { withDesign } from "storybook-addon-designs";
-import { Stack } from "@mui/material";
-import { FAButton, FAIcon } from "@Atoms";
+import { Box, Stack } from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
+import { withDesign } from "storybook-addon-designs";
+import { Meta, Story } from "@storybook/react";
+
+import { FAButton, FAFormControlLabel, FAIcon, FASwitch } from "@Atoms";
+
 import { IFAButtonProps } from "@Atoms/FAButton/FAButton.interface";
 
-const story = {
+const meta: Meta = {
   title: "Atom/Button",
   component: FAButton,
   argTypes: {
@@ -19,11 +22,11 @@ const story = {
   decorators: [withDesign],
 };
 
-export default story;
+export default meta;
 
-export const Default = (props: IFAButtonProps) => (
-  <FAButton {...props}>{props.children}</FAButton>
-);
+const Template: Story<IFAButtonProps> = props => <FAButton {...props} />;
+
+export const Default = Template.bind({});
 
 export const Variant = (props: IFAButtonProps) => (
   <Stack direction="row" spacing={2}>
@@ -119,3 +122,41 @@ Default.parameters = {
     url: "https://www.figma.com/file/q2CQUOtypaKMoDl1CLAann/Flex-Design-System?node-id=233%3A1965",
   },
 };
+
+export const Loading = Template.bind({});
+
+Loading.decorators = [
+  StoryDecoractors => {
+    const [isLoading, setIsLoading] = React.useState(true);
+    return (
+      <>
+        <FAFormControlLabel
+          testID="form-control-label-toggle"
+          sx={{
+            display: "block",
+          }}
+          control={
+            <FASwitch
+              testID="switch-loading"
+              checked={isLoading}
+              onChange={() => setIsLoading(!isLoading)}
+              name="loading"
+              color="primary"
+            />
+          }
+          label="Loading"
+        />
+
+        <Box mt={2}>
+          {StoryDecoractors({
+            args: {
+              testID: "button-loading",
+              isLoading,
+              children: "Submit",
+            },
+          })}
+        </Box>
+      </>
+    );
+  },
+];
