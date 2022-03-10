@@ -26,7 +26,6 @@ export const FATextField = memo(
 
     const startAdornment =
       adornment && adornmentPosition === "start" ? AddAdornment() : null;
-
     const endAdornment =
       adornment && adornmentPosition === "end" ? AddAdornment() : null;
 
