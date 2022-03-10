@@ -111,11 +111,11 @@ export const baseTheme = createTheme({
       },
     },
     MuiCssBaseline: {
-      styleOverrides: {
-        body: sx({
+      styleOverrides: sx({
+        body: {
           p: 3,
-        }),
-      },
+        },
+      }),
     },
     MuiPaginationItem: {
       styleOverrides: {
@@ -228,7 +228,7 @@ export const baseTheme = createTheme({
           lineHeight: "20px",
         }),
         root: sx({
-          borderRadius: "8px",
+          borderRadius: 2,
           "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
             borderColor: "secondary.main",
             borderWidth: "1px",
@@ -284,16 +284,49 @@ export const baseTheme = createTheme({
       },
     },
     MuiCard: {
+      defaultProps: {
+        className: "flex-paper-3",
+      },
       styleOverrides: {
-        root: {
-          borderRadius: "8px",
-        },
+        root: sx({
+          borderRadius: 3,
+        }),
+      },
+    },
+    MuiCardActions: {
+      styleOverrides: {
+        root: sx({
+          p: 0,
+        }),
       },
     },
     MuiCardContent: {
       styleOverrides: {
         root: sx({
-          padding: 3,
+          px: 0,
+          py: 3,
+          "&:first-of-type": {
+            pt: 0,
+          },
+          "&:last-of-type": {
+            pb: 0,
+          },
+        }),
+      },
+    },
+    MuiCardHeader: {
+      defaultProps: {
+        subheaderTypographyProps: {
+          variant: "body1",
+          color: "text.secondary",
+        },
+      },
+      styleOverrides: {
+        root: sx({
+          p: 0,
+        }),
+        subheader: sx({
+          mt: 1,
         }),
       },
     },
@@ -692,6 +725,9 @@ export const baseTheme = createTheme({
           },
           "&.flex-paper-2": {
             p: 2,
+          },
+          "&.flex-paper-3": {
+            p: 3,
           },
         }),
       },

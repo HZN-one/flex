@@ -24,6 +24,7 @@ describe("FOHeader", () => {
           href: "/register",
         }}
         linkComponent="a"
+        logo={true}
       />
     );
     expect(container).toMatchSnapshot();

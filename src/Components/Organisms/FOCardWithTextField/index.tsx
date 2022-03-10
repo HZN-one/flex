@@ -1,78 +1,65 @@
 import React, { memo } from "react";
-import { Card, Box } from "@mui/material";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
+import { Box } from "@mui/material";
 
 import { FATypography, FAButton } from "@Atoms";
+import { FMCard } from "@Molecules/FMCard";
 
 import { IFOCardWithTextFieldProps } from "./FOCardWithTextField.interface";
 
 export const FOCardWithTextField = memo((props: IFOCardWithTextFieldProps) => {
   const {
-    sx,
     testID,
-    actions,
     onSubmit,
     form,
-    subtitle,
+    subheader,
     title,
-    buttonPrimary,
-    firstLink,
-    secondLink,
+    buttonSubmitLabel,
     noValidate,
-    ...materialUIProps
+    actionStartAdornment,
+    actionEndAdornment,
   } = props;
   return (
-    <Card
-      data-testid={testID}
-      {...materialUIProps}
-      elevation={1}
-      sx={{
-        ...sx,
+    <FMCard
+      testID={testID}
+      header={{
+        title: (
+          <FATypography
+            testID="typography-card-textfield-title"
+            component="h1"
+            variant="h3"
+          >
+            {title}
+          </FATypography>
+        ),
+        subheader: (
+          <FATypography
+            testID="typography-card-textfield-subheader"
+            color="textSecondary"
+            component="h2"
+            variant="body1"
+            sx={{ mt: 1 }}
+          >
+            {subheader}
+          </FATypography>
+        ),
+        disableTypography: true,
       }}
     >
-      <CardContent>
-        <FATypography
-          testID="typography-signIn"
-          textAlign="left"
-          variant="h3"
-          color="text.primary"
+      <form onSubmit={onSubmit} noValidate={noValidate}>
+        <Box sx={{ mt: 1, mb: 4 }}>{form}</Box>
+        {actionStartAdornment}
+        <FAButton
+          testID="button-submit"
+          color="primary"
+          variant="contained"
+          type="submit"
+          fullWidth
         >
-          {title}
-        </FATypography>
-
-        <FATypography
-          testID="typography-signIn"
-          textAlign="left"
-          variant="body1"
-          color="textSecondary"
-          sx={{ pb: 3.75, mt: 1 }}
-        >
-          {subtitle}
-        </FATypography>
-        <form onSubmit={onSubmit} noValidate={noValidate}>
-          <Box>{form}</Box>
-
-          <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-            {firstLink}
-          </Box>
-          <FAButton
-            testID="button-submit"
-            color="primary"
-            sx={{
-              mt: 1,
-            }}
-            variant="contained"
-            type="submit"
-            fullWidth
-          >
-            {buttonPrimary ?? "buttonPrimary"}
-          </FAButton>
-          <Box sx={{ mt: "10px" }}>{secondLink}</Box>
-        </form>
-      </CardContent>
-      {actions && <CardActions>{actions}</CardActions>}
-    </Card>
+          {buttonSubmitLabel}
+        </FAButton>
+        {actionEndAdornment}
+      </form>
+    </FMCard>
   );
 });
 

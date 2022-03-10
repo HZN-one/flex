@@ -1,20 +1,13 @@
-import { CardProps } from "@mui/material";
-import { ReactChild } from "react";
-import { SxProps, Theme } from "@mui/material/styles";
+import { ReactNode } from "react";
 
-export interface IFOCardWithTextFieldProps extends CardProps {
-  testID: `card-${string}`;
-  actions?: ReactChild;
+export interface IFOCardWithTextFieldProps {
+  testID: `card-textfield-${string}`;
   onSubmit?: React.FormEventHandler;
-  form?: ReactChild;
+  form: ReactNode;
   title?: string;
-  subtitle?: ReactChild | string;
-  firstLink?: ReactChild | string;
-  secondLink?: ReactChild | string;
-  sx?: SxProps<Theme>;
-  buttonPrimary?: ReactChild | string;
-  buttonSecondary?: string;
-  option?: React.ReactElement<any, any>;
-  optionLabel?: string;
+  subheader?: ReactNode | string;
   noValidate?: boolean;
+  buttonSubmitLabel: string;
+  actionStartAdornment?: ReactNode;
+  actionEndAdornment?: ReactNode;
 }

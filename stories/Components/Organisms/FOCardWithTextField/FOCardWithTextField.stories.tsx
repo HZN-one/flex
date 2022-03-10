@@ -22,44 +22,69 @@ const Template: Story<IFOCardWithTextFieldProps> = props => (
 export const Default = Template.bind({});
 
 Default.args = {
+  title: "Forgot Password",
+  subheader:
+    "Please type your company email address and we’ll send an email notification with reset link to change your password.",
+  form: (
+    <FATextField
+      css={{}}
+      testID="input-signIn"
+      required
+      fullWidth
+      variant="standard"
+      type="email"
+      label={"Company email"}
+      placeholder="Input company email"
+    />
+  ),
+  buttonSubmitLabel: "Send Reset Password Link",
+};
+
+export const WithActionAdornment = Template.bind({});
+
+WithActionAdornment.args = {
   title: "Sign In",
-  subtitle: (
+  subheader: (
     <>
       To continue, please sign in to <b>Horizon</b> platform.
     </>
   ),
   form: (
-    <Box height="80px" sx={{ m: "1 0" }}>
-      <FATextField
-        css={{}}
-        testID="input-signIn"
-        required
-        fullWidth
-        variant="standard"
-        type="email"
-        label={"Company email"}
-        placeholder="Input company email"
-        helperText="Password contains 8 alfanumeric characters with one capital (A-Z) and one special characters (!@#$%^&*.)"
-      />
+    <FATextField
+      css={{}}
+      testID="input-signIn"
+      required
+      fullWidth
+      variant="standard"
+      type="email"
+      label={"Company email"}
+      placeholder="Input company email"
+    />
+  ),
+  buttonSubmitLabel: "Sign In",
+  actionStartAdornment: (
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "flex-end",
+        p: 1,
+      }}
+    >
+      <FAButton variant="text" size="small" color="info" testID="button-card">
+        Link
+      </FAButton>
     </Box>
   ),
-  firstLink: (
-    <FAButton sx={{ mt: 2 }} variant="text" size="small" testID="button-card">
-      Link
-    </FAButton>
-  ),
-  secondLink: (
-    <FAButton variant="text" size="small" testID="button-card">
-      Link
-    </FAButton>
-  ),
-};
-
-export const withAction = Default.bind({});
-withAction.args = {
-  actions: (
-    <FAButton variant="text" size="small" testID="button-card">
-      Link
-    </FAButton>
+  actionEndAdornment: (
+    <Box
+      sx={{
+        display: "flex",
+        p: 1,
+      }}
+    >
+      <FAButton variant="text" size="small" color="info" testID="button-card">
+        Link
+      </FAButton>
+    </Box>
   ),
 };

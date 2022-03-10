@@ -64,16 +64,17 @@ Auth.args = {
     href: "/register",
   },
   linkComponent: "a",
+  logo: true,
 };
 
 export const WithCustomLogo = Template.bind({});
 
 WithCustomLogo.args = {
   headerType: "auth",
-  logo: (
+  companyLogo: (
     <img
       src={DUMMY_COMPANY_IMAGE_URL}
-      style={{ width: "100%", objectFit: "contain" }}
+      style={{ width: "100%", objectFit: "contain", objectPosition: "left" }}
     />
   ),
   buttonLogin: {

@@ -1,11 +1,10 @@
 import { ReactNode } from "react";
-import { CardProps, TypographyTypeMap } from "@mui/material";
+import { CardProps, CardHeaderProps, CardContentProps } from "@mui/material";
 
 export interface IFMCardProps extends CardProps {
   testID: `card-${string}`;
-  actions?: ReactNode;
-  title?: string;
-  titleTypographyVariant?: TypographyTypeMap["props"]["variant"];
-  subtitle?: string | ReactNode;
-  subtitleTypographyVariant?: TypographyTypeMap["props"]["variant"];
+  actions?: Omit<CardContentProps, "sx">;
+  content?: Omit<CardContentProps, "sx" | "children">;
+  header?: Omit<CardHeaderProps, "sx">;
+  children?: ReactNode;
 }
