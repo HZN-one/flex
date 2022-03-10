@@ -14,6 +14,7 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextFieldProps) => {
     subheader,
     title,
     buttonSubmitLabel,
+    buttonSubmitState,
     noValidate,
     actionStartAdornment,
     actionEndAdornment,
@@ -54,6 +55,7 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextFieldProps) => {
           variant="contained"
           type="submit"
           fullWidth
+          {...buttonSubmitState}
         >
           {buttonSubmitLabel}
         </FAButton>

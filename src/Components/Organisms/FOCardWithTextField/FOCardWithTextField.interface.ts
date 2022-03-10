@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 
+import { IFAButtonProps } from "../../Atoms/FAButton/FAButton.interface";
+
 export interface IFOCardWithTextFieldProps {
   testID: `card-textfield-${string}`;
   onSubmit?: React.FormEventHandler;
@@ -8,6 +10,7 @@ export interface IFOCardWithTextFieldProps {
   subheader?: ReactNode | string;
   noValidate?: boolean;
   buttonSubmitLabel: string;
+  buttonSubmitState?: Pick<IFAButtonProps, "isLoading" | "disabled">;
   actionStartAdornment?: ReactNode;
   actionEndAdornment?: ReactNode;
 }
