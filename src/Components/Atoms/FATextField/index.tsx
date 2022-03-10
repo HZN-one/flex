@@ -42,11 +42,11 @@ export const FATextField = memo(
         helperText={helperText}
         error={error}
         placeholder={placeholder}
-        {...materialUIProps}
         InputProps={{
           startAdornment: startAdornment,
           endAdornment: endAdornment,
         }}
+        {...materialUIProps}
       />
     );
   })
