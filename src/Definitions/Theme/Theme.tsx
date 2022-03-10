@@ -548,6 +548,19 @@ export const baseTheme = createTheme({
         }),
       },
     },
+    MuiAutocomplete: {
+      styleOverrides: {
+        root: sx({
+          "& .MuiOutlinedInput-root.MuiInputBase-sizeSmall.MuiAutocomplete-inputRoot":
+            {
+              padding: 0,
+              "& .MuiAutocomplete-input.MuiInputBase-inputSizeSmall": {
+                padding: "14px",
+              },
+            },
+        }),
+      },
+    },
     MuiTextField: {
       defaultProps: {
         InputLabelProps: { shrink: true },
