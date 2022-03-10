@@ -289,7 +289,7 @@ export const baseTheme = createTheme({
       },
       styleOverrides: {
         root: sx({
-          borderRadius: 3,
+          borderRadius: 2,
         }),
       },
     },
