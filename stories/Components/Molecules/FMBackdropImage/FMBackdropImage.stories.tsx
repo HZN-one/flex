@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { FMBackdropImage } from "@Molecules";
 
-import { FAButton } from "@Atoms/FAButton";
+import { FAButton } from "@Atoms";
+import { FMBackdropImage } from "@Molecules";
 
 import { DUMMY_COMPANY_IMAGE_URL } from "@Definitions/constants";
 
