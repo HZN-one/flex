@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 
 import { IFAButtonProps } from "../../Atoms/FAButton/FAButton.interface";
+import { ElementPosition } from "../../../Types";
 
 export interface IFOCardWithTextFieldProps {
   testID: `card-textfield-${string}`;
@@ -12,7 +13,7 @@ export interface IFOCardWithTextFieldProps {
   buttonSubmitLabel: string;
   buttonSubmitState?: Pick<IFAButtonProps, "isLoading" | "disabled">;
   buttonSubmitStyle?: Pick<IFAButtonProps, "size"> & {
-    position?: "start" | "center" | "end";
+    position?: ElementPosition;
   };
   actionStartAdornment?: ReactNode;
   actionEndAdornment?: ReactNode;

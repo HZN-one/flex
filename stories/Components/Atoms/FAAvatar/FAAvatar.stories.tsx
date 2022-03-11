@@ -33,9 +33,9 @@ const Template: Story<IFAAvatarProps> = (props: IFAAvatarProps) => (
 );
 
 Template.decorators = [
-  StoryDecoractors => (
+  StoryDecorators => (
     <Stack direction="row" spacing={3}>
-      {StoryDecoractors()}
+      {StoryDecorators()}
     </Stack>
   ),
 ];

@@ -83,14 +83,14 @@ WithActionAdornment.args = {
 export const withButtonSubmitCustomization = Template.bind({});
 
 withButtonSubmitCustomization.decorators = [
-  StoryDecoractors => (
+  StoryDecorators => (
     <>
       <Stack spacing={3}>
         <Box>
           <FATypography testID="typography-button-loading" variant="h5" mb={2}>
             Loading
           </FATypography>
-          {StoryDecoractors({
+          {StoryDecorators({
             args: {
               testID: "card-textfield-button-login",
               buttonSubmitState: { isLoading: true },
@@ -103,7 +103,7 @@ withButtonSubmitCustomization.decorators = [
           <FATypography testID="typography-button-styled" variant="h5" mb={2}>
             Styled
           </FATypography>
-          {StoryDecoractors({
+          {StoryDecorators({
             args: {
               testID: "card-textfield-button-styled",
               form,

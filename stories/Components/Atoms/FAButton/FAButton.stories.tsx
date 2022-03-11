@@ -126,7 +126,7 @@ Default.parameters = {
 export const Loading = Template.bind({});
 
 Loading.decorators = [
-  StoryDecoractors => {
+  StoryDecorators => {
     const [isLoading, setIsLoading] = React.useState(true);
     return (
       <>
@@ -148,7 +148,7 @@ Loading.decorators = [
         />
 
         <Box mt={2}>
-          {StoryDecoractors({
+          {StoryDecorators({
             args: {
               testID: "button-loading",
               isLoading,

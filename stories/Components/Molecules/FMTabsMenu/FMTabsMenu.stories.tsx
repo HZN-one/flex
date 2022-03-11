@@ -42,7 +42,7 @@ withMaxWidthWrapper.args = {
 };
 
 withMaxWidthWrapper.decorators = [
-  StoryDecoractors => <Box maxWidth={200}>{StoryDecoractors()}</Box>,
+  StoryDecorators => <Box maxWidth={200}>{StoryDecorators()}</Box>,
 ];
 
 export const withTabDisabled = Template.bind({});
@@ -55,7 +55,7 @@ withTabDisabled.args = {
 export const withContent = Template.bind({});
 
 withContent.decorators = [
-  StoryDecoractors => {
+  StoryDecorators => {
     const [activeIndex, setActiveIndex] = React.useState(0);
     return (
       <Box
@@ -66,7 +66,7 @@ withContent.decorators = [
         }}
       >
         <Box maxWidth={200}>
-          {StoryDecoractors({
+          {StoryDecorators({
             args: {
               value: activeIndex,
               testID: "tabs-with-content",

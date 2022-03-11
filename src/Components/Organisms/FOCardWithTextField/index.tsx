@@ -1,8 +1,10 @@
-import React, { memo, useMemo } from "react";
+import React, { memo } from "react";
 import { Box } from "@mui/material";
 
 import { FATypography, FAButton } from "@Atoms";
 import { FMCard } from "@Molecules/FMCard";
+
+import { getFlexJustifyContent } from "@Definitions/helpers";
 
 import { IFOCardWithTextFieldProps } from "./FOCardWithTextField.interface";
 
@@ -20,19 +22,6 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextFieldProps) => {
     actionStartAdornment,
     actionEndAdornment,
   } = props;
-
-  const buttonPosition = useMemo(() => {
-    switch (buttonSubmitStyle?.position) {
-      case "center":
-        return "center";
-      case "start":
-        return "flex-start";
-      case "end":
-        return "flex-end";
-      default:
-        return "flex-start";
-    }
-  }, [buttonSubmitStyle?.position]);
 
   return (
     <FMCard
@@ -64,7 +53,10 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextFieldProps) => {
       <form onSubmit={onSubmit} noValidate={noValidate}>
         <Box sx={{ mt: 1, mb: 4 }}>{form}</Box>
         {actionStartAdornment}
-        <Box display="flex" justifyContent={buttonPosition}>
+        <Box
+          display="flex"
+          justifyContent={getFlexJustifyContent(buttonSubmitStyle?.position)}
+        >
           <FAButton
             testID="button-submit"
             color="primary"
