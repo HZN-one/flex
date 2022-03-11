@@ -48,13 +48,13 @@ export const FOCardWithImage = memo((props: IFOCardWithImageProps) => {
       >
         {image}
       </Box>
-      <Box display="flex" justifyContent="center">
+      <Box display="flex" justifyContent="center" textAlign="center">
         <CardHeader {...header} />
       </Box>
 
       {buttonPrimary && (
         <Box
-          mt={3}
+          mt={4}
           display="flex"
           justifyContent={getFlexJustifyContent(buttonPrimaryPosition)}
         >
