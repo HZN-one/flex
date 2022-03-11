@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FMBackdropImage should match snapshot 1`] = `
+<div>
+  <div
+    aria-hidden="true"
+    class="MuiBackdrop-root css-sox5kk-MuiBackdrop-root"
+    data-testid="backdrop-image-test"
+    style="opacity: 1; webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
+  >
+    <img
+      src="https://www.freepnglogos.com/uploads/netflix-logo-circle-png-5.png"
+    />
+  </div>
+</div>
+`;

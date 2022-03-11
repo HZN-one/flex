@@ -3,7 +3,7 @@
 exports[`FAChip should match snapshot 1`] = `
 <div>
   <div
-    class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1iz24ed-MuiChip-root"
+    class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-gac2fo-MuiChip-root"
     data-testid="chip-example"
   >
     <span

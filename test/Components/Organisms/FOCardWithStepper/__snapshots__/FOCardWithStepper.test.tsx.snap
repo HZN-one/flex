@@ -7,32 +7,26 @@ exports[`FOCardWithImage should match snapshot 1`] = `
     data-testid="card-stepper"
   >
     <div
-      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
     >
       <div
-        class="MuiBox-root css-1xn3edc"
+        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
       >
-        <div
-          class="MuiBox-root css-19idom"
+        <span
+          class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1qvr50w-MuiTypography-root"
         >
-          <h6
-            class="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
-            data-testid="typography-card"
-          >
-            Card Title
-          </h6>
-        </div>
-        <div
-          class="MuiBox-root css-0"
+          Card Title
+        </span>
+        <span
+          class="MuiTypography-root MuiTypography-body1 MuiCardHeader-subheader css-nrdprl-MuiTypography-root"
         >
-          <span
-            class="MuiTypography-root MuiTypography-subtitle css-adfmws-MuiTypography-root"
-            data-testid="typography-card"
-          >
-            Card Subtilte
-          </span>
-        </div>
+          Card Subtitle
+        </span>
       </div>
+    </div>
+    <div
+      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+    >
       <div
         class="MuiBox-root css-0"
         data-testid="stepper-in-card"
