@@ -43,9 +43,6 @@ const Template: Story<IFOCardWithStepperProps> = props => (
 export const Default = Template.bind({});
 
 Default.args = {
-  cardProps: {
-    title: "Hello World",
-  },
   stepperProps: {
     data: stepperData,
     stepperColumn: 8,
@@ -56,7 +53,6 @@ export const CompleteCardWithStepper = Template.bind({});
 
 CompleteCardWithStepper.args = {
   cardProps: {
-    title: "Register",
     header: {
       title: "Register",
       titleTypographyProps: {
