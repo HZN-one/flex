@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useMemo } from "react";
 import { Box } from "@mui/material";
 
 import { FATypography, FAButton } from "@Atoms";
@@ -15,10 +15,25 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextFieldProps) => {
     title,
     buttonSubmitLabel,
     buttonSubmitState,
+    buttonSubmitStyle,
     noValidate,
     actionStartAdornment,
     actionEndAdornment,
   } = props;
+
+  const buttonPosition = useMemo(() => {
+    switch (buttonSubmitStyle?.position) {
+      case "center":
+        return "center";
+      case "start":
+        return "flex-start";
+      case "end":
+        return "flex-end";
+      default:
+        return "flex-start";
+    }
+  }, [buttonSubmitStyle?.position]);
+
   return (
     <FMCard
       testID={testID}
@@ -49,16 +64,19 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextFieldProps) => {
       <form onSubmit={onSubmit} noValidate={noValidate}>
         <Box sx={{ mt: 1, mb: 4 }}>{form}</Box>
         {actionStartAdornment}
-        <FAButton
-          testID="button-submit"
-          color="primary"
-          variant="contained"
-          type="submit"
-          fullWidth
-          {...buttonSubmitState}
-        >
-          {buttonSubmitLabel}
-        </FAButton>
+        <Box display="flex" justifyContent={buttonPosition}>
+          <FAButton
+            testID="button-submit"
+            color="primary"
+            variant="contained"
+            type="submit"
+            fullWidth={!buttonSubmitStyle?.position}
+            size={buttonSubmitStyle?.size ?? "medium"}
+            {...buttonSubmitState}
+          >
+            {buttonSubmitLabel}
+          </FAButton>
+        </Box>
         {actionEndAdornment}
       </form>
     </FMCard>

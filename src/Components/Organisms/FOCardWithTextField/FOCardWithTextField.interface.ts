@@ -11,6 +11,9 @@ export interface IFOCardWithTextFieldProps {
   noValidate?: boolean;
   buttonSubmitLabel: string;
   buttonSubmitState?: Pick<IFAButtonProps, "isLoading" | "disabled">;
+  buttonSubmitStyle?: Pick<IFAButtonProps, "size"> & {
+    position?: "start" | "center" | "end";
+  };
   actionStartAdornment?: ReactNode;
   actionEndAdornment?: ReactNode;
 }
