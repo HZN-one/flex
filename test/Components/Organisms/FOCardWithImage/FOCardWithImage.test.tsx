@@ -13,7 +13,11 @@ describe("FOCardWithImage", () => {
   it("should match snapshot", () => {
     const { container } = render(
       <FOCardWithImage
-        testID="card-example"
+        header={{
+          title: "Card Image Title",
+          subheader: "Card Image Subheader",
+        }}
+        testID="card-image-example"
         image={<img src={DUMMY_IMAGE_URL} />}
       />
     );
