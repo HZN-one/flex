@@ -4,6 +4,8 @@ import { Box } from "@mui/material";
 import { FATypography, FAButton } from "@Atoms";
 import { FMCard } from "@Molecules/FMCard";
 
+import { getFlexJustifyContent } from "@Definitions/helpers";
+
 import { IFOCardWithTextFieldProps } from "./FOCardWithTextField.interface";
 
 export const FOCardWithTextField = memo((props: IFOCardWithTextFieldProps) => {
@@ -15,10 +17,12 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextFieldProps) => {
     title,
     buttonSubmitLabel,
     buttonSubmitState,
+    buttonSubmitStyle,
     noValidate,
     actionStartAdornment,
     actionEndAdornment,
   } = props;
+
   return (
     <FMCard
       testID={testID}
@@ -49,16 +53,22 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextFieldProps) => {
       <form onSubmit={onSubmit} noValidate={noValidate}>
         <Box sx={{ mt: 1, mb: 4 }}>{form}</Box>
         {actionStartAdornment}
-        <FAButton
-          testID="button-submit"
-          color="primary"
-          variant="contained"
-          type="submit"
-          fullWidth
-          {...buttonSubmitState}
+        <Box
+          display="flex"
+          justifyContent={getFlexJustifyContent(buttonSubmitStyle?.position)}
         >
-          {buttonSubmitLabel}
-        </FAButton>
+          <FAButton
+            testID="button-submit"
+            color="primary"
+            variant="contained"
+            type="submit"
+            fullWidth={!buttonSubmitStyle?.position}
+            size={buttonSubmitStyle?.size ?? "medium"}
+            {...buttonSubmitState}
+          >
+            {buttonSubmitLabel}
+          </FAButton>
+        </Box>
         {actionEndAdornment}
       </form>
     </FMCard>
