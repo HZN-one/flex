@@ -1,13 +1,11 @@
+import { ReactChild } from "react";
 import { IFAAvatarProps } from "@Atoms/FAAvatar/FAAvatar.interface";
 import { IFAButtonProps } from "@Atoms/FAButton/FAButton.interface";
 
 export interface IFMViewPicture {
   testID: `view-picture-${string}`;
   label: string;
-  img: {
-    src: string;
-    alt: string;
-  };
+  children: ReactChild;
   avatar?: Omit<IFAAvatarProps, "testID">;
   button?: Omit<
     IFAButtonProps,

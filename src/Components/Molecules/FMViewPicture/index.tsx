@@ -1,12 +1,14 @@
 import React, { memo, useState } from "react";
+
 import { Box } from "@mui/material";
 
-import { IFMViewPicture } from "./FMViewPicture.interface";
 import { FAAvatar, FAButton } from "@Atoms";
 import { FMBackdropImage } from "@Molecules/FMBackdropImage";
 
+import { IFMViewPicture } from "./FMViewPicture.interface";
+
 export const FMViewPicture = memo((props: IFMViewPicture) => {
-  const { testID, label, avatar, button, img } = props;
+  const { testID, label, avatar, button, children } = props;
   const [open, setOpen] = useState(false);
   const handleClose = () => {
     setOpen(false);
@@ -37,7 +39,7 @@ export const FMViewPicture = memo((props: IFMViewPicture) => {
         open={open}
         handleClose={handleClose}
       >
-        <img src={img.src} alt={img.alt} />
+        {children}
       </FMBackdropImage>
     </Box>
   );
