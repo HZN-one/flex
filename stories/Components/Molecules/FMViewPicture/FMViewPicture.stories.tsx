@@ -1,7 +1,7 @@
 import React from "react";
+import { Meta } from "@storybook/react";
 
 import { FMViewPicture } from "@Molecules";
-import { Meta } from "@storybook/react";
 
 import { DUMMY_COMPANY_IMAGE_URL } from "@Definitions/constants";
 
