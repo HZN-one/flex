@@ -8,3 +8,4 @@ export * from "./FMLabelValue";
 export * from "./FMTabsMenu";
 export * from "./FMInputAvatar";
 export * from "./FMBackdropImage";
+export * from "./FMViewPicture";
