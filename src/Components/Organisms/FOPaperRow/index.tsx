@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
 
 import { FATypography } from "@Atoms";
 
@@ -20,15 +21,15 @@ export const FOPaperRow = (props: IFOPaperRowProps) => {
 
   return (
     <Paper className="flex-paper-2" sx={{ position: "relative" }}>
-      <Box
-        display="flex"
-        gap={3}
+      <Grid
+        container
+        spacing={3}
         sx={{ width: `calc(100% - ${actionWidth})` }}
         overflow="auto"
       >
         {items.map((item, idx) => {
           return (
-            <Box key={idx}>
+            <Grid item xs="auto" key={idx}>
               <Box mb={1}>
                 <FATypography
                   testID="typography-paper-row-item-title"
@@ -48,10 +49,10 @@ export const FOPaperRow = (props: IFOPaperRowProps) => {
               ) : (
                 <Box>{item.children}</Box>
               )}
-            </Box>
+            </Grid>
           );
         })}
-      </Box>
+      </Grid>
       {actions && (
         <Box
           ref={actionRef}
