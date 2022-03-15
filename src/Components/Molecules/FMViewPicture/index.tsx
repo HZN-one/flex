@@ -3,7 +3,9 @@ import React, { memo, useState } from "react";
 import { Box } from "@mui/material";
 
 import { FAAvatar, FAButton } from "@Atoms";
-import { FMBackdropImage } from "@Molecules/FMBackdropImage";
+import { FMBackdropImage } from "@Molecules";
+
+import { DEFAULT_IMAGE_INPUT_AVATAR } from "@Definitions/constants";
 
 import { IFMViewPicture } from "./FMViewPicture.interface";
 
@@ -20,7 +22,8 @@ export const FMViewPicture = memo((props: IFMViewPicture) => {
     <Box data-testid={testID} sx={{ display: "flex", alignItems: "center" }}>
       <FAAvatar
         testID="avatar-profile-picture"
-        sx={{ height: "90px", width: "90px", mr: 3 }}
+        src={avatar?.src ?? DEFAULT_IMAGE_INPUT_AVATAR}
+        sx={{ height: 90, width: 90, mr: 3 }}
         {...avatar}
       />
       <FAButton

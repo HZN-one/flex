@@ -312,7 +312,7 @@ export const baseTheme = createTheme({
       styleOverrides: {
         root: sx({
           px: 0,
-          py: 3,
+          py: 4,
           "&:first-of-type": {
             pt: 0,
           },
