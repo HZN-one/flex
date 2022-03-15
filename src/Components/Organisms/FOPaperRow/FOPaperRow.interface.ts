@@ -6,5 +6,5 @@ export interface IFOPaperRowProps {
     title: string;
     children: ReactNode;
   }[];
-  actions: ReactNode;
+  actions?: ReactNode;
 }
