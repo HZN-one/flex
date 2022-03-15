@@ -3,30 +3,34 @@
 exports[`FOPaperRow should match snapshot 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 flex-paper-2 css-k6d2hm-MuiPaper-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 flex-paper-2 css-1ps6pg7-MuiPaper-root"
   >
     <div
-      class="MuiBox-root css-1miaeq2"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-wrap-xs-nowrap css-xgstj9-MuiGrid-root"
     >
       <div
-        class="MuiBox-root css-0"
+        class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-spacing-xs-3 MuiGrid-wrap-xs-nowrap MuiGrid-grid-xs-true css-mo67vd-MuiGrid-root"
       >
         <div
-          class="MuiBox-root css-19idom"
+          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
         >
-          <span
-            class="MuiTypography-root MuiTypography-overline css-1hbyad5-MuiTypography-root"
-            data-testid="typography-paper-row-item-title"
+          <div
+            class="MuiBox-root css-19idom"
           >
-            Title
-          </span>
+            <span
+              class="MuiTypography-root MuiTypography-overline css-1hbyad5-MuiTypography-root"
+              data-testid="typography-paper-row-item-title"
+            >
+              Title
+            </span>
+          </div>
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+            data-testid="typography-paper-row-item-children"
+          >
+            Description
+          </p>
         </div>
-        <p
-          class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-          data-testid="typography-paper-row-item-children"
-        >
-          Description
-        </p>
       </div>
     </div>
   </div>
