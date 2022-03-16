@@ -8,7 +8,7 @@ import { FMAlert } from "@Molecules";
 
 import { render } from "@testing-library/react";
 
-describe("FMCard", () => {
+describe("FMAlert", () => {
   it("should match snapshot", () => {
     const { container } = render(<FMAlert testID="alert-example" />);
     expect(container).toMatchSnapshot();
