@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Meta, Story } from "@storybook/react";
 import { DateRange } from "@mui/lab";
+import { Stack } from "@mui/material";
 
 import { FMDateRangePicker } from "@Molecules";
 
@@ -31,6 +32,37 @@ Default.decorators = [
         setValue,
       },
     });
+  },
+];
+
+export const Sizes = Template.bind({});
+
+Sizes.decorators = [
+  StoryDecorators => {
+    const [value, setValue] = useState<DateRange<Date>>([null, null]);
+
+    return (
+      <Stack spacing={2} direction="row">
+        {StoryDecorators({
+          args: {
+            testID: "date-range-picker-small",
+            label: "Small Date Picker",
+            value,
+            setValue,
+            size: "small",
+          },
+        })}
+        {StoryDecorators({
+          args: {
+            testID: "date-range-picker-medium",
+            label: "Medium Date Picker",
+            value,
+            setValue,
+            size: "medium",
+          },
+        })}
+      </Stack>
+    );
   },
 ];
 

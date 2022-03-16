@@ -18,11 +18,12 @@ export const FMDateRangePicker = (props: IFMDateRangePicker) => {
   const {
     testID,
     label = "Pick Date",
-    calendars,
-    renderFormat,
+    calendars = 2,
+    renderFormat = "dd MMM",
     value,
     setValue,
     fullWidth,
+    size,
   } = props;
 
   const startDate = value[0] ?? new Date();
@@ -33,7 +34,7 @@ export const FMDateRangePicker = (props: IFMDateRangePicker) => {
       <DateRangePicker
         data-testid={testID}
         value={value}
-        calendars={calendars ?? 2}
+        calendars={calendars}
         onChange={newValue => setValue(newValue)}
         renderInput={(startProps, endProps) => (
           <Box
@@ -58,10 +59,11 @@ export const FMDateRangePicker = (props: IFMDateRangePicker) => {
               testID="input-date-range-picker"
               fullWidth
               label={label}
+              size={size}
               value={
-                format(startDate, renderFormat ?? "dd MMM") +
+                format(startDate, renderFormat) +
                 " - " +
-                format(endDate, renderFormat ?? "dd MMM")
+                format(endDate, renderFormat)
               }
               adornmentPosition="end"
               adornment={
