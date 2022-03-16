@@ -13,6 +13,7 @@ export const FATextField = memo(
       variants,
       required,
       disabled,
+      readOnly,
       size,
       helperText,
       error,
@@ -44,6 +45,7 @@ export const FATextField = memo(
         InputProps={{
           startAdornment: startAdornment,
           endAdornment: endAdornment,
+          readOnly,
         }}
         {...materialUIProps}
       />
