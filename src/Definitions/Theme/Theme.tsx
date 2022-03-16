@@ -6,6 +6,17 @@ declare module "@mui/material/styles" {
     bluegrey: Palette["grey"];
     accent: Palette["info"];
   }
+
+  interface PaletteColorOptions {
+    main: string;
+    dark: string;
+    light: string;
+    contrastText?: string;
+    darkText?: string;
+    lightBg?: string;
+    border?: string;
+  }
+
   // allow configuration using `createTheme`
   interface PaletteOptions {
     bluegrey?: PaletteOptions["grey"];
@@ -90,6 +101,45 @@ export const baseTheme = createTheme({
           m: 0,
           p: 0,
           minHeight: 0,
+        }),
+      },
+    },
+    MuiAlert: {
+      defaultProps: {
+        elevation: 1,
+      },
+      styleOverrides: {
+        root: sx({
+          alignItems: "center",
+          pt: 1.5,
+          pb: 1,
+          borderRadius: 1,
+        }),
+        action: sx({
+          pt: 0,
+        }),
+        icon: ({ ownerState }) =>
+          sx({
+            color: `${ownerState.color}.main`,
+            fontSize: "1.25rem",
+          }),
+        message: sx({
+          lineHeight: "1.25rem",
+        }),
+        standard: ({ ownerState }) =>
+          sx({
+            border: "1px solid",
+            borderColor: `${ownerState.color}.border`,
+            backgroundColor: `${ownerState.color}.lightBg`,
+            color: `${ownerState.color}.darkText`,
+          }),
+      },
+    },
+    MuiAlertTitle: {
+      styleOverrides: {
+        root: sx({
+          typography: "subtitleBold",
+          mb: 1,
         }),
       },
     },
@@ -1020,23 +1070,37 @@ export const baseTheme = createTheme({
       main: "#3B82F6",
       dark: "#1D4ED8",
       light: "#629BF8",
+      contrastText: "#FFFFFF",
+      darkText: "#234E94",
+      lightBg: "#EBF2FE",
+      border: "#9CC0FA",
     },
     error: {
       main: "#F43F5E",
       dark: "#BE123C",
       light: "#9CC0FA",
+      contrastText: "#FFFFFF",
+      darkText: "#922638",
+      lightBg: "#FEECEF",
+      border: "#F99EAE",
     },
     warning: {
       main: "#F59E0B",
       dark: "#B45309",
       light: "#FBBF24",
       contrastText: "#FFFFFF",
+      darkText: "#935F07",
+      lightBg: "#FEF5E7",
+      border: "#F9CE84",
     },
     success: {
       main: "#22C55E",
       dark: "#15803D",
       light: "#4ED17E",
       contrastText: "#FFFFFF",
+      darkText: "#147638",
+      lightBg: "#E9F9EF",
+      border: "#90E1AE",
     },
     text: {
       primary: "#221F20",
