@@ -1,4 +1,5 @@
 export * from "./FMAccordion";
+export * from "./FMAlert";
 export * from "./FMBackdropImage";
 export * from "./FMCard";
 export * from "./FMCircularProgress";
