@@ -16,6 +16,7 @@ import { IFMDateRangePicker } from "./FMDateRangePicker.interface";
 
 export const FMDateRangePicker = (props: IFMDateRangePicker) => {
   const {
+    testID,
     label = "Pick Date",
     calendars,
     renderFormat,
@@ -30,6 +31,7 @@ export const FMDateRangePicker = (props: IFMDateRangePicker) => {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <DateRangePicker
+        data-testid={testID}
         value={value}
         calendars={calendars ?? 2}
         onChange={newValue => setValue(newValue)}
