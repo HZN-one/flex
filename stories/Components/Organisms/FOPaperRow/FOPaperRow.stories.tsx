@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
 
-import { FAChip, FAIcon, FAIconButton } from "@Atoms";
+import { FAButton, FAChip, FAIcon, FAIconButton } from "@Atoms";
 import { FOPaperRow } from "@Organisms";
 
 import { IFOPaperRowProps } from "@Organisms/FOPaperRow/FOPaperRow.interface";
@@ -53,6 +53,22 @@ WithAction.args = {
         arrow_forward_ios
       </FAIcon>
     </FAIconButton>
+  ),
+};
+
+export const ItemStretch = Template.bind({});
+
+ItemStretch.args = {
+  isStretch: true,
+  actions: (
+    <FAButton
+      testID="button-actions"
+      variant="outlined"
+      color="secondary"
+      size="small"
+    >
+      View Order
+    </FAButton>
   ),
 };
 

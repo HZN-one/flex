@@ -24,6 +24,7 @@ export const FMDateRangePicker = (props: IFMDateRangePicker) => {
     setValue,
     fullWidth,
     size,
+    margin,
   } = props;
 
   const startDate = value[0] ?? new Date();
@@ -60,6 +61,7 @@ export const FMDateRangePicker = (props: IFMDateRangePicker) => {
               fullWidth
               label={label}
               size={size}
+              margin={margin}
               value={
                 format(startDate, renderFormat) +
                 " - " +
@@ -67,14 +69,9 @@ export const FMDateRangePicker = (props: IFMDateRangePicker) => {
               }
               adornmentPosition="end"
               adornment={
-                <FAIconButton testID="icon-button-date-range">
-                  <FAIcon
-                    testID="icon-date-range"
-                    baseClassName="material-icons"
-                  >
-                    date_range
-                  </FAIcon>
-                </FAIconButton>
+                <FAIcon testID="icon-date-range" baseClassName="material-icons">
+                  date_range
+                </FAIcon>
               }
               readOnly
             />

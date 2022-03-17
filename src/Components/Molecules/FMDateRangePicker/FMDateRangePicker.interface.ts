@@ -14,4 +14,5 @@ export interface IFMDateRangePicker {
   renderFormat?: string;
   fullWidth?: boolean;
   size?: IFATextFieldProps["size"];
+  margin?: IFATextFieldProps["margin"];
 }
