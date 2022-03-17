@@ -1,6 +1,8 @@
 import React, { memo } from "react";
 import { Box } from "@mui/material";
+
 import { FOHeader, FOSideBar } from "@Organisms";
+
 import { IFLDefaultProps } from "./FLDefault.interface";
 
 export const FLDefault = memo((props: IFLDefaultProps) => {
@@ -11,7 +13,6 @@ export const FLDefault = memo((props: IFLDefaultProps) => {
       <FOHeader
         testID="header-layout-default"
         headerType="default"
-        position="fixed"
         {...header}
       />
       <FOSideBar testID="sidebar-layout-default" {...sidebarProps} />

@@ -29,6 +29,7 @@ Authentication.args = {
       href: "/register",
     },
     linkComponent: "a",
+    logo: true,
   },
   children: "Children component",
   childrenGridWidth: 6,

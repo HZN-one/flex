@@ -9,6 +9,7 @@ export interface IFATextFieldProps extends Omit<StandardTextFieldProps, "sx"> {
   variants?: "standard" | "outlined" | "filled";
   required?: boolean;
   disabled?: boolean;
+  readOnly?: boolean;
   size?: "small" | "medium";
   error?: boolean;
   placeholder?: string;

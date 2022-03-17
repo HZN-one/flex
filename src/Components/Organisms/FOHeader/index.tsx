@@ -5,7 +5,7 @@ import { FMSearch } from "@Molecules";
 import { IFOHeaderProps } from "./FOHeader.interface";
 
 export const FOHeader = memo((props: IFOHeaderProps) => {
-  const { testID, logo, position, headerType } = props;
+  const { testID, logo, companyLogo, position = "fixed", headerType } = props;
 
   return (
     <AppBar
@@ -35,6 +35,13 @@ export const FOHeader = memo((props: IFOHeaderProps) => {
                   iconColor="#D8232A"
                   textColor="#1A1919"
                 />
+              </Box>
+            </Grid>
+          )}
+          {companyLogo && (
+            <Grid item xs>
+              <Box display="flex" minWidth={200} maxWidth={200} maxHeight={60}>
+                {companyLogo}
               </Box>
             </Grid>
           )}

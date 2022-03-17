@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useEffect } from "react";
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
@@ -10,22 +10,32 @@ import { FAButton, FAIcon } from "@Atoms";
 import { IFMStepperProps } from "./FMStepper.interface";
 
 export const FMStepper = memo((props: IFMStepperProps) => {
-  const { testID, data, stepperColumn } = props;
+  const { testID, data, stepperColumn, isControlled, onSubmitFinish } = props;
   const [activeStep, setActiveStep] = React.useState(0);
 
   const isLastStep = data.length - 1 === activeStep;
+  const isFirstStep = activeStep === 0;
 
   const handleNext = () => {
-    data[activeStep].onSubmitNext();
+    const onSubmitNext = data[activeStep].onSubmitNext;
+    if (isLastStep) return;
 
-    if (!isLastStep) {
+    if (onSubmitNext) onSubmitNext({ activeStep, setActiveStep });
+
+    if (!isControlled) {
       setActiveStep(prevActiveStep => prevActiveStep + 1);
     }
   };
 
   const handleBack = () => {
-    data[activeStep].onSubmitBack();
-    setActiveStep(prevActiveStep => prevActiveStep - 1);
+    const onSubmitBack = data[activeStep].onSubmitBack;
+    if (isFirstStep) return;
+
+    if (onSubmitBack) onSubmitBack({ activeStep, setActiveStep });
+
+    if (!isControlled) {
+      setActiveStep(prevActiveStep => prevActiveStep - 1);
+    }
   };
 
   if (data.length) {
@@ -70,7 +80,19 @@ export const FMStepper = memo((props: IFMStepperProps) => {
             <FAButton
               testID={`button-${testID}`}
               size="small"
-              onClick={handleNext}
+              onClick={isLastStep ? onSubmitFinish : handleNext}
+              {...(!isLastStep && {
+                endIcon: (
+                  <FAIcon
+                    testID={`icon-${testID}-arrow-back`}
+                    sx={{
+                      color: "white",
+                    }}
+                  >
+                    arrow_forward_ios
+                  </FAIcon>
+                ),
+              })}
             >
               {data[activeStep].buttonLabel}
             </FAButton>

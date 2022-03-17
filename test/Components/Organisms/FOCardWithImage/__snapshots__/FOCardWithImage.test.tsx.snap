@@ -3,30 +3,41 @@
 exports[`FOCardWithImage should match snapshot 1`] = `
 <div>
   <div
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-s46y68-MuiPaper-root-MuiCard-root"
-    data-testid="card-example"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
+    data-testid="card-image-example"
   >
     <div
       class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
     >
       <div
-        class="MuiBox-root css-12q5dil"
+        class="MuiBox-root css-1dzqdzx"
       >
         <img
           src="https://dummyimage.com/250x180/e5e5e5/e5e5e5.jpg"
         />
       </div>
-      <h5
-        class="MuiTypography-root MuiTypography-h5 css-1n4v9ok-MuiTypography-root"
-        data-testid="typography-launchpad"
-      />
-      <p
-        class="MuiTypography-root MuiTypography-body2 css-8u47tb-MuiTypography-root"
-        data-testid="typography-launchpad"
-      />
       <div
-        class="MuiBox-root css-1pq59s1"
-      />
+        class="MuiBox-root css-l7tphn"
+      >
+        <div
+          class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+        >
+          <div
+            class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1qvr50w-MuiTypography-root"
+            >
+              Card Image Title
+            </span>
+            <span
+              class="MuiTypography-root MuiTypography-body1 MuiCardHeader-subheader css-nrdprl-MuiTypography-root"
+            >
+              Card Image Subheader
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

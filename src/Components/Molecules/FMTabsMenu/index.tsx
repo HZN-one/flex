@@ -17,6 +17,8 @@ const Tabs = styled(TabsUnstyled)`
   box-shadow: ${baseTheme.shadows[1]};
   border-radius: ${baseTheme.spacing(1)};
   min-width: 200px;
+  background-color: ${baseTheme.palette.common.white};
+  height: fit-content;
 `;
 
 const TabsList = styled(TabsListUnstyled)`

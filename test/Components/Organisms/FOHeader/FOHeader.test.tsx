@@ -13,7 +13,6 @@ describe("FOHeader", () => {
     const { container } = render(
       <FOHeader
         testID="header-example"
-        logo
         position="static"
         headerType="auth"
         buttonLogin={{
@@ -25,6 +24,7 @@ describe("FOHeader", () => {
           href: "/register",
         }}
         linkComponent="a"
+        logo={true}
       />
     );
     expect(container).toMatchSnapshot();

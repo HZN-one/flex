@@ -5,9 +5,23 @@ export interface IFMStepperProps {
   data: Array<{
     title: string;
     children: ReactNode;
-    onSubmitNext: () => void;
-    onSubmitBack: () => void;
+    onSubmitNext?: ({
+      activeStep,
+      setActiveStep,
+    }: {
+      activeStep: number;
+      setActiveStep: (value: number) => void;
+    }) => void;
+    onSubmitBack?: ({
+      activeStep,
+      setActiveStep,
+    }: {
+      activeStep: number;
+      setActiveStep: (value: number) => void;
+    }) => void;
     buttonLabel: string;
   }>;
   stepperColumn: number;
+  isControlled?: boolean;
+  onSubmitFinish?: () => void;
 }

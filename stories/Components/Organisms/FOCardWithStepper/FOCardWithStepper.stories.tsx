@@ -43,9 +43,6 @@ const Template: Story<IFOCardWithStepperProps> = props => (
 export const Default = Template.bind({});
 
 Default.args = {
-  cardProps: {
-    title: "Hello World",
-  },
   stepperProps: {
     data: stepperData,
     stepperColumn: 8,
@@ -56,14 +53,20 @@ export const CompleteCardWithStepper = Template.bind({});
 
 CompleteCardWithStepper.args = {
   cardProps: {
-    title: "Register",
-    titleTypographyVariant: "h3",
-    subtitle: (
-      <>
-        To continue, please register to <strong>Horizon</strong> platform.
-      </>
-    ),
-    subtitleTypographyVariant: "subtitle",
+    header: {
+      title: "Register",
+      titleTypographyProps: {
+        variant: "h3",
+      },
+      subheader: (
+        <>
+          To continue, please register to <strong>Horizon</strong> platform.
+        </>
+      ),
+      subheaderTypographyProps: {
+        variant: "subtitle",
+      },
+    },
   },
   stepperProps: {
     data: stepperData,

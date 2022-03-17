@@ -1,8 +1,8 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react";
-import { Box } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 
-import { FAButton, FATextField } from "@Atoms";
+import { FAButton, FATextField, FATypography } from "@Atoms";
 import { IFOCardWithTextFieldProps } from "@Organisms/FOCardWithTextField/FOCardWithTextField.interface";
 import { FOCardWithTextField } from "@Organisms/FOCardWithTextField";
 
@@ -13,6 +13,19 @@ const meta: Meta = {
 
 export default meta;
 
+const form = (
+  <FATextField
+    css={{}}
+    testID="input-signIn"
+    required
+    fullWidth
+    variant="standard"
+    type="email"
+    label={"Company email"}
+    placeholder="Input company email"
+  />
+);
+
 const Template: Story<IFOCardWithTextFieldProps> = props => (
   <Box maxWidth={560}>
     <FOCardWithTextField {...props} />
@@ -22,44 +35,87 @@ const Template: Story<IFOCardWithTextFieldProps> = props => (
 export const Default = Template.bind({});
 
 Default.args = {
+  title: "Forgot Password",
+  subheader:
+    "Please type your company email address and we’ll send an email notification with reset link to change your password.",
+  form,
+  buttonSubmitLabel: "Send Reset Password Link",
+};
+
+export const WithActionAdornment = Template.bind({});
+
+WithActionAdornment.args = {
   title: "Sign In",
-  subtitle: (
+  subheader: (
     <>
       To continue, please sign in to <b>Horizon</b> platform.
     </>
   ),
-  form: (
-    <Box height="80px" sx={{ m: "1 0" }}>
-      <FATextField
-        css={{}}
-        testID="input-signIn"
-        required
-        fullWidth
-        variant="standard"
-        type="email"
-        label={"Company email"}
-        placeholder="Input company email"
-        helperText="Password contains 8 alfanumeric characters with one capital (A-Z) and one special characters (!@#$%^&*.)"
-      />
+  form,
+  buttonSubmitLabel: "Sign In",
+  actionStartAdornment: (
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "flex-end",
+        p: 1,
+      }}
+    >
+      <FAButton variant="text" size="small" color="info" testID="button-card">
+        Link
+      </FAButton>
     </Box>
   ),
-  firstLink: (
-    <FAButton sx={{ mt: 2 }} variant="text" size="small" testID="button-card">
-      Link
-    </FAButton>
-  ),
-  secondLink: (
-    <FAButton variant="text" size="small" testID="button-card">
-      Link
-    </FAButton>
+  actionEndAdornment: (
+    <Box
+      sx={{
+        display: "flex",
+        p: 1,
+      }}
+    >
+      <FAButton variant="text" size="small" color="info" testID="button-card">
+        Link
+      </FAButton>
+    </Box>
   ),
 };
 
-export const withAction = Default.bind({});
-withAction.args = {
-  actions: (
-    <FAButton variant="text" size="small" testID="button-card">
-      Link
-    </FAButton>
+export const withButtonSubmitCustomization = Template.bind({});
+
+withButtonSubmitCustomization.decorators = [
+  StoryDecorators => (
+    <>
+      <Stack spacing={3}>
+        <Box>
+          <FATypography testID="typography-button-loading" variant="h5" mb={2}>
+            Loading
+          </FATypography>
+          {StoryDecorators({
+            args: {
+              testID: "card-textfield-button-login",
+              buttonSubmitState: { isLoading: true },
+              form,
+              buttonSubmitLabel: "Sign In",
+            },
+          })}
+        </Box>
+        <Box>
+          <FATypography testID="typography-button-styled" variant="h5" mb={2}>
+            Styled
+          </FATypography>
+          {StoryDecorators({
+            args: {
+              testID: "card-textfield-button-styled",
+              form,
+              buttonSubmitLabel: "Register",
+              buttonSubmitStyle: {
+                size: "small",
+                position: "end",
+              },
+            },
+          })}
+        </Box>
+      </Stack>
+    </>
   ),
-};
+];

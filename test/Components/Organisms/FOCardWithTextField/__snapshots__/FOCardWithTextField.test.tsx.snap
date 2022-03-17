@@ -4,40 +4,85 @@ exports[`FOCardWithTextField should match snapshot 1`] = `
 <div>
   <div
     class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bhp9pd-MuiPaper-root-MuiCard-root"
-    data-testid="card-example"
+    data-testid="card-textfield-test"
   >
+    <div
+      class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+    >
+      <div
+        class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+      >
+        <h1
+          class="MuiTypography-root MuiTypography-h3 css-gepadz-MuiTypography-root"
+          data-testid="typography-card-textfield-title"
+        >
+          Forgot Password
+        </h1>
+        <h2
+          class="MuiTypography-root MuiTypography-body1 css-1ts76t1-MuiTypography-root"
+          data-testid="typography-card-textfield-subheader"
+        >
+          Please type your company email address and we’ll send an email notification with reset link to change your password.
+        </h2>
+      </div>
+    </div>
     <div
       class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
     >
-      <h3
-        class="MuiTypography-root MuiTypography-h3 css-1ot9enh-MuiTypography-root"
-        data-testid="typography-signIn"
-      />
-      <p
-        class="MuiTypography-root MuiTypography-body1 css-h9g4i5-MuiTypography-root"
-        data-testid="typography-signIn"
-      />
       <form>
         <div
-          class="MuiBox-root css-0"
-        />
-        <div
-          class="MuiBox-root css-1bvc4cc"
-        />
-        <button
-          class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButtonBase-root  css-79nr1p-MuiButtonBase-root-MuiButton-root"
-          data-testid="button-submit"
-          tabindex="0"
-          type="submit"
+          class="MuiBox-root css-h4qm9t"
         >
-          buttonPrimary
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
-        </button>
+          <div
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+            css="[object Object]"
+            data-testid="input-test"
+          >
+            <label
+              class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink="false"
+              for="mui-1"
+              id="mui-1-label"
+            >
+              Company email
+              <span
+                aria-hidden="true"
+                class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+              >
+                 
+                *
+              </span>
+            </label>
+            <div
+              class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-ghsjzk-MuiInputBase-root-MuiInput-root"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+                id="mui-1"
+                placeholder="Input company email"
+                required=""
+                type="email"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
         <div
-          class="MuiBox-root css-1q7njkh"
-        />
+          class="MuiBox-root css-1w1vbxm"
+        >
+          <button
+            class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButtonBase-root  css-1fu7jd5-MuiButtonBase-root-MuiButton-root"
+            data-testid="button-submit"
+            tabindex="0"
+            type="submit"
+          >
+            submit
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
       </form>
     </div>
   </div>

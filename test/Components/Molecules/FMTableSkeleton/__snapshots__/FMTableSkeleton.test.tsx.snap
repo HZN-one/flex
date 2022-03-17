@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FMTableSkeleton should match snapshot 1`] = `
-<div>
+<table>
   <tbody
     class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
     data-testid="table-skeleton-example"
@@ -95,5 +95,5 @@ exports[`FMTableSkeleton should match snapshot 1`] = `
       </td>
     </tr>
   </tbody>
-</div>
+</table>
 `;

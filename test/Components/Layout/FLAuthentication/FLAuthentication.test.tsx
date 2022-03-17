@@ -24,6 +24,7 @@ describe("FLAuthentication", () => {
             href: "/register",
           },
           linkComponent: "a",
+          logo: true,
         }}
         childrenGridWidth={6}
       >

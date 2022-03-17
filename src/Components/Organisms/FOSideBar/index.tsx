@@ -83,7 +83,7 @@ export const FOSideBar = memo((props: IFOSideBarProps) => {
                       key={path}
                       component={linkComponent}
                       href={path}
-                      selected={path === location.pathname}
+                      selected={location.pathname.includes(path)}
                     >
                       <ListItemText primary={title} />
                     </ListItemButton>

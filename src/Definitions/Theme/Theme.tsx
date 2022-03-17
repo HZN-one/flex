@@ -4,10 +4,23 @@ import type {} from "@mui/lab/themeAugmentation";
 declare module "@mui/material/styles" {
   interface Palette {
     bluegrey: Palette["grey"];
+    accent: Palette["info"];
   }
+
+  interface PaletteColorOptions {
+    main: string;
+    dark: string;
+    light: string;
+    contrastText?: string;
+    darkText?: string;
+    lightBg?: string;
+    border?: string;
+  }
+
   // allow configuration using `createTheme`
   interface PaletteOptions {
     bluegrey?: PaletteOptions["grey"];
+    accent?: PaletteOptions["info"];
   }
   interface TypographyVariants {
     subtitle: React.CSSProperties;
@@ -49,6 +62,14 @@ declare module "@mui/material/Typography" {
 // Create a theme instance.
 export const baseTheme = createTheme({
   components: {
+    MuiBackdrop: {
+      styleOverrides: {
+        root: sx({
+          background: "rgba(0, 0, 0, 0.25)",
+          zIndex: "modal",
+        }),
+      },
+    },
     MuiAccordion: {
       styleOverrides: {
         root: sx({
@@ -83,6 +104,45 @@ export const baseTheme = createTheme({
         }),
       },
     },
+    MuiAlert: {
+      defaultProps: {
+        elevation: 1,
+      },
+      styleOverrides: {
+        root: sx({
+          alignItems: "center",
+          pt: 1.5,
+          pb: 1,
+          borderRadius: 1,
+        }),
+        action: sx({
+          pt: 0,
+        }),
+        icon: ({ ownerState }) =>
+          sx({
+            color: `${ownerState.color}.main`,
+            fontSize: "1.25rem",
+          }),
+        message: sx({
+          lineHeight: "1.25rem",
+        }),
+        standard: ({ ownerState }) =>
+          sx({
+            border: "1px solid",
+            borderColor: `${ownerState.color}.border`,
+            backgroundColor: `${ownerState.color}.lightBg`,
+            color: `${ownerState.color}.darkText`,
+          }),
+      },
+    },
+    MuiAlertTitle: {
+      styleOverrides: {
+        root: sx({
+          typography: "subtitleBold",
+          mb: 1,
+        }),
+      },
+    },
     MuiAppBar: {
       styleOverrides: {
         root: {
@@ -109,11 +169,11 @@ export const baseTheme = createTheme({
       },
     },
     MuiCssBaseline: {
-      styleOverrides: {
-        body: sx({
+      styleOverrides: sx({
+        body: {
           p: 3,
-        }),
-      },
+        },
+      }),
     },
     MuiPaginationItem: {
       styleOverrides: {
@@ -130,6 +190,12 @@ export const baseTheme = createTheme({
           borderRadius: "50%",
           typography: "bodySemiBold2",
         }),
+      },
+    },
+    MuiLoadingButton: {
+      defaultProps: {
+        disableElevation: true,
+        variant: "contained",
       },
     },
     MuiButton: {
@@ -220,7 +286,7 @@ export const baseTheme = createTheme({
           lineHeight: "20px",
         }),
         root: sx({
-          borderRadius: "8px",
+          borderRadius: 2,
           "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
             borderColor: "secondary.main",
             borderWidth: "1px",
@@ -276,16 +342,49 @@ export const baseTheme = createTheme({
       },
     },
     MuiCard: {
+      defaultProps: {
+        className: "flex-paper-3",
+      },
       styleOverrides: {
-        root: {
-          borderRadius: "8px",
-        },
+        root: sx({
+          borderRadius: 2,
+        }),
+      },
+    },
+    MuiCardActions: {
+      styleOverrides: {
+        root: sx({
+          p: 0,
+        }),
       },
     },
     MuiCardContent: {
       styleOverrides: {
         root: sx({
-          padding: 3,
+          px: 0,
+          py: 4,
+          "&:first-of-type": {
+            pt: 0,
+          },
+          "&:last-of-type": {
+            pb: 0,
+          },
+        }),
+      },
+    },
+    MuiCardHeader: {
+      defaultProps: {
+        subheaderTypographyProps: {
+          variant: "body1",
+          color: "text.secondary",
+        },
+      },
+      styleOverrides: {
+        root: sx({
+          p: 0,
+        }),
+        subheader: sx({
+          mt: 1,
         }),
       },
     },
@@ -298,6 +397,9 @@ export const baseTheme = createTheme({
           },
           "&.MuiSelect-iconOutlined": {
             color: "text.primary",
+          },
+          "&.MuiTablePagination-selectIcon": {
+            color: "inherit",
           },
         }),
       },
@@ -315,8 +417,7 @@ export const baseTheme = createTheme({
         },
         root: sx({
           "&.MuiInput-underline": {
-            marginTop: "21px",
-            marginBottom: "3px",
+            mt: "21px",
             ":before": {
               borderBottomColor: "grey.300",
             },
@@ -505,6 +606,19 @@ export const baseTheme = createTheme({
         }),
       },
     },
+    MuiAutocomplete: {
+      styleOverrides: {
+        root: sx({
+          "& .MuiOutlinedInput-root.MuiInputBase-sizeSmall.MuiAutocomplete-inputRoot":
+            {
+              padding: 0,
+              "& .MuiAutocomplete-input.MuiInputBase-inputSizeSmall": {
+                padding: "14px",
+              },
+            },
+        }),
+      },
+    },
     MuiTextField: {
       defaultProps: {
         InputLabelProps: { shrink: true },
@@ -518,12 +632,6 @@ export const baseTheme = createTheme({
           "&.flex-textfield-placeholder": {
             "& .MuiSelect-select": {
               color: "text.secondary",
-            },
-          },
-          input: {
-            "&::placeholder": {
-              color: "text.secondary",
-              opacity: 1,
             },
           },
         }),
@@ -556,11 +664,6 @@ export const baseTheme = createTheme({
     },
     MuiInputAdornment: {
       styleOverrides: {
-        root: sx({
-          "& .MuiIcon-root": {
-            color: "text.primary",
-          },
-        }),
         standard: {
           marginBottom: "12px",
           "& .MuiIcon-root": {
@@ -607,15 +710,26 @@ export const baseTheme = createTheme({
     },
     MuiFormControl: {
       styleOverrides: {
-        root: {
+        root: sx({
           "& > label > span": {
-            color: "red",
+            color: "error.main",
           },
           ".MuiSelect-nativeInput": {
             border: "1px solid red",
             color: "red",
           },
-        },
+          "&.flex-textfield-no-label": {
+            "& .MuiInput-root": {
+              mt: 0,
+            },
+          },
+          input: {
+            "&::placeholder": {
+              color: "text.secondary",
+              opacity: 1,
+            },
+          },
+        }),
         marginNormal: sx({
           mt: 0,
           mb: 1.875,
@@ -682,6 +796,9 @@ export const baseTheme = createTheme({
           },
           "&.flex-paper-2": {
             p: 2,
+          },
+          "&.flex-paper-3": {
+            p: 3,
           },
         }),
       },
@@ -826,6 +943,15 @@ export const baseTheme = createTheme({
     "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
   ],
   spacing: 8,
+  zIndex: {
+    mobileStepper: 1000,
+    speedDial: 1050,
+    appBar: 1100,
+    drawer: 1200,
+    modal: 1300,
+    snackbar: 1400,
+    tooltip: 1500,
+  },
   typography: {
     fontFamily: ['"Inter"', "sans-serif"].join(","),
     htmlFontSize: 16,
@@ -944,23 +1070,37 @@ export const baseTheme = createTheme({
       main: "#3B82F6",
       dark: "#1D4ED8",
       light: "#629BF8",
+      contrastText: "#FFFFFF",
+      darkText: "#234E94",
+      lightBg: "#EBF2FE",
+      border: "#9CC0FA",
     },
     error: {
       main: "#F43F5E",
       dark: "#BE123C",
       light: "#9CC0FA",
+      contrastText: "#FFFFFF",
+      darkText: "#922638",
+      lightBg: "#FEECEF",
+      border: "#F99EAE",
     },
     warning: {
       main: "#F59E0B",
       dark: "#B45309",
       light: "#FBBF24",
       contrastText: "#FFFFFF",
+      darkText: "#935F07",
+      lightBg: "#FEF5E7",
+      border: "#F9CE84",
     },
     success: {
       main: "#22C55E",
       dark: "#15803D",
       light: "#4ED17E",
       contrastText: "#FFFFFF",
+      darkText: "#147638",
+      lightBg: "#E9F9EF",
+      border: "#90E1AE",
     },
     text: {
       primary: "#221F20",
@@ -990,6 +1130,11 @@ export const baseTheme = createTheme({
       "700": "#334155",
       "800": "#1E293B",
       "900": "#0F172A",
+    },
+    accent: {
+      main: "#6366F1",
+      dark: "#4338CA",
+      light: "#818CF8",
     },
     action: {
       active: "#EE9C98",

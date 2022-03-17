@@ -13,6 +13,7 @@ export const FATextField = memo(
       variants,
       required,
       disabled,
+      readOnly,
       size,
       helperText,
       error,
@@ -26,7 +27,6 @@ export const FATextField = memo(
 
     const startAdornment =
       adornment && adornmentPosition === "start" ? AddAdornment() : null;
-
     const endAdornment =
       adornment && adornmentPosition === "end" ? AddAdornment() : null;
 
@@ -42,11 +42,12 @@ export const FATextField = memo(
         helperText={helperText}
         error={error}
         placeholder={placeholder}
-        {...materialUIProps}
         InputProps={{
           startAdornment: startAdornment,
           endAdornment: endAdornment,
+          readOnly,
         }}
+        {...materialUIProps}
       />
     );
   })

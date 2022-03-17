@@ -1,107 +1,82 @@
 import React, { memo } from "react";
-import { Card, Box } from "@mui/material";
-import CardContent from "@mui/material/CardContent";
+import Box from "@mui/material/Box";
+import CardHeader from "@mui/material/CardHeader";
 
-import { FATypography, FAButton, FAFormControlLabel } from "@Atoms";
+import { FARadio, FAButton, FAFormControlLabel } from "@Atoms";
+import { FMCard } from "@Molecules";
+
+import { getFlexJustifyContent } from "@Definitions/helpers";
 
 import { IFOCardWithImageProps } from "./FOCardWithImage.interface";
 
 export const FOCardWithImage = memo((props: IFOCardWithImageProps) => {
   const {
-    sx,
     testID,
-    actions,
-    subtitle,
-    title,
     image,
-    option,
-    optionLabel,
-    handleButtonPrimary,
-    handleButtonSecondary,
+    imagePosition,
+    header: { ...header },
     buttonPrimary,
+    buttonPrimaryPosition,
     buttonSecondary,
-    ...materialUIProps
+    buttonSecondaryPosition,
+    control,
+    actionEndAdornment,
   } = props;
+
   return (
-    <Card
-      data-testid={testID}
-      {...materialUIProps}
-      sx={{
-        ...sx,
-        borderWidth: "1px",
-        borderStyle: "solid",
-        borderColor: "grey.300",
-      }}
-    >
-      <CardContent>
-        {option && (
+    <FMCard testID={testID}>
+      {control && (
+        <Box mb={3}>
           <FAFormControlLabel
-            label={optionLabel || "optionLabel"}
-            testID="form-control-label-test"
-            control={option}
-            sx={{ mb: 3 }}
-          ></FAFormControlLabel>
-        )}
+            testID="form-control-label-card-image"
+            control={
+              <FARadio
+                testID="radio-card-control"
+                size="medium"
+                checked={control.isChecked}
+              />
+            }
+            label={control.label}
+          />
+        </Box>
+      )}
+
+      <Box
+        display="flex"
+        justifyContent={getFlexJustifyContent(imagePosition)}
+        mb={3}
+      >
+        {image}
+      </Box>
+      <Box display="flex" justifyContent="center" textAlign="center">
+        <CardHeader {...header} />
+      </Box>
+
+      {buttonPrimary && (
         <Box
+          mt={4}
           display="flex"
-          justifyContent="center"
-          width="100%"
-          mx="auto"
-          sx={{ maxWidth: "250px", maxHeight: "180px" }}
-          mb={3}
+          justifyContent={getFlexJustifyContent(buttonPrimaryPosition)}
         >
-          {image}
+          <FAButton testID="button-primary" {...buttonPrimary} />
         </Box>
-        <FATypography
-          testID="typography-launchpad"
-          textAlign="center"
-          variant="h5"
-          fontWeight={700}
-          color="text.primary"
-        >
-          {title}
-        </FATypography>
-        <FATypography
-          testID="typography-launchpad"
-          textAlign="center"
-          variant="body2"
-          color="textSecondary"
-          letterSpacing="0.2px"
-          mt="8px"
-        >
-          {subtitle}
-        </FATypography>
+      )}
+      {buttonSecondary && buttonPrimary && (
         <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            width: "100%",
-          }}
+          mt={1}
+          display="flex"
+          justifyContent={getFlexJustifyContent(buttonSecondaryPosition)}
         >
-          {buttonPrimary && (
-            <FAButton
-              testID="button-register-customer"
-              sx={{ mt: 2.5, borderRadius: ".5rem" }}
-              onClick={handleButtonPrimary}
-            >
-              {buttonPrimary}
-            </FAButton>
-          )}
-          {buttonSecondary && (
-            <FAButton
-              variant="text"
-              testID="button-register-customer"
-              sx={{ mt: 1, borderRadius: ".5rem", color: "black" }}
-              onClick={handleButtonSecondary}
-            >
-              {buttonSecondary}
-            </FAButton>
-          )}
+          <FAButton
+            testID="button-primary"
+            variant="text"
+            color="secondary"
+            {...buttonSecondary}
+          />
         </Box>
-        {actions && <Box sx={{ mt: 3 }}>{actions}</Box>}
-      </CardContent>
-    </Card>
+      )}
+      {actionEndAdornment}
+    </FMCard>
   );
 });
 

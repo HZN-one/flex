@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FMCircularProgress should match snapshot 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-1n2mv2k"
+    data-testid="circular-progress-test"
+  >
+    <div
+      class="MuiBox-root css-kjafn5"
+    >
+      <svg
+        fill="none"
+        height="100"
+        style="position: absolute; top: 0px; left: 0px;"
+        viewBox="0 0 100 100"
+        width="100"
+      >
+        <defs>
+          <lineargradient
+            id="circular_progress_gradient"
+            x1="0%"
+            x2="0%"
+            y1="0%"
+            y2="100%"
+          >
+            <stop
+              offset="0%"
+              stop-color="#DC3931"
+            />
+            <stop
+              offset="100%"
+              stop-color="#DC3931"
+              stop-opacity="0.25"
+            />
+          </lineargradient>
+        </defs>
+      </svg>
+      <span
+        class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1ywlch6-MuiCircularProgress-root"
+        role="progressbar"
+        style="width: 100px; height: 100px;"
+      >
+        <svg
+          class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+          viewBox="22 22 44 44"
+        >
+          <circle
+            class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate MuiCircularProgress-circleDisableShrink css-79nvmn-MuiCircularProgress-circle"
+            cx="44"
+            cy="44"
+            fill="none"
+            r="19"
+            stroke-width="6"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+</div>
+`;
