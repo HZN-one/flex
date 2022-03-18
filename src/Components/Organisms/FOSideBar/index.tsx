@@ -60,7 +60,7 @@ export const FOSideBar = memo((props: IFOSideBarProps) => {
             />
           </ListSubheader>
         }
-        sx={{ height: "100%" }}
+        sx={{ height: "100%", overflowY: "auto" }}
       >
         {menu.map((item, index) => (
           <React.Fragment key={index}>

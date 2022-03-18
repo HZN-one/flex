@@ -11,12 +11,12 @@ exports[`FMCard should match snapshot 1`] = `
       <input
         placeholder="mm/dd/yyyy"
         type="hidden"
-        value=""
+        value="03/16/2022"
       />
       <input
         placeholder="mm/dd/yyyy"
         type="hidden"
-        value=""
+        value="03/16/2022"
       />
       <div
         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -72,7 +72,7 @@ exports[`FMCard should match snapshot 1`] = `
             class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-7nxzgd"
+              class="css-1in441m"
             >
               <span>
                 Pick Date Range

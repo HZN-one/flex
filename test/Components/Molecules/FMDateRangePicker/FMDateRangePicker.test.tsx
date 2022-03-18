@@ -14,7 +14,10 @@ describe("FMCard", () => {
       <FMDateRangePicker
         testID="date-range-picker-test"
         label="Pick Date Range"
-        value={[null, null]}
+        value={[
+          new Date("Wed Mar 16 2022 00:00:00 GMT+0700"),
+          new Date("Wed Mar 16 2022 00:00:00 GMT+0700"),
+        ]}
         setValue={value => {
           console.log(value);
         }}

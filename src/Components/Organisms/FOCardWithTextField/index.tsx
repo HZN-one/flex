@@ -18,7 +18,7 @@ export const FOCardWithTextField = memo((props: IFOCardWithTextFieldProps) => {
     buttonSubmitLabel,
     buttonSubmitState,
     buttonSubmitStyle,
-    noValidate,
+    noValidate = true,
     actionStartAdornment,
     actionEndAdornment,
   } = props;
