@@ -675,6 +675,7 @@ export const baseTheme = createTheme({
           },
         },
         outlined: {
+          marginRight: 0,
           "&.MuiInputAdornment-outlined.MuiInputAdornment-sizeSmall": {
             "& .MuiIcon-root": {
               fontSize: 20,
