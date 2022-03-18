@@ -117,6 +117,9 @@ export const baseTheme = createTheme({
         }),
         action: sx({
           pt: 0,
+          "& .MuiIconButton-root .MuiSvgIcon-root": {
+            fontSize: "1.5rem",
+          },
         }),
         icon: ({ ownerState }) =>
           sx({

@@ -47,6 +47,21 @@ Default.args = {
         },
       ],
     },
+    {
+      title: "Orders",
+      path: "/orders",
+      icon: "shopping_cart",
+      subMenu: [
+        {
+          title: "List",
+          path: "/orders/list",
+        },
+        {
+          title: "Create",
+          path: "/orders/create",
+        },
+      ],
+    },
   ],
   footerMenu: [
     {

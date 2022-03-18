@@ -10,7 +10,7 @@ exports[`FOSideBar should match snapshot 1`] = `
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-12i7wg6-MuiPaper-root-MuiDrawer-paper"
     >
       <nav
-        class="MuiList-root MuiList-padding MuiList-subheader css-11tbbah-MuiList-root"
+        class="MuiList-root MuiList-padding MuiList-subheader css-788p0o-MuiList-root"
       >
         <div
           class="MuiListSubheader-root MuiListSubheader-sticky css-10gjrkt-MuiListSubheader-root"
