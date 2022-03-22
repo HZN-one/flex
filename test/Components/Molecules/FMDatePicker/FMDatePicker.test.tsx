@@ -14,7 +14,7 @@ describe("FMDatePicker", () => {
       <FMDatePicker
         testID="date-picker-test"
         datePickerType="date"
-        value={new Date()}
+        value={"Tue Mar 22 2022 18:18:55 GMT+0700 (Western Indonesia Time)"}
         onChange={value => console.log(value)}
       />
     );
