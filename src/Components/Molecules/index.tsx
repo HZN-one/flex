@@ -12,3 +12,4 @@ export * from "./FMTabsMenu";
 export * from "./FMTimeline";
 export * from "./FMViewPicture";
 export * from "./FMDateRangePicker";
+export * from "./FMDatePicker";

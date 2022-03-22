@@ -50,7 +50,7 @@ const Tab = styled(TabUnstyled)`
     &:before {
       content: "";
       position: absolute;
-      background-color: ${baseTheme.palette.action.active};
+      background-color: ${baseTheme.palette.action.selected};
       width: 4px;
       height: 100%;
       bottom: 0;
