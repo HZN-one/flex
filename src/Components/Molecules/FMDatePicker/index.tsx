@@ -19,20 +19,18 @@ export const FMDatePicker = (props: IFMDatePickerProps) => {
 
   return (
     <Box data-testid={testID} color="primary.main">
-      <LocalizationProvider dateAdapter={AdapterDateFns}>
-        {datePickerType === "date" && (
-          <DesktopDatePicker renderInput={renderInput} {...props} />
-        )}
-        {datePickerType === "time" && (
-          <TimePicker {...props} renderInput={renderInput} />
-        )}
-        {datePickerType === "mobileDate" && (
-          <MobileDatePicker {...props} renderInput={renderInput} />
-        )}
-        {datePickerType === "dateTime" && (
-          <DateTimePicker {...props} renderInput={renderInput} />
-        )}
-      </LocalizationProvider>
+      {datePickerType === "date" && (
+        <DesktopDatePicker renderInput={renderInput} {...props} />
+      )}
+      {datePickerType === "time" && (
+        <TimePicker {...props} renderInput={renderInput} />
+      )}
+      {datePickerType === "mobileDate" && (
+        <MobileDatePicker {...props} renderInput={renderInput} />
+      )}
+      {datePickerType === "dateTime" && (
+        <DateTimePicker {...props} renderInput={renderInput} />
+      )}
     </Box>
   );
 };
