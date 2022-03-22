@@ -18,7 +18,7 @@ export const FMDatePicker = (props: IFMDatePickerProps) => {
   );
 
   return (
-    <Box data-testid={testID} color="primary.main">
+    <Box data-testid={testID}>
       {datePickerType === "date" && (
         <DesktopDatePicker renderInput={renderInput} {...props} />
       )}
