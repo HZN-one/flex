@@ -21,8 +21,8 @@ export const FMMapsTextField = memo((props: IFMMapsTextField) => {
   } = props;
 
   return (
-    <>
-      <Box mb={0.5} data-testid={testID}>
+    <Box data-testid={testID}>
+      <Box mb={0.5}>
         <FATypography testID="typography-maps-label" variant="captionSemiBold">
           {label}{" "}
           {props.required && (
@@ -74,13 +74,14 @@ export const FMMapsTextField = memo((props: IFMMapsTextField) => {
       <Box mt={1.5}>
         <FATextField
           {...textFieldProps}
+          testID="input-maps"
           className="flex-textfield-no-label"
           variant={variant}
           fullWidth={fullWidth}
           multiline
         />
       </Box>
-    </>
+    </Box>
   );
 });
 
