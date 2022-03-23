@@ -3,6 +3,7 @@ import { Meta, Story } from "@storybook/react";
 
 import { FMNoData } from "@Molecules";
 import { IFMNoDataProps } from "@Molecules/FMNoData/FMNoData.interface";
+import { Box } from "@mui/material";
 
 const meta: Meta = {
   title: "Molecules/No Data",
@@ -13,8 +14,7 @@ export default meta;
 
 const Template: Story<IFMNoDataProps> = props => (
   <FMNoData {...props}>
-    Don’t worry! all order has completely assigned..
-    <br />
+    <Box sx={{ mb: 1 }}>Don’t worry! all order has completely assigned..</Box>
     Now you don’t have any unassigned order from customer.
   </FMNoData>
 );
