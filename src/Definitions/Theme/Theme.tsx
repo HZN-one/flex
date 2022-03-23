@@ -62,6 +62,11 @@ declare module "@mui/material/Typography" {
 // Create a theme instance.
 export const baseTheme = createTheme({
   components: {
+    MuiDatePicker: {
+      defaultProps: {
+        ignoreInvalidInputs: false,
+      },
+    },
     MuiBackdrop: {
       styleOverrides: {
         root: sx({
@@ -1141,7 +1146,7 @@ export const baseTheme = createTheme({
       light: "#818CF8",
     },
     action: {
-      active: "#EE9C98",
+      selected: "#EE9C98",
     },
     contrastThreshold: 3,
     tonalOffset: 0.2,

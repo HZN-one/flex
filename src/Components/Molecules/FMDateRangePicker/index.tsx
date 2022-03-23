@@ -5,7 +5,7 @@ import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import format from "date-fns/format";
 import Box from "@mui/material/Box";
 
-import { FATextField, FAIcon, FAIconButton } from "@Atoms";
+import { FATextField, FAIcon } from "@Atoms";
 
 import { IFMDateRangePicker } from "./FMDateRangePicker.interface";
 
