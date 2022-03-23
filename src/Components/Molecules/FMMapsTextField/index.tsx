@@ -10,6 +10,7 @@ import { IFMMapsTextField } from "./FMMapsTextField.interface";
 
 export const FMMapsTextField = memo((props: IFMMapsTextField) => {
   const {
+    testID,
     label,
     buttonLabel,
     buttonIconName,
@@ -21,7 +22,7 @@ export const FMMapsTextField = memo((props: IFMMapsTextField) => {
 
   return (
     <>
-      <Box mb={0.5}>
+      <Box mb={0.5} data-testid={testID}>
         <FATypography testID="typography-maps-label" variant="captionSemiBold">
           {label}{" "}
           {props.required && (
