@@ -7,6 +7,7 @@ export * from "./FMDatePicker";
 export * from "./FMDateRangePicker";
 export * from "./FMInputAvatar";
 export * from "./FMLabelValue";
+export * from "./FMNoData";
 export * from "./FMSearch";
 export * from "./FMStepper";
 export * from "./FMTableSkeleton";
