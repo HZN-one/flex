@@ -423,6 +423,9 @@ export const baseTheme = createTheme({
           fontSize: "14px",
           padding: 0,
         },
+        multiline: {
+          padding: 0,
+        },
         root: sx({
           "&.MuiInput-underline": {
             mt: "21px",
@@ -730,6 +733,12 @@ export const baseTheme = createTheme({
           "&.flex-textfield-no-label": {
             "& .MuiInput-root": {
               mt: 0,
+            },
+          },
+          textArea: {
+            "&::placeholder": {
+              color: "text.secondary",
+              opacity: 1,
             },
           },
           input: {
