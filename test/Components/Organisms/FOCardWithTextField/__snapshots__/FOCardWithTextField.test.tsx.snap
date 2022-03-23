@@ -29,7 +29,9 @@ exports[`FOCardWithTextField should match snapshot 1`] = `
     <div
       class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
     >
-      <form>
+      <form
+        novalidate=""
+      >
         <div
           class="MuiBox-root css-h4qm9t"
         >

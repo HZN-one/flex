@@ -2,9 +2,10 @@ import type { ReactNode } from "react";
 
 export interface IFMStepperProps {
   testID: `stepper-${string}`;
+  active?: number;
   data: Array<{
     title: string;
-    children: ReactNode;
+    children?: ReactNode;
     onSubmitNext?: ({
       activeStep,
       setActiveStep,
@@ -19,7 +20,7 @@ export interface IFMStepperProps {
       activeStep: number;
       setActiveStep: (value: number) => void;
     }) => void;
-    buttonLabel: string;
+    buttonLabel?: string;
   }>;
   stepperColumn: number;
   isControlled?: boolean;

@@ -7,4 +7,5 @@ export interface IFOPaperRowProps {
     children: ReactNode;
   }[];
   actions?: ReactNode;
+  isStretch?: boolean;
 }
