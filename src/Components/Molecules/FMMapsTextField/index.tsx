@@ -63,6 +63,7 @@ export const FMMapsTextField = memo((props: IFMMapsTextField) => {
 
         <Box
           component="img"
+          alt="maps-placeholder"
           src={DEFAULT_IMAGE_MAPS_PLACEHOLDER}
           width="100%"
           height={200}
