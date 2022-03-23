@@ -1,9 +1,9 @@
 import React from "react";
 import { Meta, Story } from "@storybook/react";
 
+import { Box } from "@mui/material";
 import { FMNoData } from "@Molecules";
 import { IFMNoDataProps } from "@Molecules/FMNoData/FMNoData.interface";
-import { Box } from "@mui/material";
 
 const meta: Meta = {
   title: "Molecules/No Data",

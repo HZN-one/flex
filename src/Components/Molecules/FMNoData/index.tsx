@@ -1,8 +1,8 @@
 import React, { memo } from "react";
 import { Box } from "@mui/material";
+import { FATypography } from "@Atoms/FATypography";
 
 import { IFMNoDataProps } from "./FMNoData.interface";
-import { FATypography } from "@Atoms/FATypography";
 
 export const FMNoData = memo((props: IFMNoDataProps) => {
   const { testID, children, svgHeight = 289, svgWidth = 400 } = props;
