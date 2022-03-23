@@ -42,7 +42,11 @@ export const FMMapsTextField = memo((props: IFMMapsTextField) => {
             testID="button-input-maps"
             {...(buttonIconName && {
               startIcon: (
-                <FAIcon testID="icon-button" color="inherit">
+                <FAIcon
+                  testID="icon-button"
+                  color="inherit"
+                  baseClassName="material-icons"
+                >
                   {buttonIconName}
                 </FAIcon>
               ),
