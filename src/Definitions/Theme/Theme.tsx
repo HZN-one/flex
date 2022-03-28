@@ -590,13 +590,13 @@ export const baseTheme = createTheme({
           margin: 0,
         }),
         labelMedium: sx({
-          typography: "body1",
+          typography: "bodySemiBold1",
         }),
         deleteIconMedium: sx({
           marginLeft: "10px",
         }),
         labelSmall: sx({
-          typography: "body2",
+          typography: "bodySemiBold2",
         }),
         deleteIconSmall: sx({
           marginLeft: "8px",
