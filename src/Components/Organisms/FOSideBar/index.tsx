@@ -16,19 +16,27 @@ import { IFOSideBarProps } from "./FOSideBar.interface";
 
 export const FOSideBar = memo((props: IFOSideBarProps) => {
   const { testID, menu, footerMenu, buttonLogout, linkComponent } = props;
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState<number[]>([]);
 
-  const handleMenuClick = () => {
-    setOpen(!open);
+  const handleMenuClick = (index: number) => {
+    if (open.includes(index)) {
+      setOpen(open.filter(i => i !== index));
+    } else {
+      setOpen([...open, index]);
+    }
   };
 
   const listMenuItems = (index: number, children: JSX.Element) => {
     if (menu[index].subMenu) {
       return (
-        <ListItemButton onClick={handleMenuClick}>
+        <ListItemButton onClick={() => handleMenuClick(index)}>
           {children}
-          <FAIcon testID={`icon-menu-${index}`} fontSize="small">
-            {open ? "keyboard_arrow_down" : "keyboard_arrow_up"}
+          <FAIcon
+            testID={`icon-menu-${index}`}
+            fontSize="small"
+            color="inherit"
+          >
+            {open.includes(index) ? "keyboard_arrow_down" : "keyboard_arrow_up"}
           </FAIcon>
         </ListItemButton>
       );
@@ -68,7 +76,11 @@ export const FOSideBar = memo((props: IFOSideBarProps) => {
               index,
               <React.Fragment>
                 <ListItemIcon>
-                  <FAIcon testID={`icon-${item.icon}`} fontSize="small">
+                  <FAIcon
+                    testID={`icon-${item.icon}`}
+                    fontSize="small"
+                    color="inherit"
+                  >
                     {item.icon}
                   </FAIcon>
                 </ListItemIcon>
@@ -76,7 +88,7 @@ export const FOSideBar = memo((props: IFOSideBarProps) => {
               </React.Fragment>
             )}
             {item.subMenu && (
-              <Collapse in={open} timeout="auto" unmountOnExit>
+              <Collapse in={open.includes(index)} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                   {item.subMenu.map(({ title, path }) => (
                     <ListItemButton
@@ -104,7 +116,11 @@ export const FOSideBar = memo((props: IFOSideBarProps) => {
               selected={list.path === location.pathname}
             >
               <ListItemIcon>
-                <FAIcon testID={`icon-${list.icon}`} fontSize="small">
+                <FAIcon
+                  testID={`icon-${list.icon}`}
+                  fontSize="small"
+                  color="inherit"
+                >
                   {list.icon}
                 </FAIcon>
               </ListItemIcon>
