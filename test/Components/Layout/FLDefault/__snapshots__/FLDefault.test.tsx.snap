@@ -139,7 +139,7 @@ exports[`FLDefault should match snapshot 1`] = `
             >
               <span
                 aria-hidden="true"
-                class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeSmall css-htapw0-MuiIcon-root"
+                class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeSmall css-1cgz6tp-MuiIcon-root"
                 data-testid="icon-dashboard"
               >
                 dashboard
@@ -168,7 +168,7 @@ exports[`FLDefault should match snapshot 1`] = `
             >
               <span
                 aria-hidden="true"
-                class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeSmall css-htapw0-MuiIcon-root"
+                class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeSmall css-1cgz6tp-MuiIcon-root"
                 data-testid="icon-people"
               >
                 people
@@ -185,67 +185,14 @@ exports[`FLDefault should match snapshot 1`] = `
             </div>
             <span
               aria-hidden="true"
-              class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeSmall css-htapw0-MuiIcon-root"
+              class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeSmall css-1cgz6tp-MuiIcon-root"
               data-testid="icon-menu-1"
             >
-              keyboard_arrow_down
+              keyboard_arrow_up
             </span>
             <span
               class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />
-          </div>
-          <div
-            class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-pwcg7p-MuiCollapse-root"
-            style="min-height: 0px;"
-          >
-            <div
-              class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
-            >
-              <div
-                class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
-              >
-                <div
-                  class="MuiList-root css-1mk9mw3-MuiList-root"
-                >
-                  <a
-                    class="MuiListItemButton-root MuiListItemButton-gutters MuiButtonBase-root css-cvhtoe-MuiButtonBase-root-MuiListItemButton-root"
-                    href="/users/list"
-                    tabindex="0"
-                  >
-                    <div
-                      class="MuiListItemText-root css-tlelie-MuiListItemText-root"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
-                      >
-                        List
-                      </span>
-                    </div>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
-                  </a>
-                  <a
-                    class="MuiListItemButton-root MuiListItemButton-gutters MuiButtonBase-root css-cvhtoe-MuiButtonBase-root-MuiListItemButton-root"
-                    href="/users/create"
-                    tabindex="0"
-                  >
-                    <div
-                      class="MuiListItemText-root css-tlelie-MuiListItemText-root"
-                    >
-                      <span
-                        class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
-                      >
-                        Create
-                      </span>
-                    </div>
-                    <span
-                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
         </nav>
         <hr
@@ -267,7 +214,7 @@ exports[`FLDefault should match snapshot 1`] = `
               >
                 <span
                   aria-hidden="true"
-                  class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeSmall css-htapw0-MuiIcon-root"
+                  class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeSmall css-1cgz6tp-MuiIcon-root"
                   data-testid="icon-settings"
                 >
                   settings

@@ -265,6 +265,54 @@ export const baseTheme = createTheme({
         }),
       },
     },
+    MuiDialog: {
+      defaultProps: {
+        maxWidth: "xl",
+        PaperProps: {
+          className: "flex-paper-2",
+        },
+      },
+      styleOverrides: {
+        root: sx({
+          "& .flex-close-dialog": {
+            position: "absolute",
+            top: 4,
+            right: 8,
+            "& + .MuiDialogContent-root": {
+              pt: 3,
+            },
+          },
+        }),
+      },
+    },
+    MuiDialogActions: {
+      styleOverrides: {
+        root: sx({
+          p: 0,
+        }),
+      },
+    },
+    MuiDialogContent: {
+      styleOverrides: {
+        root: sx({
+          p: 0,
+          "& + .MuiDialogActions-root": {
+            pt: 3,
+          },
+          ".MuiDialogTitle-root + &": {
+            pt: 3,
+          },
+        }),
+      },
+    },
+    MuiDialogTitle: {
+      styleOverrides: {
+        root: sx({
+          p: 0,
+          typography: "h5",
+        }),
+      },
+    },
     MuiInputBase: {
       styleOverrides: {
         root: {
@@ -891,6 +939,29 @@ export const baseTheme = createTheme({
         root: {
           borderBottom: "none",
         },
+      },
+    },
+    MuiTab: {
+      styleOverrides: {
+        root: sx({
+          px: 2,
+          py: 1.28125,
+          typography: "subtitle",
+          textTransform: "capitalize",
+          color: "text.secondary",
+          minHeight: "38px",
+          "&.Mui-selected": {
+            typography: "subtitleBold",
+            color: "text.primary",
+          },
+        }),
+      },
+    },
+    MuiTabs: {
+      styleOverrides: {
+        root: sx({
+          minHeight: "38px",
+        }),
       },
     },
     MuiTimelineConnector: {
