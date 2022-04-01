@@ -289,6 +289,9 @@ export const baseTheme = createTheme({
       styleOverrides: {
         root: sx({
           p: 0,
+          ".MuiDialogContent-root + &": {
+            pt: 3,
+          },
         }),
       },
     },
@@ -296,12 +299,6 @@ export const baseTheme = createTheme({
       styleOverrides: {
         root: sx({
           p: 0,
-          "& + .MuiDialogActions-root": {
-            pt: 3,
-          },
-          ".MuiDialogTitle-root + &": {
-            pt: 3,
-          },
         }),
       },
     },
@@ -310,6 +307,7 @@ export const baseTheme = createTheme({
         root: sx({
           p: 0,
           typography: "h5",
+          pb: 3,
         }),
       },
     },
