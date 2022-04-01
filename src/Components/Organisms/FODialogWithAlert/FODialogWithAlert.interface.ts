@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { IFMDialogProps } from "@Molecules/FMDialog/FMDialog.interface";
+import { IFMDialogProps } from "../../Molecules/FMDialog/FMDialog.interface";
 
 export interface IFODialogWithAlertProps
   extends Pick<IFMDialogProps, "dialogProps" | "onCloseIcon"> {

@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { Box } from "@mui/system";
+import Box from "@mui/material/Box";
 import { FAIcon, FATypography } from "@Atoms";
 import { FMDialog } from "@Molecules";
 
@@ -13,14 +13,14 @@ export const FODialogWithAlert = memo((props: IFODialogWithAlertProps) => {
       case "error":
         return {
           icon: "close",
-          color: "error",
+          color: "error.main",
           bgColor: "error.lightBg",
           fontSize: 32,
         };
       case "success":
         return {
           icon: "check",
-          color: "success",
+          color: "success.main",
           bgColor: "success.lightBg",
           fontSize: 32,
         };
@@ -28,7 +28,7 @@ export const FODialogWithAlert = memo((props: IFODialogWithAlertProps) => {
         return {
           icon: "loop",
           bgColor: "inherit",
-          color: "primary",
+          color: "primary.main",
           fontSize: 58.67,
         };
       default:
@@ -65,8 +65,10 @@ export const FODialogWithAlert = memo((props: IFODialogWithAlertProps) => {
         >
           <FAIcon
             testID="icon-dialog-with-alert"
-            color={iconProps(icon).color as any}
             fontSize="inherit"
+            sx={{
+              color: iconProps(icon).color,
+            }}
           >
             {iconProps(icon).icon}
           </FAIcon>
