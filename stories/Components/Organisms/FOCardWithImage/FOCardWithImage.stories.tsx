@@ -114,9 +114,9 @@ CompleteCardWithImage.args = {
   ),
 };
 
-export const OutlinedCard = Template.bind({});
+export const CardSelected = Template.bind({});
 
-OutlinedCard.args = {
+CardSelected.args = {
   image: <img src={DUMMY_IMAGE_URL} />,
   imagePosition: "center",
   header: {
@@ -127,6 +127,5 @@ OutlinedCard.args = {
     children: "Default",
   },
   buttonPrimaryPosition: "center",
-  variant: "outlined",
   isSelected: true,
 };

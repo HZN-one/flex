@@ -400,8 +400,8 @@ export const baseTheme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: sx({
-          padding: 3,
           borderRadius: 2,
+          padding: 3,
         }),
       },
     },
@@ -864,6 +864,10 @@ export const baseTheme = createTheme({
           "&.flex-paper-3": {
             p: 3,
           },
+          "&.flex-paper-selected": sx({
+            border: "1px solid",
+            borderColor: "action.selected",
+          }),
         }),
       },
     },

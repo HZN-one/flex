@@ -1,13 +1,11 @@
 import React, { memo } from "react";
 import Box from "@mui/material/Box";
 import CardHeader from "@mui/material/CardHeader";
-import { styled } from "@mui/material/styles";
 
 import { FARadio, FAButton, FAFormControlLabel } from "@Atoms";
 import { FMCard } from "@Molecules";
 
 import { getFlexJustifyContent } from "@Definitions/helpers";
-import { baseTheme as theme } from "@Definitions/Theme";
 
 import { IFOCardWithImageProps } from "./FOCardWithImage.interface";
 
@@ -27,12 +25,12 @@ export const FOCardWithImage = memo((props: IFOCardWithImageProps) => {
     ...cardProps
   } = props;
 
-  const FMCardStyled = styled(FMCard)({
-    borderColor: isSelected ? theme.palette.action.selected : "auto",
-  });
-
   return (
-    <FMCardStyled testID={testID} {...cardProps}>
+    <FMCard
+      testID={testID}
+      {...cardProps}
+      className={isSelected ? "flex-paper-selected" : ""}
+    >
       {control && (
         <Box mb={3}>
           <FAFormControlLabel
@@ -84,7 +82,7 @@ export const FOCardWithImage = memo((props: IFOCardWithImageProps) => {
         </Box>
       )}
       {actionEndAdornment}
-    </FMCardStyled>
+    </FMCard>
   );
 });
 
