@@ -964,6 +964,14 @@ export const baseTheme = createTheme({
         }),
       },
     },
+    MuiTimeline: {
+      styleOverrides: {
+        positionRight: {
+          padding: 0,
+          margin: 0,
+        },
+      },
+    },
     MuiTimelineConnector: {
       styleOverrides: {
         root: sx({

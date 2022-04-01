@@ -113,3 +113,19 @@ CompleteCardWithImage.args = {
     </Box>
   ),
 };
+
+export const OutlinedCard = Template.bind({});
+
+OutlinedCard.args = {
+  image: <img src={DUMMY_IMAGE_URL} />,
+  imagePosition: "center",
+  header: {
+    title: "Card With Image Title",
+    subheader: "Card With Image Subheader",
+  },
+  buttonPrimary: {
+    children: "Default",
+  },
+  buttonPrimaryPosition: "center",
+  variant: "outlined",
+};

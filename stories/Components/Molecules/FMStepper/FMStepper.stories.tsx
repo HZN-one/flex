@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Story, Meta } from "@storybook/react";
 
+import { FAButton } from "@Atoms/FAButton";
 import { FMStepper } from "@Molecules";
 import { IFMStepperProps } from "@Molecules/FMStepper/FMStepper.interface";
 
@@ -101,4 +102,32 @@ Controlled.args = {
     },
   ],
   onSubmitFinish: () => alert("Submitted"),
+};
+
+export const Test = () => {
+  const [activeStep, setActiveStep] = useState(0);
+
+  return (
+    <>
+      {JSON.stringify(activeStep)}
+      <FMStepper
+        testID="stepper-test"
+        data={[{ title: "test" }, { title: "test2" }]}
+        stepperColumn={12}
+        active={activeStep}
+      />
+      <FAButton
+        testID="button-back"
+        onClick={() => setActiveStep(prevActiveStep => prevActiveStep - 1)}
+      >
+        Back
+      </FAButton>
+      <FAButton
+        testID="button-next"
+        onClick={() => setActiveStep(prevActiveStep => prevActiveStep + 1)}
+      >
+        Next
+      </FAButton>
+    </>
+  );
 };

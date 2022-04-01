@@ -21,10 +21,11 @@ export const FOCardWithImage = memo((props: IFOCardWithImageProps) => {
     buttonSecondaryPosition,
     control,
     actionEndAdornment,
+    ...cardProps
   } = props;
 
   return (
-    <FMCard testID={testID}>
+    <FMCard testID={testID} {...cardProps}>
       {control && (
         <Box mb={3}>
           <FAFormControlLabel
