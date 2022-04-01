@@ -398,11 +398,9 @@ export const baseTheme = createTheme({
       },
     },
     MuiCard: {
-      defaultProps: {
-        className: "flex-paper-3",
-      },
       styleOverrides: {
         root: sx({
+          padding: 3,
           borderRadius: 2,
         }),
       },

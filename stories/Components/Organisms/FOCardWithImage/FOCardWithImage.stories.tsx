@@ -128,4 +128,5 @@ OutlinedCard.args = {
   },
   buttonPrimaryPosition: "center",
   variant: "outlined",
+  isSelected: true,
 };
