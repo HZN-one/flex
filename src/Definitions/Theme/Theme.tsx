@@ -289,6 +289,9 @@ export const baseTheme = createTheme({
       styleOverrides: {
         root: sx({
           p: 0,
+          ".MuiDialogContent-root + &": {
+            pt: 3,
+          },
         }),
       },
     },
@@ -296,12 +299,6 @@ export const baseTheme = createTheme({
       styleOverrides: {
         root: sx({
           p: 0,
-          "& + .MuiDialogActions-root": {
-            pt: 3,
-          },
-          ".MuiDialogTitle-root + &": {
-            pt: 3,
-          },
         }),
       },
     },
@@ -310,6 +307,7 @@ export const baseTheme = createTheme({
         root: sx({
           p: 0,
           typography: "h5",
+          pb: 3,
         }),
       },
     },
@@ -398,12 +396,10 @@ export const baseTheme = createTheme({
       },
     },
     MuiCard: {
-      defaultProps: {
-        className: "flex-paper-3",
-      },
       styleOverrides: {
         root: sx({
           borderRadius: 2,
+          padding: 3,
         }),
       },
     },
@@ -866,6 +862,10 @@ export const baseTheme = createTheme({
           "&.flex-paper-3": {
             p: 3,
           },
+          "&.flex-paper-selected": sx({
+            border: "1px solid",
+            borderColor: "action.selected",
+          }),
         }),
       },
     },
@@ -962,6 +962,14 @@ export const baseTheme = createTheme({
         root: sx({
           minHeight: "38px",
         }),
+      },
+    },
+    MuiTimeline: {
+      styleOverrides: {
+        positionRight: {
+          padding: 0,
+          margin: 0,
+        },
       },
     },
     MuiTimelineConnector: {

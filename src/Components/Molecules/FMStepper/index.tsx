@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useEffect } from "react";
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
@@ -16,6 +16,12 @@ export const FMStepper = memo((props: IFMStepperProps) => {
 
   const isLastStep = data.length - 1 === activeStep;
   const isFirstStep = activeStep === 0;
+
+  useEffect(() => {
+    if (typeof active === "number" && active <= data.length - 1 && active > 0) {
+      setActiveStep(active);
+    }
+  }, [active]);
 
   const handleNext = () => {
     const onSubmitNext = data[activeStep].onSubmitNext;
