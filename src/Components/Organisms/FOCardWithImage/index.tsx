@@ -21,10 +21,16 @@ export const FOCardWithImage = memo((props: IFOCardWithImageProps) => {
     buttonSecondaryPosition,
     control,
     actionEndAdornment,
+    isSelected,
+    ...cardProps
   } = props;
 
   return (
-    <FMCard testID={testID}>
+    <FMCard
+      testID={testID}
+      {...cardProps}
+      className={isSelected ? "flex-paper-selected" : ""}
+    >
       {control && (
         <Box mb={3}>
           <FAFormControlLabel

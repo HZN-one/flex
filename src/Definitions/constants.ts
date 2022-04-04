@@ -9,3 +9,4 @@ export const DUMMY_COMPANY_IMAGE_URL =
   "https://www.freepnglogos.com/uploads/netflix-logo-circle-png-5.png";
 
 export const DEFAULT_IMAGE_INPUT_AVATAR = `${HZN_BASE_URL_ASSETS}/icons/inputAvatar.png`;
+export const DEFAULT_IMAGE_MAPS_PLACEHOLDER = `${HZN_BASE_URL_ASSETS}/icons/maps-placeholder.webp`;

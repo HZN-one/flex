@@ -265,6 +265,52 @@ export const baseTheme = createTheme({
         }),
       },
     },
+    MuiDialog: {
+      defaultProps: {
+        maxWidth: "xl",
+        PaperProps: {
+          className: "flex-paper-2",
+        },
+      },
+      styleOverrides: {
+        root: sx({
+          "& .flex-close-dialog": {
+            position: "absolute",
+            top: 4,
+            right: 8,
+            "& + .MuiDialogContent-root": {
+              pt: 3,
+            },
+          },
+        }),
+      },
+    },
+    MuiDialogActions: {
+      styleOverrides: {
+        root: sx({
+          p: 0,
+          ".MuiDialogContent-root + &": {
+            pt: 3,
+          },
+        }),
+      },
+    },
+    MuiDialogContent: {
+      styleOverrides: {
+        root: sx({
+          p: 0,
+        }),
+      },
+    },
+    MuiDialogTitle: {
+      styleOverrides: {
+        root: sx({
+          p: 0,
+          typography: "h5",
+          pb: 3,
+        }),
+      },
+    },
     MuiInputBase: {
       styleOverrides: {
         root: {
@@ -350,12 +396,10 @@ export const baseTheme = createTheme({
       },
     },
     MuiCard: {
-      defaultProps: {
-        className: "flex-paper-3",
-      },
       styleOverrides: {
         root: sx({
           borderRadius: 2,
+          padding: 3,
         }),
       },
     },
@@ -421,6 +465,9 @@ export const baseTheme = createTheme({
       styleOverrides: {
         input: {
           fontSize: "14px",
+          padding: 0,
+        },
+        multiline: {
           padding: 0,
         },
         root: sx({
@@ -587,13 +634,13 @@ export const baseTheme = createTheme({
           margin: 0,
         }),
         labelMedium: sx({
-          typography: "body1",
+          typography: "bodySemiBold1",
         }),
         deleteIconMedium: sx({
           marginLeft: "10px",
         }),
         labelSmall: sx({
-          typography: "body2",
+          typography: "bodySemiBold2",
         }),
         deleteIconSmall: sx({
           marginLeft: "8px",
@@ -732,6 +779,12 @@ export const baseTheme = createTheme({
               mt: 0,
             },
           },
+          textArea: {
+            "&::placeholder": {
+              color: "text.secondary",
+              opacity: 1,
+            },
+          },
           input: {
             "&::placeholder": {
               color: "text.secondary",
@@ -809,6 +862,10 @@ export const baseTheme = createTheme({
           "&.flex-paper-3": {
             p: 3,
           },
+          "&.flex-paper-selected": sx({
+            border: "1px solid",
+            borderColor: "action.selected",
+          }),
         }),
       },
     },
@@ -881,6 +938,37 @@ export const baseTheme = createTheme({
       styleOverrides: {
         root: {
           borderBottom: "none",
+        },
+      },
+    },
+    MuiTab: {
+      styleOverrides: {
+        root: sx({
+          px: 2,
+          py: 1.28125,
+          typography: "subtitle",
+          textTransform: "capitalize",
+          color: "text.secondary",
+          minHeight: "38px",
+          "&.Mui-selected": {
+            typography: "subtitleBold",
+            color: "text.primary",
+          },
+        }),
+      },
+    },
+    MuiTabs: {
+      styleOverrides: {
+        root: sx({
+          minHeight: "38px",
+        }),
+      },
+    },
+    MuiTimeline: {
+      styleOverrides: {
+        positionRight: {
+          padding: 0,
+          margin: 0,
         },
       },
     },
