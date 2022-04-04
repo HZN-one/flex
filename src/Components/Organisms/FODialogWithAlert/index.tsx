@@ -1,12 +1,13 @@
 import React, { memo } from "react";
-import Box from "@mui/material/Box";
+import { Box, Grid } from "@mui/material";
 import { FAIcon, FATypography } from "@Atoms";
 import { FMDialog } from "@Molecules";
 
 import { IFODialogWithAlertProps } from "./FODialogWithAlert.interface";
 
 export const FODialogWithAlert = memo((props: IFODialogWithAlertProps) => {
-  const { testID, children, icon, title, ...materialUIProps } = props;
+  const { testID, children, icon, onCloseIcon, title, ...materialUIProps } =
+    props;
 
   const iconProps = (iconName: string) => {
     switch (iconName) {
@@ -44,6 +45,7 @@ export const FODialogWithAlert = memo((props: IFODialogWithAlertProps) => {
   return (
     <FMDialog
       testID="dialog-with-alert"
+      onCloseIcon={onCloseIcon}
       {...materialUIProps}
       dialogProps={{
         fullWidth: true,
@@ -51,45 +53,51 @@ export const FODialogWithAlert = memo((props: IFODialogWithAlertProps) => {
         ...materialUIProps.dialogProps,
       }}
     >
-      <Box data-testid={testID} textAlign="center">
-        <Box
-          bgcolor={iconProps(icon).bgColor}
-          borderRadius="50%"
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          fontSize={iconProps(icon).fontSize}
-          height={64}
-          width={64}
-          mx="auto"
-        >
-          <FAIcon
-            testID="icon-dialog-with-alert"
-            fontSize="inherit"
-            sx={{
-              color: iconProps(icon).color,
-            }}
+      <Grid data-testid={testID} container rowSpacing={2} textAlign="center">
+        <Grid item xs={12}>
+          <Box
+            bgcolor={iconProps(icon).bgColor}
+            borderRadius="50%"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            fontSize={iconProps(icon).fontSize}
+            height={64}
+            width={64}
+            mx="auto"
           >
-            {iconProps(icon).icon}
-          </FAIcon>
-        </Box>
-        <FATypography
-          testID="typography-dialog-alert-title"
-          variant="h5"
-          sx={{ mt: 2 }}
-        >
-          {title}
-        </FATypography>
-        {children && (
+            <FAIcon
+              testID="icon-dialog-with-alert"
+              fontSize="inherit"
+              sx={{
+                color: iconProps(icon).color,
+              }}
+            >
+              {iconProps(icon).icon}
+            </FAIcon>
+          </Box>
+        </Grid>
+        <Grid item xs={12}>
           <FATypography
-            testID="typography-dialog-alert-children"
-            variant="body1"
-            sx={{ mt: 2 }}
+            testID="typography-dialog-alert-title"
+            component="span"
+            variant="h5"
           >
-            {children}
+            {title}
           </FATypography>
+        </Grid>
+        {children && (
+          <Grid item xs={12}>
+            <FATypography
+              testID="typography-dialog-alert-children"
+              component="span"
+              variant="body1"
+            >
+              {children}
+            </FATypography>
+          </Grid>
         )}
-      </Box>
+      </Grid>
     </FMDialog>
   );
 });
