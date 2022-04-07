@@ -387,7 +387,12 @@ export const baseTheme = createTheme({
         }),
         outlined: sx({
           "&.MuiInputLabel-sizeSmall": {
-            top: "2px",
+            top: "4px",
+            fontSize: "14px",
+            "&.MuiInputLabel-shrink": {
+              fontSize: "16px",
+              top: "2px",
+            },
           },
           "&.Mui-focused": {
             color: "inherit",
