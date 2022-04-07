@@ -29,7 +29,7 @@ export const FOSideBar = memo((props: IFOSideBarProps) => {
   const listMenuItems = (index: number, children: JSX.Element) => {
     if (menu[index].subMenu) {
       return (
-        <ListItemButton onClick={() => handleMenuClick(index)}>
+        <ListItemButton sx={{ pr: 0 }} onClick={() => handleMenuClick(index)}>
           {children}
           <FAIcon
             testID={`icon-menu-${index}`}

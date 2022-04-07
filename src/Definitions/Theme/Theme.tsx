@@ -426,6 +426,9 @@ export const baseTheme = createTheme({
     },
     MuiCardHeader: {
       defaultProps: {
+        titleTypographyProps: {
+          variant: "subtitleBold",
+        },
         subheaderTypographyProps: {
           variant: "body1",
           color: "text.secondary",
