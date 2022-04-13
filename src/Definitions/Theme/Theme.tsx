@@ -405,6 +405,15 @@ export const baseTheme = createTheme({
         root: sx({
           borderRadius: 2,
           padding: 3,
+          "&.flex-card-0": {
+            p: 0,
+          },
+          "&.flex-card-1": {
+            p: 1,
+          },
+          "&.flex-card-2": {
+            p: 2,
+          },
         }),
       },
     },

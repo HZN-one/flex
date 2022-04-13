@@ -66,6 +66,7 @@
     "i18next": "^21.6.2",
     "i18next-browser-languagedetector": "^6.1.2",
     "next-i18next": "^10.0.1",
+    "react-apexcharts": "^1.4.0",
     "react-i18next": "^11.15.1",
     "webpack": "^4.46.0"
   },
