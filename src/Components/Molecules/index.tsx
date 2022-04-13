@@ -16,3 +16,4 @@ export * from "./FMTableSkeleton";
 export * from "./FMTabsMenu";
 export * from "./FMTimeline";
 export * from "./FMViewPicture";
+export * from "./FMLineChart";
