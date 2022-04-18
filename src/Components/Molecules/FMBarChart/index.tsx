@@ -3,33 +3,45 @@ import React, { memo } from "react";
 import Chart from "react-apexcharts";
 
 import type { ApexOptions } from "apexcharts";
-import { IFMLineChart } from "./FMLineChart.interface";
+import { IFMBarChart } from "./FMBarChart.inteface";
 
-export const FMLineChart = memo((props: IFMLineChart) => {
+export const FMBarChart = memo((props: IFMBarChart) => {
   const chartOptions: ApexOptions = {
     chart: {
-      background: "transparent",
-      fontFamily: "inter",
-      stacked: false,
       toolbar: {
         show: false,
       },
+      fontFamily: "inter",
       zoom: {
         enabled: false,
       },
     },
-    stroke: {
-      curve: "smooth",
-      width: 2,
+    plotOptions: {
+      bar: {
+        horizontal: true,
+        distributed: true,
+        barHeight: "55%",
+      },
     },
-    dataLabels: {
-      enabled: false,
+    fill: {
+      opacity: 1,
+    },
+    states: {
+      hover: {
+        filter: {
+          type: "none",
+          value: 0,
+        },
+      },
+      active: {
+        filter: {
+          type: "none",
+          value: 0,
+        },
+      },
     },
     tooltip: {
       enabled: false,
-    },
-    markers: {
-      size: 6,
     },
     grid: {
       show: true,
@@ -45,31 +57,15 @@ export const FMLineChart = memo((props: IFMLineChart) => {
       },
     },
     legend: {
-      showForZeroSeries: true,
-      showForSingleSeries: true,
-      markers: {
-        width: 16,
-        height: 2,
-        radius: 3,
-      },
-      labels: {
-        colors: "#221F20",
-      },
-      fontSize: "12px",
-      fontFamily: "inter",
+      show: false,
+    },
+    dataLabels: {
+      enabled: false,
     },
     xaxis: {
-      type: "category",
-      labels: {
-        style: {
-          colors: "#64748B",
-          fontSize: "12px",
-        },
-      },
-    },
-    yaxis: {
-      max: props.maxValue,
+      categories: props.categories,
       min: props.minValue,
+      max: props.maxValue,
       tickAmount: props.tickAmount,
       labels: {
         style: {
@@ -78,20 +74,36 @@ export const FMLineChart = memo((props: IFMLineChart) => {
         },
       },
     },
+    yaxis: {
+      labels: {
+        align: "left",
+        style: {
+          colors: "#221F20",
+          fontSize: "12px",
+        },
+      },
+    },
+    colors: props.colors,
     ...props.chartOptions,
   };
+
+  const chartData = [
+    {
+      data: props.chartData,
+    },
+  ];
 
   return (
     <>
       <Chart
         data-testid={props.testID}
         options={chartOptions}
-        series={props.chartData}
-        type="line"
+        series={chartData}
+        type="bar"
         width={props.width}
         height={props.height}
       />
     </>
   );
 });
-FMLineChart.displayName = "FMLineChart";
+FMBarChart.displayName = "FMBarChart";
