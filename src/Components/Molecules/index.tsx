@@ -17,3 +17,5 @@ export * from "./FMTabsMenu";
 export * from "./FMTimeline";
 export * from "./FMViewPicture";
 export * from "./FMLineChart";
+export * from "./FMBarChart";
+export * from "./FMPieChart";
