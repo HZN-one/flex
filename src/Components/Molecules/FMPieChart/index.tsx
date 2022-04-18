@@ -31,6 +31,23 @@ export const FMPieChart = memo((props: IFMPieChart) => {
         expandOnClick: false,
       },
     },
+    fill: {
+      opacity: 1,
+    },
+    states: {
+      hover: {
+        filter: {
+          type: "none",
+          value: 0,
+        },
+      },
+      active: {
+        filter: {
+          type: "none",
+          value: 0,
+        },
+      },
+    },
     legend: {
       showForNullSeries: true,
       showForSingleSeries: true,
@@ -41,6 +58,19 @@ export const FMPieChart = memo((props: IFMPieChart) => {
       },
       fontSize: "12px",
       fontFamily: "inter",
+      itemMargin: {
+        vertical: 2,
+      },
+      markers: {
+        offsetX: -8,
+        offsetY: 1,
+      },
+      onItemClick: {
+        toggleDataSeries: false,
+      },
+      onItemHover: {
+        highlightDataSeries: false,
+      },
     },
     labels: props.labels,
     colors: props.colors,
