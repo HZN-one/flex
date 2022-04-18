@@ -58,8 +58,9 @@ export const FMPieChart = memo((props: IFMPieChart) => {
       },
       fontSize: "12px",
       fontFamily: "inter",
+      offsetY: -17,
       itemMargin: {
-        vertical: 2,
+        vertical: 3.3,
       },
       markers: {
         offsetX: -8,
