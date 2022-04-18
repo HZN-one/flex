@@ -20,6 +20,7 @@ export const FMBarChart = memo((props: IFMBarChart) => {
       bar: {
         horizontal: true,
         distributed: true,
+        barHeight: "55%",
       },
     },
     fill: {
