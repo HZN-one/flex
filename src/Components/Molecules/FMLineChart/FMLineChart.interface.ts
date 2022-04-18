@@ -6,4 +6,7 @@ export interface IFMLineChart {
   chartOptions?: ApexOptions;
   width?: string | number;
   height?: string | number;
+  minValue?: number;
+  maxValue?: number;
+  tickAmount?: number;
 }

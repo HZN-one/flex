@@ -9,9 +9,13 @@ export const FMLineChart = memo((props: IFMLineChart) => {
   const chartOptions: ApexOptions = {
     chart: {
       background: "transparent",
+      fontFamily: "inter",
       stacked: false,
       toolbar: {
         show: false,
+      },
+      zoom: {
+        enabled: false,
       },
     },
     stroke: {
@@ -44,15 +48,35 @@ export const FMLineChart = memo((props: IFMLineChart) => {
       showForZeroSeries: true,
       showForSingleSeries: true,
       markers: {
-        width: 20,
+        width: 16,
         height: 2,
-        radius: 0,
+        radius: 3,
+      },
+      labels: {
+        colors: "#221F20",
       },
       fontSize: "12px",
       fontFamily: "inter",
     },
     xaxis: {
       type: "category",
+      labels: {
+        style: {
+          colors: "#64748B",
+          fontSize: "12px",
+        },
+      },
+    },
+    yaxis: {
+      max: props.maxValue,
+      min: props.minValue,
+      tickAmount: props.tickAmount,
+      labels: {
+        style: {
+          colors: "#64748B",
+          fontSize: "12px",
+        },
+      },
     },
     ...props.chartOptions,
   };
@@ -64,6 +88,8 @@ export const FMLineChart = memo((props: IFMLineChart) => {
         options={chartOptions}
         series={props.chartData}
         type="line"
+        width={props.width}
+        height={props.height}
       />
     </>
   );
