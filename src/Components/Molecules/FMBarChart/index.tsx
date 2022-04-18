@@ -22,6 +22,23 @@ export const FMBarChart = memo((props: IFMBarChart) => {
         distributed: true,
       },
     },
+    fill: {
+      opacity: 1,
+    },
+    states: {
+      hover: {
+        filter: {
+          type: "none",
+          value: 0,
+        },
+      },
+      active: {
+        filter: {
+          type: "none",
+          value: 0,
+        },
+      },
+    },
     tooltip: {
       enabled: false,
     },

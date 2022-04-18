@@ -11,7 +11,7 @@ const story = {
   },
   args: {
     testID: "bar-chart-storybook",
-    chartData: [480, 280, 380, 130, 320],
+    chartData: [480, 280, 390, 130, 340],
     categories: ["New", "Assigned", "Confirmed", "Rejected", "Completed"],
     colors: ["#629BF8", "#4ED17E", "#818CF8", "#FB7185", "#4ED17E"],
     minValue: 0,
