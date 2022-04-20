@@ -65,6 +65,7 @@ export const FMLineChart = memo((props: IFMLineChart) => {
           colors: "#64748B",
           fontSize: "12px",
         },
+        rotate: 0,
       },
     },
     yaxis: {
