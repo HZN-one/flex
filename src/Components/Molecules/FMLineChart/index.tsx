@@ -1,9 +1,9 @@
-import React, { memo } from "react";
+import React, { memo, Suspense } from "react";
+import { ApexOptions } from "apexcharts";
 
-import Chart from "react-apexcharts";
-
-import type { ApexOptions } from "apexcharts";
 import { IFMLineChart } from "./FMLineChart.interface";
+
+const Chart = React.lazy(() => import("react-apexcharts"));
 
 export const FMLineChart = memo((props: IFMLineChart) => {
   const chartOptions: ApexOptions = {
@@ -82,7 +82,7 @@ export const FMLineChart = memo((props: IFMLineChart) => {
   };
 
   return (
-    <>
+    <Suspense fallback={<div></div>}>
       <Chart
         data-testid={props.testID}
         options={chartOptions}
@@ -91,7 +91,7 @@ export const FMLineChart = memo((props: IFMLineChart) => {
         width={props.width}
         height={props.height}
       />
-    </>
+    </Suspense>
   );
 });
 FMLineChart.displayName = "FMLineChart";

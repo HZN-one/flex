@@ -435,6 +435,15 @@ export const baseTheme = createTheme({
           "&:last-of-type": {
             pb: 0,
           },
+          "&.flex-card-content-0": {
+            pt: 0,
+          },
+          "&.flex-card-content-1": {
+            pt: 1,
+          },
+          "&.flex-card-content-2": {
+            pt: 2,
+          },
         }),
       },
     },

@@ -1,5 +1,4 @@
-import type { ApexOptions } from "apexcharts";
-
+import { ApexOptions } from "apexcharts";
 export interface IFMPieChart {
   testID: `pie-chart-${string}`;
   chartOptions?: ApexOptions;
