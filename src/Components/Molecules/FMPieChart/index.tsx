@@ -79,7 +79,7 @@ export const FMPieChart = memo((props: IFMPieChart) => {
   };
 
   return (
-    <Suspense fallback={<div></div>}>
+    <Suspense fallback={<div>Loading</div>}>
       <Chart
         data-testid={props.testID}
         options={chartOptions}

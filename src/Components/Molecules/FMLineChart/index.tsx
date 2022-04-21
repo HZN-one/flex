@@ -83,7 +83,7 @@ export const FMLineChart = memo((props: IFMLineChart) => {
   };
 
   return (
-    <Suspense fallback={<div></div>}>
+    <Suspense fallback={<div>Loading</div>}>
       <Chart
         data-testid={props.testID}
         options={chartOptions}
