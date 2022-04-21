@@ -2,7 +2,7 @@ name: NPM publish CD workflow v6
 
 on:
   release:
-    types: [published]
+    types: [published, prereleased]
 jobs:
   build:
     runs-on: ubuntu-latest
