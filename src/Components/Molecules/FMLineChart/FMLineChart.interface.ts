@@ -1,4 +1,4 @@
-import type { ApexOptions } from "apexcharts";
+import { ApexOptions } from "apexcharts";
 
 export interface IFMLineChart {
   testID: `line-chart-${string}`;

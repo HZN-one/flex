@@ -1,9 +1,9 @@
-import React, { memo } from "react";
+import React, { memo, Suspense } from "react";
+import { ApexOptions } from "apexcharts";
 
-import Chart from "react-apexcharts";
-
-import type { ApexOptions } from "apexcharts";
 import { IFMBarChart } from "./FMBarChart.inteface";
+
+const Chart = React.lazy(() => import("react-apexcharts"));
 
 export const FMBarChart = memo((props: IFMBarChart) => {
   const chartOptions: ApexOptions = {
@@ -94,7 +94,7 @@ export const FMBarChart = memo((props: IFMBarChart) => {
   ];
 
   return (
-    <>
+    <Suspense fallback={<div>Loading</div>}>
       <Chart
         data-testid={props.testID}
         options={chartOptions}
@@ -103,7 +103,7 @@ export const FMBarChart = memo((props: IFMBarChart) => {
         width={props.width}
         height={props.height}
       />
-    </>
+    </Suspense>
   );
 });
 FMBarChart.displayName = "FMBarChart";
