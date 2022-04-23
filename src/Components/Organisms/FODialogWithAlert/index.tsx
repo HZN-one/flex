@@ -88,13 +88,17 @@ export const FODialogWithAlert = memo((props: IFODialogWithAlertProps) => {
         </Grid>
         {children && (
           <Grid item xs={12}>
-            <FATypography
-              testID="typography-dialog-alert-children"
-              component="span"
-              variant="body1"
-            >
-              {children}
-            </FATypography>
+            {typeof children === "string" ? (
+              <FATypography
+                testID="typography-dialog-alert-children"
+                component="span"
+                variant="body1"
+              >
+                {children}
+              </FATypography>
+            ) : (
+              <>{children}</>
+            )}
           </Grid>
         )}
       </Grid>
