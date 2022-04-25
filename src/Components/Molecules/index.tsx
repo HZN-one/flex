@@ -19,3 +19,4 @@ export * from "./FMViewPicture";
 export * from "./FMLineChart";
 export * from "./FMBarChart";
 export * from "./FMPieChart";
+export * from "./FMDialogConfirmation";

@@ -4,7 +4,7 @@ import { IFMDialogProps } from "../../Molecules/FMDialog/FMDialog.interface";
 export interface IFODialogWithAlertProps
   extends Pick<IFMDialogProps, "dialogProps"> {
   testID: `dialog-alert-${string}`;
-  children?: ReactNode;
+  children?: string | ReactNode;
   icon: "error" | "processing" | "success" | string;
   onCloseIcon?: () => void;
   title: string;
