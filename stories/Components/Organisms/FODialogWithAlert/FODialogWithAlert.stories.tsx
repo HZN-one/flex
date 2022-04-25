@@ -37,7 +37,6 @@ const Template: Story<IFODialogWithAlertProps> = (
           onClose: handleClose,
         }}
         icon="error"
-        onCloseIcon={handleClose}
         title="Failed Generating Invoice"
       >
         Please check{" "}

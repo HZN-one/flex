@@ -11,7 +11,7 @@ export interface IFMDialogConfirmationProps {
   testID: `dialog-${string}`;
   actionsProps?: Omit<DialogActionsProps, "sx" | "children">;
   contentProps?: Omit<DialogContentProps, "sx" | "children">;
-  dialogProps?: Omit<DialogProps, "children">;
+  dialogProps: Omit<DialogProps, "children">;
   children?: ReactNode;
   icon: "error" | "processing" | "success" | "warning" | string;
   onCloseIcon?: () => void;
