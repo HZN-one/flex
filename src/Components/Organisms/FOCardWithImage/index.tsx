@@ -22,6 +22,7 @@ export const FOCardWithImage = memo((props: IFOCardWithImageProps) => {
     control,
     actionEndAdornment,
     isSelected,
+    isDisabled,
     ...cardProps
   } = props;
 
@@ -29,7 +30,14 @@ export const FOCardWithImage = memo((props: IFOCardWithImageProps) => {
     <FMCard
       testID={testID}
       {...cardProps}
-      className={isSelected ? "flex-paper-selected" : ""}
+      className={isSelected && !isDisabled ? "flex-paper-selected" : ""}
+      sx={{
+        ...(isDisabled && {
+          filter: "grayscale(1)",
+          opacity: 0.6,
+          pointerEvents: "none",
+        }),
+      }}
     >
       {control && (
         <Box mb={3}>
