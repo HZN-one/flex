@@ -19,4 +19,5 @@ export interface IFOCardWithImageProps extends CardProps {
   };
   actionEndAdornment?: ReactNode;
   isSelected?: boolean;
+  isDisabled?: boolean;
 }

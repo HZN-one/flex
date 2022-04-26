@@ -5,7 +5,7 @@ import {
   DialogContentProps,
 } from "@mui/material";
 
-import { IFAButtonProps } from "@Atoms/FAButton/FAButton.interface";
+import { IFAButtonProps } from "../../Atoms/FAButton/FAButton.interface";
 
 export interface IFMDialogConfirmationProps {
   testID: `dialog-${string}`;

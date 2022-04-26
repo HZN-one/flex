@@ -129,3 +129,20 @@ CardSelected.args = {
   buttonPrimaryPosition: "center",
   isSelected: true,
 };
+
+export const CardDisabled = Template.bind({});
+
+CardDisabled.args = {
+  image: <img src={DUMMY_IMAGE_URL} />,
+  imagePosition: "center",
+  header: {
+    title: "Card With Image Title",
+    subheader: "Card With Image Subheader",
+  },
+  buttonPrimary: {
+    children: "Default",
+  },
+  buttonPrimaryPosition: "center",
+  isDisabled: true,
+  variant: "outlined",
+};
