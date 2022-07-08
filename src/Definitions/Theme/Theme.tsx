@@ -838,7 +838,7 @@ export const baseTheme = createTheme({
             px: 2,
           },
           "& .MuiListItemButton-root": {
-            borderRadius: 2,
+            borderRadius: "16px",
             mb: 1,
             color: "secondary.main",
             typography: "body2",
