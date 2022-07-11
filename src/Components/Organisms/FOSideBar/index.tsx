@@ -15,7 +15,7 @@ import { FAButton, FAIcon, FALogo } from "@Atoms";
 import { IFOSideBarProps } from "./FOSideBar.interface";
 
 export const FOSideBar = memo((props: IFOSideBarProps) => {
-  const { testID, menu, footerMenu, buttonLogout, linkComponent } = props;
+  const { testID, menu, footerMenu, buttonLogout, linkComponent, logo } = props;
   const [open, setOpen] = useState<number[]>([]);
 
   const handleMenuClick = (index: number) => {
@@ -59,13 +59,15 @@ export const FOSideBar = memo((props: IFOSideBarProps) => {
         component="nav"
         subheader={
           <ListSubheader component="div" disableGutters>
-            <FALogo
-              testID="logo-sidebar"
-              width={119}
-              height={20}
-              iconColor="#D8232A"
-              textColor="#1A1919"
-            />
+            {logo ?? (
+              <FALogo
+                testID="logo-sidebar"
+                width={119}
+                height={20}
+                iconColor="#D8232A"
+                textColor="#1A1919"
+              />
+            )}
           </ListSubheader>
         }
         sx={{ height: "100%", overflowY: "auto" }}
