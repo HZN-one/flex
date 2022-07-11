@@ -1,9 +1,11 @@
 import React from "react";
+import { ReactChild } from "react";
 import { IFAButtonProps } from "../../Atoms/FAButton/FAButton.interface";
 
 export interface IFOSideBarProps {
   testID: `sidebar-${string}`;
   linkComponent: React.ElementType;
+  logo?: ReactChild;
   menu: {
     title: string;
     path?: string;
