@@ -94,10 +94,12 @@ export const FOHeader = memo((props: IFOHeaderProps) => {
               )}
               <Grid item xs="auto">
                 <Box display="flex" justifyContent="center" alignItems="center">
-                  <Avatar
-                    src={props.userAvatarSrc}
-                    sx={{ bgcolor: "secondary.main" }}
-                  />
+                  {props.accountName && (
+                    <Avatar
+                      src={props.userAvatarSrc}
+                      sx={{ bgcolor: "secondary.main" }}
+                    />
+                  )}
                   <FATypography
                     testID="typography-header-company-name"
                     variant="body1"

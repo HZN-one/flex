@@ -8,7 +8,7 @@ export interface IFOSideBarProps {
   logo?: ReactChild;
   menu: {
     title: string;
-    path?: string;
+    path: string;
     icon: string;
     subMenu?: {
       title: string;
