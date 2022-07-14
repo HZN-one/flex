@@ -119,7 +119,7 @@ export const FOSideBar = memo((props: IFOSideBarProps) => {
             <ListItemButton
               component={linkComponent}
               href={list.path}
-              selected={list.path === location.pathname}
+              selected={location.pathname.includes(list.path)}
             >
               <ListItemIcon>
                 <FAIcon
