@@ -7,6 +7,7 @@ export interface IFLDefaultProps extends Omit<IFOSideBarProps, "testID"> {
   children: ReactNode;
   header: Pick<
     IFOHeaderDefault,
+    | "language"
     | "search"
     | "title"
     | "userAvatarSrc"

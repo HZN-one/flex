@@ -21,6 +21,10 @@ Default.args = {
   testID: "layout-default-storybook",
   children: "Children component",
   header: {
+    language: {
+      value: "ID",
+      onChange: () => console.log("dida"),
+    },
     title: "Title",
     userAvatarSrc: "#",
     accountName: "Company Name",

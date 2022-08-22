@@ -20,6 +20,10 @@ Authentication.args = {
   testID: "layout-authentication-storybook",
   isCenter: true,
   header: {
+    language: {
+      value: "EN",
+      onChange: () => console.log("dida"),
+    },
     buttonLogin: {
       children: "Login",
       href: "/login",
