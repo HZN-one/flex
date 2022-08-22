@@ -7,9 +7,8 @@ import {
   Select,
   Toolbar,
   MenuItem,
-  InputBase,
+  InputAdornment,
 } from "@mui/material";
-import { styled } from "@mui/material/styles";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 import { FMSearch } from "@Molecules";
@@ -19,41 +18,30 @@ import { FAButton, FALogo, FATypography } from "@Atoms";
 
 import { IFOHeaderProps } from "./FOHeader.interface";
 
-const BootstrapInput = styled(InputBase)(({ theme }) => ({
-  "label + &": {
-    marginTop: theme.spacing(3),
-  },
-  "& .MuiInputBase-input": {
-    borderRadius: 4,
-    position: "relative",
-    padding: "10px 26px 10px 12px",
-    transition: theme.transitions.create(["border-color", "box-shadow"]),
-    "&:focus": {
-      borderRadius: 4,
-      borderColor: "#80bdff",
-      boxShadow: "0 0 0 0.2rem rgba(0,123,255,.25)",
-    },
-  },
-}));
-
 export const FOHeader = memo((props: IFOHeaderProps) => {
   const { testID, logo, companyLogo, position = "fixed", headerType } = props;
 
   const SelectLanguage = () => {
     return (
-      <Box display="flex" alignItems="center">
-        {props?.language?.value === "EN" ? <EN /> : <ID />}
-        <Select
-          IconComponent={KeyboardArrowDownIcon}
-          id="flex-select-language"
-          value={props?.language?.value}
-          onChange={props?.language?.onChange}
-          input={<BootstrapInput />}
-        >
-          <MenuItem value={"EN"}>EN</MenuItem>
-          <MenuItem value={"ID"}>ID</MenuItem>
-        </Select>
-      </Box>
+      <Select
+        IconComponent={KeyboardArrowDownIcon}
+        value={props?.language?.value}
+        onChange={props?.language?.onChange}
+        variant="outlined"
+        sx={{
+          "& fieldset": { borderColor: "transparent" },
+          "& .MuiSelect-select": { padding: 0.7 },
+        }}
+        size="small"
+        startAdornment={
+          <InputAdornment position="start">
+            {props?.language?.value === "EN" ? <EN /> : <ID />}
+          </InputAdornment>
+        }
+      >
+        <MenuItem value="EN">EN</MenuItem>
+        <MenuItem value="ID">ID</MenuItem>
+      </Select>
     );
   };
 
