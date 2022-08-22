@@ -1,4 +1,5 @@
-import { ReactChild } from "react";
+import { SelectChangeEvent } from "@mui/material";
+import { ReactChild, ReactNode } from "react";
 import { IFAButtonProps } from "../../Atoms/FAButton/FAButton.interface";
 import { IFMSearchProps } from "../../Molecules/FMSearch/FMSearch.interface";
 
@@ -10,7 +11,10 @@ interface IFOHeaderGeneral {
   headerType: "auth" | "default";
   language?: {
     value: "EN" | "ID";
-    onChange?: (event: any) => void;
+    onChange?: (
+      event: SelectChangeEvent<"EN" | "ID">,
+      child: ReactNode
+    ) => void;
   };
 }
 export interface IFOHeaderAuth extends IFOHeaderGeneral {
