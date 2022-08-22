@@ -87,3 +87,28 @@ WithCustomLogo.args = {
   },
   linkComponent: "a",
 };
+
+export const WithChangeLanguage = (props: IFOHeaderProps) => {
+  const [language, setLanguage] = React.useState<"EN" | "ID">("EN");
+  const handleChangeLanguage = (event: any) => {
+    setLanguage(event.target.value);
+  };
+  return (
+    <FOHeader
+      {...props}
+      buttonLogin={{
+        children: "Login",
+        href: "/login",
+      }}
+      buttonRegister={{
+        children: "Register",
+        href: "/register",
+      }}
+      linkComponent="a"
+      logo={true}
+      position="static"
+      headerType="auth"
+      language={{ value: language, onChange: handleChangeLanguage }}
+    />
+  );
+};

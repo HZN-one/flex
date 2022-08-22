@@ -8,6 +8,10 @@ interface IFOHeaderGeneral {
   logo?: boolean;
   companyLogo?: ReactChild;
   headerType: "auth" | "default";
+  language?: {
+    value: "EN" | "ID";
+    onChange?: (event: any) => void;
+  };
 }
 export interface IFOHeaderAuth extends IFOHeaderGeneral {
   headerType: "auth";
